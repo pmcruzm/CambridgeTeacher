@@ -1,0 +1,195 @@
+/*
+Proyecto: Cambridge Teacher
+Autor: Pedro de la Cruz
+Fecha: 19/5/2016
+*/
+
+/*****************************
+RESET
+*****************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{outline: medium none;text-decoration: none;}
+a img{border:none;}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/*****************************
+PROPIEDADES GENERALES
+******************************/
+body{margin:0;padding:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;font-size: 1em;line-height: 1.5em;}
+.container{display:block;width:100%;max-width:1024px;min-width:768px;margin:0 auto;position:relative;}
+#wrapper{}
+
+/*****************************
+PROPIEDADES HEADER
+******************************/
+#header{position:relative;}
+.logo_h{display:block;background:url(../img/logo_cambridge.png) top left no-repeat;height:47px;width:162px;background-size:162px;text-indent:-99999px;}
+
+ul.menu_h{padding:0;margin:0;font-size:0;position:absolute;top:0;right:0;}
+ul.menu_h li{height:48px;display:inline-block;position:relative;}
+ul.menu_h li a{font-size:14px;line-height:48px;color:#7d7974;display:block;text-align:center;width:70px;}
+ul.menu_h li a:hover{background:#2e2e2e;color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+
+ul.menu_h li.language_opc>a{width:50px !important;display:block;background:url(../img/ico_globe.png) center center no-repeat;background-size:20px;text-indent:-99999px;}
+ul.menu_h li.language_opc.active{background:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+ul.menu_h li.language_opc.active>a{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
+ul.menu_h li .desplegable {background:#2e2e2e;display:none;right:0;position:absolute;top:47px;width:171px;z-index:99;box-sizing:border-box;opacity:0;}
+ul.menu_h li.language_opc .desplegable{padding-left:47px;padding-top:28px;padding-bottom:34px;}
+ul.menu_h li.language_opc .desplegable h3{padding-bottom:25px;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+ul.menu_h li.language_opc .desplegable a{color:#a19d98;font-size:14px;font-family:'sofia-pro-regular', Helvetica, sans-serif;display:block !important;line-height:21px !important;width:auto !important; height:auto !important;text-align:left !important;margin-bottom:5px;}
+ul.menu_h li.language_opc .desplegable a.active{color:#ffffff;}
+ul.menu_h li.language_opc .desplegable a:hover{color:#ffffff;}
+
+ul.menu_h li.login_opc>a:hover{background:#ffffff;}
+ul.menu_h li.login_opc>a{width:125px;}
+ul.menu_h li.login_opc>a span{display:block;background:#fde052;height:33px;line-height:33px;width:113px;border-radius:30px;color:#2e2e2e;right:50px !important;margin:0 auto;}
+ul.menu_h li.login_opc .desplegable{padding-left:47px;padding-top:33px;padding-bottom:0px;width:332px !important;box-sizing:border-box;padding-left:36px;padding-right:36px;}
+#form-login label{display:none;}
+#form-login input[type=text],#form-login input[type=password]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;}
+.btns-login{overflow:hidden;margin-bottom:10px;}
+#form-login input[type=submit]{float:left;width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:35px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;}
+.btns-login .btn-register{float:right;width:107px;height:35px;border-radius:30px;background:#393939;display:block;line-height:35px;color:#5e5e5e;font-size:14px;}
+.txt-remember{text-align:right !important;}
+.txt-remember a{width:auto !important;height:auto !important;color:#5e5e5e !important;line-height:13px !important;font-size:10px !important;display:inline-block !important;}
+
+ul.menu_h li.login_opc.active>a{background:#2e2e2e;color:#ffffff;}
+ul.menu_h li.login_opc.active>a span{background:#2e2e2e;color:#ffffff;height:48px;line-height:48px;width:125px;}
+
+ul.menu_h li.user_opc>a{color:#30c0d8;width:auto;padding-left:20px;padding-right:20px;background:url(../img/arrow_down.png) 95% 23px no-repeat;background-size:9px;}
+ul.menu_h li.user_opc.active>a{background:#ffffff;color:#30c0d8;background:url(../img/arrow_down.png) 95% 23px no-repeat;background-size:9px;}
+ul.menu_h li.user_opc>a:hover{background:url(../img/arrow_down.png) 95% 23px no-repeat;background-size:9px;}
+
+ul.menu_h li.user_opc .desplegable p{color:#ffffff;}
+
+.cobo-logo{display:block;position:absolute;top:0;left:197px;height:48px;}
+.cobo-logo h1{display:block;width:222px;height:48px;background:url(../img/ico_cambridge_t.png) center left no-repeat;background-size:222px;text-indent:-99999px;}
+.cobo-logo span{position:absolute;right:-62px;font-size:12px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;height:20px;line-height:20px;padding-left:10px;padding-right:10px;background:#2e2e2e;top:15px;border-radius:2px;color:#fde052;}
+
+/*****************************
+PROPIEDADES CATALOGO
+******************************/
+#banner-coleccion{background:#fde052;height:360px;}
+
+#block-catalogo{background:#2e2e2e;height:277px;margin-bottom:50px;}
+
+#list-news{background:#f5f0eb;}
+#block-noticias h3{font-size:26px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-bottom:20px;display:inline-block;margin-left:108px;border-bottom:7px solid #fb6120;}
+
+/*****************************
+PROPIEDADES FOOTER
+******************************/
+#footer{background:#2e2e2e;}
+#footer .container{box-sizing:border-box;padding:50px 40px;overflow:hidden;}
+.logo_f{display:block;background:url(../img/logo_footer.png) top left no-repeat;background-size:179px;width:179px;height:38px;text-indent:-99999px;}
+.left_footer{width:42%;float:left;}
+.right_footer{width:58%;float:left;overflow:hidden;}
+.block_visita{width:65%;float:left;}
+.block_visita h4{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:48px;}
+.block_visita ul{margin-bottom:50px;}
+.block_visita ul li{color:#afaaa6;}
+.block_visita ul li a{color:#afaaa6;}
+
+.block_siguenos{width:35%;float:left;}
+.block_siguenos h4{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:48px;}
+.block_siguenos ul{padding:0;margin:0;font-size:0;}
+.block_siguenos ul li{font-size:16px;display:inline-block;margin-right:20px;}
+.block_siguenos ul li:last-child{margin-right:0;}
+.block_siguenos ul li a{text-indent:-99999px;display:block;}
+.block_siguenos ul li a.ico_facebook{background:url(../img/ico_facebook.png) center center no-repeat;width:10px;height:21px;background-size:10px;}
+.block_siguenos ul li a.ico_twitter{background:url(../img/ico_twitter.png) center center no-repeat;width:18px;height:21px;background-size:18px;}
+.block_siguenos ul li a.ico_instagram{background:url(../img/ico_instagram.png) center center no-repeat;width:21px;height:21px;background-size:21px;}
+.block_siguenos ul li a.ico_youtube{background:url(../img/ico_youtube.png) center center no-repeat;width:22px;height:21px;background-size:22px;}
+
+.txt-footer{clear:both;color:#afaaa6;font-size:12px;}
+.txt-footer a{color:#afaaa6;}
+
+
+/*****************************
+PROPIEDADES ESPECIALES
+******************************/
+a img{border:0;}
+.clear{clear:both;}
+.hide{display:none !important;}
+
+.desktop_opc{display:block;}
+.mobile_opc{display:none;}
+input{-webkit-border-radius:0; border-radius:0;}
+textarea{-webkit-border-radius:0; border-radius:0;}
+input, textarea, select {-webkit-appearance: none;}
+.extend_menu_mob{display:none;}
+.helper{display: inline-block;height:100%;vertical-align:middle;}
+
+
+
+
+
+/*****************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 1400px) {
+	
+}
+
+@media screen and (max-width: 1200px) {
+	
+	
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+
+@media screen and (max-width: 768px) {	
+	
+}

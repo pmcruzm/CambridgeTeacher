@@ -1,0 +1,42 @@
+/******************************
+FUENTES CAMBRIDGE UNIVERSITY
+*****************************/
+
+@font-face {
+    font-family: 'sofia-pro-regular';
+    src: url('../fonts/sofia-pro-regular-webfont');
+    src: url('../fonts/sofia-pro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sofia-pro-regular-webfont.woff') format('woff'),
+         url('../fonts/sofia-pro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sofia-pro-regular-webfont.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sofia-pro-black';
+    src: url('../fonts/sofia-pro-black-webfont.eot');
+    src: url('../fonts/sofia-pro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sofia-pro-black-webfont.woff') format('woff'),
+         url('../fonts/sofia-pro-black-webfont.ttf') format('truetype'),
+         url('../fonts/sofia-pro-black-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?mx7xpv');
+	src:url('../fonts/icomoon.eot?#iefixmx7xpv') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?mx7xpv') format('woff'),
+		url('../fonts/icomoon.ttf?mx7xpv') format('truetype'),
+		url('../fonts/icomoon.svg?mx7xpv#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
