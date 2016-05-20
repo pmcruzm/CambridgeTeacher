@@ -65,7 +65,7 @@ button:focus {
 PROPIEDADES GENERALES
 ******************************/
 body{margin:0;padding:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;font-size: 1em;line-height: 1.5em;}
-.container{display:block;width:100%;max-width:1024px;min-width:768px;margin:0 auto;position:relative;}
+.container{display:block;width:100%;min-width:768px;margin:0 auto;position:relative;}
 #wrapper{}
 
 /*****************************
@@ -133,6 +133,7 @@ PROPIEDADES CATALOGO
 
 #block-catalogo{background:#2e2e2e;height:277px;margin-bottom:50px;}
 #block-catalogo .container{background:#2e2e2e url(../img/bg-catalogo.png) top left no-repeat;height:277px;;background-size:contain;}
+#block-catalogo{}
 
 #list-news{background:#f5f0eb;padding-top:30px;padding-bottom:40px;}
 #block-noticias h3{font-size:26px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-bottom:20px;display:inline-block;margin-left:108px;border-bottom:7px solid #fb6120;}
@@ -162,7 +163,7 @@ PROPIEDADES FOOTER
 .block_visita{width:65%;float:left;}
 .block_visita h4{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:48px;}
 .block_visita ul{margin-bottom:50px;}
-.block_visita ul li{color:#afaaa6;}
+.block_visita ul li{color:#afaaa6;font-size:14px;}
 .block_visita ul li a{color:#afaaa6;}
 
 .block_siguenos{width:35%;float:left;}
