@@ -117,12 +117,39 @@ ul.menu_h li.user_opc .desplegable p{color:#ffffff;}
 /*****************************
 PROPIEDADES CATALOGO
 ******************************/
-#banner-coleccion{background:#fde052;height:360px;}
+#banner-coleccion{background:#fde052;height:360px;position:relative;}
+#banner-coleccion .container{background:#fde052 url(../img/bg-mi-coleccion.png) top left no-repeat;height:360px;background-size:contain;}
+#banner-coleccion h2{padding-top:68px;padding-left:25px;font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.enl-coleccion{text-align:right;margin-top:17px;padding-right:60px;margin-bottom:17px;}
+.enl-coleccion a{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-left:30px;}
+.enl-coleccion a:first-child{margin-left:0;}
+.enl-coleccion a:before{content:'';display:inline-block;background:url(../img/ico_plus.png) center center no-repeat;background-size:21px;width:21px;height:21px;vertical-align:middle;margin-right:10px;}
+.carrusel-coleccion{width:100%;overflow:hidden;}
+
+/*.carrusel-coleccion div.slider ul { margin:0; padding:0; height:200px; }
+.carrusel-coleccion div.slider li { float:left; list-style:none; margin:0 5px 0 0; }
+.carrusel-coleccion div.slider li { text-align:center; line-height:200px; font-size:25px; }
+.carrusel-coleccion div.slider li img { height:200px;}*/
 
 #block-catalogo{background:#2e2e2e;height:277px;margin-bottom:50px;}
+#block-catalogo .container{background:#2e2e2e url(../img/bg-catalogo.png) top left no-repeat;height:277px;;background-size:contain;}
 
-#list-news{background:#f5f0eb;}
+#list-news{background:#f5f0eb;padding-top:30px;padding-bottom:40px;}
 #block-noticias h3{font-size:26px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-bottom:20px;display:inline-block;margin-left:108px;border-bottom:7px solid #fb6120;}
+#list-news .container{overflow:hidden;box-sizing:border-box;padding-left:14px;padding-right:14px;}
+#list-news .container .new-single{width:25%;float:left;box-sizing:border-box;padding-left:9px;padding-right:9px;margin-bottom:18px;}
+#list-news .container .new-single .inside-new{background:#ffffff;}
+#list-news .container .new-single .inside-new:hover{background:#ffffff url(../img/arrow_new.png) 94% 97% no-repeat;background-size:10px;}
+#list-news .container .new-single .inside-new img{max-width:100%;}
+#list-news .container .new-single .inside-new img + h4{margin-top:-25px;}
+#list-news .container .new-single .inside-new h4{color:#2e2e2e;font-size:18px;box-sizing:border-box;padding-right:10px;padding-left:10px;position:relative;}
+#list-news .container .new-single .inside-new h4 span{background:#ffffff;padding-left:10px;padding-right:10px;box-sizing:border-box;display:block;padding-top:10px;padding-bottom:10px;}
+#list-news .container .new-single .inside-new h4:after{content:'';display:block;width:75px;height:5px;background:#fde052;margin-bottom:15px;}
+#list-news .container .new-single .inside-new p{color:#2e2e2e;font-size:14px;line-height:21px;padding-left:20px;padding-right:20px;padding-bottom:15px;}
+.btn-more{clear:both;text-align:center;padding-top:20px;}
+.btn-more a{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.btn-more a:after{content:'';display:block;background:url(../img/ico_plus.png) top center no-repeat;background-size:21px;height:21px;}
+
 
 /*****************************
 PROPIEDADES FOOTER

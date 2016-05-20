@@ -26,6 +26,19 @@ jQuery.noConflict();
 
 jQuery(window).load(function(){
 	
+	//Ajustamos altura de los bloques de noticias
+	if (jQuery('#list-news').is(":visible") ) {
+		//Listado cursos
+		var heights = jQuery('#list-news div.inside-new').map(function ()
+		{
+			return jQuery(this).outerHeight();
+		}).get(),
+		//Obtenemos tamaño max de los cuadros
+		maxHeight = Math.max.apply(null, heights);
+		jQuery('#list-news div.inside-new').each(function() {
+			jQuery(this).css('height',maxHeight+30);
+		});
+	}
 
 });
 
@@ -83,6 +96,11 @@ jQuery(document).ready(function(){
 		}
 	});
 	
+	//Carrusel de Mi Catalogo 
+	/*jQuery( '#slider1' ).lemmonSlider({
+			infinite: true
+	});*/
+	
 
 	
 	//Volver el scroll a top
@@ -137,6 +155,20 @@ jQuery(document).ready(function(){
 			//Obtenemos altura y anchura del navegador
 			var h_win_r=jQuery(this).height();
 			var w_win_r=jQuery(this).width();
+			
+			//Ajustamos altura de los bloques de noticias
+			if (jQuery('#list-news').is(":visible") ) {
+				//Listado cursos
+				var heights = jQuery('#list-news div.inside-new').map(function ()
+				{
+					return jQuery(this).outerHeight();
+				}).get(),
+				//Obtenemos tamaño max de los cuadros
+				maxHeight = Math.max.apply(null, heights);
+				jQuery('#list-news div.inside-new').each(function() {
+					jQuery(this).css('height',maxHeight);
+				});
+			}
 	
 
 	});
