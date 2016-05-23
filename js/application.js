@@ -50,8 +50,10 @@ jQuery(window).load(function(){
 	//Ajustamos altura de los cuadros de catalogo
 	if (jQuery('#content-catalogo').is(":visible") ) {
 		jQuery('#content-catalogo .enl-book img').each(function() {
-			var alto_img=jQuery(this).height();
-			jQuery(this).parent().css({height:alto_img,marginTop:-alto_img/2});
+			if(jQuery(this).parent().find('span').length>0){
+				var alto_img=jQuery(this).height();
+				jQuery(this).parent().find('span').css({bottom:-alto_img/2});
+			}
 		});
 	}
 
@@ -225,8 +227,10 @@ jQuery(document).ready(function(){
 			//Ajustamos altura de los cuadros de catalogo
 			if (jQuery('#content-catalogo').is(":visible") ) {
 				jQuery('#content-catalogo .enl-book img').each(function() {
-					var alto_img=jQuery(this).height();
-					jQuery(this).parent().css({height:alto_img,marginTop:-alto_img/2});
+					if(jQuery(this).parent().find('span').length>0){
+						var alto_img=jQuery(this).height();
+						jQuery(this).parent().find('span').css({bottom:-alto_img/2});
+					}
 				});
 			}
 	

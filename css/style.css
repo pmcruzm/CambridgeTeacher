@@ -235,9 +235,9 @@ PROPIEDADES CATALOGO
 
 #content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
 #content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:9px;padding-right:9px;float:left;margin-bottom:18px;}
-#content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding-left:20px;padding-right:20px;}
-#content-catalogo .single-box-book .inside-b-book img{max-width:100%;vertical-align:middle;}
-#content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;display:inline-block;top:50%;}
+#content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding:30px;}
+#content-catalogo .single-box-book .inside-b-book img{max-width:100%;vertical-align:middle;max-height:100%;}
+#content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;}
 #content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;font-size:8px;}
 
 .plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) top left no-repeat;display:block;width:21px;height:21px;text-indent:-99999px;background-size:21px;}
