@@ -241,6 +241,55 @@ PROPIEDADES CATALOGO
 #content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;font-size:8px;}
 
 .plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) top left no-repeat;display:block;width:21px;height:21px;text-indent:-99999px;background-size:21px;}
+
+
+/*****************************
+PROPIEDADES REGISTRO
+******************************/
+#form_box_registro{width:100%;max-width:660px;margin:0 auto;}
+#block-registro{background:#f5f0eb;padding-bottom:150px;}
+
+.top-register{background:#ffffff;padding-top:35px;padding-bottom:35px;position:relative;margin-top:-85px;margin-bottom:12px;box-sizing:border-box;padding-right:85px;padding-left:62px;}
+.form-group{overflow:hidden;margin-bottom:10px;}
+#registro-form .form-group label{display:block;text-align:right;width:42%;float:left;box-sizing:border-box;padding-right:40px;height:40px;line-height:40px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+#registro-form .form-group input[type=text]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:55%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+#registro-form .form-group input[type=password]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:55%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+#registro-form .form-group input[type=email]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:55%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+
+#registro-form .form-group input[type=text].error{border:3px solid #f05456;}
+#registro-form .form-group input[type=password].error{border:3px solid #f05456;}
+#registro-form .form-group input[type=email].error{border:3px solid #f05456;}
+
+.group-clase-checkbox{overflow:hidden;margin-top:30px;}
+.title-group{width:42%;float:left;text-align:right;box-sizing:border-box;padding-right:40px;}
+.title-group p{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+
+.rest-checkbox{width:55%;float:left;overflow:hidden;}
+.single-radio{width:50%;float:left;}
+
+.bottom-register{background:#ffffff;padding-top:35px;padding-bottom:150px;position:relative;box-sizing:border-box;box-sizing:border-box;padding-right:85px;padding-left:62px;}
+.group_checkbox{margin-top:70px;}
+#registro-form .checkbox label{display:inline-block;}
+#registro-form  .checkbox{padding-left:50px;margin-bottom:18px;display:block;padding-left:40%;}
+#registro-form  .checkbox p{margin-top:-30px;font-size:16px;padding-left:40px;color:#2e2e2e;}
+#registro-form .checkbox a{color:#2e2e2e;text-decoration:underline;}
+
+.submit_group{padding-left:40%;padding-top:40px;}
+.submit_group input{-webkit-appearance:none;font-size:16px;height:35px;width:200px;box-sizing:border-box;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;font-family:'cabinregular', Helvetica, sans-serif;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.submit_group input:hover{background:#fde052;color:#2e2e2e;}
+
+.errores{color:#f05456;font-size:14px;display:block;padding-left:30%;width:95%;box-sizing:border-box;margin-top:20px;}
+
+.maquetacion_captcha{padding-left:40%;}
+.label-2-lines{line-height:19px !important;}
+
+.bg-select{background:#2e2e2e url(../img/arrow_select.png) 95% 50% no-repeat;display:block;width:55%;float:left;overflow:hidden;height:40px;background-size:9px;}
+#select_centre{background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;text-align:right;height:40px;line-height:40px;padding-right:45px;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;}
+#select_centre option{}
+.enl-help{clear:both;text-align:right;padding-right:14px;margin-bottom:15px;}
+.enl-help a{color:#7d7974;font-size:13px;}
+
+.single-radio label span{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;top:-2px;position:relative;}
 	
 /*****************************
 PROPIEDADES FOOTER
@@ -269,6 +318,107 @@ PROPIEDADES FOOTER
 
 .txt-footer{clear:both;color:#afaaa6;font-size:12px;}
 .txt-footer a{color:#afaaa6;}
+
+/**********************************
+PROPIEDADES DE CUSTOM RADIO | CHECKBOX BUTTON
+**********************************/
+#foo:checked::before,
+input[type="radio"] {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+}
+
+#foo:checked,
+input[type="radio"] + label::before {
+    content:'';
+    cursor:pointer;
+    position:relative;
+    top:2px;
+    vertical-align:top;
+    padding-right:10px;
+    display:inline-block;
+    overflow:hidden;
+    width:20px;
+    height:20px;
+    background:url(../img/check_state.png) no-repeat;
+    background-position:0px 0px;
+    background-size:20px;
+}
+
+input[type="radio"].error + label::before {
+    content:'';
+    cursor:pointer;
+    position:relative;
+    top:2px;
+    vertical-align:top;
+    padding-right:10px;
+    display:inline-block;
+    overflow:hidden;
+    width:20px;
+    height:20px;
+    background:url(../img/check_state.png) no-repeat;
+    background-position:0px -40px;
+    background-size:20px;
+}
+
+input[type="radio"]:checked + label::before {
+    content:'';
+    cursor:pointer;
+    position:relative;
+    top:2px;
+    vertical-align:top;
+    padding-right:10px;
+    display:inline-block;
+    overflow:hidden;
+    width:20px;
+    height:20px;
+    background:url(../img/check_state.png) no-repeat;
+    background-position:0px -20px;
+    background-size:20px;
+}
+
+#foo:checked::before,
+input[type="checkbox"] {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+}
+
+#foo:checked,
+input[type="checkbox"] + label::before {
+    content:'';
+    cursor:pointer;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:url(../img/check_state.png) no-repeat;
+    background-position:0px 0px;
+    background-size:20px;
+}
+
+#foo:checked,
+input[type="checkbox"].error + label::before {
+    content:'';
+    cursor:pointer;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:url(../img/check_state.png) no-repeat;
+    background-position:0px -40px;
+    background-size:20px;
+}
+
+input[type="checkbox"]:checked + label::before {
+    content:'';
+    cursor:pointer;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:url(../img/check_state.png) no-repeat;
+    background-position:0px -20px;
+    background-size:20px;
+}
 
 
 /*****************************
