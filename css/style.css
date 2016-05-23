@@ -161,7 +161,7 @@ PROPIEDADES HOME
 #info-profesor a{height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;margin:0 auto;color:#ffffff;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;width:222px;margin-top:30px;}
 
 /*****************************
-PROPIEDADES CATALOGO
+PROPIEDADES MI COLECCION
 ******************************/
 #banner-coleccion{background:#fde052;height:360px;position:relative;}
 #banner-coleccion .container{background:#fde052 url(../img/bg-mi-coleccion.png) top left no-repeat;height:360px;background-size:contain;}
@@ -177,21 +177,21 @@ PROPIEDADES CATALOGO
 .carrusel-coleccion div.slider li { text-align:center; line-height:200px; font-size:25px; }
 .carrusel-coleccion div.slider li img { height:200px;}*/
 
-#block-catalogo{background:#2e2e2e;height:277px;margin-bottom:50px;position:relative}
-#block-catalogo .container{background:#2e2e2e url(../img/bg-catalogo.png) top center no-repeat;height:277px;;background-size:contain;}
-#block-catalogo h3{font-size:40px;color:#fde052;padding-left:60px;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-top:40px;}
-#block-catalogo .enl-explorar{position:absolute;color:#fde052;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;right:25px;top:60px;}
-#block-catalogo .enl-explorar:before{content:'';display:inline-block;vertical-align:middle;width:21px;height:21px;background:url(../img/ico-explorar.png) center center no-repeat;background-size:21px;margin-right:10px;}
-#block-catalogo .mod-catalogo{position:absolute;bottom:0;box-sizing:border-box;border:3px solid #323232;display:block;width:114px;background:#464646;}
-#block-catalogo .enl-infantil{height:142px;left:50%;margin-left:-451px;}
-#block-catalogo .enl-primaria{height:158px;left:50%;margin-left:-294px;}
-#block-catalogo .enl-secundaria{height:150px;left:50%;margin-left:-134px;}
-#block-catalogo .enl-bachillerato{height:144px;left:50%;margin-left:22px;}
-#block-catalogo .enl-examenes{height:158px;left:50%;margin-left:179px;}
-#block-catalogo .enl-adultos{height:144px;left:50%;margin-left:338px;}
-#block-catalogo .mod-catalogo span{display:block;font-size:13px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;position:absolute;text-align:center;width:100%;bottom:50px;}
-#block-catalogo .mod-catalogo span:before{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-bottom:5px;}
-#block-catalogo .mod-catalogo span:after{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-top:5px;}
+#block-coleccion{background:#2e2e2e;height:277px;margin-bottom:50px;position:relative}
+#block-coleccion .container{background:#2e2e2e url(../img/bg-catalogo.png) top center no-repeat;height:277px;;background-size:contain;}
+#block-coleccion h3{font-size:40px;color:#fde052;padding-left:60px;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-top:40px;}
+#block-coleccion .enl-explorar{position:absolute;color:#fde052;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;right:25px;top:60px;}
+#block-coleccion .enl-explorar:before{content:'';display:inline-block;vertical-align:middle;width:21px;height:21px;background:url(../img/ico-explorar.png) center center no-repeat;background-size:21px;margin-right:10px;}
+#block-coleccion .mod-catalogo{position:absolute;bottom:0;box-sizing:border-box;border:3px solid #323232;display:block;width:114px;background:#464646;}
+#block-coleccion .enl-infantil{height:142px;left:50%;margin-left:-451px;}
+#block-coleccion .enl-primaria{height:158px;left:50%;margin-left:-294px;}
+#block-coleccion .enl-secundaria{height:150px;left:50%;margin-left:-134px;}
+#block-coleccion .enl-bachillerato{height:144px;left:50%;margin-left:22px;}
+#block-coleccion .enl-examenes{height:158px;left:50%;margin-left:179px;}
+#block-coleccion .enl-adultos{height:144px;left:50%;margin-left:338px;}
+#block-coleccion .mod-catalogo span{display:block;font-size:13px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;position:absolute;text-align:center;width:100%;bottom:50px;}
+#block-coleccion .mod-catalogo span:before{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-bottom:5px;}
+#block-coleccion .mod-catalogo span:after{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-top:5px;}
 
 #list-news{background:#f5f0eb;padding-top:30px;padding-bottom:40px;}
 #block-noticias h3{font-size:26px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-bottom:20px;display:inline-block;margin-left:108px;border-bottom:7px solid #fb6120;}
@@ -210,6 +210,38 @@ PROPIEDADES CATALOGO
 .btn-more a:after{content:'';display:block;background:url(../img/ico_plus.png) top center no-repeat;background-size:21px;height:21px;}
 
 
+/*****************************
+PROPIEDADES CATALOGO
+******************************/
+#banner-catalogo{height:180px;position:relative;background:#fde052 url(../img/bg-catalogo-min.jpg) top left no-repeat;background-size:1024px;overflow:hidden;}
+#banner-catalogo h2{color:#2e2e2e;font-size:40px;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-top:70px;padding-left:60px;}
+
+#banner-catalogo ul.tipo_cat{position:absolute;bottom:-4px;left:15px;font-size:0;}
+#banner-catalogo ul.tipo_cat li{display:inline-block;font-size:16px;height:32px;}
+#banner-catalogo ul.tipo_cat li a{display:block;height:32px;line-height:32px;padding-left:30px;padding-right:30px;font-size:18px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
+#banner-catalogo ul.tipo_cat li a:hover{background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
+#banner-catalogo ul.tipo_cat li.active a{background:#ffffff;}
+
+#banner-catalogo ul.filter_cat{position:absolute;bottom:-3px;right:15px;font-size:0;}
+#banner-catalogo ul.filter_cat li{display:inline-block;font-size:16px;}
+#banner-catalogo ul.filter_cat li a{display:block;height:32px;line-height:32px;padding-left:15px;padding-right:15px;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
+#banner-catalogo ul.filter_cat li a:hover{background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
+#banner-catalogo ul.filter_cat li.active a{background:#ffffff;}
+
+#selectores-filtros{height:50px;text-align:right;}
+#selectores-filtros a{color:#7d7974;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-right:50px;position:relative;top:12px;}
+#selectores-filtros a:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-filter.png);background-size:21px;vertical-align:middle;margin-right:20px;background-position:0px 0px;background-repeat:no-repeat;}
+#selectores-filtros a.active:before{background-position:0px -21px;}
+
+#content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
+#content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:9px;padding-right:9px;float:left;margin-bottom:18px;}
+#content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding-left:20px;padding-right:20px;}
+#content-catalogo .single-box-book .inside-b-book img{max-width:100%;vertical-align:middle;}
+#content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;display:inline-block;top:50%;}
+#content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;font-size:8px;}
+
+.plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) top left no-repeat;display:block;width:21px;height:21px;text-indent:-99999px;background-size:21px;}
+	
 /*****************************
 PROPIEDADES FOOTER
 ******************************/

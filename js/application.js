@@ -28,7 +28,6 @@ jQuery(window).load(function(){
 	
 	//Ajustamos altura de los bloques de noticias
 	if (jQuery('#list-news').is(":visible") ) {
-		//Listado cursos
 		var heights = jQuery('#list-news div.inside-new').map(function ()
 		{
 			return jQuery(this).outerHeight();
@@ -37,6 +36,22 @@ jQuery(window).load(function(){
 		maxHeight = Math.max.apply(null, heights);
 		jQuery('#list-news div.inside-new').each(function() {
 			jQuery(this).css('height',maxHeight+30);
+		});
+	}
+	
+	//Ajustamos altura de los cuadros de catalogo
+	if (jQuery('#content-catalogo').is(":visible") ) {
+		jQuery('#content-catalogo div.inside-b-book').each(function() {
+			var ancho_box=jQuery(this).width();
+			jQuery(this).css('height',ancho_box);
+		});
+	}
+	
+	//Ajustamos altura de los cuadros de catalogo
+	if (jQuery('#content-catalogo').is(":visible") ) {
+		jQuery('#content-catalogo .enl-book img').each(function() {
+			var alto_img=jQuery(this).height();
+			jQuery(this).parent().css({height:alto_img,marginTop:-alto_img/2});
 		});
 	}
 
@@ -99,6 +114,38 @@ jQuery(document).ready(function(){
 			infinite: true
 	});*/
 	
+	
+	//Filtros de la página de catálogo 
+	jQuery(document).on('click','#selectores-filtros a',function(e){
+        e.preventDefault();
+		
+		if(jQuery(this).hasClass('active')) {
+			jQuery(this).removeClass('active');
+		}else{
+			jQuery(this).addClass('active');
+		}
+
+        var allCourses = jQuery('#content-catalogo div[data-type]');
+
+        allCourses.show();
+
+        if( jQuery(this).parent().find('a[data-filter-type="demo"]').hasClass('active') ) {
+            allCourses.each(function(i, e){
+                if( jQuery(e).data('type') == 'demo' ) {
+                    jQuery(e).hide();
+                }
+            });
+        }
+
+        if( jQuery(this).parent().find('a[data-filter-type="centre"]').hasClass('active') ) {
+            allCourses.each(function(i, e){
+                if( jQuery(e).data('type') == 'centre' ) {
+                    jQuery(e).hide();
+                }
+            });
+        }
+
+    });
 
 	
 	//Volver el scroll a top
@@ -156,7 +203,6 @@ jQuery(document).ready(function(){
 			
 			//Ajustamos altura de los bloques de noticias
 			if (jQuery('#list-news').is(":visible") ) {
-				//Listado cursos
 				var heights = jQuery('#list-news div.inside-new').map(function ()
 				{
 					return jQuery(this).outerHeight();
@@ -164,7 +210,23 @@ jQuery(document).ready(function(){
 				//Obtenemos tamaño max de los cuadros
 				maxHeight = Math.max.apply(null, heights);
 				jQuery('#list-news div.inside-new').each(function() {
-					jQuery(this).css('height',maxHeight);
+					jQuery(this).css('height',maxHeight+30);
+				});
+			}
+			
+			//Ajustamos altura de los cuadros de catalogo
+			if (jQuery('#content-catalogo').is(":visible") ) {
+				jQuery('#content-catalogo div.inside-b-book').each(function() {
+					var ancho_box=jQuery(this).width();
+					jQuery(this).css('height',ancho_box);
+				});
+			}
+			
+			//Ajustamos altura de los cuadros de catalogo
+			if (jQuery('#content-catalogo').is(":visible") ) {
+				jQuery('#content-catalogo .enl-book img').each(function() {
+					var alto_img=jQuery(this).height();
+					jQuery(this).parent().css({height:alto_img,marginTop:-alto_img/2});
 				});
 			}
 	
