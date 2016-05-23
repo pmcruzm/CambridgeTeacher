@@ -82,6 +82,7 @@ ul.menu_h li a:hover{background:#2e2e2e;color:#ffffff;-webkit-transition: all 0.
 ul.menu_h li.language_opc>a{width:50px !important;display:block;background:url(../img/ico_globe.png) center center no-repeat;background-size:20px;text-indent:-99999px;}
 ul.menu_h li.language_opc.active{background:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 ul.menu_h li.language_opc.active>a{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
+ul.menu_h li.language_opc>a:hover{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
 ul.menu_h li .desplegable {background:#2e2e2e;display:none;right:0;position:absolute;top:47px;width:171px;z-index:99;box-sizing:border-box;opacity:0;}
 ul.menu_h li.language_opc .desplegable{padding-left:47px;padding-top:28px;padding-bottom:34px;}
 ul.menu_h li.language_opc .desplegable h3{padding-bottom:25px;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
@@ -92,6 +93,7 @@ ul.menu_h li.language_opc .desplegable a:hover{color:#ffffff;}
 ul.menu_h li.login_opc>a:hover{background:#ffffff;}
 ul.menu_h li.login_opc>a{width:125px;}
 ul.menu_h li.login_opc>a span{display:block;background:#fde052;height:33px;line-height:33px;width:113px;border-radius:30px;color:#2e2e2e;right:50px !important;margin:0 auto;}
+ul.menu_h li.login_opc>a span:hover{background:#393939;color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 ul.menu_h li.login_opc .desplegable{padding-left:47px;padding-top:33px;padding-bottom:0px;width:332px !important;box-sizing:border-box;padding-left:36px;padding-right:36px;}
 #form-login label{display:none;}
 #form-login input[type=text],#form-login input[type=password]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;}
@@ -110,9 +112,53 @@ ul.menu_h li.user_opc>a:hover{background:url(../img/arrow_down.png) 95% 23px no-
 
 ul.menu_h li.user_opc .desplegable p{color:#ffffff;}
 
-.cobo-logo{display:block;position:absolute;top:0;left:197px;height:48px;}
-.cobo-logo h1{display:block;width:222px;height:48px;background:url(../img/ico_cambridge_t.png) center left no-repeat;background-size:222px;text-indent:-99999px;}
-.cobo-logo span{position:absolute;right:-62px;font-size:12px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;height:20px;line-height:20px;padding-left:10px;padding-right:10px;background:#2e2e2e;top:15px;border-radius:2px;color:#fde052;}
+.cobo-logo{}
+h1{display:block;position:absolute;top:0;left:197px;height:48px;width:222px;height:48px;background:url(../img/ico_cambridge_t.png) center left no-repeat;background-size:222px;text-indent:-99999px;}
+span.type-user{position:absolute;font-size:12px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;height:20px;line-height:20px;padding-left:10px;padding-right:10px;background:#2e2e2e;top:15px;border-radius:2px;color:#fde052;left:425px;}
+
+/*****************************
+PROPIEDADES HOME
+******************************/
+#banner-home{background:#fde052 url(../img/banner-home.png) center 45px no-repeat;height:493px;text-align:center;background-size:935px;position:relative;}
+.btn-register-h{position:absolute;height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;bottom:-25px;left:0;right:0;margin:0 auto;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+
+.txt-b-bottom{position:absolute;bottom:50px;width:100%;}
+.txt-b-bottom p{text-align:center;color:#2e2e2e;font-size:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+
+.txt-b-top{position:absolute;top:65px;width:100%;}
+.txt-b-top p{text-align:center;color:#2e2e2e;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.txt-b-top p:first-child:after{content:'';display:block;background:url(../img/embellecedor-w.png) top center no-repeat;height:6px;background-size:41px;margin-top:2px;margin-bottom:-1px;}
+
+#info-home{background:#f5f0eb;padding-top:50px;}
+.pizarra-interectiva{padding-right:15px;padding-left:225px;height:350px;padding-bottom:12px;}
+.inside-pizarra{height:350px;background:#ffffff;padding-left:210px;padding-top:90px;position:relative;box-sizing:border-box;}
+.inside-pizarra h3{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;}
+.inside-pizarra h3:after{display:block;content:'';background:url(../img/embellecedor-a.png) top left no-repeat;background-size:43px;height:7px;margin-top:25px;margin-bottom:25px;margin-left:-25px;}
+.inside-pizarra p{color:#2e2e2e;font-size:16px;line-height:24px;}
+.inside-pizarra p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.inside-pizarra img{width:284px;position:absolute;top:74px;left:-177px;z-index:10;}
+
+.recursos-extra{padding-left:15px;padding-right:225px;height:350px;padding-bottom:12px;}
+.inside-recursos{height:350px;background:#ffffff;padding-left:125px;padding-top:90px;position:relative;box-sizing:border-box;z-index:20;}
+.inside-recursos h3{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;}
+.inside-recursos h3:after{display:block;content:'';background:url(../img/embellecedor-r.png) top left no-repeat;background-size:43px;height:7px;margin-top:25px;margin-bottom:25px;margin-left:-25px;}
+.inside-recursos p{color:#2e2e2e;font-size:16px;line-height:24px;}
+.inside-recursos p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.inside-recursos img{width:303px;position:absolute;top:133px;right:-177px;}
+
+.que-esta-pasando{padding-right:15px;padding-left:225px;height:350px;padding-bottom:12px;}
+.inside-pasando{height:350px;background:#ffffff;padding-left:210px;padding-top:90px;position:relative;box-sizing:border-box;z-index:30}
+.inside-pasando h3{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;}
+.inside-pasando h3:after{display:block;content:'';background:url(../img/embellecedor-v.png) top left no-repeat;background-size:43px;height:7px;margin-top:25px;margin-bottom:25px;margin-left:-25px;}
+.inside-pasando p{color:#2e2e2e;font-size:16px;line-height:24px;}
+.inside-pasando p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.inside-pasando img{width:284px;position:absolute;top:74px;left:-177px;z-index:10;}
+
+#info-profesor{text-align:center;background:#fde052;padding-top:50px;padding-bottom:65px;z-index:40;position:relative;}
+#info-profesor h2{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;margin-bottom:40px;}
+#info-profesor p{font-size:16px;line-height:21px;color:#2e2e2e;margin-bottom:10px;}
+#info-profesor p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+#info-profesor a{height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;margin:0 auto;color:#ffffff;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;width:222px;margin-top:30px;}
 
 /*****************************
 PROPIEDADES CATALOGO
@@ -131,9 +177,21 @@ PROPIEDADES CATALOGO
 .carrusel-coleccion div.slider li { text-align:center; line-height:200px; font-size:25px; }
 .carrusel-coleccion div.slider li img { height:200px;}*/
 
-#block-catalogo{background:#2e2e2e;height:277px;margin-bottom:50px;}
-#block-catalogo .container{background:#2e2e2e url(../img/bg-catalogo.png) top left no-repeat;height:277px;;background-size:contain;}
-#block-catalogo{}
+#block-catalogo{background:#2e2e2e;height:277px;margin-bottom:50px;position:relative}
+#block-catalogo .container{background:#2e2e2e url(../img/bg-catalogo.png) top center no-repeat;height:277px;;background-size:contain;}
+#block-catalogo h3{font-size:40px;color:#fde052;padding-left:60px;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-top:40px;}
+#block-catalogo .enl-explorar{position:absolute;color:#fde052;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;right:25px;top:60px;}
+#block-catalogo .enl-explorar:before{content:'';display:inline-block;vertical-align:middle;width:21px;height:21px;background:url(../img/ico-explorar.png) center center no-repeat;background-size:21px;margin-right:10px;}
+#block-catalogo .mod-catalogo{position:absolute;bottom:0;box-sizing:border-box;border:3px solid #323232;display:block;width:114px;background:#464646;}
+#block-catalogo .enl-infantil{height:142px;left:50%;margin-left:-451px;}
+#block-catalogo .enl-primaria{height:158px;left:50%;margin-left:-294px;}
+#block-catalogo .enl-secundaria{height:150px;left:50%;margin-left:-134px;}
+#block-catalogo .enl-bachillerato{height:144px;left:50%;margin-left:22px;}
+#block-catalogo .enl-examenes{height:158px;left:50%;margin-left:179px;}
+#block-catalogo .enl-adultos{height:144px;left:50%;margin-left:338px;}
+#block-catalogo .mod-catalogo span{display:block;font-size:13px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;position:absolute;text-align:center;width:100%;bottom:50px;}
+#block-catalogo .mod-catalogo span:before{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-bottom:5px;}
+#block-catalogo .mod-catalogo span:after{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-top:5px;}
 
 #list-news{background:#f5f0eb;padding-top:30px;padding-bottom:40px;}
 #block-noticias h3{font-size:26px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-bottom:20px;display:inline-block;margin-left:108px;border-bottom:7px solid #fb6120;}

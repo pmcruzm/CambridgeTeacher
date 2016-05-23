@@ -59,16 +59,14 @@ jQuery(document).ready(function(){
 	});*/
 	
 	//Menú principal y submenús
-	jQuery(document).on("mouseenter",".language_opc", function(e) {
-		jQuery(this).addClass('active');
-		//Comprobamos si tiene desplegable
-		if(jQuery(this).find('.desplegable').length>0){
-			jQuery(this).find('.desplegable').show().animate({opacity:1},400);	
-		}
-	}).on("mouseleave",".language_opc", function(e) {
-		jQuery(this).removeClass('active');
-		if(jQuery(this).find('.desplegable').length>0){
-			jQuery(this).find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});	
+	jQuery(document).on('click','.language_opc a',function(e){
+		e.preventDefault();
+		if(jQuery(this).parent().hasClass('active')){
+			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});
+			jQuery(this).parent().removeClass('active');		
+		}else{
+			jQuery(this).parent().addClass('active');
+			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);	
 		}
 	});
 	
