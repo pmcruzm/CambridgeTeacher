@@ -170,7 +170,15 @@ PROPIEDADES MI COLECCION
 .enl-coleccion a{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-left:30px;}
 .enl-coleccion a:first-child{margin-left:0;}
 .enl-coleccion a:before{content:'';display:inline-block;background:url(../img/ico_plus.png) center center no-repeat;background-size:21px;width:21px;height:21px;vertical-align:middle;margin-right:10px;}
-.carrusel-coleccion{width:100%;overflow:hidden;}
+.carrusel-coleccion{width:100%;overflow:hidden;position:relative;box-sizing:border-box;padding-left:9px;}
+.carrusel-list{height:200px;}
+.carrusel-list .item{height:200px;}
+.carrusel-list .item img{height:200px;padding-right:8px;}
+.slick-arrow{position:absolute;top:0;z-index:100;top:50%;margin-top:-18px;}
+.slick-next{right:10px;background-image:url(../img/arrow_right.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
+.slick-next.slick-disabled{background-position:0px -36px;}
+.slick-prev{left:10px;background-image:url(../img/arrow_left.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
+.slick-prev.slick-disabled{background-position:0px -36px;}
 
 /*.carrusel-coleccion div.slider ul { margin:0; padding:0; height:200px; }
 .carrusel-coleccion div.slider li { float:left; list-style:none; margin:0 5px 0 0; }
@@ -250,7 +258,7 @@ PROPIEDADES REGISTRO
 #block-registro{background:#f5f0eb;padding-bottom:150px;}
 
 .top-register{background:#ffffff;padding-top:35px;padding-bottom:35px;position:relative;margin-top:-85px;margin-bottom:12px;box-sizing:border-box;padding-right:85px;padding-left:62px;}
-.form-group{overflow:hidden;margin-bottom:10px;}
+.form-group{overflow:hidden;margin-bottom:10px;position:relative;}
 #registro-form .form-group label{display:block;text-align:right;width:42%;float:left;box-sizing:border-box;padding-right:40px;height:40px;line-height:40px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 #registro-form .form-group input[type=text]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:55%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
 #registro-form .form-group input[type=password]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:55%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
@@ -275,7 +283,7 @@ PROPIEDADES REGISTRO
 #registro-form .checkbox a{color:#2e2e2e;text-decoration:underline;}
 
 .submit_group{padding-left:40%;padding-top:40px;}
-.submit_group input{-webkit-appearance:none;font-size:16px;height:35px;width:200px;box-sizing:border-box;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;font-family:'cabinregular', Helvetica, sans-serif;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.submit_group input{-webkit-appearance:none;font-size:16px;height:35px;width:200px;box-sizing:border-box;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:35px;}
 .submit_group input:hover{background:#fde052;color:#2e2e2e;}
 
 .errores{color:#f05456;font-size:14px;display:block;padding-left:30%;width:95%;box-sizing:border-box;margin-top:20px;}
@@ -290,6 +298,11 @@ PROPIEDADES REGISTRO
 .enl-help a{color:#7d7974;font-size:13px;}
 
 .single-radio label span{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;top:-2px;position:relative;}
+
+.help-box{position:absolute;right:-42px;width:242px;z-index:30;}
+.help-box a{display:block;width:21px;height:21px;background:url(../img/ico-question.png) top left no-repeat;text-indent:-99999px;background-size:21px;position:relative;left:120px;top:-42px;}
+.help-box .content-help{display:block;background:#fde052;box-sizing:border-box;padding:15px;padding-bottom:25px;margin-top:-25px;display:none;}
+.help-box .content-help p{color:#2e2e2e;font-size:14px;line-height:18px;}
 	
 /*****************************
 PROPIEDADES FOOTER

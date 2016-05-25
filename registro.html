@@ -82,6 +82,12 @@
                                 <label for="password">CONTRASEÑA</label>
                                 <input type="password" class="form-control validation-rule-password init_password" id="password" name="password" data-error-msg="Error contraseña">
                             </div>
+                            <div class="help-box">
+                                	<a href="#">Ayuda</a>
+                                    <div class="content-help">
+                                    	<p>La contraseña debe tener al menos 8 caracteres. Te recomendamos que uses una combinación de mayúsculas, minúsculas, números y caracteres especiales.</p>
+                                    </div>
+                            </div>
                             <div class="form-group required">
                                 <label for="password_confirm">REPITE CONTRASEÑA</label>
                                 <input type="password" class="form-control validation-rule-password repeat_password" id="password_confirm" name="password_confirm" data-error-msg="Error contraseña" >
@@ -91,7 +97,7 @@
                                 	<p>DOY CLASE DE</p>
                                 </div>
                                 <div class="rest-checkbox">
-                                	<div class="single-radio"><input type="radio" value="infantil" class="validation-rule-radio" id="radiosinfantil" name="user_type" data-error-msg="Seleccione tipo de clase">
+                                	<div class="single-radio"><input checked type="radio" value="infantil" class="validation-rule-radio" id="radiosinfantil" name="user_type" data-error-msg="Seleccione tipo de clase">
                                     <label class="radio-inline" for="radiosinfantil"><span>Infantil</span></label></div>
                                     <div class="single-radio"><input type="radio" class="validation-rule-radio" value="primaria" id="radiosprimaria" name="user_type" data-error-msg="Seleccione tipo de clase">
                                     <label class="radio-inline" for="radiosprimaria"><span>Primaria</span></label></div>
@@ -125,13 +131,19 @@
                             </div>
                             <div class="form-group required">
                                 <label class="label-2-lines" for="school_mastercode">SCHOOL MASTERCODE<br/>(OPCIONAL)</label>
-                                <input type="text" class="form-control validation-rule-empty" id="school_mastercode" name="school_mastercode">
+                                <input type="text" class="form-control validation-rule-empty" id="school_mastercode" name="school_mastercode">	
+                            </div>
+                            <div class="help-box">
+                                	<a href="#">Ayuda</a>
+                                    <div class="content-help">
+                                    	<p>El School MasterCode es código único que identifica a tu centro educativo, y que tu oficina local te proporcionará si en vuestro centro utilizáis libros de Cambridge. Puedes registrarte sin él para tener acceso a versiones de prueba de nuestros libros.</p>
+                                    </div>
                             </div>
                             <div class="group_checkbox">
                                <div class="checkbox"><input id="legal" name="legal" class="validation-rule-checkbox" data-error-msg="Debe aceptar política de privacidad." type="checkbox"><label for="legal"></label><p><span>He leído y acepto la </span> <a href="#" title="Privacy Policy">Política de privacidad</a>.</p></div>
                                <div class="checkbox"><input id="no_subscription" name="no_subscription" type="checkbox"><label for="no_subscription"></label><p><span>No deseo estar informado sobre nuevas promociones, acontecimientos de interés e información de Cambridge University Press.</span></p></div>
                             </div>
-                            <div class="maquetacion_captcha"><div class="g-recaptcha" data-sitekey="6LeNvAsTAAAAAAJf_hL1Nt7yX1NZaERZiABBt2He"></div></div>
+                            <div class="maquetacion_captcha"><div class="g-recaptcha" data-sitekey="6LdL4CATAAAAADBQNQQKNEMNn9x6_YUmIDWybTXi"></div></div>
                             <div class="errores"></div>
                             <div class="submit_group"><input type="submit"  value="ENVIAR"></div>
                         </div>

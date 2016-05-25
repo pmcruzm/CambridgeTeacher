@@ -1,8 +1,8 @@
 /**********************
 FUNCIONES JQUERY
 Autor:Pedro de la Cruz
-Fecha: 10-8-2015
-Cliente: Cervecear
+Fecha: 18-5-2015
+Cliente: Cambridge Teacher
 ***********************/
 
 
@@ -10,6 +10,7 @@ Cliente: Cervecear
 VARIABLES
 **********************/
 var slider_l_post;
+var send_form=0;
 
 //Eventos para dispositivos móviles
 var ua = navigator.userAgent,
@@ -112,10 +113,17 @@ jQuery(document).ready(function(){
 	});
 	
 	//Carrusel de Mi Catalogo 
-	/*jQuery( '#slider1' ).lemmonSlider({
-			infinite: true
-	});*/
-	
+	if (jQuery('.carrusel-coleccion').is(":visible") ) {
+		jQuery('.carrusel-list').slick({
+		  dots: true,
+		  infinite: false,
+		  speed: 300,
+		  slidesToShow: 1,
+		  centerMode: false,
+		  variableWidth: true,
+		  slidesToScroll: 2
+		});
+	}
 	
 	//Filtros de la página de catálogo 
 	jQuery(document).on('click','#selectores-filtros a',function(e){
@@ -148,50 +156,54 @@ jQuery(document).ready(function(){
         }
 
     });
-
 	
-	//Volver el scroll a top
-	/*jQuery('body').scrollTo( "0px", 0,function(){
-		//Pillar anclas de la url si las hay
-		var hash = window.location.hash.substring(1);
-		if(hash!=""){
-			alert('hash');
-			jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
-		}
-	});*/
-	
-
-	
-	//Responsive de los vídeos de Youtube 
-	/*if ( jQuery(".single-youtube").is(":visible") ) {
-		jQuery(".single-youtube").fitVids();
-	}*/
-	
-	
-	
-	//Ajustar altura de los destacados de la home 
-	/*if ( jQuery("#carrusel-last-post").is(":visible") ) {
-		jQuery('.bg-single-post').each(function() {
-			var w_single=jQuery(this).width();
-			jQuery(this).height(w_single);
-		});
-	}*/
-	
-	
-	//Menú principal y submenús
-	/*jQuery(document).on("mouseenter","#main_menu > li", function(e) {
-		jQuery(this).addClass('active');
+	//Ayudas de los registros (over) 
+	jQuery(document).on("mouseenter",".help-box a", function(e) {
+		e.preventDefault();	
 		//Comprobamos si tiene desplegable
-		if(jQuery(this).find('.desplegable').length>0){
-			jQuery(this).find('.desplegable').slideToggle();	
-		}
-	}).on("mouseleave","#main_menu > li", function(e) {
-		jQuery(this).removeClass('active');
-		if(jQuery(this).find('.desplegable').length>0){
-			jQuery(this).find('.desplegable').slideToggle();	
-		}
-	});*/
+		jQuery(this).parent().find('.content-help').fadeIn(600);
+	}).on("mouseleave",".help-box a", function(e) {
+		e.preventDefault();	
+		jQuery(this).parent().find('.content-help').removeClass('active');
+		jQuery(this).parent().find('.content-help').fadeOut(600);
+	});
 	
+	//Ayudas de los registros click
+	jQuery(document).on('click','.help-box a',function(e){
+		e.preventDefault();	
+		if(jQuery(this).parent().find('.content-help').hasClass('active')){
+			jQuery(this).parent().find('.content-help').removeClass('active');
+			jQuery(this).parent().find('.content-help').fadeOut(600);
+		}else{
+			jQuery(this).parent().find('.content-help').addClass('active');	
+			jQuery(this).parent().find('.content-help').fadeIn(600);
+		}
+	});
+	
+	//Enviar formulario de registro
+	jQuery(document).on("submit","#registro-form", function(e) {
+		if(send_form==0){
+			send_form=1;
+			//Limpiamos errores si no es la primera vez
+			jQuery(".errores").html("");
+			//Llamamos a la funciÃ³n de validar (id formulario y contenedor errores)
+			var result=validate_form('#registro-form');
+			if(result==1){
+				e.preventDefault();
+				send_form=0;
+			}
+		}
+	});
+	
+	//Eliminar marco de error cuando se hace click sobre un input con error
+	jQuery(document).on('focus','form input,form textarea,form input[type=checkbox]',function(event){
+		event.preventDefault();
+		if(jQuery(this).attr('type')!='submit'){
+			if(jQuery(this).hasClass('error')){
+				jQuery(this).removeClass('error');
+			}
+		}
+	});
 
 	jQuery(window).scroll(control_scroll);
 
@@ -281,4 +293,130 @@ function doOnOrientationChange()
         break;
     }
   }
+  
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+//Funcion para validar genéricamente un formulario
+function validate_form(id){
+
+		//Busca todos los campos requeridos de texto
+			if(jQuery(id).find('.validation-rule-empty').length > 0){
+				var error_empty=0;
+				jQuery(id).find('.validation-rule-empty').each(function() {
+					if(jQuery(this).is(":visible")){
+					var res_campo=jQuery(this).val();
+						if(res_campo==""){
+							error_empty=1;
+								jQuery(this).addClass('error').val('');
+						}
+					}
+
+				});
+			}
+
+			//Busca todos los campos requeridos de mail
+			if(jQuery(id).find('.validation-rule-mail').length > 0){
+				var error_mail=0;
+				jQuery(id).find('.validation-rule-mail').each(function() {
+					if(jQuery(this).is(":visible")){
+						var res_campo=jQuery(this).val();
+						if((res_campo=="") || (res_campo!="" && validateEmail(res_campo)==false) ){
+							error_mail=1;
+								jQuery(this).addClass('error').val('');
+						}
+					}
+
+				});
+			}
+
+			//Busca todos los campos requeridos de codigo postal
+			if(jQuery(id).find('.validation-rule-password').length > 0){
+				var error_password=0;
+				//Comprobamos que uno de los 2 no está vacío
+				if(jQuery('.init_password').val()!="" && jQuery('.repeat_password').val()!=""){
+					var txt_ini=jQuery('.init_password').val();
+					var txt_rept=jQuery('.repeat_password').val();
+					if(txt_ini!=txt_rept){
+						error_password=1;
+						jQuery('.init_password').addClass('error').val('');
+						jQuery('.repeat_password').addClass('error').val('');
+					}else{
+						if(txt_ini.length < 8){
+							error_password=1;
+							jQuery('.init_password').addClass('error').val('');
+							jQuery('.repeat_password').addClass('error').val('');
+						}
+					}
+				}else{
+					error_password=1;
+					jQuery('.init_password').addClass('error').val('');
+					jQuery('.repeat_password').addClass('error').val('');
+				}
+			}
+
+			//Busca todos los campos requeridos checkbox
+			if(jQuery(id).find('.validation-rule-checkbox').length > 0){
+				var error_checkbox=0;
+				jQuery(id).find('.validation-rule-checkbox').each(function() {
+					if(!jQuery(this).prop("checked")){
+						error_checkbox=1;
+						jQuery(this).addClass('error');
+					}
+
+				});
+			}
+
+			//Busca todos los campos requeridos radio
+			if(jQuery(id).find('.validation-rule-radio').length > 0){
+				var error_radio=0;
+				var value_radio=jQuery(id).find('input[name=user_type]:checked').val();
+				if (typeof value_radio == 'undefined') {
+					error_radio=1;
+					jQuery(id).find('input[name=user_type]').addClass('error');
+				}
+				//console.log(error_radio);
+			}
+
+
+			//Error general campos vacíos
+			if(error_empty==1){
+				var message=jQuery(id).attr('data-error-msg');
+				jQuery('.errores').append('<p>'+message+'</p>');
+			}
+
+			if(error_checkbox==1){
+				var message=jQuery(id).find('.validation-rule-checkbox').attr('data-error-msg');
+				jQuery('.errores').append('<p>'+message+'</p>');
+			}
+
+			if(error_radio==1){
+				var message=jQuery(id).find('.validation-rule-radio').attr('data-error-msg');
+				jQuery('.errores').append('<p>'+message+'</p>');
+			}
+
+			//Errores password
+			if(error_password==1){
+				var message=jQuery(id).find('.validation-rule-password').attr('data-error-msg');
+				jQuery('.errores').append('<p>'+message+'</p>');
+			}
+
+			if(error_mail==1){
+				var message=jQuery(id).find('.validation-rule-mail').attr('data-error-msg');
+				jQuery('.errores').append('<p>'+message+'</p>');
+			}
+
+			//Salida
+			if(error_empty==1 || error_checkbox==1 || error_mail || error_password==1 || error_radio==1){
+				return 1;
+			}else{
+				return 0;
+			}
+}
 
