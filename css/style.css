@@ -288,7 +288,7 @@ PROPIEDADES REGISTRO
 
 .errores{color:#f05456;font-size:14px;display:block;padding-left:30%;width:95%;box-sizing:border-box;margin-top:20px;}
 
-.maquetacion_captcha{padding-left:40%;}
+.maquetacion_captcha{padding-left:40%;padding-top:40px;}
 .label-2-lines{line-height:19px !important;}
 
 .bg-select{background:#2e2e2e url(../img/arrow_select.png) 95% 50% no-repeat;display:block;width:55%;float:left;overflow:hidden;height:40px;background-size:9px;}
