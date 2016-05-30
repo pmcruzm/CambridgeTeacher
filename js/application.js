@@ -11,6 +11,7 @@ VARIABLES
 **********************/
 var slider_l_post;
 var send_form=0;
+var max_items=8;
 
 //Eventos para dispositivos móviles
 var ua = navigator.userAgent,
@@ -38,6 +39,23 @@ jQuery(window).load(function(){
 		jQuery('#list-news div.inside-new').each(function() {
 			jQuery(this).css('height',maxHeight+30);
 		});
+		//Ocultamos bloques 
+		jQuery('#list-news a.new-single').hide().css('visibility','visible');
+		//Mostramos los 8 primeros  
+		var cont=0;
+		jQuery('#list-news a.new-single').each(function() {
+			if(cont<max_items){
+				jQuery(this).addClass('visible').css('display','block');
+				cont++;
+			}else{
+				return true;
+			}
+		});	
+		//Miramos si nos hay más noticias por mostrar 
+		var all_elem=jQuery('#list-news a.new-single').length;
+		var all_elem_v=jQuery('#list-news a.new-single.visible').length;
+		//console.log(all_elem+'--'+all_elem_v);
+		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}
 	}
 	
 	//Ajustamos altura de los cuadros de catalogo
@@ -57,6 +75,19 @@ jQuery(window).load(function(){
 			}
 		});
 	}
+	
+	//Ajustamos Shot de la home
+	if (jQuery('#show-examples').is(":visible") ) {
+		var heights = jQuery('#show-examples div.shot-box').map(function ()
+		{
+			return jQuery(this).outerHeight();
+		}).get(),
+		//Obtenemos tamaño max de los cuadros
+		maxHeight = Math.max.apply(null, heights);
+		jQuery('#show-examples div.shot-box').each(function() {
+			jQuery(this).css('height',maxHeight);
+		});
+	}
 
 });
 
@@ -67,14 +98,14 @@ jQuery(document).ready(function(){
 	w_win=jQuery(window).width();
 	
 	//Volver el scroll a top
-	/*jQuery('body').scrollTo( "0px", 0,function(){
+	jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
 		var hash = window.location.hash.substring(1);
 		if(hash!=""){
 			alert('hash');
 			jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
 		}
-	});*/
+	});
 	
 	//Menú principal y submenús
 	jQuery(document).on('click','.language_opc a',function(e){
@@ -204,6 +235,40 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
+	
+	//Mostramos las primeras noticias visibles
+	/*if (jQuery('#list-news').is(":visible") ) {
+		var cont=0;
+		jQuery('#list-news a.new-single').each(function() {
+			if(cont<max_items){
+				jQuery(this).addClass('visible').css('display','block');
+				cont++;
+			}else{
+				return true;
+			}
+		});		
+	}*/
+	
+	//Mostrar más noticias 
+	jQuery(document).on('click','.btn-more',function(e){
+		e.preventDefault();	
+		var cont=0;
+		jQuery('#list-news a.new-single').each(function() {
+			if(!jQuery(this).hasClass('visible')){
+				if(cont<max_items){
+					jQuery(this).addClass('visible').css('display','block');
+					cont++;
+				}else{
+					return true;
+				}
+			}
+		});	
+		//Miramos si nos hay más noticias por mostrar 
+		var all_elem=jQuery('#list-news a.new-single').length;
+		var all_elem_v=jQuery('#list-news a.new-single.visible').length;
+		//console.log(all_elem+'--'+all_elem_v);
+		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}		
+	});
 
 	jQuery(window).scroll(control_scroll);
 
@@ -245,6 +310,20 @@ jQuery(document).ready(function(){
 					}
 				});
 			}
+			
+			//Ajustamos Shot de la home
+			if (jQuery('#show-examples').is(":visible") ) {
+				jQuery('#show-examples div.shot-box').removeAttr('style');
+				var heights = jQuery('#show-examples div.shot-box').map(function ()
+				{
+					return jQuery(this).outerHeight();
+				}).get(),
+				//Obtenemos tamaño max de los cuadros
+				maxHeight = Math.max.apply(null, heights);
+				jQuery('#show-examples div.shot-box').each(function() {
+					jQuery(this).css('height',maxHeight);
+				});
+			}
 	
 
 	});
@@ -256,6 +335,19 @@ jQuery(document).ready(function(){
 /*************************
 FUNCIONES JAVASCRIPT
 **************************/
+
+//Ajusta tamaño de noticias
+function ajusta_news(){
+	var heights = jQuery('#list-news div.inside-new').map(function ()
+	{
+		return jQuery(this).outerHeight();
+	}).get(),
+	//Obtenemos tamaño max de los cuadros
+	maxHeight = Math.max.apply(null, heights);
+	jQuery('#list-news div.inside-new').each(function() {
+		jQuery(this).css('height',maxHeight+30);
+	});
+}
 
 //Función para capturar eventos scroll
 function control_scroll(e){

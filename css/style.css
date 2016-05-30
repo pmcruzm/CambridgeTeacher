@@ -78,11 +78,12 @@ ul.menu_h{padding:0;margin:0;font-size:0;position:absolute;top:0;right:0;}
 ul.menu_h li{height:48px;display:inline-block;position:relative;}
 ul.menu_h li a{font-size:14px;line-height:48px;color:#7d7974;display:block;text-align:center;width:70px;}
 ul.menu_h li a:hover{background:#2e2e2e;color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
-
-ul.menu_h li.language_opc>a{width:50px !important;display:block;background:url(../img/ico_globe.png) center center no-repeat;background-size:20px;text-indent:-99999px;}
+ul.menu_h li.language_opc>a{width:auto !important;padding-right:15px;}
+ul.menu_h li.language_opc>a:before{content:'';display:inline-block;background:url(../img/ico_globe.png) center center no-repeat;background-size:20px;width:20px;height:48px;float:left;padding-left:10px;padding-right:13px;}
 ul.menu_h li.language_opc.active{background:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
-ul.menu_h li.language_opc.active>a{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
-ul.menu_h li.language_opc>a:hover{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
+ul.menu_h li.language_opc.active>a{color:#ffffff;}
+ul.menu_h li.language_opc.active>a:before{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
+ul.menu_h li.language_opc>a:hover:before{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
 ul.menu_h li .desplegable {background:#2e2e2e;display:none;right:0;position:absolute;top:47px;width:171px;z-index:99;box-sizing:border-box;opacity:0;}
 ul.menu_h li.language_opc .desplegable{padding-left:47px;padding-top:28px;padding-bottom:34px;}
 ul.menu_h li.language_opc .desplegable h3{padding-bottom:25px;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
@@ -154,11 +155,15 @@ PROPIEDADES HOME
 .inside-pasando p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .inside-pasando img{width:284px;position:absolute;top:74px;left:-177px;z-index:10;}
 
-#info-profesor{text-align:center;background:#fde052;padding-top:50px;padding-bottom:65px;z-index:40;position:relative;}
-#info-profesor h2{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;margin-bottom:40px;}
+#info-profesor{text-align:center;background:#fde052;padding-top:50px;/*padding-bottom:65px;*/z-index:40;position:relative;}
+#info-profesor h2{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;margin-bottom:40px;margin-top:40px;}
 #info-profesor p{font-size:16px;line-height:21px;color:#2e2e2e;margin-bottom:10px;}
 #info-profesor p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 #info-profesor a{height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;margin:0 auto;color:#ffffff;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;width:222px;margin-top:30px;}
+#info-profesor .logo-info{max-width:492px;width:100%;}
+#show-examples{overflow:hidden;width:100%;max-width:1200px;margin:0 auto;box-sizing:border-box;padding-left:8px;padding-right:8px;padding-top:45px;}
+.shot-box{width:33.3333%;float:left;padding-right:4px;padding-left:4px;box-sizing:border-box;}
+.shot-box img{max-width:100%;vertical-align:bottom;}
 
 /*****************************
 PROPIEDADES MI COLECCION
@@ -169,7 +174,10 @@ PROPIEDADES MI COLECCION
 .enl-coleccion{text-align:right;margin-top:17px;padding-right:60px;margin-bottom:17px;}
 .enl-coleccion a{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-left:30px;}
 .enl-coleccion a:first-child{margin-left:0;}
-.enl-coleccion a:before{content:'';display:inline-block;background:url(../img/ico_plus.png) center center no-repeat;background-size:21px;width:21px;height:21px;vertical-align:middle;margin-right:10px;}
+.enl-coleccion a.add-title:before{content:'';display:inline-block;background-image:url(../img/ico_plus.png);background-size:21px;width:21px;height:21px;vertical-align:middle;margin-right:10px;background-repeat:no-repeat;background-position:0px 0px;}
+.enl-coleccion a.add-title:hover:before{background-position:0px -21px;}
+.enl-coleccion a.remove-title:before{content:'';display:inline-block;background-image:url(../img/ico_less.png);background-size:21px;width:21px;height:21px;vertical-align:middle;margin-right:10px;background-repeat:no-repeat;background-position:0px 0px;}
+.enl-coleccion a.remove-title:hover:before{background-position:0px -21px;}
 .carrusel-coleccion{width:100%;overflow:hidden;position:relative;box-sizing:border-box;padding-left:9px;}
 .carrusel-list{height:200px;}
 .carrusel-list .item{height:200px;}
@@ -185,26 +193,29 @@ PROPIEDADES MI COLECCION
 .carrusel-coleccion div.slider li { text-align:center; line-height:200px; font-size:25px; }
 .carrusel-coleccion div.slider li img { height:200px;}*/
 
-#block-coleccion{background:#2e2e2e;height:277px;margin-bottom:50px;position:relative}
-#block-coleccion .container{background:#2e2e2e url(../img/bg-catalogo.png) top center no-repeat;height:277px;;background-size:contain;}
+#block-coleccion{height:277px;margin-bottom:50px;position:relative;background:#2e2e2e url(../img/bg-catalogo-inf.png) bottom left no-repeat;background-size:1600px;}
+#block-coleccion .container{background:url(../img/bg-catalogo-sup.png) bottom left no-repeat;height:277px;;background-size:1248px;}
 #block-coleccion h3{font-size:40px;color:#fde052;padding-left:60px;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-top:40px;}
 #block-coleccion .enl-explorar{position:absolute;color:#fde052;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;right:25px;top:60px;}
-#block-coleccion .enl-explorar:before{content:'';display:inline-block;vertical-align:middle;width:21px;height:21px;background:url(../img/ico-explorar.png) center center no-repeat;background-size:21px;margin-right:10px;}
+#block-coleccion .enl-explorar:before{content:'';display:inline-block;vertical-align:middle;width:21px;height:21px;background-image:url(../img/ico-explorar.png);background-size:21px;margin-right:10px;background-repeat:no-repeat;background-position:0px 0px;}
+#block-coleccion .enl-explorar:hover:before{background-position:0px -21px;}
 #block-coleccion .mod-catalogo{position:absolute;bottom:0;box-sizing:border-box;border:3px solid #323232;display:block;width:114px;background:#464646;}
-#block-coleccion .enl-infantil{height:142px;left:50%;margin-left:-451px;}
-#block-coleccion .enl-primaria{height:158px;left:50%;margin-left:-294px;}
-#block-coleccion .enl-secundaria{height:150px;left:50%;margin-left:-134px;}
-#block-coleccion .enl-bachillerato{height:144px;left:50%;margin-left:22px;}
-#block-coleccion .enl-examenes{height:158px;left:50%;margin-left:179px;}
-#block-coleccion .enl-adultos{height:144px;left:50%;margin-left:338px;}
+#block-coleccion .enl-infantil{height:145px;left:61px;}
+#block-coleccion .enl-primaria{height:161px;left:218px;}
+#block-coleccion .enl-secundaria{height:154px;left:376px;}
+#block-coleccion .enl-bachillerato{height:144px;left:534px;}
+#block-coleccion .enl-examenes{height:161px;left:690px;}
+#block-coleccion .enl-adultos{height:144px;left:847px;}
 #block-coleccion .mod-catalogo span{display:block;font-size:13px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;position:absolute;text-align:center;width:100%;bottom:50px;}
 #block-coleccion .mod-catalogo span:before{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-bottom:5px;}
 #block-coleccion .mod-catalogo span:after{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-top:5px;}
+#block-coleccion .mod-catalogo:hover span:before{background:#fde052;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
+#block-coleccion .mod-catalogo:hover span:after{background:#fde052;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
 
 #list-news{background:#f5f0eb;padding-top:30px;padding-bottom:40px;}
 #block-noticias h3{font-size:26px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-bottom:20px;display:inline-block;margin-left:108px;border-bottom:7px solid #fb6120;}
 #list-news .container{overflow:hidden;box-sizing:border-box;padding-left:14px;padding-right:14px;}
-#list-news .container .new-single{width:25%;float:left;box-sizing:border-box;padding-left:9px;padding-right:9px;margin-bottom:18px;}
+#list-news .container .new-single{width:25%;float:left;box-sizing:border-box;padding-left:9px;padding-right:9px;margin-bottom:18px;visibility:hidden;}
 #list-news .container .new-single .inside-new{background:#ffffff;}
 #list-news .container .new-single .inside-new:hover{background:#ffffff url(../img/arrow_new.png) 94% 97% no-repeat;background-size:10px;}
 #list-news .container .new-single .inside-new img{max-width:100%;}
@@ -293,7 +304,7 @@ PROPIEDADES REGISTRO
 
 .bg-select{background:#2e2e2e url(../img/arrow_select.png) 95% 50% no-repeat;display:block;width:55%;float:left;overflow:hidden;height:40px;background-size:9px;}
 #select_centre{background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;text-align:right;height:40px;line-height:40px;padding-right:45px;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;}
-#select_centre option{}
+#select_centre option{text-align:right;}
 .enl-help{clear:both;text-align:right;padding-right:14px;margin-bottom:15px;}
 .enl-help a{color:#7d7974;font-size:13px;}
 
@@ -448,6 +459,7 @@ textarea{-webkit-border-radius:0; border-radius:0;}
 input, textarea, select {-webkit-appearance: none;}
 .extend_menu_mob{display:none;}
 .helper{display: inline-block;height:100%;vertical-align:middle;}
+.helper_bottom{display: inline-block;height:100%;vertical-align:bottom;}
 
 
 
@@ -467,7 +479,8 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 1024px) {
-
+	ul.menu_h li.language_opc>a span{font-size:0;}
+	ul.menu_h li.language_opc>a{padding-right:0;}
 }
 
 
