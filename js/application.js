@@ -217,7 +217,7 @@ jQuery(document).ready(function(){
 			send_form=1;
 			//Limpiamos errores si no es la primera vez
 			jQuery(".errores").html("");
-			//Llamamos a la funciÃ³n de validar (id formulario y contenedor errores)
+			//Llamamos a la función de validar (id formulario y contenedor errores)
 			var result=validate_form('#registro-form');
 			if(result==1){
 				e.preventDefault();
@@ -227,13 +227,26 @@ jQuery(document).ready(function(){
 	});
 	
 	//Eliminar marco de error cuando se hace click sobre un input con error
-	jQuery(document).on('focus','form input,form textarea,form input[type=checkbox]',function(event){
+	jQuery(document).on('focus','form input,form textarea',function(event){
 		event.preventDefault();
 		if(jQuery(this).attr('type')!='submit'){
 			if(jQuery(this).hasClass('error')){
 				jQuery(this).removeClass('error');
 			}
 		}
+	});
+	
+	//Detectar cambios en checkbox
+	jQuery(document).on('change','form input[type=checkbox]',function(event){
+		event.preventDefault();
+			//alert(jQuery(this).attr('class'));
+			if(jQuery(this).hasClass('validation-rule-checkbox-profe')){
+				jQuery('form .single-radio input[type=checkbox]').removeClass('error');	
+			}else{
+				if(jQuery(this).hasClass('error')){
+					jQuery(this).removeClass('error');
+				}
+			}
 	});
 	
 	//Mostramos las primeras noticias visibles
@@ -464,7 +477,22 @@ function validate_form(id){
 
 				});
 			}
+			
+			//Busca todos los checkbox de profesor
+			if(jQuery(id).find('.validation-rule-checkbox-profe').length > 0){
+				var error_checkbox_profe=1;
+				jQuery(id).find('.validation-rule-checkbox-profe').each(function() {
+					if(jQuery(this).prop("checked")){
+						error_checkbox_profe=0;
+						return true;
+					}
 
+				});
+				if(error_checkbox_profe==1){
+					jQuery('.validation-rule-checkbox-profe').addClass('error');	
+				}
+			}
+			
 			//Busca todos los campos requeridos radio
 			if(jQuery(id).find('.validation-rule-radio').length > 0){
 				var error_radio=0;
@@ -487,6 +515,11 @@ function validate_form(id){
 				var message=jQuery(id).find('.validation-rule-checkbox').attr('data-error-msg');
 				jQuery('.errores').append('<p>'+message+'</p>');
 			}
+			
+			if(error_checkbox_profe==1){
+				var message=jQuery(id).find('.validation-rule-checkbox-profe').attr('data-error-msg');
+				jQuery('.errores').append('<p>'+message+'</p>');
+			}
 
 			if(error_radio==1){
 				var message=jQuery(id).find('.validation-rule-radio').attr('data-error-msg');
@@ -505,7 +538,7 @@ function validate_form(id){
 			}
 
 			//Salida
-			if(error_empty==1 || error_checkbox==1 || error_mail || error_password==1 || error_radio==1){
+			if(error_empty==1 || error_checkbox==1 || error_mail || error_password==1 || error_radio==1 || error_checkbox_profe==1){
 				return 1;
 			}else{
 				return 0;
