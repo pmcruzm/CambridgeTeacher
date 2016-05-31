@@ -188,10 +188,10 @@ PROPIEDADES MI COLECCION
 .slick-prev{left:10px;background-image:url(../img/arrow_left.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
 .slick-prev.slick-disabled{background-position:0px -36px;}
 
-/*.carrusel-coleccion div.slider ul { margin:0; padding:0; height:200px; }
-.carrusel-coleccion div.slider li { float:left; list-style:none; margin:0 5px 0 0; }
-.carrusel-coleccion div.slider li { text-align:center; line-height:200px; font-size:25px; }
-.carrusel-coleccion div.slider li img { height:200px;}*/
+.empty-titles{height:200px;background:url(../img/bg-empty-titles.png) top left repeat-x;background-size:996px;padding-top:40px;}
+.box-aviso{background:url(../img/box-aviso.png) top left no-repeat;margin:0 auto;width:520px;height:115px;background-size:520px;text-align:center;padding-top:25px;}
+.box-aviso h3{font-size:20px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.box-aviso p{font-size:16px;color:#2e2e2e;line-height:21px;padding-top:8px;}
 
 #block-coleccion{height:277px;margin-bottom:50px;position:relative;background:#2e2e2e url(../img/bg-catalogo-inf.png) bottom left no-repeat;background-size:1600px;}
 #block-coleccion .container{background:url(../img/bg-catalogo-sup.png) bottom left no-repeat;height:277px;;background-size:1248px;}
@@ -248,18 +248,23 @@ PROPIEDADES CATALOGO
 #banner-catalogo ul.filter_cat li.active a{background:#ffffff;}
 
 #selectores-filtros{height:50px;text-align:right;text-align:-webkit-right;}
-#selectores-filtros a{color:#7d7974;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-right:50px;position:relative;top:12px;}
-#selectores-filtros a:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-filter.png);background-size:21px;vertical-align:middle;margin-right:20px;background-position:0px 0px;background-repeat:no-repeat;}
-#selectores-filtros a.active:before{background-position:0px -21px;}
+#selectores-filtros p{color:#7d7974;line-height:50px;height:50px;font-size:12px;padding-right:30px;font-family:'sofia-pro-black', Helvetica, sans-serif;position:relative;}
+#selectores-filtros a{margin-left:50px;display:inline-block;color:#7d7974;height:24px;vertical-align:middle;}
+#selectores-filtros a span{display:inline-block;height:24px;line-height:22px;position:relative;top:-14px;}
+#selectores-filtros a.active{color:#ffffff;}
+#selectores-filtros a.active span{background:#2e2e2e url(../img/cross-filter.png) 94% center no-repeat;height:24px;background-size:7px;border-radius:20px;padding-left:30px;padding-right:30px;left:-19px;}
+/*#selectores-filtros a:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-filter.png);background-size:21px;vertical-align:middle;margin-right:20px;background-position:0px 0px;background-repeat:no-repeat;}
+#selectores-filtros a.active:before{background-position:0px -21px;}*/
 
 #content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
 #content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:9px;padding-right:9px;float:left;margin-bottom:18px;}
 #content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding:30px;}
-#content-catalogo .single-box-book .inside-b-book img{max-width:100%;vertical-align:middle;max-height:100%;}
+#content-catalogo .single-box-book .inside-b-book img{max-width:100%;vertical-align:middle;max-height:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
 #content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;}
-#content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;font-size:8px;}
+#content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;}
 
 .plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) top left no-repeat;display:block;width:21px;height:21px;text-indent:-99999px;background-size:21px;}
+.check-book{position:absolute;top:10px;right:10px;background:url(../img/ico-check.png) top left no-repeat;display:block;width:20px;height:20px;text-indent:-99999px;background-size:20px;}
 
 
 /*****************************

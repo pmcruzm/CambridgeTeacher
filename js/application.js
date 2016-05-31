@@ -71,7 +71,7 @@ jQuery(window).load(function(){
 		jQuery('#content-catalogo .enl-book img').each(function() {
 			if(jQuery(this).parent().find('span').length>0){
 				var alto_img=jQuery(this).height();
-				jQuery(this).parent().find('span').css({bottom:-alto_img/2});
+				jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 			}
 		});
 	}
@@ -306,7 +306,7 @@ jQuery(document).ready(function(){
 				jQuery('#content-catalogo .enl-book img').each(function() {
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
-						jQuery(this).parent().find('span').css({bottom:-alto_img/2});
+						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 					}
 				});
 			}
