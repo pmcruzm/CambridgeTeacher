@@ -496,6 +496,10 @@ MEDIA QUERIES
 	ul.menu_h li.language_opc>a{padding-right:0;}
 }
 
+@media screen and (max-width: 950px) {	
+	#banner-home{background:#fde052 url(../img/banner-home.png) center 55px no-repeat;height:413px;text-align:center;background-size:745px;position:relative;}	
+	#info-profesor p{width:90%;margin:0 auto 10px;}
+}
 
 @media screen and (max-width: 768px) {	
 	
