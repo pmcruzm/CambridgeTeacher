@@ -110,6 +110,11 @@ jQuery(document).ready(function(){
 	//Menú principal y submenús
 	jQuery(document).on('click','.language_opc a',function(e){
 		e.preventDefault();
+		//Miramos si ya está desplegado el de login 
+		if(jQuery('.login_opc').hasClass('active')){
+			jQuery('.login_opc').removeClass('active');	
+			jQuery('.login_opc').find('.desplegable').hide().css({opacity:0});		
+		}
 		if(jQuery(this).parent().hasClass('active')){
 			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});
 			jQuery(this).parent().removeClass('active');		
@@ -122,8 +127,13 @@ jQuery(document).ready(function(){
 	//Activar el menú de Login
 	jQuery(document).on('click','.login_opc a',function(e){
 		e.preventDefault();
+		//Miramos si ya está desplegado el de idioma 
+		if(jQuery('.language_opc').hasClass('active')){
+			jQuery('.language_opc').removeClass('active');
+			jQuery('.language_opc').find('.desplegable').hide().css({opacity:0});			
+		}
 		if(jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});
+			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();jQuery('.login_box').show();jQuery('.forget_box').hide();});
 			jQuery(this).parent().removeClass('active');		
 		}else{
 			jQuery(this).parent().addClass('active');
@@ -281,6 +291,40 @@ jQuery(document).ready(function(){
 		var all_elem_v=jQuery('#list-news a.new-single.visible').length;
 		//console.log(all_elem+'--'+all_elem_v);
 		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}		
+	});
+	
+	//Comprobación del login/forgot-password vía AJAX
+	jQuery('#form-login,#form-forgot-password').on('submit', function(e){
+		e.preventDefault();
+
+		var f = jQuery(this);
+
+		jQuery.ajax({
+		url: f.attr('action'),
+		method: f.attr('method'),
+		data: f.serialize(),
+		dataType: 'json',
+		success : function(response) {
+			if(response.errorCode == 0){
+				//success message
+				jQuery('.feedback', f).text(response.message).show(400);
+				if(response.redirect){window.top.location = response.redirect;}
+			}else{
+				//some error message
+				jQuery('.feedback', f).text(response.message).show(400);
+			}
+		 }
+	   });
+
+	});
+	
+	//Mostrar formulario de resetar password
+	jQuery(document).on('click','.reset_password',function(e){
+		e.preventDefault();
+		jQuery('.login_box').fadeOut(600,function(){
+			jQuery('.forget_box').fadeIn(600);
+		});
+
 	});
 
 	jQuery(window).scroll(control_scroll);

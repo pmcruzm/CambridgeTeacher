@@ -96,6 +96,7 @@ ul.menu_h li.login_opc>a{width:125px;}
 ul.menu_h li.login_opc>a span{display:block;background:#fde052;height:33px;line-height:33px;width:113px;border-radius:30px;color:#2e2e2e;right:50px !important;margin:0 auto;}
 ul.menu_h li.login_opc>a span:hover{background:#393939;color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 ul.menu_h li.login_opc .desplegable{padding-left:47px;padding-top:33px;padding-bottom:0px;width:332px !important;box-sizing:border-box;padding-left:36px;padding-right:36px;}
+
 #form-login label{display:none;}
 #form-login input[type=text],#form-login input[type=password]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;}
 .btns-login{overflow:hidden;margin-bottom:10px;}
@@ -103,6 +104,13 @@ ul.menu_h li.login_opc .desplegable{padding-left:47px;padding-top:33px;padding-b
 .btns-login .btn-register{float:right;width:107px;height:35px;border-radius:30px;background:#393939;display:block;line-height:35px;color:#5e5e5e;font-size:14px;}
 .txt-remember{text-align:right !important;}
 .txt-remember a{width:auto !important;height:auto !important;color:#5e5e5e !important;line-height:13px !important;font-size:10px !important;display:inline-block !important;}
+
+.forget_box{display:none;}
+#form-forgot-password p{color:#ffffff;font-size: 13px;line-height: 16px;margin-bottom: 20px;}
+#form-forgot-password input[type=text]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;}
+#form-forgot-password input[type=submit]{width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:35px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;}
+.btns-reset{clear:both;padding-bottom:20px;}
+.feedback{text-align:center;color:#f05456;font-size:14px;margin-top:20px;display:none;width:100%;}
 
 ul.menu_h li.login_opc.active>a{background:#2e2e2e;color:#ffffff;}
 ul.menu_h li.login_opc.active>a span{background:#2e2e2e;color:#ffffff;height:48px;line-height:48px;width:125px;}

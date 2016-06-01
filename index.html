@@ -40,6 +40,7 @@
                     <li class="login_opc">
                         <a href="#"><span>Acceder</span></a>
                         <div class="desplegable">
+                        	<!--Box Login-->
                             <div class="login_box">
                                 <form id="form-login" role="form" method="POST" action="/login">
                                     <div>
@@ -58,6 +59,16 @@
                                     <p class="txt-remember">
                                     	<a class="reset_password" href="#">Recordar contraseña</a>
                                     </p>
+                                </form>
+                            </div>
+                            <!--Box Forget-->
+                            <div class="forget_box">
+                            	<form id="form-forgot-password" role="form" method="POST" action="/forgot-password">
+                                    <p>Introduce la cuenta de correo con la que estás registrado para restablecer la contraseña.</p>
+                                    <label for="email_forget">Email</label>
+                                    <input type="text" name="email" id="email_forget">
+                                    <span class="feedback" style="display: none;"></span>
+                                    <div class="btns-reset"><input type="submit" value="Restablecer" class="btn"></div>
                                 </form>
                             </div>
                         </div>
