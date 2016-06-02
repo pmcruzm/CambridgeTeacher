@@ -133,6 +133,7 @@ PROPIEDADES HOME
 ******************************/
 #banner-home{background:#fde052 url(../img/banner-home.png) center 45px no-repeat;height:493px;text-align:center;background-size:935px;position:relative;}
 .btn-register-h{position:absolute;height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;bottom:-25px;left:0;right:0;margin:0 auto;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+#banner-home h2{font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;width:100%;max-width:660px;position:absolute;bottom:60px;left:0;right:0;margin:0 auto;text-align:left;line-height:40px;}
 
 .txt-b-bottom{position:absolute;bottom:50px;width:90%;margin:0 auto;left:0;right:0;}
 .txt-b-bottom p{text-align:center;color:#2e2e2e;font-size:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
@@ -287,6 +288,8 @@ PROPIEDADES REGISTRO
 #form_box_registro{width:100%;max-width:660px;margin:0 auto;}
 #block-registro{background:#f5f0eb;padding-bottom:150px;}
 
+
+.top-w-title{margin-top:-40px !important}
 .top-register{background:#ffffff;padding-top:35px;padding-bottom:35px;position:relative;margin-top:-85px;margin-bottom:12px;box-sizing:border-box;padding-right:85px;padding-left:62px;}
 .form-group{overflow:hidden;margin-bottom:10px;position:relative;}
 #registro-form .form-group label{display:block;text-align:right;width:42%;float:left;box-sizing:border-box;padding-right:40px;height:40px;line-height:40px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
@@ -336,6 +339,38 @@ PROPIEDADES REGISTRO
 .help-box a{display:block;width:21px;height:21px;background:url(../img/ico-question.png) top left no-repeat;text-indent:-99999px;background-size:21px;position:relative;left:120px;top:-42px;}
 .help-box .content-help{display:block;background:#fde052;box-sizing:border-box;padding:15px;padding-bottom:25px;margin-top:-25px;display:none;}
 .help-box .content-help p{color:#2e2e2e;font-size:14px;line-height:18px;}
+
+/*****************************
+PROPIEDADES CONTACT
+******************************/
+.intro_contact{padding-left: 42%;}
+.intro_contact p{padding-bottom:50px;color:#2e2e2e;font-size:16px;line-height:24px;}
+
+/*****************************
+PROPIEDADES FAQs
+******************************/
+#box-faqs{margin: 0 auto;max-width: 660px;width: 100%;}	
+
+.top-faqs{padding:50px 90px;box-sizing:border-box;}
+.top-faqs p{margin-top:40px;font-size:16px;line-height:24px;}
+.top-faqs p:first-child{margin-top:0;}
+.top-faqs p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.top-faqs p a{color:#30c0d8;text-decoration:underline;}
+
+.btns-faqs{overflow:hidden;height:60px;}
+.btns-faqs a{width:50%;float:left;height:60px;line-height:60px;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:18px;color:#7d7974;background:#faf8f5;text-align:center;}
+.btns-faqs a.active{color:#2e2e2e;background:#ffffff;}
+.btns-faqs a:hover{color:#2e2e2e;background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+
+.bottom-faqs{padding:0 !important;}
+
+.contenidos-faqs{padding-top:40px;box-sizing:border-box;padding-left:85px;padding-right:85px;padding-bottom:50px;}
+.single-faq{}
+.single-faq>a{color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:30px;display:block;position:relative;}
+.single-faq>a:hover:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/arrow_faqs.png) top left no-repeat;background-size:21px;position:absolute;left:-40px;top:4px;}
+.single-faq>a.active:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/arrow_faqs.png) top left no-repeat;background-size:21px;position:absolute;left:-40px;top:4px;}
+.single-faq .desplegable{display:none;padding-bottom:30px;}
+	
 	
 /*****************************
 PROPIEDADES FOOTER

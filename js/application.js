@@ -326,6 +326,47 @@ jQuery(document).ready(function(){
 		});
 
 	});
+	
+	//Desplegar los cuadros de faqs
+	jQuery(document).on('click','.enl-faq',function(e){
+		e.preventDefault();
+		if(jQuery(this).hasClass('active')){
+			jQuery(this).parent().find('.desplegable').slideToggle(400,function(){
+				jQuery(this).parent().find('.enl-faq').removeClass('active');
+			});
+		}else{
+			jQuery(this).parent().find('.desplegable').slideToggle(400,function(){
+				jQuery(this).parent().find('.enl-faq').addClass('active');
+			});
+		}
+
+	});
+	
+	//Desplegar los faqs según link 
+	jQuery(document).on('click','.new-user',function(e){
+		e.preventDefault();
+		jQuery('.btns-faqs a').removeClass('active');
+		jQuery(this).addClass('active');
+		jQuery('.old-user-ct').fadeOut(400,function(){
+			jQuery('.new-user-ct').fadeIn('active');
+			//Cerrar todos los desplegables 
+			jQuery('.old-user-ct .desplegable').hide();
+			jQuery('.old-user-ct a').removeClass('active');
+		});
+
+	});
+	//Desplegar los faqs según link 
+	jQuery(document).on('click','.old-user',function(e){
+		e.preventDefault();
+		jQuery('.btns-faqs a').removeClass('active');
+		jQuery(this).addClass('active');
+		jQuery('.new-user-ct').fadeOut(400,function(){
+			jQuery('.old-user-ct').fadeIn('active');
+			//Cerrar todos los desplegables 
+			jQuery('.new-user-ct .desplegable').hide();
+			jQuery('.new-user-ct a').removeClass('active');
+		});
+	});
 
 	jQuery(window).scroll(control_scroll);
 
