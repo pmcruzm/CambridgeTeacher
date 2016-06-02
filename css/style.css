@@ -72,6 +72,7 @@ body{margin:0;padding:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;f
 PROPIEDADES HEADER
 ******************************/
 #header{position:relative;}
+#header .container{min-width:auto !important;}
 .logo_h{display:block;background:url(../img/logo_cambridge.png) top left no-repeat;height:47px;width:162px;background-size:162px;text-indent:-99999px;}
 
 ul.menu_h{padding:0;margin:0;font-size:0;position:absolute;top:0;right:0;}
@@ -133,32 +134,32 @@ PROPIEDADES HOME
 #banner-home{background:#fde052 url(../img/banner-home.png) center 45px no-repeat;height:493px;text-align:center;background-size:935px;position:relative;}
 .btn-register-h{position:absolute;height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;bottom:-25px;left:0;right:0;margin:0 auto;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 
-.txt-b-bottom{position:absolute;bottom:50px;width:100%;}
+.txt-b-bottom{position:absolute;bottom:50px;width:90%;margin:0 auto;}
 .txt-b-bottom p{text-align:center;color:#2e2e2e;font-size:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 
-.txt-b-top{position:absolute;top:65px;width:100%;}
+.txt-b-top{position:absolute;top:65px;width:90%;margin:0 auto;}
 .txt-b-top p{text-align:center;color:#2e2e2e;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .txt-b-top p:first-child:after{content:'';display:block;background:url(../img/embellecedor-w.png) top center no-repeat;height:6px;background-size:41px;margin-top:2px;margin-bottom:-1px;}
 
 #info-home{background:#f5f0eb;padding-top:50px;}
-.pizarra-interectiva{padding-right:15px;padding-left:225px;height:350px;padding-bottom:12px;}
-.inside-pizarra{height:350px;background:#ffffff;padding-left:210px;padding-top:90px;position:relative;box-sizing:border-box;}
+.pizarra-interectiva{padding-right:15px;padding-left:22%;height:350px;padding-bottom:12px;}
+.inside-pizarra{height:350px;background:#ffffff;padding-left:210px;padding-top:90px;position:relative;box-sizing:border-box;padding-right:50px;}
 .inside-pizarra h3{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;}
 .inside-pizarra h3:after{display:block;content:'';background:url(../img/embellecedor-a.png) top left no-repeat;background-size:43px;height:7px;margin-top:25px;margin-bottom:25px;margin-left:-25px;}
 .inside-pizarra p{color:#2e2e2e;font-size:16px;line-height:24px;}
 .inside-pizarra p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .inside-pizarra img{width:284px;position:absolute;top:74px;left:-177px;z-index:10;}
 
-.recursos-extra{padding-left:15px;padding-right:225px;height:350px;padding-bottom:12px;}
-.inside-recursos{height:350px;background:#ffffff;padding-left:125px;padding-top:90px;position:relative;box-sizing:border-box;z-index:20;}
+.recursos-extra{padding-left:15px;padding-right:22%;height:350px;padding-bottom:12px;}
+.inside-recursos{height:350px;background:#ffffff;padding-left:125px;padding-top:90px;position:relative;box-sizing:border-box;z-index:20;padding-right:150px;}
 .inside-recursos h3{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;}
 .inside-recursos h3:after{display:block;content:'';background:url(../img/embellecedor-r.png) top left no-repeat;background-size:43px;height:7px;margin-top:25px;margin-bottom:25px;margin-left:-25px;}
 .inside-recursos p{color:#2e2e2e;font-size:16px;line-height:24px;}
 .inside-recursos p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .inside-recursos img{width:303px;position:absolute;top:133px;right:-177px;}
 
-.que-esta-pasando{padding-right:15px;padding-left:225px;height:350px;padding-bottom:12px;}
-.inside-pasando{height:350px;background:#ffffff;padding-left:210px;padding-top:90px;position:relative;box-sizing:border-box;z-index:30}
+.que-esta-pasando{padding-right:15px;padding-left:22%;height:350px;padding-bottom:12px;}
+.inside-pasando{height:350px;background:#ffffff;padding-left:210px;padding-top:90px;position:relative;box-sizing:border-box;z-index:30;padding-right:50px;}
 .inside-pasando h3{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;}
 .inside-pasando h3:after{display:block;content:'';background:url(../img/embellecedor-v.png) top left no-repeat;background-size:43px;height:7px;margin-top:25px;margin-bottom:25px;margin-left:-25px;}
 .inside-pasando p{color:#2e2e2e;font-size:16px;line-height:24px;}
@@ -170,10 +171,13 @@ PROPIEDADES HOME
 #info-profesor p{font-size:16px;line-height:21px;color:#2e2e2e;margin-bottom:10px;}
 #info-profesor p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 #info-profesor a{height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;margin:0 auto;color:#ffffff;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;width:222px;margin-top:30px;}
-#info-profesor .logo-info{max-width:492px;width:100%;padding-bottom:40px;}
+#info-profesor .logo-info{max-width:492px;width:90%;padding-bottom:40px;}
 #show-examples{overflow:hidden;width:100%;max-width:1200px;margin:0 auto;box-sizing:border-box;padding-left:8px;padding-right:8px;padding-top:45px;}
 .shot-box{width:33.3333%;float:left;padding-right:4px;padding-left:4px;box-sizing:border-box;}
 .shot-box img{max-width:100%;vertical-align:bottom;}
+
+.box-ins-home{display:block;width:100%;max-width:430px;position:absolute;}
+.box-ins-home.right-box{right:250px;}
 
 /*****************************
 PROPIEDADES MI COLECCION
@@ -337,7 +341,7 @@ PROPIEDADES REGISTRO
 PROPIEDADES FOOTER
 ******************************/
 #footer{background:#2e2e2e;}
-#footer .container{box-sizing:border-box;padding:50px 40px;overflow:hidden;}
+#footer .container{box-sizing:border-box;padding:50px 40px;overflow:hidden;min-width:auto !important;}
 .logo_f{display:block;background:url(../img/logo_footer.png) top left no-repeat;background-size:179px;width:179px;height:38px;text-indent:-99999px;}
 .left_footer{width:42%;float:left;}
 .right_footer{width:58%;float:left;overflow:hidden;}
@@ -358,7 +362,7 @@ PROPIEDADES FOOTER
 .block_siguenos ul li a.ico_instagram{background:url(../img/ico_instagram.png) center center no-repeat;width:21px;height:21px;background-size:21px;}
 .block_siguenos ul li a.ico_youtube{background:url(../img/ico_youtube.png) center center no-repeat;width:22px;height:21px;background-size:22px;}
 
-.txt-footer{clear:both;color:#afaaa6;font-size:12px;}
+.txt-footer{clear:both;color:#afaaa6;font-size:12px;line-height:21px;}
 .txt-footer a{color:#afaaa6;}
 
 /**********************************
@@ -504,6 +508,20 @@ MEDIA QUERIES
 @media screen and (max-width: 1024px) {
 	ul.menu_h li.language_opc>a span{font-size:0;}
 	ul.menu_h li.language_opc>a{padding-right:0;}
+	.box-ins-home{display:block;width:100%;max-width:430px;position:relative;}
+	.box-ins-home.right-box{right:0px;}
+}
+
+@media screen and (max-width: 1023px) {
+	.box-ins-home{display:block;width:100%;max-width:430px;position:relative;}
+	.box-ins-home.right-box{right:0px;}
+	.recursos-extra{}
+	.pizarra-interectiva{}
+	.que-esta-pasando{}
+	.inside-pizarra img{left:-22.5%;}
+	.inside-pasando img{left:-22.5%;}
+	.inside-recursos img{right:-22.5%;}
+	.inside-recursos{padding-right:28%;}
 }
 
 @media screen and (max-width: 950px) {	
@@ -511,6 +529,61 @@ MEDIA QUERIES
 	#info-profesor p{width:90%;margin:0 auto 10px;}
 }
 
+@media screen and (max-width: 878px) {	
+	
+}
+
 @media screen and (max-width: 768px) {	
+	
+}
+
+@media screen and (max-width: 767px) {	
+
+	.inside-pizarra img{position:relative;top:0;left:0;}
+	.inside-recursos img{position:relative;top:0;right:0;}
+	.inside-pasando img{position:relative;top:0;left:0;}
+	
+	.pizarra-interectiva{padding-left:0;padding-right:0;height:auto;}
+	.inside-pizarra{height:auto;background:none;padding-left:10px;padding-right:10px;padding-top:20px;text-align:center;}
+	.inside-pizarra .box-ins-home{margin-top:-90px;z-index:10;}
+	
+	.recursos-extra{padding-left:0;padding-right:0;height:auto;}
+	.inside-recursos{height:auto;background:none;padding-left:10px;padding-right:10px;padding-top:20px;text-align:center;}
+	.inside-recursos .box-ins-home{margin-top:-90px;z-index:10;}
+	
+	.que-esta-pasando{padding-left:0;padding-right:0;height:auto;}
+	.inside-pasando{height:auto;background:none;padding-left:10px;padding-right:10px;padding-top:20px;text-align:center;}
+	.inside-pasando .box-ins-home{margin-top:-90px;z-index:10;}
+	
+	.box-ins-home{background:#ffffff;width:100%;max-width:100%;padding-top:40px;padding-bottom:100px;padding-left:35px;padding-right:25px;box-sizing:border-box;text-align:left;}
+	
+	#banner-home{background:#fde052 url(../img/banner-home.png) center 55px no-repeat;height:373px;text-align:center;background-size:615px;position:relative;}
+	#info-profesor p{width:90%;margin:0 auto 10px;}	
+	.txt-b-top{top:55px;}
+	
+	.login_opc{display:none !important;}
+	.left_footer{width:38%;}
+	.right_footer{width:62%;}
+	.block_visita{width:60%;}
+	.block_siguenos{width:40%;}
+	
+}
+
+@media screen and (max-width: 640px) {	
+	.shot-box{height:auto !important;width:100%;margin-bottom:15px;}
+	.left_footer{width:100%;padding-bottom:30px;}
+	.right_footer{width:100%;}
+}
+
+@media screen and (max-width: 480px) {	
+	#footer{text-align:center;}
+	.block_visita{width:100%;}
+	.block_visita h4{margin-bottom:20px;}
+	.block_siguenos{width:100%;margin-bottom:20px;}
+	.block_siguenos h4{margin-bottom:20px;}
+	.logo_f{margin:0 auto;}
+}
+
+@media screen and (max-width: 320px) {	
 	
 }

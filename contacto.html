@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title></title>
+    <meta name="description" content="" />
+	<meta property="og:title" content=""/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontface.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+     <!-- Font Awesome styles-->
+    <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+
+    <!--El siguiente comentario es un comentario condicional que solo IE sabe interpretar-->
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/css_ie.css"/>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+    	<div id="header">
+        	<div class="container">
+                <a href="" class="logo_h">Cambridge University Press</a>
+               	<h1>The Cambridge Teacher</h1>
+                <span class="type-user">GUEST</span>
+                <ul class="menu_h">
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li class="user_opc">
+                        <a href="#">Adriana</a>
+                        <div class="desplegable">
+                            <p>Info personal</p>
+                        </div>
+                    </li>
+                    <li class="language_opc">
+                        <a href="#"><span>Castellano</span></a>
+                        <div class="desplegable">
+                            <h3>IDIOMA</h3>
+                            <a href="#" class="active">Castellano</a>
+                            <a href="#">English</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+        	<div id="block-registro">
+                <div id="banner-home">
+                    <div class="txt-b-top">
+                        <p>BIENVENIDO</p>
+                        <p>A</p>
+                    </div>
+                </div>
+                <div id="form_box_registro">
+                     <form id="registro-form" action="" method="post" role="form" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados">
+                        <div class="top-register">
+                            <div class="form-group required">
+                                <label for="first_name">NOMBRE</label>
+                                <input type="text" class="form-control validation-rule-empty" id="first_name" name="first_name">
+                            </div>
+                            <div class="form-group required">
+                                <label for="last_name">APELLIDOS</label>
+                                <input type="text" class="form-control validation-rule-empty" id="last_name" name="last_name">
+                            </div>
+                            <div class="form-group required">
+                                <label for="email">EMAIL</label>
+                                <input type="email" class="form-control validation-rule-mail" id="email" name="email" autocorrect="off" data-error-msg="El email no es válido">
+                            </div>
+                            <div class="form-group required">
+                                <label for="password">CONTRASEÑA</label>
+                                <input type="password" class="form-control validation-rule-password init_password" id="password" name="password" data-error-msg="Error contraseña">
+                            </div>
+                            <div class="help-box">
+                                	<a href="#">Ayuda</a>
+                                    <div class="content-help">
+                                    	<p>La contraseña debe tener al menos 8 caracteres. Te recomendamos que uses una combinación de mayúsculas, minúsculas, números y caracteres especiales.</p>
+                                    </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="password_confirm">REPITE CONTRASEÑA</label>
+                                <input type="password" class="form-control validation-rule-password repeat_password" id="password_confirm" name="password_confirm" data-error-msg="Error contraseña" >
+                            </div>
+                            <div class="group-clase-checkbox">
+                            	<div class="title-group">
+                                	<p>SOY PROFESOR DE</p>
+                                </div>
+                                <div class="rest-checkbox">
+                                	<div class="single-radio"><div class="checkbox"><input id="Infantil" name="Infantil" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Infantil"></label><p><span>Infantil</span></p></div></div>
+                                    <div class="single-radio"><div class="checkbox"><input id="Primaria" name="Primaria" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Primaria"></label><p><span>Primaria</span></p></div></div>
+                                    <div class="single-radio"><div class="checkbox"><input id="Secundaria" name="Secundaria" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Secundaria"></label><p><span>Secundaria</span></p></div></div>
+                                    <div class="single-radio"><div class="checkbox"><input id="Bachiller" name="Bachiller" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Bachiller"></label><p><span>Bachiller</span></p></div></div>
+                                    <div class="single-radio"><div class="checkbox"><input id="Examenes" name="Examenes" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Examenes"></label><p><span>Exámenes</span></p></div></div>
+                                    <div class="single-radio"><div class="checkbox"><input id="Adultos" name="Adultos" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Adultos"></label><p><span>Adultos</span></p></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-register">
+                        	<div class="form-group required">
+                                <label  class="label-2-lines" for="cp_centre">CÓDIGO POSTAL<br/>DE TU CENTRO</label>
+                                <input type="text" class="form-control validation-rule-empty" id="cp_centre" name="cp_centre">
+                            </div>
+                            <div class="form-group required select-box">
+                                <label for="select_centre">SELECCIONA TU CENTRO</label>
+                                <div class="bg-select">
+                                <select id="select_centre" name="select_centre">
+                                	<option value="-1">Centros en tu código postal</option>
+                                	<option value="1">Centro 1</option>
+                                    <option value="2">Centro 2</option>
+                                    <option value="3">Centro 3</option>
+                                </select>
+                                </div>
+                                <div class="enl-help"><a href="#">¿No encuentras tu centro?</a></div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="label-2-lines" for="school_mastercode">SCHOOL MASTERCODE<br/>(OPCIONAL)</label>
+                                <input type="text" class="form-control validation-rule-empty" id="school_mastercode" name="school_mastercode">	
+                            </div>
+                            <div class="help-box">
+                                	<a href="#">Ayuda</a>
+                                    <div class="content-help">
+                                    	<p>El School MasterCode es código único que identifica a tu centro educativo, y que tu oficina local te proporcionará si en vuestro centro utilizáis libros de Cambridge. Puedes registrarte sin él para tener acceso a versiones de prueba de nuestros libros.</p>
+                                    </div>
+                            </div>
+                            <div class="group_checkbox">
+                               <div class="checkbox"><input id="legal" name="legal" class="validation-rule-checkbox" data-error-msg="Debe aceptar política de privacidad." type="checkbox"><label for="legal"></label><p><span>He leído y acepto la </span> <a href="#" title="Privacy Policy">Política de privacidad</a>.</p></div>
+                               <div class="checkbox"><input id="no_subscription" name="no_subscription" type="checkbox"><label for="no_subscription"></label><p><span>No deseo estar informado sobre nuevas promociones, acontecimientos de interés e información de Cambridge University Press.</span></p></div>
+                            </div>
+                            <div class="maquetacion_captcha"><div class="g-recaptcha" data-sitekey="6LdL4CATAAAAADBQNQQKNEMNn9x6_YUmIDWybTXi"></div></div>
+                            <div class="errores"></div>
+                            <div class="submit_group"><input type="submit"  value="ENVIAR"></div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+        	<div class="container">
+                <div class="left_footer">
+                	<a href="#" class="logo_f">Cambridge University Press</a>
+                </div>
+                <div class="right_footer">
+                    <div class="block_visita">
+                        <h4>VISITA TAMBIÉN</h4>	
+                        <ul>
+                            <li><a href="#" target="_blank">Cambridge.es</a></li>
+                            <li><a href="#" target="_blank">The Primary Box</a> | <a href="#">The Secondary Box</a></li>
+                            <li><a href="#" target="_blank">Cambridge Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="block_siguenos">
+                    	<h4>SÍGUENOS</h4>	
+                        <ul>
+                            <li><a href="#" class="ico_facebook">Facebook</a></li>
+                            <li><a href="#" class="ico_twitter">Twitter</a></li>
+                            <li><a href="#" class="ico_instagram">Instagram</a></li>
+                            <li><a href="#" class="ico_youtube">Youtube</a></li>
+                        </ul>
+                    </div>
+                    <p class="txt-footer">© Cambridge University Press 2016 / <a href="#">Aviso Legal</a> / <a href="#">Politica de privacidad</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-cookie.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="js/jquery.lazyload.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/application.js"></script>
+</body>
+</html>
