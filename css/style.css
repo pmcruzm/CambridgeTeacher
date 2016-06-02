@@ -575,6 +575,12 @@ MEDIA QUERIES
 	.right_footer{width:100%;}
 }
 
+@media screen and (max-width: 639px) {
+	#banner-home{background:#fde052 url(../img/banner-home.png) center 65px no-repeat;height:313px;text-align:center;background-size:465px;position:relative;}
+	.txt-b-top{top:45px;}
+	.txt-b-top p{font-size:14px;}
+}
+
 @media screen and (max-width: 480px) {	
 	#footer{text-align:center;}
 	.block_visita{width:100%;}
@@ -582,6 +588,17 @@ MEDIA QUERIES
 	.block_siguenos{width:100%;margin-bottom:20px;}
 	.block_siguenos h4{margin-bottom:20px;}
 	.logo_f{margin:0 auto;}
+	.txt-b-bottom p{font-size:18px;}
+	.btn-register-h{font-size:14px;height:40px;line-height:40px;bottom:-20px;}
+}
+
+@media screen and (max-width: 479px) {	
+	#banner-home{background:#fde052 url(../img/banner-home.png) center 65px no-repeat;height:253px;text-align:center;background-size:305px;position:relative;}
+	.txt-b-top{top:45px;}
+	.txt-b-top p{font-size:14px;}
+	.txt-b-bottom p{font-size:16px;line-height:21px;}
+	.txt-b-bottom{bottom:35px;width:95%;}
+	.txt-b-top{top:28px;}
 }
 
 @media screen and (max-width: 320px) {	
