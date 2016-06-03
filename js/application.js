@@ -108,7 +108,7 @@ jQuery(document).ready(function(){
 	});
 	
 	//Menú principal y submenús
-	jQuery(document).on('click','.language_opc a',function(e){
+	jQuery(document).on('click','.language_opc > a',function(e){
 		e.preventDefault();
 		//Miramos si ya está desplegado el de login 
 		if(jQuery('.login_opc').hasClass('active')){
@@ -125,7 +125,7 @@ jQuery(document).ready(function(){
 	});
 	
 	//Activar el menú de Login
-	jQuery(document).on('click','.login_opc a',function(e){
+	jQuery(document).on('click','.login_opc > a',function(e){
 		e.preventDefault();
 		//Miramos si ya está desplegado el de idioma 
 		if(jQuery('.language_opc').hasClass('active')){
@@ -142,7 +142,7 @@ jQuery(document).ready(function(){
 	});
 	
 	//Activar desplegable usuario logado 
-	jQuery(document).on('click','.user_opc a',function(e){
+	jQuery(document).on('click','.user_opc > a',function(e){
 		e.preventDefault();
 		if(jQuery(this).parent().hasClass('active')){
 			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});
