@@ -79,6 +79,7 @@ ul.menu_h{padding:0;margin:0;font-size:0;position:absolute;top:0;right:0;}
 ul.menu_h li{height:48px;display:inline-block;position:relative;}
 ul.menu_h li a{font-size:14px;line-height:48px;color:#7d7974;display:block;text-align:center;width:70px;}
 ul.menu_h li a:hover{background:#2e2e2e;color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+ul.menu_h li a.active{background:#2e2e2e;color:#ffffff;}
 ul.menu_h li.language_opc>a{width:auto !important;padding-right:15px;}
 ul.menu_h li.language_opc>a:before{content:'';display:inline-block;background:url(../img/ico_globe.png) center center no-repeat;background-size:20px;width:20px;height:48px;float:left;padding-left:10px;padding-right:13px;}
 ul.menu_h li.language_opc.active{background:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
