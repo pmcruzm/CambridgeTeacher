@@ -370,6 +370,9 @@ PROPIEDADES FAQs
 .single-faq>a:hover:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/arrow_faqs.png) top left no-repeat;background-size:21px;position:absolute;left:-40px;top:4px;}
 .single-faq>a.active:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/arrow_faqs.png) top left no-repeat;background-size:21px;position:absolute;left:-40px;top:4px;}
 .single-faq .desplegable{display:none;padding-bottom:30px;}
+.single-faq .desplegable p{}
+.single-faq .desplegable p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.single-faq .desplegable p a{color:#30c0d8;text-decoration:underline;}
 	
 	
 /*****************************
