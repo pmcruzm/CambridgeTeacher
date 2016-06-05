@@ -251,13 +251,13 @@ PROPIEDADES CATALOGO
 #banner-catalogo{height:180px;position:relative;background:#fde052 url(../img/bg-catalogo-min.jpg) top left no-repeat;background-size:1024px;overflow:hidden;}
 #banner-catalogo h2{color:#2e2e2e;font-size:40px;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-top:70px;padding-left:60px;}
 
-#banner-catalogo ul.tipo_cat{position:absolute;bottom:-4px;left:15px;font-size:0;}
+#banner-catalogo ul.tipo_cat{position:absolute;left:15px;bottom:0;}
 #banner-catalogo ul.tipo_cat li{display:inline-block;font-size:16px;height:32px;}
 #banner-catalogo ul.tipo_cat li a{display:block;height:32px;line-height:32px;padding-left:30px;padding-right:30px;font-size:18px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
 #banner-catalogo ul.tipo_cat li a:hover{background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
 #banner-catalogo ul.tipo_cat li.active a{background:#ffffff;}
 
-#banner-catalogo ul.filter_cat{position:absolute;bottom:-3px;right:15px;font-size:0;}
+#banner-catalogo ul.filter_cat{position:absolute;right:15px;bottom:0;}
 #banner-catalogo ul.filter_cat li{display:inline-block;font-size:16px;}
 #banner-catalogo ul.filter_cat li a{display:block;height:32px;line-height:32px;padding-left:15px;padding-right:15px;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
 #banner-catalogo ul.filter_cat li a:hover{background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
