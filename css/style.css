@@ -374,6 +374,35 @@ PROPIEDADES FAQs
 .single-faq .desplegable p{}
 .single-faq .desplegable p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .single-faq .desplegable p a{color:#30c0d8;text-decoration:underline;}
+
+/*****************************
+PROPIEDADES DETALLE
+******************************/
+#banner-detalle{}
+#banner-detalle .container{height:180px;position:relative;}
+#banner-detalle h3{position:absolute;left:265px;top:65px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;}
+#banner-detalle h2{position:absolute;left:265px;top:115px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:40px;}
+#banner-detalle h2 span{font-size:20px;display:inline-block;margin-left:10px;}
+
+.cover-detalle{display:inline-block;position:relative;top:35px;left:55px;position:absolute;width:160px;z-index:20;}
+.cover-detalle img{width:160px;box-shadow:0 5px 15px rgba(0, 0, 0, 0.5);}
+.cover-detalle span{position:absolute;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;bottom:0;}
+
+#block-detalle{background:#f5f0eb;padding-top:35px;position:relative;padding-bottom:100px;}
+.enl-volver{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;position:absolute;top:100px;left:55px;}
+.enl-volver:before{content:'';display:inline-block;width:10px;height:15px;background:url(../img/arrow-back.png) top left no-repeat;background-size:10px;margin-right:10px;position:relative;top:3px;}
+
+.box-generic-detalle{padding-left:25%;padding-right:15px;box-sizing:border-box;}
+.content-detalle{background:#ffffff;padding-left:42px;padding-right:42px;padding-top:25px;margin-bottom:12px;}
+.content-detalle h4{color:#2e2e2e;font-size:24px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+
+.img-detalles{overflow:hidden;padding-top:15px;}
+.img-detalles img{max-height:172px;max-width:100%;float:left;margin-left:10px;margin-bottom:15px;}
+.img-detalles img:first-child{margin-left:0;}
+
+.list-digitales{padding-bottom:40px;padding-top:40px;}
+.list-digitales li{margin-bottom:20px;}
+.list-digitales li a{color:#2e2e2e;font-size:16px;}
 	
 	
 /*****************************

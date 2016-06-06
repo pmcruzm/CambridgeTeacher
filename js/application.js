@@ -88,6 +88,19 @@ jQuery(window).load(function(){
 			jQuery(this).css('height',maxHeight);
 		});
 	}
+	
+	//Ajustamos altura de detalle de producto
+	if (jQuery('.cover-detalle img').is(":visible") ) {
+		var w_img=jQuery('.cover-detalle img').width();
+		var h_img=jQuery('.cover-detalle img').height();
+		//Añadimos altura y anchura al div padre
+		jQuery('.cover-detalle img').parent().width(w_img);
+		jQuery('.cover-detalle img').parent().height(h_img);
+		//Miramos si tiene span
+		if(jQuery('.cover-detalle img').parent().find('span').length>0){
+			jQuery('.cover-detalle img').parent().find('span').css({bottom:20});
+		}
+	}
 
 });
 
