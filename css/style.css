@@ -330,7 +330,7 @@ PROPIEDADES REGISTRO
 
 .bg-select{background:#2e2e2e url(../img/arrow_select.png) 95% 50% no-repeat;display:block;width:56%;float:left;overflow:hidden;height:40px;background-size:9px;}
 #select_centre{background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;text-align:right;height:40px;line-height:40px;padding-right:45px;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;cursor:pointer;}
-#select_centre option{text-align:right;}
+#select_centre option{text-align:right;background:#2e2e2e;}
 .enl-help{clear:both;text-align:right;padding-right:14px;margin-bottom:15px;}
 .enl-help a{color:#7d7974;font-size:13px;}
 
