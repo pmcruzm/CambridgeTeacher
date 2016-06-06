@@ -590,6 +590,8 @@ MEDIA QUERIES
 	.inside-pasando img{left:-22.5%;}
 	.inside-recursos img{right:-22.5%;}
 	.inside-recursos{padding-right:28%;}
+	.box-generic-detalle{padding-left:55px;padding-right:15px;}
+	#block-detalle{padding-top:140px;}
 }
 
 @media screen and (max-width: 950px) {	
