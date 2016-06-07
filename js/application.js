@@ -12,6 +12,9 @@ VARIABLES
 var slider_l_post;
 var send_form=0;
 var max_items=8;
+var filter_segmento=-1;
+var filter_type1=-1;
+var filter_type2=-1;
 
 //Eventos para dispositivos móviles
 var ua = navigator.userAgent,
@@ -66,21 +69,27 @@ jQuery(window).load(function(){
 	}
 
 	//Ajustamos altura de los cuadros de catalogo
-	if (jQuery('#content-catalogo').is(":visible") ) {
-		jQuery('#content-catalogo div.inside-b-book').each(function() {
+	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
+		//Ajustamos cuadros 
+		jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
 			var ancho_box=jQuery(this).width();
 			jQuery(this).css('height',ancho_box);
 		});
-	}
-
-	//Ajustamos altura de los cuadros de catalogo
-	if (jQuery('#content-catalogo').is(":visible") ) {
-		jQuery('#content-catalogo .enl-book img').each(function() {
+		//Ajustamos etiqueta sample
+		jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
 			if(jQuery(this).parent().find('span').length>0){
 				var alto_img=jQuery(this).height();
 				jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 			}
 		});
+		
+		//Calculamos demos y evalución para todos
+		var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
+		var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
+		
+		//Asignamos valores a enlaces correspondientes 
+		jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
+		jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 	}
 
 	//Ajustamos Shot de la home
@@ -124,6 +133,8 @@ jQuery(document).ready(function(){
 		if(hash!=""){
 			alert('hash');
 			jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
+			
+			//Mirar si estamos en catalogo y es un filtro
 		}
 	});*/
 
@@ -195,27 +206,21 @@ jQuery(document).ready(function(){
 		}else{
 			jQuery(this).addClass('active');
 		}
-
-        var allCourses = jQuery('#content-catalogo div[data-type]');
-
-        allCourses.show();
-
-        if( jQuery(this).parent().find('a[data-filter-type="demo"]').hasClass('active') ) {
-            allCourses.each(function(i, e){
-                if( jQuery(e).data('type') == 'demo' ) {
-                    jQuery(e).hide();
-                }
-            });
-        }
-
-        if( jQuery(this).parent().find('a[data-filter-type="centre"]').hasClass('active') ) {
-            allCourses.each(function(i, e){
-                if( jQuery(e).data('type') == 'centre' ) {
-                    jQuery(e).hide();
-                }
-            });
-        }
-
+		
+		//Miramos si está activo el filtro de demo
+		if(jQuery('#selectores-filtros a[data-filter-type=demo]').hasClass('active')){
+			filter_type1='demo';
+		}else{
+			filter_type1=-1;
+		}
+		//Miramos si está actimo el filtro de evaluación 
+		if(jQuery('#selectores-filtros a[data-filter-type=centre]').hasClass('active')){
+			filter_type2='centre';
+		}else{
+			filter_type2=-1;
+		}
+		//console.log(filter_segmento+'--'+filter_type1+'--'+filter_type2);
+		filter_catalogo(filter_segmento,filter_type1,filter_type2);	
     });
 
 	//Ayudas de los registros (over)
@@ -401,6 +406,102 @@ jQuery(document).ready(function(){
 			});
 		}
 	});
+	
+	//En catalogo mostrar todo o mi colección
+	jQuery(document).on('click','.tipo_cat a',function(e){
+		e.preventDefault();
+		if(!jQuery(this).hasClass('active')){
+			jQuery('.tipo_cat a').removeClass('active');
+			jQuery(this).addClass('active');
+			var id_enl=jQuery(this).attr('id');
+			//alert(id_enl);
+			if(id_enl=='btn-mi-coleccion'){
+				//Ocultamos filtros cabecera
+				jQuery('.filter_cat').fadeOut(400,function(){
+					jQuery('.filter_cat a').removeClass('active');	
+				});
+				//Cerramos todos y mostramos mi coleccion 
+				jQuery('#all-catalogo').fadeOut(400,function(){
+					jQuery('#selectores-filtros a').removeClass('active');
+					jQuery('#my-catalogo').css({'opacity':0}).show();
+					/****Hacemos calculos****/ 
+					//Tamaño de cuadros
+					if (jQuery('#my-catalogo .content-catalogo').is(":visible") ) {
+						
+						jQuery('#my-catalogo .content-catalogo div.inside-b-book').each(function() {
+							var ancho_box=jQuery(this).width();
+							jQuery(this).css('height',ancho_box);
+						});
+						
+						jQuery('#my-catalogo .content-catalogo .enl-book img').each(function() {
+							if(jQuery(this).parent().find('span').length>0){
+								var alto_img=jQuery(this).height();
+								jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
+							}
+						});
+						
+						//Animamos aparición cuadros
+						jQuery('#my-catalogo').animate({opacity:1},400);
+					}
+					//Etiqueta Sample
+				});
+			}else{
+				jQuery('#my-catalogo').fadeOut(400,function(){
+					//Reseteamos los filtros
+					filter_segmento=-1;
+					filter_type1=-1;
+					filter_type2=-1;	
+					filter_catalogo(filter_segmento,filter_type1,filter_type2);	
+					jQuery('#all-catalogo').fadeIn(400,function(){
+						//Calculamos subfiltros
+					});
+					jQuery('.filter_cat').fadeIn(400);
+				});
+			}
+		}
+	});
+	
+	//Cuando pulsas sobre un filter de primer nivel 
+	jQuery(document).on('click','.filter_cat a',function(e){
+		e.preventDefault();
+		if(!jQuery(this).hasClass('active')){
+			jQuery('.filter_cat a').removeClass('active');
+			jQuery(this).addClass('active');
+			filter_segmento=jQuery(this).attr('data-filter-segment');
+			filter_type1=-1;
+			filter_type2=-1;	
+			filter_catalogo(filter_segmento,filter_type1,filter_type2);
+			jQuery('#selectores-filtros a').removeClass('active');	
+		}else{
+			jQuery('.filter_cat a').removeClass('active');
+			filter_segmento=-1;
+			filter_type1=-1;
+			filter_type2=-1;
+			//Mostramos todos los elementos
+			filter_catalogo(filter_segmento,filter_type1,filter_type2);	
+			jQuery('#selectores-filtros a').removeClass('active');
+		}
+	}); 
+	
+	/*
+	//Ajustamos altura de los cuadros de catalogo
+			if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
+				jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
+					var ancho_box=jQuery(this).width();
+					jQuery(this).css('height',ancho_box);
+				});
+			}
+
+			//Ajustamos etiqueta sample de los cuadros de catalogo
+			if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
+				jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
+					if(jQuery(this).parent().find('span').length>0){
+						var alto_img=jQuery(this).height();
+						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
+					}
+				});
+			}
+	*/
 
 	jQuery(window).scroll(control_scroll);
 
@@ -424,16 +525,28 @@ jQuery(document).ready(function(){
 			}
 
 			//Ajustamos altura de los cuadros de catalogo
-			if (jQuery('#content-catalogo').is(":visible") ) {
-				jQuery('#content-catalogo div.inside-b-book').each(function() {
+			if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
+				jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
 					var ancho_box=jQuery(this).width();
 					jQuery(this).css('height',ancho_box);
 				});
+				//Ajustamos etiqueta sample
+				jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
+					if(jQuery(this).parent().find('span').length>0){
+						var alto_img=jQuery(this).height();
+						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
+					}
+				});
 			}
-
+			
 			//Ajustamos altura de los cuadros de catalogo
-			if (jQuery('#content-catalogo').is(":visible") ) {
-				jQuery('#content-catalogo .enl-book img').each(function() {
+			if (jQuery('#my-catalogo .content-catalogo').is(":visible") ) {
+				jQuery('#my-catalogo .content-catalogo div.inside-b-book').each(function() {
+					var ancho_box=jQuery(this).width();
+					jQuery(this).css('height',ancho_box);
+				});
+				//Ajustamos etiqueta sample
+				jQuery('#my-catalogo .content-catalogo .enl-book img').each(function() {
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
@@ -494,9 +607,63 @@ function control_scroll(e){
 
   }
 
-
 }
 
+//Funcion para mostrar los elementos filtrados
+function filter_catalogo(segmento,type1,type2){
+	var allCourses = jQuery('#all-catalogo .content-catalogo div[data-type]');
+
+    allCourses.show();
+	
+	if(segmento==-1 & type1==-1 & type2==-1 ){
+		allCourses.show();
+	}else{
+		if(type1!=-1) {
+				allCourses.each(function(i, e){
+					if( jQuery(e).data('type') == 'demo' ) {
+						jQuery(e).hide();
+					}
+				});
+		}
+	
+		if(type2!=-1) {
+				allCourses.each(function(i, e){
+					if( jQuery(e).data('type') == 'centre' ) {
+						jQuery(e).hide();
+					}
+				});
+		}
+		
+		//Filtro de primer nivel 
+		if(segmento!=-1) {
+			
+			allCourses.each(function(i, e){
+					if( jQuery(e).data('segment') != segmento ) {
+						jQuery(e).hide();
+					}
+			});
+			
+			//Calculamos demos y evalución para los correspondientes al filtro
+			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo][data-segment='+segmento+']').length;
+			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre][data-segment='+segmento+']').length;
+				
+			//Asignamos valores a enlaces correspondientes 
+			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
+			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
+		}else{
+			
+			//Calculamos demos y evalución para todos
+			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
+			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
+				
+			//Asignamos valores a enlaces correspondientes 
+			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
+			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
+		}
+		
+	}
+		
+}
 
 //Función para el cambio de orientación
 function doOnOrientationChange()
@@ -524,6 +691,7 @@ function validateEmail(email) {
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
+
 
 //Funcion para validar genéricamente un formulario
 function validate_form(id){

@@ -71,7 +71,7 @@ body{margin:0;padding:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;f
 /*****************************
 PROPIEDADES HEADER
 ******************************/
-#header{position:relative;}
+#header{position:fixed;width:100%;top:0;left:0;z-index:100;background:#ffffff;}
 #header .container{min-width:auto !important;}
 .logo_h{display:block;background:url(../img/logo_cambridge.png) center center no-repeat;height:47px;width:162px;background-size:162px;text-indent:-99999px;}
 
@@ -132,6 +132,8 @@ span.type-user{position:absolute;font-size:12px;font-family:'sofia-pro-black', H
 /*****************************
 PROPIEDADES HOME
 ******************************/
+#content{padding-top:47px;}
+
 #banner-home{background:#fde052 url(../img/banner-home.png) center 45px no-repeat;height:493px;text-align:center;background-size:935px;position:relative;}
 .btn-register-h{position:absolute;height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;bottom:-25px;left:0;right:0;margin:0 auto;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 #banner-home h2{font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;width:100%;max-width:660px;position:absolute;bottom:60px;left:0;right:0;margin:0 auto;text-align:left;line-height:40px;}
@@ -255,13 +257,13 @@ PROPIEDADES CATALOGO
 #banner-catalogo ul.tipo_cat li{display:inline-block;font-size:16px;height:32px;}
 #banner-catalogo ul.tipo_cat li a{display:block;height:32px;line-height:32px;padding-left:30px;padding-right:30px;font-size:18px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
 #banner-catalogo ul.tipo_cat li a:hover{background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
-#banner-catalogo ul.tipo_cat li.active a{background:#ffffff;}
+#banner-catalogo ul.tipo_cat li a.active{background:#ffffff;}
 
 #banner-catalogo ul.filter_cat{position:absolute;right:15px;bottom:0;}
 #banner-catalogo ul.filter_cat li{display:inline-block;font-size:16px;}
 #banner-catalogo ul.filter_cat li a{display:block;height:32px;line-height:32px;padding-left:15px;padding-right:15px;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
 #banner-catalogo ul.filter_cat li a:hover{background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
-#banner-catalogo ul.filter_cat li.active a{background:#ffffff;}
+#banner-catalogo ul.filter_cat li a.active{background:#ffffff;}
 
 #selectores-filtros{height:50px;text-align:right;text-align:-webkit-right;}
 #selectores-filtros p{color:#7d7974;line-height:50px;height:50px;font-size:12px;padding-right:30px;font-family:'sofia-pro-black', Helvetica, sans-serif;position:relative;}
@@ -272,12 +274,12 @@ PROPIEDADES CATALOGO
 /*#selectores-filtros a:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-filter.png);background-size:21px;vertical-align:middle;margin-right:20px;background-position:0px 0px;background-repeat:no-repeat;}
 #selectores-filtros a.active:before{background-position:0px -21px;}*/
 
-#content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
-#content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:9px;padding-right:9px;float:left;margin-bottom:18px;}
-#content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding:30px;}
-#content-catalogo .single-box-book .inside-b-book img{max-width:100%;vertical-align:middle;max-height:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
-#content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;}
-#content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;}
+.content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
+.content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:9px;padding-right:9px;float:left;margin-bottom:18px;}
+.content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding:30px;}
+.content-catalogo .single-box-book .inside-b-book img{max-width:100%;vertical-align:middle;max-height:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
+.content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;}
+.content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;}
 
 .plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) top left no-repeat;display:block;width:21px;height:21px;text-indent:-99999px;background-size:21px;}
 .check-book{position:absolute;top:10px;right:10px;background:url(../img/ico-check.png) top left no-repeat;display:block;width:20px;height:20px;text-indent:-99999px;background-size:20px;}
