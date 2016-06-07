@@ -26,8 +26,15 @@ if(ua.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)){
 jQuery.noConflict();
 
 
+jQuery.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+
 jQuery(window).load(function(){
-	
+
 	//Ajustamos altura de los bloques de noticias
 	if (jQuery('#list-news').is(":visible") ) {
 		var heights = jQuery('#list-news div.inside-new').map(function ()
@@ -39,9 +46,9 @@ jQuery(window).load(function(){
 		jQuery('#list-news div.inside-new').each(function() {
 			jQuery(this).css('height',maxHeight+30);
 		});
-		//Ocultamos bloques 
+		//Ocultamos bloques
 		jQuery('#list-news a.new-single').hide().css('visibility','visible');
-		//Mostramos los 8 primeros  
+		//Mostramos los 8 primeros
 		var cont=0;
 		jQuery('#list-news a.new-single').each(function() {
 			if(cont<max_items){
@@ -50,14 +57,14 @@ jQuery(window).load(function(){
 			}else{
 				return true;
 			}
-		});	
-		//Miramos si nos hay más noticias por mostrar 
+		});
+		//Miramos si nos hay más noticias por mostrar
 		var all_elem=jQuery('#list-news a.new-single').length;
 		var all_elem_v=jQuery('#list-news a.new-single.visible').length;
 		//console.log(all_elem+'--'+all_elem_v);
 		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}
 	}
-	
+
 	//Ajustamos altura de los cuadros de catalogo
 	if (jQuery('#content-catalogo').is(":visible") ) {
 		jQuery('#content-catalogo div.inside-b-book').each(function() {
@@ -65,7 +72,7 @@ jQuery(window).load(function(){
 			jQuery(this).css('height',ancho_box);
 		});
 	}
-	
+
 	//Ajustamos altura de los cuadros de catalogo
 	if (jQuery('#content-catalogo').is(":visible") ) {
 		jQuery('#content-catalogo .enl-book img').each(function() {
@@ -75,7 +82,7 @@ jQuery(window).load(function(){
 			}
 		});
 	}
-	
+
 	//Ajustamos Shot de la home
 	if (jQuery('#show-examples').is(":visible") ) {
 		var heights = jQuery('#show-examples div.shot-box').map(function ()
@@ -88,7 +95,7 @@ jQuery(window).load(function(){
 			jQuery(this).css('height',maxHeight);
 		});
 	}
-	
+
 	//Ajustamos altura de detalle de producto
 	if (jQuery('.cover-detalle img').is(":visible") ) {
 		var w_img=jQuery('.cover-detalle img').width();
@@ -109,7 +116,7 @@ jQuery(document).ready(function(){
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
-	
+
 	//Volver el scroll a top
 	/*jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
@@ -119,54 +126,54 @@ jQuery(document).ready(function(){
 			jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
 		}
 	});*/
-	
+
 	//Menú principal y submenús
 	jQuery(document).on('click','.language_opc > a',function(e){
 		e.preventDefault();
-		//Miramos si ya está desplegado el de login 
+		//Miramos si ya está desplegado el de login
 		if(jQuery('.login_opc').hasClass('active')){
-			jQuery('.login_opc').removeClass('active');	
-			jQuery('.login_opc').find('.desplegable').hide().css({opacity:0});		
+			jQuery('.login_opc').removeClass('active');
+			jQuery('.login_opc').find('.desplegable').hide().css({opacity:0});
 		}
 		if(jQuery(this).parent().hasClass('active')){
 			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});
-			jQuery(this).parent().removeClass('active');		
+			jQuery(this).parent().removeClass('active');
 		}else{
 			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);	
+			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);
 		}
 	});
-	
+
 	//Activar el menú de Login
 	jQuery(document).on('click','.login_opc > a',function(e){
 		e.preventDefault();
-		//Miramos si ya está desplegado el de idioma 
+		//Miramos si ya está desplegado el de idioma
 		if(jQuery('.language_opc').hasClass('active')){
 			jQuery('.language_opc').removeClass('active');
-			jQuery('.language_opc').find('.desplegable').hide().css({opacity:0});			
+			jQuery('.language_opc').find('.desplegable').hide().css({opacity:0});
 		}
 		if(jQuery(this).parent().hasClass('active')){
 			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();jQuery('.login_box').show();jQuery('.forget_box').hide();});
-			jQuery(this).parent().removeClass('active');		
+			jQuery(this).parent().removeClass('active');
 		}else{
 			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);	
+			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);
 		}
 	});
-	
-	//Activar desplegable usuario logado 
+
+	//Activar desplegable usuario logado
 	jQuery(document).on('click','.user_opc > a',function(e){
 		e.preventDefault();
 		if(jQuery(this).parent().hasClass('active')){
 			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});
-			jQuery(this).parent().removeClass('active');		
+			jQuery(this).parent().removeClass('active');
 		}else{
 			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);	
+			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);
 		}
 	});
-	
-	//Carrusel de Mi Catalogo 
+
+	//Carrusel de Mi Catalogo
 	if (jQuery('.carrusel-coleccion').is(":visible") ) {
 		jQuery('.carrusel-list').slick({
 		  dots: true,
@@ -178,11 +185,11 @@ jQuery(document).ready(function(){
 		  slidesToScroll: 2
 		});
 	}
-	
-	//Filtros de la página de catálogo 
+
+	//Filtros de la página de catálogo
 	jQuery(document).on('click','#selectores-filtros a',function(e){
         e.preventDefault();
-		
+
 		if(jQuery(this).hasClass('active')) {
 			jQuery(this).removeClass('active');
 		}else{
@@ -210,30 +217,30 @@ jQuery(document).ready(function(){
         }
 
     });
-	
-	//Ayudas de los registros (over) 
+
+	//Ayudas de los registros (over)
 	jQuery(document).on("mouseenter",".help-box a", function(e) {
-		e.preventDefault();	
+		e.preventDefault();
 		//Comprobamos si tiene desplegable
 		jQuery(this).parent().find('.content-help').fadeIn(600);
 	}).on("mouseleave",".help-box a", function(e) {
-		e.preventDefault();	
+		e.preventDefault();
 		jQuery(this).parent().find('.content-help').removeClass('active');
 		jQuery(this).parent().find('.content-help').fadeOut(600);
 	});
-	
+
 	//Ayudas de los registros click
 	jQuery(document).on('click','.help-box a',function(e){
-		e.preventDefault();	
+		e.preventDefault();
 		if(jQuery(this).parent().find('.content-help').hasClass('active')){
 			jQuery(this).parent().find('.content-help').removeClass('active');
 			jQuery(this).parent().find('.content-help').fadeOut(600);
 		}else{
-			jQuery(this).parent().find('.content-help').addClass('active');	
+			jQuery(this).parent().find('.content-help').addClass('active');
 			jQuery(this).parent().find('.content-help').fadeIn(600);
 		}
 	});
-	
+
 	//Enviar formulario de registro
 	jQuery(document).on("submit","#registro-form", function(e) {
 		if(send_form==0){
@@ -248,7 +255,7 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
-	
+
 	//Eliminar marco de error cuando se hace click sobre un input con error
 	jQuery(document).on('focus','form input,form textarea',function(event){
 		event.preventDefault();
@@ -258,20 +265,20 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
-	
+
 	//Detectar cambios en checkbox
 	jQuery(document).on('change','form input[type=checkbox]',function(event){
 		event.preventDefault();
 			//alert(jQuery(this).attr('class'));
 			if(jQuery(this).hasClass('validation-rule-checkbox-profe')){
-				jQuery('form .single-radio input[type=checkbox]').removeClass('error');	
+				jQuery('form .single-radio input[type=checkbox]').removeClass('error');
 			}else{
 				if(jQuery(this).hasClass('error')){
 					jQuery(this).removeClass('error');
 				}
 			}
 	});
-	
+
 	//Mostramos las primeras noticias visibles
 	/*if (jQuery('#list-news').is(":visible") ) {
 		var cont=0;
@@ -282,12 +289,12 @@ jQuery(document).ready(function(){
 			}else{
 				return true;
 			}
-		});		
+		});
 	}*/
-	
-	//Mostrar más noticias 
+
+	//Mostrar más noticias
 	jQuery(document).on('click','.btn-more',function(e){
-		e.preventDefault();	
+		e.preventDefault();
 		var cont=0;
 		jQuery('#list-news a.new-single').each(function() {
 			if(!jQuery(this).hasClass('visible')){
@@ -298,14 +305,14 @@ jQuery(document).ready(function(){
 					return true;
 				}
 			}
-		});	
-		//Miramos si nos hay más noticias por mostrar 
+		});
+		//Miramos si nos hay más noticias por mostrar
 		var all_elem=jQuery('#list-news a.new-single').length;
 		var all_elem_v=jQuery('#list-news a.new-single.visible').length;
 		//console.log(all_elem+'--'+all_elem_v);
-		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}		
+		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}
 	});
-	
+
 	//Comprobación del login/forgot-password vía AJAX
 	jQuery('#form-login,#form-forgot-password').on('submit', function(e){
 		e.preventDefault();
@@ -330,7 +337,7 @@ jQuery(document).ready(function(){
 	   });
 
 	});
-	
+
 	//Mostrar formulario de resetar password
 	jQuery(document).on('click','.reset_password',function(e){
 		e.preventDefault();
@@ -339,7 +346,7 @@ jQuery(document).ready(function(){
 		});
 
 	});
-	
+
 	//Desplegar los cuadros de faqs
 	jQuery(document).on('click','.enl-faq',function(e){
 		e.preventDefault();
@@ -354,62 +361,62 @@ jQuery(document).ready(function(){
 		}
 
 	});
-	
-	//Desplegar los faqs según link 
+
+	//Desplegar los faqs según link
 	jQuery(document).on('click','.new-user',function(e){
 		e.preventDefault();
 		jQuery('.btns-faqs a').removeClass('active');
 		jQuery(this).addClass('active');
 		jQuery('.old-user-ct').fadeOut(400,function(){
 			jQuery('.new-user-ct').fadeIn(400);
-			//Cerrar todos los desplegables 
+			//Cerrar todos los desplegables
 			jQuery('.old-user-ct .desplegable').hide();
 			jQuery('.old-user-ct a').removeClass('active');
 		});
 
 	});
-	
-	//Desplegar los faqs según link 
+
+	//Desplegar los faqs según link
 	jQuery(document).on('click','.old-user',function(e){
 		e.preventDefault();
 		jQuery('.btns-faqs a').removeClass('active');
 		jQuery(this).addClass('active');
 		jQuery('.new-user-ct').fadeOut(400,function(){
 			jQuery('.old-user-ct').fadeIn(400);
-			//Cerrar todos los desplegables 
+			//Cerrar todos los desplegables
 			jQuery('.new-user-ct .desplegable').hide();
 			jQuery('.new-user-ct a').removeClass('active');
 		});
 	});
-	
-	//Mostrar tabs de detalle de producto 
+
+	//Mostrar tabs de detalle de producto
 	jQuery(document).on('click','.single-tab',function(e){
 		e.preventDefault();
 		jQuery('.single-tab a').removeClass('active');
 		jQuery(this).addClass('active');
 		var box_open=jQuery(this).attr('rel');
-		
+
 		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
 		}
-		
+
 		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
 		}
-		
+
 		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
 		}
-		
+
 		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
 		}
-		
+
 		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
 		}
-		
+
 		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
 		}
-		
+
 		/*jQuery('.new-user-ct').fadeOut(400,function(){
 			jQuery('.old-user-ct').fadeIn('active');
-			//Cerrar todos los desplegables 
+			//Cerrar todos los desplegables
 			jQuery('.new-user-ct .desplegable').hide();
 			jQuery('.new-user-ct a').removeClass('active');
 		});*/
@@ -424,7 +431,7 @@ jQuery(document).ready(function(){
 			//Obtenemos altura y anchura del navegador
 			var h_win_r=jQuery(this).height();
 			var w_win_r=jQuery(this).width();
-			
+
 			//Ajustamos altura de los bloques de noticias
 			if (jQuery('#list-news').is(":visible") ) {
 				var heights = jQuery('#list-news div.inside-new').map(function ()
@@ -437,7 +444,7 @@ jQuery(document).ready(function(){
 					jQuery(this).css('height',maxHeight+30);
 				});
 			}
-			
+
 			//Ajustamos altura de los cuadros de catalogo
 			if (jQuery('#content-catalogo').is(":visible") ) {
 				jQuery('#content-catalogo div.inside-b-book').each(function() {
@@ -445,7 +452,7 @@ jQuery(document).ready(function(){
 					jQuery(this).css('height',ancho_box);
 				});
 			}
-			
+
 			//Ajustamos altura de los cuadros de catalogo
 			if (jQuery('#content-catalogo').is(":visible") ) {
 				jQuery('#content-catalogo .enl-book img').each(function() {
@@ -455,7 +462,7 @@ jQuery(document).ready(function(){
 					}
 				});
 			}
-			
+
 			//Ajustamos Shot de la home
 			if (jQuery('#show-examples').is(":visible") ) {
 				jQuery('#show-examples div.shot-box').removeAttr('style');
@@ -469,7 +476,7 @@ jQuery(document).ready(function(){
 					jQuery(this).css('height',maxHeight);
 				});
 			}
-	
+
 
 	});
 
@@ -506,7 +513,7 @@ function control_scroll(e){
 
   //Añadir Cookie si se hace scroll a +100px
   if(scrollAmount>100){
- 		
+
   }
 
 
@@ -521,16 +528,16 @@ function doOnOrientationChange()
       case -90:
       case 90:
 
-	 
+
         break;
       default:
 
-	
+
 
         break;
     }
   }
-  
+
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -609,7 +616,7 @@ function validate_form(id){
 
 				});
 			}
-			
+
 			//Busca todos los checkbox de profesor
 			if(jQuery(id).find('.validation-rule-checkbox-profe').length > 0){
 				var error_checkbox_profe=1;
@@ -621,10 +628,10 @@ function validate_form(id){
 
 				});
 				if(error_checkbox_profe==1){
-					jQuery('.validation-rule-checkbox-profe').addClass('error');	
+					jQuery('.validation-rule-checkbox-profe').addClass('error');
 				}
 			}
-			
+
 			//Busca todos los campos requeridos radio
 			if(jQuery(id).find('.validation-rule-radio').length > 0){
 				var error_radio=0;
@@ -647,7 +654,7 @@ function validate_form(id){
 				var message=jQuery(id).find('.validation-rule-checkbox').attr('data-error-msg');
 				jQuery('.errores').append('<p>'+message+'</p>');
 			}
-			
+
 			if(error_checkbox_profe==1){
 				var message=jQuery(id).find('.validation-rule-checkbox-profe').attr('data-error-msg');
 				jQuery('.errores').append('<p>'+message+'</p>');
