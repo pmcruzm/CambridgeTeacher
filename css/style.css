@@ -241,7 +241,7 @@ PROPIEDADES MI COLECCION
 #list-news .container .new-single .inside-new h4{color:#2e2e2e;font-size:18px;box-sizing:border-box;padding-right:10px;padding-left:10px;position:relative;}
 #list-news .container .new-single .inside-new h4 span{background:#ffffff;padding-left:10px;padding-right:10px;box-sizing:border-box;display:block;padding-top:10px;padding-bottom:10px;}
 #list-news .container .new-single .inside-new h4:after{content:'';display:block;width:75px;height:5px;background:#fde052;margin-bottom:15px;}
-#list-news .container .new-single .inside-new p{color:#2e2e2e;font-size:14px;line-height:21px;padding-left:20px;padding-right:20px;padding-bottom:15px;}
+#list-news .container .new-single .inside-new div{color:#2e2e2e;font-size:14px;line-height:21px;padding-left:20px;padding-right:20px;padding-bottom:15px;}
 .btn-more{clear:both;text-align:center;padding-top:20px;}
 .btn-more a{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .btn-more a:after{content:'';display:block;background:url(../img/ico_plus.png) top center no-repeat;background-size:21px;height:21px;}
