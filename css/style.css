@@ -397,13 +397,14 @@ PROPIEDADES DETALLE
 
 
 .img-detalles{overflow:hidden;padding-top:15px;}
-.box-sup-det{display:inline-block;margin-left:10px;margin-bottom:15px;}
-.box-sup-det img:first-child{margin-left:0;}
+.box-sup-det{display:block;padding-left:10px;margin-bottom:15px;width:50%;float:left;text-align:center;box-sizing:border-box;}
+.box-sup-det:first-child{padding-left:0;}
 .box-sup-det h4{color:#2e2e2e;font-size:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:inline-block;}
 .box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;height:30px;line-height:30px;width:80px;text-align:center;border-radius:20px;margin-left:15px;position:relative;font-size:14px;}
-.img-detalles{padding-bottom:50px;}
+.img-detalles{padding-bottom:50px;overflow:hidden;max-width:670px;width:100%;}
 .img-detalles img{max-height:100%;max-width:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
-.box-img-det{height:172px;box-sizing:border-box;padding:35px;margin-bottom:25px;width:100%;max-width:325px;}
+.box-img-det{height:172px;box-sizing:border-box;padding:35px;margin-bottom:25px;}
+.box-img-det + div{text-align:left;}
 
 .enl-generic{}
 .enl-generic .content-detalle{padding-top:40px;}
@@ -413,7 +414,7 @@ PROPIEDADES DETALLE
 .list-digitales li a{color:#2e2e2e;font-size:16px;}
 .list-digitales li a:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-globe.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
 
-.container-tabs{max-width:1024px;width:100%;overflow:hidden;}
+.container-tabs{max-width:100%;width:100%;overflow:hidden;}
 .single-tab{width:16.6666%;float:left;text-align:center;box-sizing:border-box;padding-left:4px;padding-right:4px;}
 .single-tab:first-child{padding-left:0;}
 .single-tab:last-child{padding-right:0;}
@@ -622,6 +623,7 @@ MEDIA QUERIES
 	.inside-recursos{padding-right:28%;}
 	.box-generic-detalle{padding-left:55px;padding-right:15px;}
 	#block-detalle{padding-top:140px;}
+	.img-detalles{max-width:100%;}
 }
 
 @media screen and (max-width: 950px) {	

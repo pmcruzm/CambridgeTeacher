@@ -390,41 +390,19 @@ jQuery(document).ready(function(){
 	});
 
 	//Mostrar tabs de detalle de producto
-	jQuery(document).on('click','.single-tab',function(e){
+	jQuery(document).on('click','.single-tab a',function(e){
 		e.preventDefault();
-		jQuery('.single-tab a').removeClass('active');
-		jQuery(this).addClass('active');
-		var box_open=jQuery(this).attr('rel');
-
-		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
+		if(!jQuery(this).hasClass('active')){
+			jQuery('.single-tab a').removeClass('active');
+			jQuery(this).addClass('active');
+			var box_open='.'+jQuery(this).attr('rel');
+			jQuery('.cont-tabs > div:visible').fadeOut(400,function(){
+				jQuery(box_open).fadeIn(400);
+			});
 		}
-
-		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
-		}
-
-		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
-		}
-
-		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
-		}
-
-		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
-		}
-
-		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
-		}
-
-		/*jQuery('.new-user-ct').fadeOut(400,function(){
-			jQuery('.old-user-ct').fadeIn('active');
-			//Cerrar todos los desplegables
-			jQuery('.new-user-ct .desplegable').hide();
-			jQuery('.new-user-ct a').removeClass('active');
-		});*/
 	});
 
 	jQuery(window).scroll(control_scroll);
-
-
 
 	//Evento para capturar el resize de la ventana
 	jQuery( window ).resize(function() {
