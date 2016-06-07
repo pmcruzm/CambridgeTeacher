@@ -394,16 +394,46 @@ PROPIEDADES DETALLE
 
 .box-generic-detalle{padding-left:25%;padding-right:15px;box-sizing:border-box;}
 .content-detalle{background:#ffffff;padding-left:42px;padding-right:42px;padding-top:25px;margin-bottom:12px;}
-.content-detalle h4{color:#2e2e2e;font-size:24px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+
 
 .img-detalles{overflow:hidden;padding-top:15px;}
-.img-detalles img{max-height:172px;max-width:100%;float:left;margin-left:10px;margin-bottom:15px;}
-.img-detalles img:first-child{margin-left:0;}
+.box-sup-det{display:inline-block;margin-left:10px;margin-bottom:15px;}
+.box-sup-det img:first-child{margin-left:0;}
+.box-sup-det h4{color:#2e2e2e;font-size:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:inline-block;}
+.box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;height:30px;line-height:30px;width:80px;text-align:center;border-radius:20px;margin-left:15px;position:relative;font-size:14px;}
+.img-detalles{padding-bottom:50px;}
+.img-detalles img{max-height:100%;max-width:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
+.box-img-det{height:172px;box-sizing:border-box;padding:35px;margin-bottom:25px;width:100%;max-width:325px;}
 
+.enl-generic{}
+.enl-generic .content-detalle{padding-top:40px;}
+.enl-generic h4{color:#2e2e2e;font-size:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:24px;}
 .list-digitales{padding-bottom:40px;padding-top:40px;}
 .list-digitales li{margin-bottom:20px;}
 .list-digitales li a{color:#2e2e2e;font-size:16px;}
-	
+.list-digitales li a:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-globe.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
+
+.container-tabs{max-width:1024px;width:100%;overflow:hidden;}
+.single-tab{width:16.6666%;float:left;text-align:center;box-sizing:border-box;padding-left:4px;padding-right:4px;}
+.single-tab:first-child{padding-left:0;}
+.single-tab:last-child{padding-right:0;}
+.single-tab a{color:#7d7974;display:block;width:100%;background:#faf8f5;font-size:11px;font-family:'sofia-pro-black', Helvetica, sans-serif;height:130px;vertical-align:bottom;line-height:16px;}
+.single-tab a.active{color:#2e2e2e;background:#ffffff;}
+.single-tab a:hover{color:#2e2e2e;background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+
+.cont-tabs{background:#ffffff;}
+.box-demos,.box-assessment,.box-home-school,.box-multimedia,.box-extra-resources,.box-programaciones{box-sizing:border-box;width:100%;padding:42px;padding-bottom:100px;}
+.box-demos h5,.box-assessment h5,.box-home-school h5,.box-multimedia h5,.box-extra-resources h5,.box-programaciones h5{font-size:24px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
+.box-demos ul,.box-assessment ul,.box-home-school ul,.box-multimedia ul,.box-extra-resources ul,.box-programaciones ul{padding-top:45px;}
+.box-demos ul li,.box-assessment ul li,.box-home-school ul li,.box-multimedia ul li,.box-extra-resources ul li,.box-programaciones ul li{margin-bottom:20px;}
+.box-demos ul li a,.box-assessment ul li a,.box-home-school ul li a,.box-multimedia ul li a,.box-extra-resources ul li a,.box-programaciones ul li a{font-size:16px;color:#2e2e2e;}
+
+.type-pdf:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-pdf.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
+.type-audio:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-audio.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
+.type-video:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-video.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
+.type-x:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-x.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
+.type-globe:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-globe.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
+.type-w:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-w.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}	
 	
 /*****************************
 PROPIEDADES FOOTER

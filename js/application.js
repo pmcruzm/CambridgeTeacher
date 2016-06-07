@@ -111,14 +111,14 @@ jQuery(document).ready(function(){
 	w_win=jQuery(window).width();
 	
 	//Volver el scroll a top
-	jQuery('body').scrollTo( "0px", 0,function(){
+	/*jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
 		var hash = window.location.hash.substring(1);
 		if(hash!=""){
 			alert('hash');
 			jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
 		}
-	});
+	});*/
 	
 	//Menú principal y submenús
 	jQuery(document).on('click','.language_opc > a',function(e){
@@ -361,24 +361,58 @@ jQuery(document).ready(function(){
 		jQuery('.btns-faqs a').removeClass('active');
 		jQuery(this).addClass('active');
 		jQuery('.old-user-ct').fadeOut(400,function(){
-			jQuery('.new-user-ct').fadeIn('active');
+			jQuery('.new-user-ct').fadeIn(400);
 			//Cerrar todos los desplegables 
 			jQuery('.old-user-ct .desplegable').hide();
 			jQuery('.old-user-ct a').removeClass('active');
 		});
 
 	});
+	
 	//Desplegar los faqs según link 
 	jQuery(document).on('click','.old-user',function(e){
 		e.preventDefault();
 		jQuery('.btns-faqs a').removeClass('active');
 		jQuery(this).addClass('active');
 		jQuery('.new-user-ct').fadeOut(400,function(){
-			jQuery('.old-user-ct').fadeIn('active');
+			jQuery('.old-user-ct').fadeIn(400);
 			//Cerrar todos los desplegables 
 			jQuery('.new-user-ct .desplegable').hide();
 			jQuery('.new-user-ct a').removeClass('active');
 		});
+	});
+	
+	//Mostrar tabs de detalle de producto 
+	jQuery(document).on('click','.single-tab',function(e){
+		e.preventDefault();
+		jQuery('.single-tab a').removeClass('active');
+		jQuery(this).addClass('active');
+		var box_open=jQuery(this).attr('rel');
+		
+		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
+		}
+		
+		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
+		}
+		
+		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
+		}
+		
+		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
+		}
+		
+		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
+		}
+		
+		if (!jQuery('.box-demos').is(":visible") && (box_open=='box-demos') ) {
+		}
+		
+		/*jQuery('.new-user-ct').fadeOut(400,function(){
+			jQuery('.old-user-ct').fadeIn('active');
+			//Cerrar todos los desplegables 
+			jQuery('.new-user-ct .desplegable').hide();
+			jQuery('.new-user-ct a').removeClass('active');
+		});*/
 	});
 
 	jQuery(window).scroll(control_scroll);
