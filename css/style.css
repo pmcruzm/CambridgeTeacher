@@ -314,7 +314,7 @@ PROPIEDADES REGISTRO
 #block-registro{background:#f5f0eb;padding-bottom:150px;}
 
 
-.top-w-title{margin-top:-40px !important}
+.top-w-title{margin-top:-25px !important}
 .top-register{background:#ffffff;padding-top:35px;padding-bottom:35px;position:relative;margin-top:-85px;margin-bottom:12px;box-sizing:border-box;padding-right:84px;}
 .form-group{overflow:hidden;margin-bottom:10px;position:relative;}
 #registro-form .form-group label{display:block;text-align:right;width:44%;float:left;box-sizing:border-box;padding-right:40px;height:40px;line-height:40px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
@@ -370,6 +370,8 @@ PROPIEDADES CONTACT
 ******************************/
 .intro_contact{padding-left: 44%;}
 .intro_contact p{padding-bottom:50px;color:#2e2e2e;font-size:16px;line-height:24px;}
+#banner-generico{position:relative;height:180px;background-image:url(../img/bg-contacto.png);background-size:496px;background-color:#fde052;background-position:calc(50% - 254px) 10px;background-repeat:no-repeat;}
+#banner-generico h2{font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;width:100%;max-width:660px;position:absolute;bottom:60px;left:0;right:0;margin:0 auto;text-align:left;line-height:40px;}
 
 /*****************************
 PROPIEDADES FAQs
