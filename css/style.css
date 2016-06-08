@@ -402,32 +402,35 @@ PROPIEDADES FAQs
 /*****************************
 PROPIEDADES DETALLE
 ******************************/
-#banner-detalle{}
+#banner-detalle{background-image:url(../img/bg-detalle.png);background-position:227px 22px;background-repeat:no-repeat;background-size:533px;}
 #banner-detalle .container{height:180px;position:relative;}
-#banner-detalle h3{position:absolute;left:265px;top:65px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;}
-#banner-detalle h2{position:absolute;left:265px;top:115px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:40px;}
+#banner-detalle h3{position:absolute;left:265px;bottom:100px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;}
+#banner-detalle h2{position:absolute;left:265px;bottom:50px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:40px;line-height:40px;}
 #banner-detalle h2 span{font-size:20px;display:inline-block;margin-left:10px;}
+.enl-delete{position:absolute;bottom:50px;right:30px;color:#ffffff;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.enl-delete:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/less-white.png) top left no-repeat;background-size:21px;position:relative;top:6px;margin-right:13px;}
 
 .cover-detalle{display:inline-block;position:relative;top:35px;left:55px;position:absolute;width:160px;z-index:20;}
 .cover-detalle img{width:160px;box-shadow:0 5px 15px rgba(0, 0, 0, 0.5);}
 .cover-detalle span{position:absolute;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;bottom:0;}
 
-#block-detalle{background:#f5f0eb;padding-top:35px;position:relative;padding-bottom:100px;}
+#block-detalle{background:#f5f0eb;position:relative;padding-bottom:100px;}
 .enl-volver{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;position:absolute;top:100px;left:55px;}
 .enl-volver:before{content:'';display:inline-block;width:10px;height:15px;background:url(../img/arrow-back.png) top left no-repeat;background-size:10px;margin-right:10px;position:relative;top:3px;}
 
 .box-generic-detalle{padding-left:25%;padding-right:15px;box-sizing:border-box;}
 .content-detalle{background:#ffffff;padding-left:42px;padding-right:42px;padding-top:25px;margin-bottom:12px;}
+.first-generic{position:relative;top:-25px;margin-bottom:-25px;}
 
 
 .img-detalles{overflow:hidden;padding-top:15px;}
 .box-sup-det{display:block;padding-left:10px;margin-bottom:15px;width:50%;float:left;text-align:center;box-sizing:border-box;}
 .box-sup-det:first-child{padding-left:0;}
-.box-sup-det h4{color:#2e2e2e;font-size:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:inline-block;}
+.box-sup-det h4{color:#2e2e2e;font-size:16px;/*font-family:'sofia-pro-black', Helvetica, sans-serif;*/display:inline-block;padding-left:10px;}
 .box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;height:30px;line-height:30px;width:80px;text-align:center;border-radius:20px;margin-left:15px;position:relative;font-size:14px;}
 .img-detalles{padding-bottom:50px;overflow:hidden;max-width:670px;width:100%;}
 .img-detalles img{max-height:100%;max-width:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
-.box-img-det{height:172px;box-sizing:border-box;padding:35px;margin-bottom:25px;}
+.box-img-det{height:182px;box-sizing:border-box;padding:10px;margin-bottom:25px;/**/}
 .box-img-det + div{text-align:left;}
 
 .enl-generic{}
@@ -436,7 +439,9 @@ PROPIEDADES DETALLE
 .list-digitales{padding-bottom:40px;padding-top:40px;}
 .list-digitales li{margin-bottom:20px;}
 .list-digitales li a{color:#2e2e2e;font-size:16px;}
-.list-digitales li a:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-globe.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
+.list-digitales li a:before{content:'';display:inline-block;width:18px;height:18px;background:url(../svg/fileformats_icon_sprite.svg) 0px -36px no-repeat;background-size:36px;margin-right:15px;position:relative;top:3px;}
+.list-digitales li a:hover{text-decoration:underline;}
+.list-digitales li a:hover:before{background-position:-18px -36px;}
 
 .container-tabs{max-width:100%;width:100%;overflow:hidden;}
 .single-tab{width:16.6666%;float:left;text-align:center;box-sizing:border-box;padding-left:4px;padding-right:4px;}
@@ -453,12 +458,24 @@ PROPIEDADES DETALLE
 .box-demos ul li,.box-assessment ul li,.box-home-school ul li,.box-multimedia ul li,.box-extra-resources ul li,.box-programaciones ul li{margin-bottom:20px;}
 .box-demos ul li a,.box-assessment ul li a,.box-home-school ul li a,.box-multimedia ul li a,.box-extra-resources ul li a,.box-programaciones ul li a{font-size:16px;color:#2e2e2e;}
 
-.type-pdf:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-pdf.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
-.type-audio:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-audio.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
-.type-video:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-video.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
-.type-x:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-x.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
-.type-globe:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-globe.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}
-.type-w:before{content:'';display:inline-block;width:18px;height:18px;background:url(../img/ico-w.png) top left no-repeat;background-size:18px;margin-right:15px;position:relative;top:3px;}	
+.type-pdf:before{content:'';display:inline-block;width:18px;height:18px;background:url(../svg/fileformats_icon_sprite.svg) 0px -18px no-repeat;background-size:36px;margin-right:15px;position:relative;top:3px;}
+.type-pdf:hover:before{background-position:-18px -18px;}
+.type-pdf:hover{text-decoration:underline;}
+.type-audio:before{content:'';display:inline-block;width:18px;height:18px;background:url(../svg/fileformats_icon_sprite.svg) 0px -90px no-repeat;background-size:36px;margin-right:15px;position:relative;top:3px;}
+.type-audio:hover:before{background-position:-18px -90px;}
+.type-audio:hover{text-decoration:underline;}
+.type-video:before{content:'';display:inline-block;width:18px;height:18px;background:url(../svg/fileformats_icon_sprite.svg) 0px -72px no-repeat;background-size:36px;margin-right:15px;position:relative;top:3px;}
+.type-video:hover:before{background-position:-18px -72px;}
+.type-video:hover{text-decoration:underline;}
+.type-x:before{content:'';display:inline-block;width:18px;height:18px;background:url(../svg/fileformats_icon_sprite.svg) 0px 0px no-repeat;background-size:36px;margin-right:15px;position:relative;top:3px;}
+.type-x:hover:before{background-position:-18px 0px;}
+.type-x:hover{text-decoration:underline;}
+.type-globe:before{content:'';display:inline-block;width:18px;height:18px;background:url(../svg/fileformats_icon_sprite.svg) 0px -36px no-repeat;background-size:36px;margin-right:15px;position:relative;top:3px;}
+.type-globe:hover:before{background-position:-18px -36px;}
+.type-globe:hover{text-decoration:underline;}
+.type-w:before{content:'';display:inline-block;width:18px;height:18px;background:url(../svg/fileformats_icon_sprite.svg) 0px -54px no-repeat;background-size:36px;margin-right:15px;position:relative;top:3px;}	
+.type-w:hover:before{background-position:-18px -54px;}
+.type-w:hover{text-decoration:underline;}
 	
 /*****************************
 PROPIEDADES FOOTER

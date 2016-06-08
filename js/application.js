@@ -15,6 +15,7 @@ var max_items=8;
 var filter_segmento=-1;
 var filter_type1=-1;
 var filter_type2=-1;
+var hash_active=0;
 
 //Eventos para dispositivos móviles
 var ua = navigator.userAgent,
@@ -83,13 +84,15 @@ jQuery(window).load(function(){
 			}
 		});
 		
-		//Calculamos demos y evalución para todos
-		var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
-		var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
-		
-		//Asignamos valores a enlaces correspondientes 
-		jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
-		jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
+		if(hash_active!=1){
+			//Calculamos demos y evalución para todos
+			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
+			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
+			
+			//Asignamos valores a enlaces correspondientes 
+			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
+			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
+		}
 	}
 
 	//Ajustamos Shot de la home
@@ -131,10 +134,21 @@ jQuery(document).ready(function(){
 		//Pillar anclas de la url si las hay
 		var hash = window.location.hash.substring(1);
 		if(hash!=""){
-			alert(hash);
-			jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
-			
-			//Mirar si estamos en catalogo y es un filtro
+			//alert(hash);
+			if(hash.indexOf('segment') > -1){
+				if (jQuery('#all-catalogo').is(":visible") ) {
+					//Mirar si estamos en catalogo y es un filtro
+					var array_hash=hash.split("-"); 
+					filter_segmento=array_hash[1];
+					//Filtramos 
+					filter_catalogo(filter_segmento,filter_type1,filter_type2);	
+					//Marcamos opcion en el filtro de primer nivel 
+					jQuery('.filter_cat a[data-filter-segment='+filter_segmento+']').addClass('active');
+					hash_active=1;
+				}
+			}else{
+				jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
+			}
 		}
 	});
 
