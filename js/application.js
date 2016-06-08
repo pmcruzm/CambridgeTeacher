@@ -16,6 +16,7 @@ var filter_segmento=-1;
 var filter_type1=-1;
 var filter_type2=-1;
 var hash_active=0;
+var block_filter=0;
 
 //Eventos para dispositivos móviles
 var ua = navigator.userAgent,
@@ -93,6 +94,9 @@ jQuery(window).load(function(){
 			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 		}
+		
+		//Activamos Lazyload para las imágenes 
+		jQuery("img.lazy").lazyload();
 	}
 
 	//Ajustamos Shot de la home
@@ -120,15 +124,7 @@ jQuery(window).load(function(){
 			jQuery('.cover-detalle img').parent().find('span').css({bottom:20});
 		}
 	}
-
-});
-
-jQuery(document).ready(function(){
-
-	//Obtenemos altura y anchura del navegador
-	h_win=jQuery(window).height();
-	w_win=jQuery(window).width();
-
+	
 	//Volver el scroll a top
 	jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
@@ -145,12 +141,67 @@ jQuery(document).ready(function(){
 					//Marcamos opcion en el filtro de primer nivel 
 					jQuery('.filter_cat a[data-filter-segment='+filter_segmento+']').addClass('active');
 					hash_active=1;
+					//Activamos Lazyload para las imágenes 
+					jQuery("img.lazy").lazyload();
 				}
 			}else{
-				jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
+				if(hash=='library'){
+				//Ocultamos filtros cabecera
+				jQuery('.filter_cat').fadeOut(400,function(){
+					jQuery('.filter_cat a').removeClass('active');	
+				});
+				
+				//Activamos el botón tipo_cat
+				jQuery('.tipo_cat a').removeClass('active');	
+				jQuery('#btn-mi-coleccion').addClass('active');	
+				
+				//Cerramos todos y mostramos mi coleccion 
+				jQuery('#all-catalogo').fadeOut(400,function(){
+					jQuery('#selectores-filtros a').removeClass('active');
+					jQuery('#my-catalogo').css({'opacity':0}).show();
+					//Tamaño de cuadros
+					if (jQuery('#my-catalogo .content-catalogo').is(":visible") ) {
+						
+						jQuery('#my-catalogo .content-catalogo div.inside-b-book').each(function() {
+							var ancho_box=jQuery(this).width();
+							jQuery(this).css('height',ancho_box);
+						});
+						
+						jQuery('#my-catalogo .content-catalogo .enl-book img').each(function() {
+							if(jQuery(this).parent().find('span').length>0){
+								var alto_img=jQuery(this).height();
+								jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
+							}
+						});
+						
+						//Animamos aparición cuadros
+						jQuery('#my-catalogo').animate({opacity:1},400);
+						
+						//Activamos Lazyload para las imágenes 
+						jQuery("img.lazy").lazyload();
+						
+						//Reseteamos los filtros
+						filter_segmento=-1;
+						filter_type1=-1;
+						filter_type2=-1;	
+						/*filter_catalogo(filter_segmento,filter_type1,filter_type2);	*/
+					}
+				});
+				
+				}else{
+					jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
+				}
 			}
 		}
 	});
+
+});
+
+jQuery(document).ready(function(){
+
+	//Obtenemos altura y anchura del navegador
+	h_win=jQuery(window).height();
+	w_win=jQuery(window).width();
 
 	//Menú principal y submenús
 	jQuery(document).on('click','.language_opc > a',function(e){
@@ -456,8 +507,10 @@ jQuery(document).ready(function(){
 						
 						//Animamos aparición cuadros
 						jQuery('#my-catalogo').animate({opacity:1},400);
+						
+						//Activamos Lazyload para las imágenes 
+						jQuery("img.lazy").lazyload();
 					}
-					//Etiqueta Sample
 				});
 			}else{
 				jQuery('#my-catalogo').fadeOut(400,function(){
@@ -478,22 +531,26 @@ jQuery(document).ready(function(){
 	//Cuando pulsas sobre un filter de primer nivel 
 	jQuery(document).on('click','.filter_cat a',function(e){
 		e.preventDefault();
-		if(!jQuery(this).hasClass('active')){
-			jQuery('.filter_cat a').removeClass('active');
-			jQuery(this).addClass('active');
-			filter_segmento=jQuery(this).attr('data-filter-segment');
-			filter_type1=-1;
-			filter_type2=-1;	
-			filter_catalogo(filter_segmento,filter_type1,filter_type2);
-			jQuery('#selectores-filtros a').removeClass('active');	
-		}else{
-			jQuery('.filter_cat a').removeClass('active');
-			filter_segmento=-1;
-			filter_type1=-1;
-			filter_type2=-1;
-			//Mostramos todos los elementos
-			filter_catalogo(filter_segmento,filter_type1,filter_type2);	
-			jQuery('#selectores-filtros a').removeClass('active');
+		//console.log(block_filter);
+		if(block_filter==0){
+			block_filter=1;
+			if(!jQuery(this).hasClass('active')){
+				jQuery('.filter_cat a').removeClass('active');
+				jQuery(this).addClass('active');
+				filter_segmento=jQuery(this).attr('data-filter-segment');
+				filter_type1=-1;
+				filter_type2=-1;	
+				filter_catalogo(filter_segmento,filter_type1,filter_type2);
+				jQuery('#selectores-filtros a').removeClass('active');	
+			}else{
+				jQuery('.filter_cat a').removeClass('active');
+				filter_segmento=-1;
+				filter_type1=-1;
+				filter_type2=-1;
+				//Mostramos todos los elementos
+				filter_catalogo(filter_segmento,filter_type1,filter_type2);	
+				jQuery('#selectores-filtros a').removeClass('active');
+			}
 		}
 	}); 
 	
@@ -646,7 +703,9 @@ function filter_catalogo(segmento,type1,type2){
 	
 	if(segmento==-1 & type1==-1 & type2==-1 ){
 		allCourses.show();
+		block_filter=0;
 	}else{
+		allCourses.show();
 		if(type1!=-1) {
 				allCourses.each(function(i, e){
 					if( jQuery(e).data('type') == 'demo' ) {
@@ -679,6 +738,9 @@ function filter_catalogo(segmento,type1,type2){
 			//Asignamos valores a enlaces correspondientes 
 			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
+			
+			//Desbloqueamos filtros
+			block_filter=0;
 		}else{
 			
 			//Calculamos demos y evalución para todos
@@ -688,6 +750,9 @@ function filter_catalogo(segmento,type1,type2){
 			//Asignamos valores a enlaces correspondientes 
 			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
+			
+			//Desbloqueamos filtros
+			block_filter=0;
 		}
 		
 	}
