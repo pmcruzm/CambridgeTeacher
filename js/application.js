@@ -127,16 +127,16 @@ jQuery(document).ready(function(){
 	w_win=jQuery(window).width();
 
 	//Volver el scroll a top
-	/*jQuery('body').scrollTo( "0px", 0,function(){
+	jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
 		var hash = window.location.hash.substring(1);
 		if(hash!=""){
-			alert('hash');
+			alert(hash);
 			jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
 			
 			//Mirar si estamos en catalogo y es un filtro
 		}
-	});*/
+	});
 
 	//Menú principal y submenús
 	jQuery(document).on('click','.language_opc > a',function(e){
@@ -483,25 +483,34 @@ jQuery(document).ready(function(){
 		}
 	}); 
 	
-	/*
-	//Ajustamos altura de los cuadros de catalogo
-			if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
-				jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
-					var ancho_box=jQuery(this).width();
-					jQuery(this).css('height',ancho_box);
-				});
+	//Cuando queremos desplegar Mastercode
+	jQuery(document).on('click','.box-mastercode a',function(e){
+		e.preventDefault();
+		var h_content=jQuery('#content').outerHeight();
+		jQuery('#modal-mastercode').height(h_content);
+		jQuery('#modal-mastercode').fadeIn(400);
+	}); 
+	
+	//Enviar formulario de mastercode
+	jQuery(document).on("submit","#form-mastercode", function(e) {
+		if(send_form==0){
+			send_form=1;
+			//Limpiamos errores si no es la primera vez
+			jQuery(".errores").html("");
+			//Llamamos a la función de validar (id formulario y contenedor errores)
+			var result=validate_form('#form-mastercode');
+			if(result==1){
+				e.preventDefault();
+				send_form=0;
 			}
-
-			//Ajustamos etiqueta sample de los cuadros de catalogo
-			if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
-				jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
-					if(jQuery(this).parent().find('span').length>0){
-						var alto_img=jQuery(this).height();
-						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
-					}
-				});
-			}
-	*/
+		}
+	});
+	
+	//Cerrar modal Mastercode
+	jQuery(document).on("click",".close-modal", function(e) {
+		e.preventDefault();
+		jQuery('#modal-mastercode').fadeOut(400);	
+	});
 
 	jQuery(window).scroll(control_scroll);
 
@@ -566,6 +575,12 @@ jQuery(document).ready(function(){
 				jQuery('#show-examples div.shot-box').each(function() {
 					jQuery(this).css('height',maxHeight);
 				});
+			}
+			
+			//Ajustamos modal si está abierto
+			if (jQuery('#modal-mastercode').is(":visible") ) {
+				var h_content=jQuery('#content').outerHeight();
+				jQuery('#modal-mastercode').height(h_content);
 			}
 
 

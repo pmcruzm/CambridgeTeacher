@@ -73,6 +73,12 @@
                     <li><a href="#" data-filter-segment="5">ADULTOS</a></li>
                     <li><a href="#" data-filter-segment="6">EXÁMENES</a></li>
                 </ul>
+                <!--Botón Mastercode-->
+                <div class="box-mastercode">
+                	<a href="#">Validar School Mastercode</a>
+                    <span class="emb-ondas"></span>
+                    <span class="emb-asteriscos"></span>
+                </div>
             </div>
             <div id="all-catalogo">
                 <div id="selectores-filtros">
@@ -228,6 +234,22 @@
                             <span class="helper"></span><a href="#" class="enl-book"><img class="tag-sample" src="img/item6.jpg"><span>SAMPLE</span></a>
                             <a href="#" class="plus-book">Abrir</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!--Modal MasterCode-->
+            <div id="modal-mastercode">
+            	<div class="inside-mastercode">
+                	<a href="#" class="close-modal">Cerrar</a>
+                	<h3>Cambridge<br/>School Mastercode</h3>
+                    <p>Introduce aquí el School MasterCode que identifica a tu centro educativo como usuario de libros de Cambridge University Press. Si en tu centro estáis usando nuestros libros pero no conoces el School MasterCode, solicítalo <a href="#">aquí.</a></p>
+                    <div class="box-form-mastercode">
+                    <form id="form-mastercode" role="form" method="POST" action="" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados">
+                        <label for="code">School Mastercode</label>
+                        <input type="text" class="form-control validation-rule-empty" name="code" id="code">
+                        <div class="errores"></div>
+                        <div class="btns-reset"><input type="submit" value="ENVIAR" class="btn"></div>
+                    </form>
                     </div>
                 </div>
             </div>

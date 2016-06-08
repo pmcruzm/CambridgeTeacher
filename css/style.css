@@ -132,7 +132,7 @@ span.type-user{position:absolute;font-size:12px;font-family:'sofia-pro-black', H
 /*****************************
 PROPIEDADES HOME
 ******************************/
-#content{padding-top:47px;}
+#content{padding-top:47px;position:relative;}
 
 #banner-home{background:#fde052 url(../img/banner-home.png) center 45px no-repeat;height:493px;text-align:center;background-size:935px;position:relative;}
 .btn-register-h{position:absolute;height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;bottom:-25px;left:0;right:0;margin:0 auto;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
@@ -283,6 +283,28 @@ PROPIEDADES CATALOGO
 
 .plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) top left no-repeat;display:block;width:21px;height:21px;text-indent:-99999px;background-size:21px;}
 .check-book{position:absolute;top:10px;right:10px;background:url(../img/ico-check.png) top left no-repeat;display:block;width:20px;height:20px;text-indent:-99999px;background-size:20px;}
+
+.box-mastercode{position:absolute;top:10px;right:60px;display:block;width:277px;height:80px;background:url(../img/bg-mastercode.png) top left no-repeat;background-size:277px;}
+.box-mastercode a{position:absolute;color:#ffffff;width:244px;top:22px;right:0;height:33px;line-height:33px;font-family:'sofia-pro-black', Helvetica, sans-serif;text-align:center;border-radius:30px;font-size:14px;background:#39c3da;display:block;}
+.emb-ondas{display:block;position:absolute;width:45px;height:7px;background:url(../img/emb-ondas.png) top left no-repeat;background-size:45px;z-index:50;top:19px;right:40px;}
+.emb-asteriscos{display:block;position:absolute;width:66px;height:10px;background:url(../img/emb-aster.png) top left no-repeat;background-size:66px;z-index:50;top:50px;left:60px;}
+
+#modal-mastercode{display:none;background:rgba(0,0,0,0.5);position:absolute;top:0;width:100%;z-index:80;height:1000px;}
+.inside-mastercode{width:480px;box-sizing:border-box;border:8px solid #ffffff;background:#39c3da;padding:50px;position:absolute;top:110px;left:0;right:0;margin:0 auto;}
+.inside-mastercode h3{color:#ffffff;font-size:40px;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:40px;margin-bottom:40px;}
+.inside-mastercode p{color:#2e2e2e;font-size:16px;margin-bottom:20px;}
+.inside-mastercode p a{text-decoration:underline;color:#ffffff;}
+#form-mastercode{}
+#form-mastercode label{display:none;}
+#form-mastercode input[type=text]{width:280px;box-sizing:border-box;border:solid 3px #ffffff;background:none;height:35px;line-height:35px;color:#2e2e2e;font-size:20px;padding-right:10px;padding-left:10px;}
+#form-mastercode input[type=text].error{border:solid 3px #bc232a;}
+#form-mastercode .errores{padding-top:20px !important;width:100% !important;padding-left:0 !important;margin-top:0!important;}
+#form-mastercode .errores p{font-size:13px !important;color:#bc232a !important;margin-bottom:0 !important;}
+#form-mastercode input[type=submit]{-webkit-appearance:none;font-size:16px;height:35px;width:200px;box-sizing:border-box;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:35px;float:right;}
+#form-mastercode input[type=submit]:hover{background:#fde052;color:#2e2e2e;}
+#form-mastercode .btns-reset{overflow:hidden;padding-top:20px;}
+
+.close-modal{position:absolute;top:10px;right:10px;width:21px;height:21px;background:url(../img/close-modal.png) top left no-repeat;background-size:21px;text-indent:-99999px;}
 
 
 /*****************************
