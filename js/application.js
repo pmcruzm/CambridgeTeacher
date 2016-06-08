@@ -741,6 +741,8 @@ function filter_catalogo(segmento,type1,type2){
 			
 			//Desbloqueamos filtros
 			block_filter=0;
+			//Activamos Lazyload para las imágenes 
+			jQuery("img.lazy").lazyload();
 		}else{
 			
 			//Calculamos demos y evalución para todos
@@ -753,6 +755,8 @@ function filter_catalogo(segmento,type1,type2){
 			
 			//Desbloqueamos filtros
 			block_filter=0;
+			//Activamos Lazyload para las imágenes 
+			jQuery("img.lazy").lazyload();
 		}
 		
 	}
