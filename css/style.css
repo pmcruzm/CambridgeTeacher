@@ -403,9 +403,13 @@ PROPIEDADES FAQs
 .single-faq>a:hover:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/arrow_faqs.png) top left no-repeat;background-size:21px;position:absolute;left:-40px;top:4px;}
 .single-faq>a.active:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/arrow_faqs.png) top left no-repeat;background-size:21px;position:absolute;left:-40px;top:4px;}
 .single-faq .desplegable{display:none;padding-bottom:30px;}
-.single-faq .desplegable p{}
+.single-faq .desplegable p{margin-bottom:14px;}
 .single-faq .desplegable p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .single-faq .desplegable p a{color:#30c0d8;text-decoration:underline;}
+
+.single-faq .desplegable ul,.single-faq .desplegable ol{margin-bottom:14px;padding-left:30px;}
+.single-faq .desplegable ul li{list-style:disc;}
+.single-faq .desplegable ol li{list-style:decimal;}
 
 /*****************************
 PROPIEDADES DETALLE
@@ -437,7 +441,7 @@ PROPIEDADES DETALLE
 .box-sup-det h4{color:#2e2e2e;font-size:16px;/*font-family:'sofia-pro-black', Helvetica, sans-serif;*/display:inline-block;padding-left:10px;}
 .box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;height:30px;line-height:30px;width:80px;text-align:center;border-radius:20px;margin-left:15px;position:relative;font-size:14px;}
 .img-detalles{padding-bottom:50px;overflow:hidden;max-width:670px;width:100%;}
-.img-detalles img{max-height:100%;max-width:100%;box-shadow:10px 17px 36px 0px rgba(0, 0, 0, 0.2);}
+.img-detalles img{max-height:100%;max-width:100%;box-shadow:5px 8px 18px 0px rgba(0, 0, 0, 0.2);}
 .box-img-det{height:182px;box-sizing:border-box;padding:10px;margin-bottom:25px;}
 .box-img-det + div{text-align:left;}
 
