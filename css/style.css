@@ -359,8 +359,8 @@ PROPIEDADES REGISTRO
 .label-2-lines{line-height:19px !important;}
 
 .bg-select{background:#2e2e2e url(../img/arrow_select.png) 95% 50% no-repeat;display:block;width:56%;float:left;overflow:hidden;height:40px;background-size:9px;}
-#select_centre{background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;text-align:right;height:40px;line-height:40px;padding-right:45px;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;cursor:pointer;}
-#select_centre option{text-align:right;background:#2e2e2e;}
+.bg-select > select {background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;text-align:right;height:40px;line-height:40px;padding-right:45px;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;cursor:pointer;}
+.bg-select > select  option{text-align:right;background:#2e2e2e;}
 .enl-help{clear:both;text-align:right;padding-right:14px;margin-bottom:15px;}
 .enl-help a{color:#7d7974;font-size:13px;}
 
@@ -382,7 +382,7 @@ PROPIEDADES CONTACT
 /*****************************
 PROPIEDADES FAQs
 ******************************/
-#box-faqs{margin: 0 auto;max-width: 660px;width: 100%;}	
+#box-faqs{margin: 0 auto;max-width: 660px;width: 100%;}
 
 .top-faqs{padding:50px 90px;box-sizing:border-box;}
 .top-faqs p{margin-top:40px;font-size:16px;line-height:24px;}
@@ -481,10 +481,10 @@ PROPIEDADES DETALLE
 .type-globe:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -38px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
 .type-globe:hover:before{background-position:-19px -36px;}
 .type-globe:hover{text-decoration:underline;}
-.type-w:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -57px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}	
+.type-w:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -57px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
 .type-w:hover:before{background-position:-19px -57px;}
 .type-w:hover{text-decoration:underline;}
-	
+
 /*****************************
 PROPIEDADES FOOTER
 ******************************/
@@ -635,9 +635,9 @@ input, textarea, select {-webkit-appearance: none;}
 /*****************************
 WEBKIT HACKS
 ******************************/
-@media screen and (-webkit-min-device-pixel-ratio:0) {  
-/* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */  
-#select_centre{direction:rtl;padding-right:60px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+/* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
+.bg-select > select {direction:rtl;padding-right:60px;}
 }
 
 /*****************************
@@ -645,12 +645,12 @@ MEDIA QUERIES
 ******************************/
 
 @media screen and (max-width: 1400px) {
-	
+
 }
 
 @media screen and (max-width: 1200px) {
-	
-	
+
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -675,52 +675,52 @@ MEDIA QUERIES
 	.img-detalles{max-width:100%;}
 }
 
-@media screen and (max-width: 950px) {	
-	#banner-home{background:#fde052 url(../img/banner-home.png) center 55px no-repeat;height:413px;text-align:center;background-size:745px;position:relative;}	
+@media screen and (max-width: 950px) {
+	#banner-home{background:#fde052 url(../img/banner-home.png) center 55px no-repeat;height:413px;text-align:center;background-size:745px;position:relative;}
 	#info-profesor p{width:90%;margin:0 auto 10px;}
 }
 
-@media screen and (max-width: 878px) {	
-	
+@media screen and (max-width: 878px) {
+
 }
 
-@media screen and (max-width: 768px) {	
-	
+@media screen and (max-width: 768px) {
+
 }
 
-@media screen and (max-width: 767px) {	
+@media screen and (max-width: 767px) {
 
 	.inside-pizarra img{position:relative;top:0;left:0;}
 	.inside-recursos img{position:relative;top:0;right:0;}
 	.inside-pasando img{position:relative;top:0;left:0;}
-	
+
 	.pizarra-interectiva{padding-left:0;padding-right:0;height:auto;}
 	.inside-pizarra{height:auto;background:none;padding-left:10px;padding-right:10px;padding-top:20px;text-align:center;}
 	.inside-pizarra .box-ins-home{margin-top:-90px;z-index:10;}
-	
+
 	.recursos-extra{padding-left:0;padding-right:0;height:auto;}
 	.inside-recursos{height:auto;background:none;padding-left:10px;padding-right:10px;padding-top:20px;text-align:center;}
 	.inside-recursos .box-ins-home{margin-top:-90px;z-index:10;}
-	
+
 	.que-esta-pasando{padding-left:0;padding-right:0;height:auto;}
 	.inside-pasando{height:auto;background:none;padding-left:10px;padding-right:10px;padding-top:20px;text-align:center;}
 	.inside-pasando .box-ins-home{margin-top:-90px;z-index:10;}
-	
+
 	.box-ins-home{background:#ffffff;width:100%;max-width:100%;padding-top:40px;padding-bottom:100px;padding-left:35px;padding-right:25px;box-sizing:border-box;text-align:left;}
-	
+
 	#banner-home{background:#fde052 url(../img/banner-home.png) center 55px no-repeat;height:373px;text-align:center;background-size:615px;position:relative;}
-	#info-profesor p{width:90%;margin:0 auto 10px;}	
+	#info-profesor p{width:90%;margin:0 auto 10px;}
 	.txt-b-top{top:55px;}
-	
+
 	.login_opc{display:none !important;}
 	.left_footer{width:38%;}
 	.right_footer{width:62%;}
 	.block_visita{width:60%;}
 	.block_siguenos{width:40%;}
-	
+
 }
 
-@media screen and (max-width: 640px) {	
+@media screen and (max-width: 640px) {
 	.shot-box{height:auto !important;width:100%;margin-bottom:15px;}
 	.left_footer{width:100%;padding-bottom:30px;}
 	.right_footer{width:100%;}
@@ -732,7 +732,7 @@ MEDIA QUERIES
 	.txt-b-top p{font-size:14px;}
 }
 
-@media screen and (max-width: 480px) {	
+@media screen and (max-width: 480px) {
 	#footer{text-align:center;}
 	.block_visita{width:100%;}
 	.block_visita h4{margin-bottom:20px;}
@@ -743,7 +743,7 @@ MEDIA QUERIES
 	.btn-register-h{font-size:14px;height:40px;line-height:40px;bottom:-20px;}
 }
 
-@media screen and (max-width: 479px) {	
+@media screen and (max-width: 479px) {
 	#banner-home{background:#fde052 url(../img/banner-home.png) center 65px no-repeat;height:253px;text-align:center;background-size:305px;position:relative;}
 	.txt-b-top{top:45px;}
 	.txt-b-top p{font-size:14px;}
@@ -753,6 +753,6 @@ MEDIA QUERIES
 	.logo_h{width:142px;}
 }
 
-@media screen and (max-width: 320px) {	
-	
+@media screen and (max-width: 320px) {
+
 }
