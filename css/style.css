@@ -361,10 +361,10 @@ PROPIEDADES REGISTRO
 .label-2-lines{line-height:19px !important;}
 
 .bg-select{background:#2e2e2e url(../img/arrow_select.png) 95% 50% no-repeat;display:block;width:56%;float:left;overflow:hidden;height:40px;background-size:9px;}
-#select_centre{background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;height:40px;line-height:40px;padding-right:60px;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;cursor:pointer;padding-left:10px;}
-#select_centre.right-t{text-align:right;}
-#select_centre option{text-align:left;background:#2e2e2e;}
-#select_centre.right-t option{text-align:right;}
+.bg-select > select{background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;height:40px;line-height:40px;padding-right:60px;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;cursor:pointer;padding-left:10px;}
+.bg-select > select.right-t{text-align:right;}
+.bg-select > select option{text-align:left;background:#2e2e2e;}
+.bg-select > select.right-t option{text-align:right;}
 .enl-help{clear:both;text-align:right;padding-right:14px;margin-bottom:15px;}
 .enl-help a{color:#7d7974;font-size:13px;}
 
@@ -647,8 +647,8 @@ WEBKIT HACKS
 ******************************/
 @media screen and (-webkit-min-device-pixel-ratio:0) {  
 /* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */  
-#select_centre.right-t{direction:rtl;padding-right:70px;}
-#select_centre{direction:ltr;}
+.bg-select > select.right-t{direction:rtl;padding-right:70px;}
+.bg-select > select{direction:ltr;}
 }
 
 /*****************************
