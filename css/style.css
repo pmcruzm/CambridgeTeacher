@@ -473,11 +473,11 @@ PROPIEDADES DETALLE
 .single-tab a:hover{color:#2e2e2e;background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 
 .cont-tabs{background:#ffffff;}
-.box-demos,.box-assessment,.box-home-school,.box-multimedia,.box-extra-resources,.box-programaciones{box-sizing:border-box;width:100%;padding:42px;padding-bottom:100px;}
-.box-demos h5,.box-assessment h5,.box-home-school h5,.box-multimedia h5,.box-extra-resources h5,.box-programaciones h5{font-size:24px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
-.box-demos ul,.box-assessment ul,.box-home-school ul,.box-multimedia ul,.box-extra-resources ul,.box-programaciones ul{padding-top:45px;}
-.box-demos ul li,.box-assessment ul li,.box-home-school ul li,.box-multimedia ul li,.box-extra-resources ul li,.box-programaciones ul li{margin-bottom:20px;}
-.box-demos ul li a,.box-assessment ul li a,.box-home-school ul li a,.box-multimedia ul li a,.box-extra-resources ul li a,.box-programaciones ul li a{font-size:16px;color:#2e2e2e;}
+.box-type-1,.box-type-2,.box-type-3,.box-type-4,.box-type-5,.box-type-6{box-sizing:border-box;width:100%;padding:42px;padding-bottom:100px;}
+.box-type-1 h5,.box-type-2 h5,.box-type-3 h5,.box-type-4 h5,.box-type-5 h5,.box-type-6 h5{font-size:24px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
+.box-type-1 ul,.box-type-2 ul,.box-type-3 ul,.box-type-4 ul,.box-type-5 ul,.box-type-6 ul{padding-top:45px;}
+.box-demos ul li,.box-type-2 ul li,.box-type-3 ul li,.box-type-4 ul li,.box-type-5 ul li,.box-type-6 ul li{margin-bottom:20px;}
+.box-type-1 ul li a,.box-type-2 ul li a,.box-type-3 ul li a,.box-type-4 ul li a,.box-type-5 ul li a,.box-type-6 ul li a{font-size:16px;color:#2e2e2e;}
 
 .type-pdf:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -19px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
 .type-pdf:hover:before{background-position:-19px -19px;}
