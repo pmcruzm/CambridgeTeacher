@@ -417,6 +417,9 @@ PROPIEDADES FAQs
 .single-faq .desplegable ul li{list-style:disc;}
 .single-faq .desplegable ol li{list-style:decimal;}
 
+.single-faq .desplegable b,.single-faq .desplegable strong{font-family:'sofia-pro-black', Helvetica, sans-serif;} 
+.single-faq .desplegable em,.single-faq .desplegable i{font-style:italic;}
+
 /*****************************
 PROPIEDADES DETALLE
 ******************************/
