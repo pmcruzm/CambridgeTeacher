@@ -448,7 +448,7 @@ PROPIEDADES DETALLE
 .box-sup-det{display:block;padding-left:10px;margin-bottom:15px;width:50%;float:left;text-align:center;box-sizing:border-box;}
 .box-sup-det:first-child{padding-left:0;}
 .box-sup-det h4{color:#2e2e2e;font-size:16px;/*font-family:'sofia-pro-black', Helvetica, sans-serif;*/display:inline-block;padding-left:10px;}
-.box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;height:30px;line-height:30px;width:80px;text-align:center;border-radius:20px;margin-left:15px;position:relative;font-size:14px;-webkit-appearance:none;}
+.box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;height:30px;line-height:30px;width:80px;text-align:center;border-radius:20px;margin-left:15px;position:relative;font-size:14px;-webkit-appearance:none;border:none;}
 .img-detalles{padding-bottom:50px;overflow:hidden;max-width:670px;width:100%;}
 .img-detalles img{max-height:100%;max-width:100%;box-shadow:5px 8px 18px 0px rgba(0, 0, 0, 0.2);}
 .box-img-det{height:182px;box-sizing:border-box;padding:10px;margin-bottom:25px;}
