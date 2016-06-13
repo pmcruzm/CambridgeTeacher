@@ -116,6 +116,7 @@ jQuery(window).load(function(){
 	if (jQuery('.cover-detalle img').is(":visible") ) {
 		var w_img=jQuery('.cover-detalle img').width();
 		var h_img=jQuery('.cover-detalle img').height();
+		var mitad_ancho=133;
 		//Añadimos altura y anchura al div padre
 		jQuery('.cover-detalle img').parent().width(w_img);
 		jQuery('.cover-detalle img').parent().height(h_img);
@@ -123,6 +124,8 @@ jQuery(window).load(function(){
 		if(jQuery('.cover-detalle img').parent().find('span').length>0){
 			jQuery('.cover-detalle img').parent().find('span').css({bottom:20});
 		}
+		//Ajustamos en la izquierda
+		jQuery('.cover-detalle img').parent().css({'left':(133-(w_img/2))});
 	}
 	
 	//Volver el scroll a top
