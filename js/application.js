@@ -72,7 +72,7 @@ jQuery(window).load(function(){
 
 	//Ajustamos altura de los cuadros de catalogo
 	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
-		//Ajustamos cuadros 
+		//Ajustamos cuadros
 		jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
 			var ancho_box=jQuery(this).width();
 			jQuery(this).css('height',ancho_box);
@@ -84,18 +84,18 @@ jQuery(window).load(function(){
 				jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 			}
 		});
-		
+
 		if(hash_active!=1){
 			//Calculamos demos y evalución para todos
 			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
 			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
-			
-			//Asignamos valores a enlaces correspondientes 
+
+			//Asignamos valores a enlaces correspondientes
 			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 		}
-		
-		//Activamos Lazyload para las imágenes 
+
+		//Activamos Lazyload para las imágenes
 		jQuery("img.lazy").lazyload();
 	}
 
@@ -127,7 +127,7 @@ jQuery(window).load(function(){
 		//Ajustamos en la izquierda
 		jQuery('.cover-detalle img').parent().css({'left':(133-(w_img/2))});
 	}
-	
+
 	//Volver el scroll a top
 	jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
@@ -137,60 +137,60 @@ jQuery(window).load(function(){
 			if(hash.indexOf('segment') > -1){
 				if (jQuery('#all-catalogo').is(":visible") ) {
 					//Mirar si estamos en catalogo y es un filtro
-					var array_hash=hash.split("-"); 
+					var array_hash=hash.split("-");
 					filter_segmento=array_hash[1];
-					//Filtramos 
-					filter_catalogo(filter_segmento,filter_type1,filter_type2);	
-					//Marcamos opcion en el filtro de primer nivel 
+					//Filtramos
+					filter_catalogo(filter_segmento,filter_type1,filter_type2);
+					//Marcamos opcion en el filtro de primer nivel
 					jQuery('.filter_cat a[data-filter-segment='+filter_segmento+']').addClass('active');
 					hash_active=1;
-					//Activamos Lazyload para las imágenes 
+					//Activamos Lazyload para las imágenes
 					jQuery("img.lazy").lazyload();
 				}
 			}else{
 				if(hash=='library'){
 				//Ocultamos filtros cabecera
 				jQuery('.filter_cat').fadeOut(400,function(){
-					jQuery('.filter_cat a').removeClass('active');	
+					jQuery('.filter_cat a').removeClass('active');
 				});
-				
+
 				//Activamos el botón tipo_cat
-				jQuery('.tipo_cat a').removeClass('active');	
-				jQuery('#btn-mi-coleccion').addClass('active');	
-				
-				//Cerramos todos y mostramos mi coleccion 
+				jQuery('.tipo_cat a').removeClass('active');
+				jQuery('#btn-mi-coleccion').addClass('active');
+
+				//Cerramos todos y mostramos mi coleccion
 				jQuery('#all-catalogo').fadeOut(400,function(){
 					jQuery('#selectores-filtros a').removeClass('active');
 					jQuery('#my-catalogo').css({'opacity':0}).show();
 					//Tamaño de cuadros
 					if (jQuery('#my-catalogo .content-catalogo').is(":visible") ) {
-						
+
 						jQuery('#my-catalogo .content-catalogo div.inside-b-book').each(function() {
 							var ancho_box=jQuery(this).width();
 							jQuery(this).css('height',ancho_box);
 						});
-						
+
 						jQuery('#my-catalogo .content-catalogo .enl-book img').each(function() {
 							if(jQuery(this).parent().find('span').length>0){
 								var alto_img=jQuery(this).height();
 								jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 							}
 						});
-						
+
 						//Animamos aparición cuadros
 						jQuery('#my-catalogo').animate({opacity:1},400);
-						
-						//Activamos Lazyload para las imágenes 
+
+						//Activamos Lazyload para las imágenes
 						jQuery("img.lazy").lazyload();
-						
+
 						//Reseteamos los filtros
 						filter_segmento=-1;
 						filter_type1=-1;
-						filter_type2=-1;	
+						filter_type2=-1;
 						/*filter_catalogo(filter_segmento,filter_type1,filter_type2);	*/
 					}
 				});
-				
+
 				}else{
 					jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
 				}
@@ -274,21 +274,21 @@ jQuery(document).ready(function(){
 		}else{
 			jQuery(this).addClass('active');
 		}
-		
+
 		//Miramos si está activo el filtro de demo
 		if(jQuery('#selectores-filtros a[data-filter-type=demo]').hasClass('active')){
 			filter_type1='demo';
 		}else{
 			filter_type1=-1;
 		}
-		//Miramos si está actimo el filtro de evaluación 
+		//Miramos si está actimo el filtro de evaluación
 		if(jQuery('#selectores-filtros a[data-filter-type=centre]').hasClass('active')){
 			filter_type2='centre';
 		}else{
 			filter_type2=-1;
 		}
 		//console.log(filter_segmento+'--'+filter_type1+'--'+filter_type2);
-		filter_catalogo(filter_segmento,filter_type1,filter_type2);	
+		filter_catalogo(filter_segmento,filter_type1,filter_type2);
     });
 
 	//Ayudas de los registros (over)
@@ -474,7 +474,7 @@ jQuery(document).ready(function(){
 			});
 		}
 	});
-	
+
 	//En catalogo mostrar todo o mi colección
 	jQuery(document).on('click','.tipo_cat a',function(e){
 		e.preventDefault();
@@ -486,32 +486,32 @@ jQuery(document).ready(function(){
 			if(id_enl=='btn-mi-coleccion'){
 				//Ocultamos filtros cabecera
 				jQuery('.filter_cat').fadeOut(400,function(){
-					jQuery('.filter_cat a').removeClass('active');	
+					jQuery('.filter_cat a').removeClass('active');
 				});
-				//Cerramos todos y mostramos mi coleccion 
+				//Cerramos todos y mostramos mi coleccion
 				jQuery('#all-catalogo').fadeOut(400,function(){
 					jQuery('#selectores-filtros a').removeClass('active');
 					jQuery('#my-catalogo').css({'opacity':0}).show();
-					/****Hacemos calculos****/ 
+					/****Hacemos calculos****/
 					//Tamaño de cuadros
 					if (jQuery('#my-catalogo .content-catalogo').is(":visible") ) {
-						
+
 						jQuery('#my-catalogo .content-catalogo div.inside-b-book').each(function() {
 							var ancho_box=jQuery(this).width();
 							jQuery(this).css('height',ancho_box);
 						});
-						
+
 						jQuery('#my-catalogo .content-catalogo .enl-book img').each(function() {
 							if(jQuery(this).parent().find('span').length>0){
 								var alto_img=jQuery(this).height();
 								jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 							}
 						});
-						
+
 						//Animamos aparición cuadros
 						jQuery('#my-catalogo').animate({opacity:1},400);
-						
-						//Activamos Lazyload para las imágenes 
+
+						//Activamos Lazyload para las imágenes
 						jQuery("img.lazy").lazyload();
 					}
 				});
@@ -520,8 +520,8 @@ jQuery(document).ready(function(){
 					//Reseteamos los filtros
 					filter_segmento=-1;
 					filter_type1=-1;
-					filter_type2=-1;	
-					filter_catalogo(filter_segmento,filter_type1,filter_type2);	
+					filter_type2=-1;
+					filter_catalogo(filter_segmento,filter_type1,filter_type2);
 					jQuery('#all-catalogo').fadeIn(400,function(){
 						//Calculamos subfiltros
 					});
@@ -530,8 +530,8 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
-	
-	//Cuando pulsas sobre un filter de primer nivel 
+
+	//Cuando pulsas sobre un filter de primer nivel
 	jQuery(document).on('click','.filter_cat a',function(e){
 		e.preventDefault();
 		//console.log(block_filter);
@@ -542,48 +542,64 @@ jQuery(document).ready(function(){
 				jQuery(this).addClass('active');
 				filter_segmento=jQuery(this).attr('data-filter-segment');
 				filter_type1=-1;
-				filter_type2=-1;	
+				filter_type2=-1;
 				filter_catalogo(filter_segmento,filter_type1,filter_type2);
-				jQuery('#selectores-filtros a').removeClass('active');	
+				jQuery('#selectores-filtros a').removeClass('active');
 			}else{
 				jQuery('.filter_cat a').removeClass('active');
 				filter_segmento=-1;
 				filter_type1=-1;
 				filter_type2=-1;
 				//Mostramos todos los elementos
-				filter_catalogo(filter_segmento,filter_type1,filter_type2);	
+				filter_catalogo(filter_segmento,filter_type1,filter_type2);
 				jQuery('#selectores-filtros a').removeClass('active');
 			}
 		}
-	}); 
-	
+	});
+
 	//Cuando queremos desplegar Mastercode
 	jQuery(document).on('click','.box-mastercode a',function(e){
 		e.preventDefault();
 		var h_content=jQuery('#content').outerHeight();
 		jQuery('#modal-mastercode').height(h_content);
 		jQuery('#modal-mastercode').fadeIn(400);
-	}); 
-	
+	});
+
 	//Enviar formulario de mastercode
 	jQuery(document).on("submit","#form-mastercode", function(e) {
-		if(send_form==0){
-			send_form=1;
-			//Limpiamos errores si no es la primera vez
-			jQuery(".errores").html("");
-			//Llamamos a la función de validar (id formulario y contenedor errores)
-			var result=validate_form('#form-mastercode');
-			if(result==1){
-				e.preventDefault();
-				send_form=0;
-			}
+		var form = jQuery(this);
+		e.preventDefault();
+		//Limpiamos errores si no es la primera vez
+		jQuery(".errores", form).html("");
+		//Llamamos a la función de validar (id formulario y contenedor errores)
+		var result = validate_form('#form-mastercode');
+
+		if(result == 0) {
+
+			jQuery.ajax({
+				url: form.attr('action'),
+				method: form.attr('method'),
+				data: form.serialize(),
+				dataType: 'json',
+				success : function(response) {
+					if(response.errorCode == 0){
+						//success message
+						jQuery('.errores', form).text(response.message).show(400);
+						if(response.redirect){window.top.location = response.redirect;}
+					}else{
+						//some error message
+						jQuery('.errores', form).text(response.message).show(400);
+					}
+				}
+			});
+
 		}
 	});
-	
+
 	//Cerrar modal Mastercode
 	jQuery(document).on("click",".close-modal", function(e) {
 		e.preventDefault();
-		jQuery('#modal-mastercode').fadeOut(400);	
+		jQuery('#modal-mastercode').fadeOut(400);
 	});
 
 	jQuery(window).scroll(control_scroll);
@@ -621,7 +637,7 @@ jQuery(document).ready(function(){
 					}
 				});
 			}
-			
+
 			//Ajustamos altura de los cuadros de catalogo
 			if (jQuery('#my-catalogo .content-catalogo').is(":visible") ) {
 				jQuery('#my-catalogo .content-catalogo div.inside-b-book').each(function() {
@@ -650,7 +666,7 @@ jQuery(document).ready(function(){
 					jQuery(this).css('height',maxHeight);
 				});
 			}
-			
+
 			//Ajustamos modal si está abierto
 			if (jQuery('#modal-mastercode').is(":visible") ) {
 				var h_content=jQuery('#content').outerHeight();
@@ -703,7 +719,7 @@ function filter_catalogo(segmento,type1,type2){
 	var allCourses = jQuery('#all-catalogo .content-catalogo div[data-type]');
 
     allCourses.show();
-	
+
 	if(segmento==-1 & type1==-1 & type2==-1 ){
 		allCourses.show();
 		block_filter=0;
@@ -716,7 +732,7 @@ function filter_catalogo(segmento,type1,type2){
 					}
 				});
 		}
-	
+
 		if(type2!=-1) {
 				allCourses.each(function(i, e){
 					if( jQuery(e).data('type') == 'centre' ) {
@@ -724,46 +740,46 @@ function filter_catalogo(segmento,type1,type2){
 					}
 				});
 		}
-		
-		//Filtro de primer nivel 
+
+		//Filtro de primer nivel
 		if(segmento!=-1) {
-			
+
 			allCourses.each(function(i, e){
 					if( jQuery(e).data('segment') != segmento ) {
 						jQuery(e).hide();
 					}
 			});
-			
+
 			//Calculamos demos y evalución para los correspondientes al filtro
 			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo][data-segment='+segmento+']').length;
 			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre][data-segment='+segmento+']').length;
-				
-			//Asignamos valores a enlaces correspondientes 
+
+			//Asignamos valores a enlaces correspondientes
 			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
-			
+
 			//Desbloqueamos filtros
 			block_filter=0;
-			//Activamos Lazyload para las imágenes 
+			//Activamos Lazyload para las imágenes
 			jQuery("img.lazy").lazyload();
 		}else{
-			
+
 			//Calculamos demos y evalución para todos
 			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
 			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
-				
-			//Asignamos valores a enlaces correspondientes 
+
+			//Asignamos valores a enlaces correspondientes
 			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
-			
+
 			//Desbloqueamos filtros
 			block_filter=0;
-			//Activamos Lazyload para las imágenes 
+			//Activamos Lazyload para las imágenes
 			jQuery("img.lazy").lazyload();
 		}
-		
+
 	}
-		
+
 }
 
 //Función para el cambio de orientación
