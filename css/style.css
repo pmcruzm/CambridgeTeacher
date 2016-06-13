@@ -417,7 +417,7 @@ PROPIEDADES FAQs
 .single-faq .desplegable ul li{list-style:disc;}
 .single-faq .desplegable ol li{list-style:decimal;}
 
-.single-faq .desplegable b,.single-faq .desplegable strong{font-family:'sofia-pro-black', Helvetica, sans-serif;} 
+.single-faq .desplegable b,.single-faq .desplegable strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .single-faq .desplegable em,.single-faq .desplegable i{font-style:italic;}
 
 /*****************************
@@ -488,15 +488,15 @@ PROPIEDADES DETALLE
 .type-video:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -76px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
 .type-video:hover:before{background-position:-19px -76px;}
 .type-video:hover{text-decoration:underline;}
-.type-x:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px 0px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-x:hover:before{background-position:-19px 0px;}
-.type-x:hover{text-decoration:underline;}
-.type-globe:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -38px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-globe:hover:before{background-position:-19px -36px;}
-.type-globe:hover{text-decoration:underline;}
-.type-w:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -57px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-w:hover:before{background-position:-19px -57px;}
-.type-w:hover{text-decoration:underline;}
+.type-excel:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px 0px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
+.type-excel:hover:before{background-position:-19px 0px;}
+.type-excel:hover{text-decoration:underline;}
+.type-link:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -38px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
+.type-link:hover:before{background-position:-19px -36px;}
+.type-link:hover{text-decoration:underline;}
+.type-word:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -57px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
+.type-word:hover:before{background-position:-19px -57px;}
+.type-word:hover{text-decoration:underline;}
 
 /*****************************
 PROPIEDADES FOOTER
