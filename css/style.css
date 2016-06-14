@@ -326,16 +326,16 @@ PROPIEDADES REGISTRO
 .top-w-title{margin-top:-25px !important}
 .top-register{background:#ffffff;padding-top:35px;padding-bottom:35px;position:relative;margin-top:-85px;margin-bottom:12px;box-sizing:border-box;padding-right:84px;}
 .form-group{overflow:hidden;margin-bottom:10px;position:relative;}
-#registro-form .form-group label{display:block;text-align:right;width:44%;float:left;box-sizing:border-box;padding-right:40px;height:40px;line-height:40px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
-#registro-form .form-group input[type=text]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
-#registro-form .form-group input[type=password]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
-#registro-form .form-group input[type=email]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
-#registro-form .form-group textarea{border:none;-webkit-appearance:none;width:auto;display:block;width:100%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;padding:10px;}
+.form-type-1 .form-group label{display:block;text-align:right;width:44%;float:left;box-sizing:border-box;padding-right:40px;height:40px;line-height:40px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.form-type-1 .form-group input[type=text]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+.form-type-1 .form-group input[type=password]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+.form-type-1 .form-group input[type=email]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+.form-type-1 .form-group textarea{border:none;-webkit-appearance:none;width:auto;display:block;width:100%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;padding:10px;}
 
-#registro-form .form-group input[type=text].error{border:3px solid #f05456;}
-#registro-form .form-group input[type=password].error{border:3px solid #f05456;}
-#registro-form .form-group input[type=email].error{border:3px solid #f05456;}
-#registro-form .form-group textarea.error{border:3px solid #f05456;}
+.form-type-1 .form-group input[type=text].error{border:3px solid #f05456;}
+.form-type-1 .form-group input[type=password].error{border:3px solid #f05456;}
+.form-type-1 .form-group input[type=email].error{border:3px solid #f05456;}
+.form-type-1 .form-group textarea.error{border:3px solid #f05456;}
 
 .group-clase-checkbox{overflow:hidden;margin-top:30px;}
 .title-group{width:44%;float:left;text-align:right;box-sizing:border-box;padding-right:40px;}
@@ -349,10 +349,10 @@ PROPIEDADES REGISTRO
 
 .bottom-register{background:#ffffff;padding-top:35px;padding-bottom:150px;position:relative;box-sizing:border-box;box-sizing:border-box;padding-right:84px;}
 .group_checkbox{margin-top:70px;}
-#registro-form .checkbox label{display:inline-block;}
-#registro-form  .checkbox{padding-left:50px;margin-bottom:18px;display:block;padding-left:44%;}
-#registro-form  .checkbox p{margin-top:-30px;font-size:13px;padding-left:40px;color:#2e2e2e;line-height:21px;}
-#registro-form .checkbox a{color:#2e2e2e;text-decoration:underline;}
+.form-type-1 .checkbox label{display:inline-block;}
+.form-type-1 .checkbox{padding-left:50px;margin-bottom:18px;display:block;padding-left:44%;}
+.form-type-1 .checkbox p{margin-top:-30px;font-size:13px;padding-left:40px;color:#2e2e2e;line-height:21px;}
+.form-type-1 .checkbox a{color:#2e2e2e;text-decoration:underline;}
 
 .submit_group{padding-left:44%;padding-top:40px;}
 .submit_group input{-webkit-appearance:none;font-size:16px;height:35px;width:200px;box-sizing:border-box;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:35px;}
