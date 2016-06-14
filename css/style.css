@@ -198,8 +198,10 @@ PROPIEDADES MI COLECCION
 .enl-coleccion a.remove-title:hover:before{background-position:0px -21px;}
 .carrusel-coleccion{width:100%;overflow:hidden;position:relative;box-sizing:border-box;padding-left:9px;}
 .carrusel-list{height:200px;}
-.carrusel-list .item{height:200px;}
+.carrusel-list .item{height:200px;position:relative;}
 .carrusel-list .item img{height:200px;padding-right:8px;}
+.carrusel-list .item span.sample{position:absolute;bottom:0;left:0;z-index:50;display:block;background:url(../img/sample-diagonal.png) top left no-repeat;width:55px;height:55px;background-size:55px;text-indent:-99999px;}
+.carrusel-list .item .minus-book{right:15px;display:block;}
 .slick-arrow{position:absolute;top:0;z-index:100;top:50%;margin-top:-18px;}
 .slick-next{right:10px;background-image:url(../img/arrow_right.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
 .slick-next.slick-disabled{background-position:0px -36px;}
@@ -272,6 +274,7 @@ PROPIEDADES CATALOGO
 #selectores-filtros a.active{color:#ffffff;}
 #selectores-filtros a span{height:24px;border-radius:20px;padding-left:30px;padding-right:30px;background:#f2f1f1;}
 #selectores-filtros a.active span{background:#2e2e2e url(../img/cross-filter.png) 94% center no-repeat;height:24px;background-size:7px;border-radius:20px;padding-left:30px;padding-right:30px;}
+#selectores-filtros a.bloqueado{cursor:default;}
 /*#selectores-filtros a:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-filter.png);background-size:21px;vertical-align:middle;margin-right:20px;background-position:0px 0px;background-repeat:no-repeat;}
 #selectores-filtros a.active:before{background-position:0px -21px;}*/
 
