@@ -467,12 +467,27 @@ PROPIEDADES DETALLE
 .list-digitales li a:hover:before{background-position:-19px -38px;}
 
 .container-tabs{max-width:100%;width:100%;overflow:hidden;}
-.single-tab{width:16.6666%;float:left;text-align:center;box-sizing:border-box;padding-left:4px;padding-right:4px;}
+.single-tab{width:16.6666%;float:left;text-align:center;box-sizing:border-box;padding-left:4px;padding-right:4px;height:132px;}
 .single-tab:first-child{padding-left:0;}
 .single-tab:last-child{padding-right:0;}
-.single-tab a{color:#7d7974;display:block;width:100%;background:#faf8f5;font-size:11px;font-family:'sofia-pro-black', Helvetica, sans-serif;height:130px;vertical-align:bottom;line-height:16px;}
+.single-tab a{color:#7d7974;display:block;width:100%;background:#faf8f5;font-size:11px;font-family:'sofia-pro-black', Helvetica, sans-serif;vertical-align:bottom;line-height:13px;height:132px;padding-top:14px;box-sizing:border-box;}
+.single-tab a:before{content:'';display:block;width:100px;height:80px;background-image:url(../svg/sprite_tabs-01.svg);background-repeat:no-repeat;background-size:200px;margin:0 auto;}
+.single-tab a.tab-1:before{background-position:0px 0px;}
+.single-tab a.tab-2:before{background-position:0px -80px;}
+.single-tab a.tab-3:before{background-position:0px -160px;}
+.single-tab a.tab-4:before{background-position:0px -240px;}
+.single-tab a.tab-5:before{background-position:0px -320px;}
+.single-tab a.tab-6:before{background-position:0px -400px;}
+
 .single-tab a.active{color:#2e2e2e;background:#ffffff;}
 .single-tab a:hover{color:#2e2e2e;background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+
+.single-tab a.tab-1:hover:before,.single-tab a.tab-1.active:before{background-position:-100px 0px;}
+.single-tab a.tab-2:hover:before,.single-tab a.tab-2.active:before{background-position:-100px -80px;}
+.single-tab a.tab-3:hover:before,.single-tab a.tab-3.active:before{background-position:-100px -160px;}
+.single-tab a.tab-4:hover:before,.single-tab a.tab-4.active:before{background-position:-100px -240px;}
+.single-tab a.tab-5:hover:before,.single-tab a.tab-5.active:before{background-position:-100px -320px;}
+.single-tab a.tab-6:hover:before,.single-tab a.tab-6.active:before{background-position:-100px -400px;}
 
 .cont-tabs{background:#ffffff;}
 .box-type-1,.box-type-2,.box-type-3,.box-type-4,.box-type-5,.box-type-6{box-sizing:border-box;width:100%;padding:42px;padding-bottom:100px;}
