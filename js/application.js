@@ -143,6 +143,14 @@ jQuery(window).load(function(){
 		jQuery('.cover-detalle img').parent().css({'left':(133-(w_img/2))});
 	}
 
+});
+
+jQuery(document).ready(function(){
+
+	//Obtenemos altura y anchura del navegador
+	h_win=jQuery(window).height();
+	w_win=jQuery(window).width();
+	
 	//Volver el scroll a top
 	jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
@@ -161,7 +169,7 @@ jQuery(window).load(function(){
 					jQuery('.tipo_cat a').removeClass('active');
 					hash_active=1;
 					//Activamos Lazyload para las imágenes
-					jQuery("img.lazy").lazyload({
+					/*jQuery("img.lazy").lazyload({
 						effect : 'fadeIn',
 						load : function()
 						{
@@ -172,21 +180,13 @@ jQuery(window).load(function(){
 								jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 							}
 						}
-					});
+					});*/
 				}
 			}else{
 				jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
 			}
 		}
 	});
-
-});
-
-jQuery(document).ready(function(){
-
-	//Obtenemos altura y anchura del navegador
-	h_win=jQuery(window).height();
-	w_win=jQuery(window).width();
 	
 	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
 		//Ajustamos cuadros
