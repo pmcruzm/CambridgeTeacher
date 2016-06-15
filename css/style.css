@@ -399,8 +399,8 @@ PROPIEDADES FAQs
 .top-faqs p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .top-faqs p a{color:#30c0d8;text-decoration:underline;}
 
-.btns-faqs{overflow:hidden;height:60px;}
-.btns-faqs a{width:50%;float:left;height:60px;line-height:60px;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:18px;color:#7d7974;background:#faf8f5;text-align:center;}
+.btns-faqs{overflow:hidden;height:70px;}
+.btns-faqs a{width:50%;float:left;height:70px;line-height:25px;padding-top:10px;text-transform:uppercase;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:18px;color:#7d7974;background:#faf8f5;text-align:center;}
 .btns-faqs a.active{color:#2e2e2e;background:#ffffff;}
 .btns-faqs a:hover{color:#2e2e2e;background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 
