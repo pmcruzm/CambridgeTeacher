@@ -74,10 +74,10 @@ jQuery(window).load(function(){
 	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
 
 		//Ajustamos cuadros
-		jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
+		/*jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
 			var ancho_box=jQuery(this).width();
 			jQuery(this).css('height',ancho_box);
-		});
+		});*/
 
 		//Ajustamos etiqueta sample
 		/*jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
@@ -187,6 +187,14 @@ jQuery(document).ready(function(){
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
+	
+	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
+		//Ajustamos cuadros
+		jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
+			var ancho_box=jQuery(this).width();
+			jQuery(this).css('height',ancho_box);
+		});
+	}
 
 	//Menú principal y submenús
 	jQuery(document).on('click','.language_opc > a',function(e){
