@@ -158,6 +158,7 @@ jQuery(window).load(function(){
 					filter_catalogo(filter_segmento,filter_type1,filter_type2);
 					//Marcamos opcion en el filtro de primer nivel
 					jQuery('.filter_cat a[data-filter-segment='+filter_segmento+']').addClass('active');
+					jQuery('.tipo_cat a').removeClass('active');
 					hash_active=1;
 					//Activamos Lazyload para las imágenes
 					jQuery("img.lazy").lazyload({
