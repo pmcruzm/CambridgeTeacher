@@ -72,13 +72,13 @@ jQuery(window).load(function(){
 
 	//Ajustamos altura de los cuadros de catalogo
 	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
-		
+
 		//Ajustamos cuadros
 		jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
 			var ancho_box=jQuery(this).width();
 			jQuery(this).css('height',ancho_box);
 		});
-		
+
 		//Ajustamos etiqueta sample
 		/*jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
 			if(jQuery(this).parent().find('span').length>0){
@@ -86,7 +86,7 @@ jQuery(window).load(function(){
 				jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 			}
 		});*/
-		
+
 		if(hash_active!=1){
 			//Calculamos demos y evalución para todos
 			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
@@ -98,13 +98,13 @@ jQuery(window).load(function(){
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
 		}
-		
+
 		//Activamos Lazyload para las imágenes
 		jQuery("img.lazy").lazyload({
 			effect : 'fadeIn',
 			load : function()
 			{
-				//jQuery(this).addClass('red');	
+				//jQuery(this).addClass('red');
 				//console.log(jQuery(this).addClass()); // Callback here
 				if(jQuery(this).parent().find('span').length>0){
 					var alto_img=jQuery(this).height();
@@ -164,7 +164,7 @@ jQuery(window).load(function(){
 						effect : 'fadeIn',
 						load : function()
 						{
-							//jQuery(this).addClass('red');	
+							//jQuery(this).addClass('red');
 							//console.log(jQuery(this).addClass()); // Callback here
 							if(jQuery(this).parent().find('span').length>0){
 								var alto_img=jQuery(this).height();
@@ -249,27 +249,27 @@ jQuery(document).ready(function(){
 	//Filtros de la página de catálogo
 	jQuery(document).on('click','#selectores-filtros a',function(e){
         e.preventDefault();
-		
+
 		if(!jQuery(this).hasClass('bloqueado')){
-			
-			var opc_btn=jQuery(this).attr('data-filter-type'); 
-			
+
+			var opc_btn=jQuery(this).attr('data-filter-type');
+
 			if(opc_btn=='demo' && jQuery('#selectores-filtros a[data-filter-type=centre]').hasClass('active')){
-				jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('active')	
+				jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('active')
 			}
-			
+
 			if(opc_btn=='centre' && jQuery('#selectores-filtros a[data-filter-type=demo]').hasClass('active')){
-				jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('active')	
+				jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('active')
 			}
-			
+
 			//Comprobamos activación y desacctivación de filtro
 			if(jQuery(this).hasClass('active')) {
 				jQuery(this).removeClass('active');
 			}else{
 				jQuery(this).addClass('active');
 			}
-			
-	
+
+
 			//Miramos si está activo el filtro de demo
 			if(jQuery('#selectores-filtros a[data-filter-type=demo]').hasClass('active')){
 				filter_type1='demo';
@@ -512,9 +512,9 @@ jQuery(document).ready(function(){
 				filter_type2=-1;
 				filter_catalogo(filter_segmento,filter_type1,filter_type2);
 				jQuery('#selectores-filtros a').removeClass('active');
-				//Eliminamos la etiqueta de todos 
+				//Eliminamos la etiqueta de todos
 				jQuery('.tipo_cat a').removeClass('active');
-				//Añadimos hash 
+				//Añadimos hash
 				window.location.hash = '#segment-'+jQuery(this).attr('data-filter-segment');
 			}else{
 				jQuery('.filter_cat a').removeClass('active');
@@ -528,7 +528,7 @@ jQuery(document).ready(function(){
 				jQuery('.tipo_cat a').removeClass('active');
 				jQuery('.tipo_cat a#btn-all-catalogo').addClass('active');
 				//Eliminamos hash
-				removeHash(); 
+				removeHash();
 			}
 		}
 	});
@@ -683,7 +683,7 @@ function filter_catalogo(segmento,type1,type2){
 
 	if(segmento==-1 & type1==-1 & type2==-1 ){
 		allCourses.show();
-		
+
 		//Reseteamos botones
 		jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('bloqueado');
 		jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('bloqueado');
@@ -728,7 +728,7 @@ function filter_catalogo(segmento,type1,type2){
 						jQuery(e).hide();
 					}
 			});
-			
+
 			//Reseteamos botones
 			jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('bloqueado');
 			jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('bloqueado');
@@ -773,7 +773,7 @@ function filter_catalogo(segmento,type1,type2){
 }
 
 //Función para eliminar hash
-function removeHash () { 
+function removeHash () {
     var scrollV, scrollH, loc = window.location;
     if ("pushState" in history)
         history.pushState("", document.title, loc.pathname + loc.search);
@@ -955,3 +955,107 @@ function validate_form(id){
 			}
 }
 
+
+function recaptchaCallback(response) {
+	validateForm.isValidRecaptcha = true;
+}
+
+
+var validateForm = {
+
+	form: null,
+	fields: [],
+	errors: [],
+	hasErrors: false,
+	isValidRecaptcha: false,
+
+	validate: function( event ) {
+
+		this.form      = jQuery(event.target);
+		this.errors    = [];
+		this.hasErrors = false;
+		this.showErrors();
+
+		this.fields = jQuery('*[data-validation-rule]:visible:not([readonly])', this.form);
+		this.fields.each( jQuery.proxy( this.checkField , this ) );
+
+		if( this.hasErrors ) {
+			this.errors.unshift( this.form.data('error-msg') );
+			this.showErrors();
+			return false;
+		}
+
+		return true;
+	},
+
+	checkField: function(i,e) {
+
+		var input  = jQuery(e);
+		var params = input.data('validation-rule').split('|');
+		var rule   = params.shift();
+		var error  = false;
+
+		//console.log('RULE:',rule);
+
+		if( 'email' == rule ) {error = ! this.ruleIsEmail(input);}
+		if( 'repeat' == rule ) {error = ! this.ruleRepeat(input, params);}
+		if( 'checkbox' == rule ) {error = ! this.ruleCheckbox(input);}
+		if( 'recaptcha' == rule ) {error = ! this.ruleValidRecaptcha();}
+		if( 'not-empty' == rule ) {error = ! this.ruleValidNotEmpty(input);}
+		if( 'zip' == rule ) {error = ! this.ruleValidZip(input);}
+		if( 'select-option' == rule ) {error = ! this.ruleValidSelectOption(input);}
+
+
+		if( error ) {
+			input.addClass('error');
+
+			this.hasErrors = true;
+
+			if( input.data('error-msg') ) {
+				this.errors.push( input.data('error-msg') );
+			}
+		}
+	},
+
+	showErrors: function() {
+
+		jQuery('.error', this.form).removeClass('.error');
+
+		var errorList = jQuery.map(
+			this.errors,
+			function( value, index ){
+				return jQuery('<p>').text(value);
+			}
+		);
+
+		jQuery('.errores', this.form).html('').append( errorList );
+	},
+
+	ruleIsEmail: function(e) {
+		return validateEmail(e.val());
+	},
+
+	ruleRepeat: function(e, params) {
+		return e.val() === jQuery(params[0], this.form).val();
+	},
+
+	ruleCheckbox: function(e) {
+		return e.is(":checked");
+	},
+
+	ruleValidRecaptcha: function(e) {
+		return this.isValidRecaptcha;
+	},
+
+	ruleValidNotEmpty: function(e) {
+		return e.val() != '';
+	},
+
+	ruleValidZip: function(e) {
+		return e.val().length == 5;
+	},
+
+	ruleValidSelectOption: function(e) {
+		return e.prop('selectedIndex') != 0;
+	}
+}
