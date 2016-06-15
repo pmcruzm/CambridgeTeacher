@@ -1,7 +1,7 @@
 /**********************
 FUNCIONES JQUERY
 Autor:Pedro de la Cruz
-Fecha: 18-5-2015
+Fecha: 18-5-2016
 Cliente: Cambridge Teacher
 ***********************/
 
@@ -478,21 +478,14 @@ jQuery(document).ready(function(){
 		if(!jQuery(this).hasClass('active')){
 			jQuery('.tipo_cat a').removeClass('active');
 			jQuery(this).addClass('active');
-			var id_enl=jQuery(this).attr('id');
-			//alert(id_enl);
-			if(id_enl=='btn-mi-coleccion'){
-				var enlace=jQuery(this).attr('href');
-				top.location.href=enlace;
-			}else{
-				filter_segmento=-1;
-				filter_type1=-1;
-				filter_type2=-1;
-				filter_catalogo(filter_segmento,filter_type1,filter_type2);
-				jQuery('#selectores-filtros a').removeClass('active');
-				jQuery('.filter_cat a').removeClass('active');
-				//Eliminamos hash
-				removeHash();	
-			}
+			filter_segmento=-1;
+			filter_type1=-1;
+			filter_type2=-1;
+			filter_catalogo(filter_segmento,filter_type1,filter_type2);
+			jQuery('#selectores-filtros a').removeClass('active');
+			jQuery('.filter_cat a').removeClass('active');
+			//Eliminamos hash
+			removeHash();
 		}
 	});
 
@@ -786,6 +779,19 @@ function removeHash () {
         document.body.scrollTop = scrollV;
         document.body.scrollLeft = scrollH;
     }
+}
+
+//Función para mostrar las notificaciones 
+function showNotification(msg,time){
+   var t_visible;
+   if (time === undefined || time === null) {
+   	  t_visible=2000;
+   }else{
+      t_visible=time;
+   }
+   jQuery('#box-notificacion').html(msg).stop().clearQueue().fadeIn(400,function(){
+   	  jQuery(this).delay(t_visible).fadeOut(400);
+   });
 }
 
 //Función para el cambio de orientación

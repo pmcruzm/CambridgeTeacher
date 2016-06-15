@@ -261,7 +261,7 @@ PROPIEDADES CATALOGO
 #banner-catalogo ul.tipo_cat li a:hover{background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
 #banner-catalogo ul.tipo_cat li a.active{background:#ffffff;}
 
-#banner-catalogo ul.filter_cat{position:absolute;right:15px;bottom:0;}
+#banner-catalogo ul.filter_cat{position:absolute;left:165px;bottom:0;}
 #banner-catalogo ul.filter_cat li{display:inline-block;font-size:16px;}
 #banner-catalogo ul.filter_cat li a{display:block;height:32px;line-height:32px;padding-left:15px;padding-right:15px;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
 #banner-catalogo ul.filter_cat li a:hover{background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
@@ -315,6 +315,15 @@ PROPIEDADES CATALOGO
 
 .close-modal{position:absolute;top:10px;right:10px;width:21px;height:21px;background:url(../img/close-modal.png) top left no-repeat;background-size:21px;text-indent:-99999px;}
 #my-catalogo{padding-top:50px;}
+
+#btn-mi-coleccion{position:absolute;right:27px;bottom:50px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+#btn-mi-coleccion:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/ico-coleccion.png) top left no-repeat;background-size:21px;margin-right:10px;vertical-align:middle;}
+#btn-mi-coleccion:hover:before{background-position:0px -21px;}
+
+#box-notificacion{display:none;position:fixed;top:25px;right:30px;width:240px;box-sizing:border-box;padding:15px;padding-bottom:30px;z-index:110;background:rgba(46,46,46,0.95);border-radius:6px;}
+#box-notificacion p{font-size:12px;color:#fde052;line-height:16px;}
+#box-notificacion p strong,#box-notificacion p b{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+#box-notificacion p em,#box-notificacion p i{font-style:italic;}
 
 /*****************************
 PROPIEDADES REGISTRO
@@ -462,15 +471,15 @@ PROPIEDADES DETALLE
 .list-digitales{padding-bottom:40px;padding-top:40px;}
 .list-digitales li{margin-bottom:20px;}
 .list-digitales li a{color:#2e2e2e;font-size:16px;}
-.list-digitales li a:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -38px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
+.list-digitales li a:before{content:'';display:inline-block;width:24px;height:24px;background:url(../svg/fileformats_icon_sprite.svg) 0px -48px no-repeat;background-size:48px;margin-right:15px;position:relative;top:6px;}
 .list-digitales li a:hover{text-decoration:underline;}
-.list-digitales li a:hover:before{background-position:-19px -38px;}
+.list-digitales li a:hover:before{background-position:-24px -48px;}
 
 .container-tabs{max-width:100%;width:100%;overflow:hidden;}
 .single-tab{width:16.6666%;float:left;text-align:center;box-sizing:border-box;padding-left:4px;padding-right:4px;height:132px;}
 .single-tab:first-child{padding-left:0;}
 .single-tab:last-child{padding-right:0;}
-.single-tab a{color:#7d7974;display:block;width:100%;background:#faf8f5;font-size:11px;font-family:'sofia-pro-black', Helvetica, sans-serif;vertical-align:bottom;line-height:13px;height:132px;padding-top:14px;box-sizing:border-box;}
+.single-tab a{color:#7d7974;display:block;width:100%;background:#faf8f5;font-size:11px;font-family:'sofia-pro-black', Helvetica, sans-serif;vertical-align:bottom;line-height:13px;height:132px;padding-top:14px;box-sizing:border-box;padding-left:10px;padding-right:10px;}
 .single-tab a:before{content:'';display:block;width:100px;height:80px;background-image:url(../svg/sprite_tabs-01.svg);background-repeat:no-repeat;background-size:200px;margin:0 auto;}
 .single-tab a.tab-1:before{background-position:0px 0px;}
 .single-tab a.tab-2:before{background-position:0px -80px;}
@@ -496,23 +505,23 @@ PROPIEDADES DETALLE
 .box-type-1 ul li,.box-type-2 ul li,.box-type-3 ul li,.box-type-4 ul li,.box-type-5 ul li,.box-type-6 ul li{margin-bottom:20px;}
 .box-type-1 ul li a,.box-type-2 ul li a,.box-type-3 ul li a,.box-type-4 ul li a,.box-type-5 ul li a,.box-type-6 ul li a{font-size:16px;color:#2e2e2e;}
 
-.type-pdf:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -19px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-pdf:hover:before{background-position:-19px -19px;}
+.type-pdf:before{content:'';display:inline-block;width:24px;height:24px;background:url(../svg/fileformats_icon_sprite.svg) 0px -24px no-repeat;background-size:48px;margin-right:15px;position:relative;top:6px;}
+.type-pdf:hover:before{background-position:-24px -24px;}
 .type-pdf:hover{text-decoration:underline;}
-.type-audio:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -95px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-audio:hover:before{background-position:-19px -95px;}
+.type-audio:before{content:'';display:inline-block;width:24px;height:24px;background:url(../svg/fileformats_icon_sprite.svg) 0px -120px no-repeat;background-size:48px;margin-right:15px;position:relative;top:6px;}
+.type-audio:hover:before{background-position:-24px -120px;}
 .type-audio:hover{text-decoration:underline;}
-.type-video:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -76px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-video:hover:before{background-position:-19px -76px;}
+.type-video:before{content:'';display:inline-block;width:24px;height:24px;background:url(../svg/fileformats_icon_sprite.svg) 0px -96px no-repeat;background-size:48px;margin-right:15px;position:relative;top:6px;}
+.type-video:hover:before{background-position:-24px -96px;}
 .type-video:hover{text-decoration:underline;}
-.type-excel:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px 0px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-excel:hover:before{background-position:-19px 0px;}
+.type-excel:before{content:'';display:inline-block;width:24px;height:24px;background:url(../svg/fileformats_icon_sprite.svg) 0px 0px no-repeat;background-size:48px;margin-right:15px;position:relative;top:6px;}
+.type-excel:hover:before{background-position:-24px 0px;}
 .type-excel:hover{text-decoration:underline;}
-.type-link:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -38px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-link:hover:before{background-position:-19px -36px;}
+.type-link:before{content:'';display:inline-block;width:24px;height:24px;background:url(../svg/fileformats_icon_sprite.svg) 0px -48px no-repeat;background-size:48px;margin-right:15px;position:relative;top:6px;}
+.type-link:hover:before{background-position:-24px -48px;}
 .type-link:hover{text-decoration:underline;}
-.type-word:before{content:'';display:inline-block;width:19px;height:19px;background:url(../svg/fileformats_icon_sprite.svg) 0px -57px no-repeat;background-size:38px;margin-right:15px;position:relative;top:3px;}
-.type-word:hover:before{background-position:-19px -57px;}
+.type-word:before{content:'';display:inline-block;width:24px;height:24px;background:url(../svg/fileformats_icon_sprite.svg) 0px -72px no-repeat;background-size:48px;margin-right:15px;position:relative;top:6px;}
+.type-word:hover:before{background-position:-24px -72px;}
 .type-word:hover{text-decoration:underline;}
 
 /*****************************
@@ -704,6 +713,7 @@ MEDIA QUERIES
 	.box-generic-detalle{padding-left:55px;padding-right:15px;}
 	#block-detalle{padding-top:140px;}
 	.img-detalles{max-width:100%;}
+	#block-detalle .group-generic .box-generic-detalle:first-child{top:0;margin-bottom:0;}
 }
 
 @media screen and (max-width: 950px) {
