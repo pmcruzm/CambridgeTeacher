@@ -483,17 +483,14 @@ jQuery(document).ready(function(){
 				var enlace=jQuery(this).attr('href');
 				top.location.href=enlace;
 			}else{
-				//jQuery('#my-catalogo').fadeOut(400,function(){
-					//Reseteamos los filtros
-					filter_segmento=-1;
-					filter_type1=-1;
-					filter_type2=-1;
-					filter_catalogo(filter_segmento,filter_type1,filter_type2);
-					//jQuery('#all-catalogo').fadeIn(400,function(){
-						//Calculamos subfiltros
-					//});
-					//jQuery('.filter_cat').fadeIn(400);
-				//});
+				filter_segmento=-1;
+				filter_type1=-1;
+				filter_type2=-1;
+				filter_catalogo(filter_segmento,filter_type1,filter_type2);
+				jQuery('#selectores-filtros a').removeClass('active');
+				jQuery('.filter_cat a').removeClass('active');
+				//Eliminamos hash
+				removeHash();	
 			}
 		}
 	});
