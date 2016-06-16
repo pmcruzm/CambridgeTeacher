@@ -87,7 +87,7 @@ jQuery(window).load(function(){
 			}
 		});*/
 
-		if(hash_active!=1){
+		/*if(hash_active!=1){
 			//Calculamos demos y evalución para todos
 			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
 			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
@@ -97,11 +97,12 @@ jQuery(window).load(function(){
 			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
-		}
+		}*/
 
 		//Activamos Lazyload para las imágenes
-		jQuery("img.lazy").lazyload({
+		/*jQuery("img.lazy").lazyload({
 			effect : 'fadeIn',
+			skip_invisible : false,
 			load : function()
 			{
 				//jQuery(this).addClass('red');
@@ -111,7 +112,7 @@ jQuery(window).load(function(){
 					jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 				}
 			}
-		});
+		});*/
 	}
 
 	//Ajustamos Shot de la home
@@ -143,6 +144,14 @@ jQuery(window).load(function(){
 		jQuery('.cover-detalle img').parent().css({'left':(133-(w_img/2))});
 	}
 
+});
+
+jQuery(document).ready(function(){
+
+	//Obtenemos altura y anchura del navegador
+	h_win=jQuery(window).height();
+	w_win=jQuery(window).width();
+	
 	//Volver el scroll a top
 	jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
@@ -161,28 +170,41 @@ jQuery(window).load(function(){
 					jQuery('.tipo_cat a').removeClass('active');
 					hash_active=1;
 					//Activamos Lazyload para las imágenes
-					jQuery("img.lazy").lazyload();
+					//jQuery("img.lazy").lazyload({skip_invisible : false});
 				}
 			}else{
 				jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
 			}
 		}
 	});
-
-});
-
-jQuery(document).ready(function(){
-
-	//Obtenemos altura y anchura del navegador
-	h_win=jQuery(window).height();
-	w_win=jQuery(window).width();
 	
 	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
+		
 		//Ajustamos cuadros
+		var heights = jQuery('#all-catalogo .content-catalogo div.inside-b-book').map(function ()
+		{
+			return jQuery(this).width();
+		}).get(),
+		//Obtenemos tamaño max de los cuadros
+		maxWidth = Math.max.apply(null, heights);
 		jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
-			var ancho_box=jQuery(this).width();
-			jQuery(this).css('height',ancho_box);
+			jQuery(this).css('height',maxWidth);
 		});
+		
+		if(hash_active!=1){
+			//Llamamos a los cuadros de TODOS
+			filter_catalogo(filter_segmento,filter_type1,filter_type2);
+			
+			//Calculamos demos y evalución para todos
+			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
+			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
+
+			//Asignamos valores a enlaces correspondientes
+			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
+			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
+			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
+			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
+		}
 	}
 
 	//Menú principal y submenús
@@ -589,10 +611,18 @@ jQuery(document).ready(function(){
 
 			//Ajustamos altura de los cuadros de catalogo
 			if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
+				
+				//Ajustamos altura de los cuadros de catalogo
+				var heights = jQuery('#all-catalogo .content-catalogo div.inside-b-book').map(function ()
+				{
+					return jQuery(this).width();
+				}).get(),
+				//Obtenemos tamaño max de los cuadros
+				maxWidth = Math.max.apply(null, heights);
 				jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
-					var ancho_box=jQuery(this).width();
-					jQuery(this).css('height',ancho_box);
+					jQuery(this).css('height',maxWidth);
 				});
+				
 				//Ajustamos etiqueta sample
 				jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
 					if(jQuery(this).parent().find('span').length>0){
@@ -667,7 +697,7 @@ function control_scroll(e){
 function filter_catalogo(segmento,type1,type2){
 	var allCourses = jQuery('#all-catalogo .content-catalogo div[data-type]');
 
-    allCourses.show();
+    //allCourses.show();
 
 	if(segmento==-1 & type1==-1 & type2==-1 ){
 		allCourses.show();
@@ -689,31 +719,35 @@ function filter_catalogo(segmento,type1,type2){
 		//Desbloqueamos filtros
 		block_filter=0;
 		//Activamos Lazyload para las imágenes
-		jQuery("img.lazy").lazyload();
+		jQuery("img.lazy:visible").lazyload({
+			effect : 'fadeIn',
+			skip_invisible : false,
+			load : function()
+			{
+				if(jQuery(this).parent().find('span').length>0){
+					var alto_img=jQuery(this).height();
+					jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
+				}
+			}
+		});
 	}else{
-		allCourses.show();
-		if(type1!=-1) {
-				allCourses.each(function(i, e){
-					if( jQuery(e).data('type') != 'demo' ) {
-						jQuery(e).hide();
-					}
-				});
-		}
-
-		if(type2!=-1) {
-				allCourses.each(function(i, e){
-					if( jQuery(e).data('type') != 'centre' ) {
-						jQuery(e).hide();
-					}
-				});
-		}
+		allCourses.hide();
 
 		//Filtro de primer nivel
 		if(segmento!=-1) {
 
 			allCourses.each(function(i, e){
-					if( jQuery(e).data('segment') != segmento ) {
-						jQuery(e).hide();
+					if( jQuery(e).data('segment') == segmento ) {
+						if(type1==-1 && type2==-1){
+							jQuery(e).show();
+						}else{
+							if( jQuery(e).data('type') == 'demo' && type1!=-1 ){
+								jQuery(e).show();
+							}
+							if( jQuery(e).data('type') == 'centre' && type2!=-1 ){
+								jQuery(e).show();
+							}
+						}
 					}
 			});
 
@@ -734,8 +768,33 @@ function filter_catalogo(segmento,type1,type2){
 			//Desbloqueamos filtros
 			block_filter=0;
 			//Activamos Lazyload para las imágenes
-			jQuery("img.lazy").lazyload();
+			jQuery("img.lazy:visible").lazyload({
+				effect : 'fadeIn',
+				skip_invisible : false,
+				load : function()
+				{
+					jQuery(this).addClass('red');	
+					if(jQuery(this).parent().find('span').length>0){
+						var alto_img=jQuery(this).height();
+						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
+					}
+				}
+			});
 		}else{
+			
+			allCourses.each(function(i, e){
+					if(type1==-1 && type2==-1){
+						jQuery(e).show();
+					}else{
+						if( jQuery(e).data('type') == 'demo' && type1!=-1 ){
+							jQuery(e).show();
+						}
+						if( jQuery(e).data('type') == 'centre' && type2!=-1 ){
+							jQuery(e).show();
+						}
+					}
+			});
+			
 			//Reseteamos botones
 			jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('bloqueado');
 			jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('bloqueado');
@@ -753,7 +812,18 @@ function filter_catalogo(segmento,type1,type2){
 			//Desbloqueamos filtros
 			block_filter=0;
 			//Activamos Lazyload para las imágenes
-			jQuery("img.lazy").lazyload();
+			jQuery("img.lazy:visible").lazyload({
+				effect : 'fadeIn',
+				skip_invisible : false,
+				load : function()
+				{
+					jQuery(this).addClass('red');	
+					if(jQuery(this).parent().find('span').length>0){
+						var alto_img=jQuery(this).height();
+						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
+					}
+				}
+			});
 		}
 
 	}
