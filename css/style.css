@@ -123,6 +123,7 @@ ul.menu_h li.user_opc>a:hover{background:#2e2e2e url(../img/arrow_down_w.png) 88
 ul.menu_h li.user_opc .desplegable{padding-left:40px;padding-top:25px;padding-bottom:25px;width:187px;}
 ul.menu_h li.user_opc .desplegable h3{padding-bottom:25px;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 ul.menu_h li.user_opc .desplegable a{color:#a19d98;font-size:14px;font-family:'sofia-pro-regular', Helvetica, sans-serif;display:block !important;line-height:21px !important;width:auto !important; height:auto !important;text-align:left !important;margin-bottom:5px;}
+ul.menu_h li.user_opc .desplegable a:hover{color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
 .enl-logout{font-size:10px !important;margin-top:20px;}
 
 .cobo-logo{}
