@@ -71,7 +71,7 @@ body{margin:0;padding:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;f
 /*****************************
 PROPIEDADES HEADER
 ******************************/
-#header{position:fixed;width:100%;top:0;left:0;z-index:100;background:#ffffff;}
+#header{position:fixed;width:100%;top:0;left:0;z-index:200;background:#ffffff;}
 #header .container{min-width:auto !important;}
 .logo_h{display:block;background:url(../img/logo_cambridge.png) center center no-repeat;height:47px;width:162px;background-size:162px;text-indent:-99999px;}
 
@@ -278,8 +278,8 @@ PROPIEDADES CATALOGO
 /*#selectores-filtros a:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-filter.png);background-size:21px;vertical-align:middle;margin-right:20px;background-position:0px 0px;background-repeat:no-repeat;}
 #selectores-filtros a.active:before{background-position:0px -21px;}*/
 
-.content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
-.content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:9px;padding-right:9px;float:left;margin-bottom:18px;}
+.content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;min-height:326px;}
+.content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:4px;padding-right:4px;float:left;margin-bottom:8px;}
 .content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding:30px;}
 .content-catalogo .single-box-book .inside-b-book img{max-width:98%;vertical-align:middle;max-height:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
 .content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;}
@@ -294,7 +294,8 @@ PROPIEDADES CATALOGO
 .single-box-book.minus .minus-book{display:block;}
 
 .box-mastercode{position:absolute;top:10px;right:60px;display:block;width:277px;height:80px;background:url(../img/bg-mastercode.png) top left no-repeat;background-size:277px;}
-.box-mastercode a{position:absolute;color:#ffffff;width:244px;top:22px;right:0;height:33px;line-height:33px;font-family:'sofia-pro-black', Helvetica, sans-serif;text-align:center;border-radius:30px;font-size:14px;background:#39c3da;display:block;}
+.box-mastercode a{position:absolute;color:#ffffff;width:244px;top:23px;right:0;height:33px;line-height:33px;font-family:'sofia-pro-black', Helvetica, sans-serif;text-align:center;border-radius:30px;font-size:14px;background:#39c3da;display:block;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
+.box-mastercode a:hover{background:#ffffff;color:#39c3da;}
 .emb-ondas{display:block;position:absolute;width:45px;height:7px;background:url(../img/emb-ondas.png) top left no-repeat;background-size:45px;z-index:50;top:19px;right:40px;}
 .emb-asteriscos{display:block;position:absolute;width:66px;height:10px;background:url(../img/emb-aster.png) top left no-repeat;background-size:66px;z-index:50;top:50px;left:60px;}
 
