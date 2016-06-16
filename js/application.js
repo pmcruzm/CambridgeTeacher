@@ -344,6 +344,51 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
+	
+	//Enviar formulario de login
+	jQuery(document).on("submit","#login-form", function(e) {
+		if(send_form==0){
+			send_form=1;
+			//Limpiamos errores si no es la primera vez
+			jQuery(".errores").html("");
+			//Llamamos a la función de validar (id formulario y contenedor errores)
+			var result=validate_form('#login-form');
+			if(result==1){
+				e.preventDefault();
+				send_form=0;
+			}
+		}
+	});
+	
+	//Enviar formulario de datos personales
+	jQuery(document).on("submit","#user-form", function(e) {
+		if(send_form==0){
+			send_form=1;
+			//Limpiamos errores si no es la primera vez
+			jQuery(".errores").html("");
+			//Llamamos a la función de validar (id formulario y contenedor errores)
+			var result=validate_form('#user-form');
+			if(result==1){
+				e.preventDefault();
+				send_form=0;
+			}
+		}
+	});
+	
+	//Enviar formulario de cambio de contraseña 
+	jQuery(document).on("submit","#password-form", function(e) {
+		if(send_form==0){
+			send_form=1;
+			//Limpiamos errores si no es la primera vez
+			jQuery(".errores").html("");
+			//Llamamos a la función de validar (id formulario y contenedor errores)
+			var result=validate_form('#password-form');
+			if(result==1){
+				e.preventDefault();
+				send_form=0;
+			}
+		}
+	});
 
 	//Eliminar marco de error cuando se hace click sobre un input con error
 	jQuery(document).on('focus','form input,form textarea',function(event){
@@ -981,33 +1026,33 @@ function validate_form(id){
 			//Error general campos vacíos
 			if(error_empty==1){
 				var message=jQuery(id).attr('data-error-msg');
-				jQuery('.errores').append('<p>'+message+'</p>');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
 			}
 
 			if(error_checkbox==1){
 				var message=jQuery(id).find('.validation-rule-checkbox').attr('data-error-msg');
-				jQuery('.errores').append('<p>'+message+'</p>');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
 			}
 
 			if(error_checkbox_profe==1){
 				var message=jQuery(id).find('.validation-rule-checkbox-profe').attr('data-error-msg');
-				jQuery('.errores').append('<p>'+message+'</p>');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
 			}
 
 			if(error_radio==1){
 				var message=jQuery(id).find('.validation-rule-radio').attr('data-error-msg');
-				jQuery('.errores').append('<p>'+message+'</p>');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
 			}
 
 			//Errores password
 			if(error_password==1){
 				var message=jQuery(id).find('.validation-rule-password').attr('data-error-msg');
-				jQuery('.errores').append('<p>'+message+'</p>');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
 			}
 
 			if(error_mail==1){
 				var message=jQuery(id).find('.validation-rule-mail').attr('data-error-msg');
-				jQuery('.errores').append('<p>'+message+'</p>');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
 			}
 
 			//Salida
