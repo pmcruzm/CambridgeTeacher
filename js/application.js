@@ -720,8 +720,6 @@ function filter_catalogo(segmento,type1,type2){
 		block_filter=0;
 		//Activamos Lazyload para las imágenes
 		jQuery("img.lazy:visible").lazyload({
-			effect : 'fadeIn',
-			skip_invisible : false,
 			load : function()
 			{
 				if(jQuery(this).parent().find('span').length>0){
@@ -769,11 +767,8 @@ function filter_catalogo(segmento,type1,type2){
 			block_filter=0;
 			//Activamos Lazyload para las imágenes
 			jQuery("img.lazy:visible").lazyload({
-				effect : 'fadeIn',
-				skip_invisible : false,
 				load : function()
-				{
-					jQuery(this).addClass('red');	
+				{	
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
@@ -813,11 +808,8 @@ function filter_catalogo(segmento,type1,type2){
 			block_filter=0;
 			//Activamos Lazyload para las imágenes
 			jQuery("img.lazy:visible").lazyload({
-				effect : 'fadeIn',
-				skip_invisible : false,
 				load : function()
-				{
-					jQuery(this).addClass('red');	
+				{	
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
