@@ -552,7 +552,7 @@ PROPIEDADES PROFILE
 .box-user-profile{padding-bottom:60px;}
 .box_profile h2{padding-left:44%;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:18px;padding-bottom:45px;}
 
-.btn-editar{display:block;width:65px;height:20px;line-height:20px;color:#2e2e2e;font-size:12px;background:#fde052;border:none;border-radius:20px;-webkit-appearance:none;right:7px;top:10px;position:absolute;z-index:50;text-align:center;}
+.btn-editar{display:block;width:115px;height:20px;line-height:20px;color:#2e2e2e;font-size:12px;background:#fde052;border:none;border-radius:20px;-webkit-appearance:none;right:7px;top:50px;position:absolute;z-index:50;text-align:center;}
 
 .password-profile,.delete-profile{background:#ffffff;padding-top:35px;padding-bottom:35px;position:relative;margin-bottom:12px;box-sizing:border-box;padding-right:84px;}
 .delete-profile p{padding-left:44%;}
@@ -565,6 +565,7 @@ PROPIEDADES PROFILE
 .delete-profile a.btn-delete{-webkit-appearance:none;font-size:14px;height:35px;width:200px;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:35px;display:block;text-align:center;margin-left:44%;}
 .delete-profile a.btn-delete:hover{background:#fde052;color:#2e2e2e;}
 .row_delete{padding-top:50px;}
+.change-btn{padding-bottom:60px;margin-bottom:0;}
 
 /*****************************
 PROPIEDADES FOOTER
