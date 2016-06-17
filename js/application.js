@@ -183,7 +183,7 @@ jQuery(document).ready(function(){
 		//Ajustamos cuadros
 		var heights = jQuery('#all-catalogo .content-catalogo div.inside-b-book').map(function ()
 		{
-			return jQuery(this).width();
+			return jQuery(this).outerWidth();
 		}).get(),
 		//Obtenemos tamaño max de los cuadros
 		maxWidth = Math.max.apply(null, heights);
@@ -660,7 +660,7 @@ jQuery(document).ready(function(){
 				//Ajustamos altura de los cuadros de catalogo
 				var heights = jQuery('#all-catalogo .content-catalogo div.inside-b-book').map(function ()
 				{
-					return jQuery(this).width();
+					return jQuery(this).outerWidth();
 				}).get(),
 				//Obtenemos tamaño max de los cuadros
 				maxWidth = Math.max.apply(null, heights);
