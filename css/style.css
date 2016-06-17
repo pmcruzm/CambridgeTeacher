@@ -568,6 +568,24 @@ PROPIEDADES PROFILE
 .change-btn{padding-bottom:60px;margin-bottom:0;}
 
 /*****************************
+PROPIEDADES AVISO LEGAL
+******************************/
+#box_aviso{width:100%;max-width:660px;margin:0 auto;}
+#block-aviso{background:#f5f0eb;padding-bottom:150px;}
+#box_aviso .top-register{padding-left:84px;padding-top:50px;padding-bottom:100px;}
+
+#box_aviso p{margin-bottom:14px;color:#2e2e2e;}
+#box_aviso p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+#box_aviso p a{color:#30c0d8;text-decoration:underline;}
+
+#box_aviso ul,#box_aviso ol{margin-bottom:14px;padding-left:30px;}
+#box_aviso ul li{list-style:disc;}
+#box_aviso ol li{list-style:decimal;}
+
+#box_aviso b,#box_aviso  strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+#box_aviso em,#box_aviso  i{font-style:italic;}
+
+/*****************************
 PROPIEDADES FOOTER
 ******************************/
 #footer{background:#2e2e2e;}
