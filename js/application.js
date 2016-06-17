@@ -745,6 +745,9 @@ function filter_catalogo(segmento,type1,type2){
     //allCourses.show();
 
 	if(segmento==-1 & type1==-1 & type2==-1 ){
+		//Cerrarmos alert de 0 libros 
+		jQuery('.empty-catalogo').hide();
+		
 		allCourses.show();
 
 		//Reseteamos botones
@@ -774,6 +777,9 @@ function filter_catalogo(segmento,type1,type2){
 			}
 		});
 	}else{
+		//Cerrarmos alert de 0 libros 
+		jQuery('.empty-catalogo').hide();
+		
 		allCourses.hide();
 
 		//Filtro de primer nivel
@@ -807,6 +813,11 @@ function filter_catalogo(segmento,type1,type2){
 			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
+			
+			//Miramos si no hay libros 
+			if(all_demos==0 && all_evaluacion==0 ){
+				jQuery('.empty-catalogo').show();
+			}
 
 			//Desbloqueamos filtros
 			block_filter=0;
@@ -848,6 +859,11 @@ function filter_catalogo(segmento,type1,type2){
 			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
+			
+			//Miramos si no hay libros 
+			if(all_demos==0 && all_evaluacion==0 ){
+				jQuery('.empty-catalogo').show();
+			}
 
 			//Desbloqueamos filtros
 			block_filter=0;
