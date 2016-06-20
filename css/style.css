@@ -369,7 +369,7 @@ PROPIEDADES REGISTRO
 .form-type-1 .checkbox a{color:#2e2e2e;text-decoration:underline;}
 
 .submit_group{padding-left:44%;padding-top:40px;}
-.submit_group input{-webkit-appearance:none;font-size:14px;height:35px;width:200px;box-sizing:border-box;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:35px;}
+.submit_group input{-webkit-appearance:none;font-size:14px;height:35px;min-width:200px;padding:0 15px;box-sizing:border-box;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:35px;}
 .submit_group input:hover{background:#fde052;color:#2e2e2e;}
 
 .errores{color:#f05456;font-size:14px;display:block;padding-left:44%;width:95%;box-sizing:border-box;margin-top:20px;}
@@ -576,6 +576,8 @@ PROPIEDADES AVISO LEGAL
 #box_aviso{width:100%;max-width:660px;margin:0 auto;}
 #block-aviso{background:#f5f0eb;padding-bottom:150px;}
 #box_aviso .top-register{padding-left:84px;padding-top:50px;padding-bottom:100px;}
+
+#box_aviso h3 {font-size:24px; margin-bottom: 20px; margin-top: 25px;}
 
 #box_aviso p{margin-bottom:14px;color:#2e2e2e;}
 #box_aviso p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
