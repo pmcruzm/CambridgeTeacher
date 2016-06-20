@@ -151,7 +151,7 @@ jQuery(document).ready(function(){
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
-	
+
 	//Volver el scroll a top
 	jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay
@@ -177,9 +177,9 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
-	
+
 	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
-		
+
 		//Ajustamos cuadros
 		var heights = jQuery('#all-catalogo .content-catalogo div.inside-b-book').map(function ()
 		{
@@ -190,11 +190,11 @@ jQuery(document).ready(function(){
 		jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
 			jQuery(this).css('height',maxWidth);
 		});
-		
+
 		if(hash_active!=1){
 			//Llamamos a los cuadros de TODOS
 			filter_catalogo(filter_segmento,filter_type1,filter_type2);
-			
+
 			//Calculamos demos y evalución para todos
 			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
 			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
@@ -344,51 +344,12 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
-	
-	//Enviar formulario de login
-	jQuery(document).on("submit","#login-form", function(e) {
-		if(send_form==0){
-			send_form=1;
-			//Limpiamos errores si no es la primera vez
-			jQuery(".errores").html("");
-			//Llamamos a la función de validar (id formulario y contenedor errores)
-			var result=validate_form('#login-form');
-			if(result==1){
-				e.preventDefault();
-				send_form=0;
-			}
-		}
-	});
-	
-	//Enviar formulario de datos personales
-	jQuery(document).on("submit","#user-form", function(e) {
-		if(send_form==0){
-			send_form=1;
-			//Limpiamos errores si no es la primera vez
-			jQuery(".errores").html("");
-			//Llamamos a la función de validar (id formulario y contenedor errores)
-			var result=validate_form('#user-form');
-			if(result==1){
-				e.preventDefault();
-				send_form=0;
-			}
-		}
-	});
-	
-	//Enviar formulario de cambio de contraseña 
-	jQuery(document).on("submit","#password-form", function(e) {
-		if(send_form==0){
-			send_form=1;
-			//Limpiamos errores si no es la primera vez
-			jQuery(".errores").html("");
-			//Llamamos a la función de validar (id formulario y contenedor errores)
-			var result=validate_form('#password-form');
-			if(result==1){
-				e.preventDefault();
-				send_form=0;
-			}
-		}
-	});
+
+    jQuery('form[data-validate="true"]').on('submit', function(event){
+        if( ! validateForm.validate(event) ) {
+            event.preventDefault();
+        }
+    });
 
 	//Eliminar marco de error cuando se hace click sobre un input con error
 	jQuery(document).on('focus','form input,form textarea',function(event){
@@ -656,7 +617,7 @@ jQuery(document).ready(function(){
 
 			//Ajustamos altura de los cuadros de catalogo
 			if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
-				
+
 				//Ajustamos altura de los cuadros de catalogo
 				var heights = jQuery('#all-catalogo .content-catalogo div.inside-b-book').map(function ()
 				{
@@ -667,7 +628,7 @@ jQuery(document).ready(function(){
 				jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
 					jQuery(this).css('height',maxWidth);
 				});
-				
+
 				//Ajustamos etiqueta sample
 				jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
 					if(jQuery(this).parent().find('span').length>0){
@@ -745,9 +706,9 @@ function filter_catalogo(segmento,type1,type2){
     //allCourses.show();
 
 	if(segmento==-1 & type1==-1 & type2==-1 ){
-		//Cerrarmos alert de 0 libros 
+		//Cerrarmos alert de 0 libros
 		jQuery('.empty-catalogo').hide();
-		
+
 		allCourses.show();
 
 		//Reseteamos botones
@@ -777,9 +738,9 @@ function filter_catalogo(segmento,type1,type2){
 			}
 		});
 	}else{
-		//Cerrarmos alert de 0 libros 
+		//Cerrarmos alert de 0 libros
 		jQuery('.empty-catalogo').hide();
-		
+
 		allCourses.hide();
 
 		//Filtro de primer nivel
@@ -813,8 +774,8 @@ function filter_catalogo(segmento,type1,type2){
 			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
-			
-			//Miramos si no hay libros 
+
+			//Miramos si no hay libros
 			if(all_demos==0 && all_evaluacion==0 ){
 				jQuery('.empty-catalogo').show();
 			}
@@ -824,7 +785,7 @@ function filter_catalogo(segmento,type1,type2){
 			//Activamos Lazyload para las imágenes
 			jQuery("img.lazy:visible").lazyload({
 				load : function()
-				{	
+				{
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
@@ -832,7 +793,7 @@ function filter_catalogo(segmento,type1,type2){
 				}
 			});
 		}else{
-			
+
 			allCourses.each(function(i, e){
 					if(type1==-1 && type2==-1){
 						jQuery(e).show();
@@ -845,7 +806,7 @@ function filter_catalogo(segmento,type1,type2){
 						}
 					}
 			});
-			
+
 			//Reseteamos botones
 			jQuery('#selectores-filtros a[data-filter-type=centre]').removeClass('bloqueado');
 			jQuery('#selectores-filtros a[data-filter-type=demo]').removeClass('bloqueado');
@@ -859,8 +820,8 @@ function filter_catalogo(segmento,type1,type2){
 			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
 			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
 			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
-			
-			//Miramos si no hay libros 
+
+			//Miramos si no hay libros
 			if(all_demos==0 && all_evaluacion==0 ){
 				jQuery('.empty-catalogo').show();
 			}
@@ -870,7 +831,7 @@ function filter_catalogo(segmento,type1,type2){
 			//Activamos Lazyload para las imágenes
 			jQuery("img.lazy:visible").lazyload({
 				load : function()
-				{	
+				{
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
@@ -901,7 +862,7 @@ function removeHash () {
     }
 }
 
-//Función para mostrar las notificaciones 
+//Función para mostrar las notificaciones
 function showNotification(msg,time){
    var t_visible;
    if (time === undefined || time === null) {
@@ -1114,29 +1075,31 @@ var validateForm = {
 
 	checkField: function(i,e) {
 
-		var input  = jQuery(e);
-		var params = input.data('validation-rule').split('|');
+		var elem   = jQuery(e);
+		var params = elem.data('validation-rule').split('|');
 		var rule   = params.shift();
 		var error  = false;
 
 		//console.log('RULE:',rule);
 
-		if( 'email' == rule ) {error = ! this.ruleIsEmail(input);}
-		if( 'repeat' == rule ) {error = ! this.ruleRepeat(input, params);}
-		if( 'checkbox' == rule ) {error = ! this.ruleCheckbox(input);}
+		if( 'email' == rule ) {error = ! this.ruleIsEmail(elem);}
+		if( 'repeat' == rule ) {error = ! this.ruleRepeat(elem, params[0]);}
+		if( 'checkbox' == rule ) {error = ! this.ruleCheckbox(elem);}
 		if( 'recaptcha' == rule ) {error = ! this.ruleValidRecaptcha();}
-		if( 'not-empty' == rule ) {error = ! this.ruleValidNotEmpty(input);}
-		if( 'zip' == rule ) {error = ! this.ruleValidZip(input);}
-		if( 'select-option' == rule ) {error = ! this.ruleValidSelectOption(input);}
+		if( 'not-empty' == rule ) {error = ! this.ruleValidNotEmpty(elem);}
+		if( 'zip' == rule ) {error = ! this.ruleValidZip(elem);}
+		if( 'select-option' == rule ) {error = ! this.ruleValidSelectOption(elem);}
+		if( 'multi-checkbox' == rule ) {error = ! this.ruleMultiCheckbox(elem);}
+		if( 'min' == rule ) {error = ! this.ruleMinimumChars(elem, parseInt(params[0]));}
 
 
 		if( error ) {
-			input.addClass('error');
+			elem.addClass('error');
 
 			this.hasErrors = true;
 
-			if( input.data('error-msg') ) {
-				this.errors.push( input.data('error-msg') );
+			if( elem.data('error-msg') ) {
+				this.errors.push( elem.data('error-msg') );
 			}
 		}
 	},
@@ -1159,8 +1122,8 @@ var validateForm = {
 		return validateEmail(e.val());
 	},
 
-	ruleRepeat: function(e, params) {
-		return e.val() === jQuery(params[0], this.form).val();
+	ruleRepeat: function(e, repeatSelector) {
+		return e.val() === jQuery(repeatSelector, this.form).val();
 	},
 
 	ruleCheckbox: function(e) {
@@ -1181,5 +1144,14 @@ var validateForm = {
 
 	ruleValidSelectOption: function(e) {
 		return e.prop('selectedIndex') != 0;
+	},
+
+	ruleMultiCheckbox: function(e) {
+		return e.find('input[type="checkbox"]:checked').length > 0;
+	},
+
+	ruleMinimumChars: function(e, minChars) {
+		return e.val().length >= minChars;
 	}
+
 }
