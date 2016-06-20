@@ -78,8 +78,8 @@ PROPIEDADES HEADER
 ul.menu_h{padding:0;margin:0;font-size:0;position:absolute;top:0;right:0;}
 ul.menu_h li{height:48px;display:inline-block;position:relative;}
 ul.menu_h li a{font-size:14px;line-height:48px;color:#7d7974;display:block;text-align:center;width:70px;}
-ul.menu_h li a:hover{background:#2e2e2e;color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
-ul.menu_h li a.active{background:#2e2e2e;color:#ffffff;}
+ul.menu_h li a:hover{color:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+ul.menu_h li a.active{color:#2e2e2e;}
 ul.menu_h li.language_opc>a{width:auto !important;padding-right:15px;}
 ul.menu_h li.language_opc>a:before{content:'';display:inline-block;background:url(../img/ico_globe.png) center center no-repeat;background-size:20px;width:20px;height:48px;float:left;padding-left:10px;padding-right:13px;}
 ul.menu_h li.language_opc.active{background:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
@@ -102,15 +102,19 @@ ul.menu_h li.login_opc .desplegable{padding-left:47px;padding-top:33px;padding-b
 #form-login label{display:none;}
 #form-login input[type=text],#form-login input[type=password]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;}
 .btns-login{overflow:hidden;margin-bottom:10px;}
-#form-login input[type=submit]{float:left;width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:35px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;}
+#form-login input[type=submit]{float:left;width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:35px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;cursor:pointer;}
+#form-login input[type=submit]:hover{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;background:#fde052;color:#393939;}
 .btns-login .btn-register{float:right;width:107px;height:35px;border-radius:30px;background:#393939;display:block;line-height:35px;color:#5e5e5e;font-size:14px;}
+.btns-login .btn-register:hover{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;color:#ffffff !important;}
 .txt-remember{text-align:right !important;}
 .txt-remember a{width:auto !important;height:auto !important;color:#5e5e5e !important;line-height:13px !important;font-size:10px !important;display:inline-block !important;}
+.txt-remember a:hover{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;color:#ffffff !important;}
 
 .forget_box{display:none;}
 #form-forgot-password p{color:#ffffff;font-size: 13px;line-height: 16px;margin-bottom: 20px;}
-#form-forgot-password input[type=text]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;}
+#form-forgot-password input[type=text]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;cursor:pointer;}
 #form-forgot-password input[type=submit]{width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:35px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;}
+#form-forgot-password input[type=submit]:hover{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;background:#fde052;color:#393939;}
 .btns-reset{clear:both;padding-bottom:20px;}
 .feedback{text-align:center;color:#f05456;font-size:14px;margin-top:20px;display:none;width:100%;}
 
@@ -189,7 +193,7 @@ PROPIEDADES MI COLECCION
 ******************************/
 #banner-coleccion{background:#fde052;height:360px;position:relative;}
 #banner-coleccion .container{background:#fde052 url(../img/bg-mi-coleccion.png) top left no-repeat;height:360px;background-size:contain;}
-#banner-coleccion h2{padding-top:68px;padding-left:25px;font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+#banner-coleccion h2{padding-top:68px;padding-left:56px;font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .enl-coleccion{text-align:right;margin-top:17px;padding-right:60px;margin-bottom:17px;}
 .enl-coleccion a{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-left:30px;}
 .enl-coleccion a:first-child{margin-left:0;}
@@ -203,7 +207,8 @@ PROPIEDADES MI COLECCION
 .carrusel-list .item img{height:200px;padding-right:8px;}
 .carrusel-list .item span.sample{position:absolute;bottom:0;left:0;z-index:50;display:block;background:url(../img/sample-diagonal.png) top left no-repeat;width:55px;height:55px;background-size:55px;text-indent:-99999px;}
 .carrusel-list .item .minus-book{right:15px;display:block;}
-.slick-arrow{position:absolute;top:0;z-index:100;top:50%;margin-top:-18px;}
+
+.slick-arrow{position:absolute;top:0;z-index:100;top:50%;margin-top:-18px;visibility:hidden;}
 .slick-next{right:10px;background-image:url(../img/arrow_right.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
 .slick-next.slick-disabled{background-position:0px -36px;}
 .slick-prev{left:10px;background-image:url(../img/arrow_left.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
@@ -216,7 +221,7 @@ PROPIEDADES MI COLECCION
 
 #block-coleccion{height:277px;margin-bottom:50px;position:relative;background:#2e2e2e url(../img/bg-catalogo-inf.png) bottom left no-repeat;background-size:1600px;}
 #block-coleccion .container{background-image:url(../img/bg-catalogo-sup.png);height:277px;;background-size:1525px;background-position:calc(50% - 25px) bottom;background-repeat:no-repeat;}
-#block-coleccion h3{font-size:40px;color:#fde052;padding-left:60px;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-top:40px;}
+#block-coleccion h3{font-size:40px;color:#fde052;padding-left:56px;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-top:40px;}
 #block-coleccion .enl-explorar{position:absolute;color:#fde052;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;right:25px;top:60px;}
 #block-coleccion .enl-explorar:before{content:'';display:inline-block;vertical-align:middle;width:21px;height:21px;background-image:url(../img/ico-explorar.png);background-size:21px;margin-right:10px;background-repeat:no-repeat;background-position:0px 0px;}
 #block-coleccion .enl-explorar:hover:before{background-position:0px -21px;}
@@ -234,7 +239,7 @@ PROPIEDADES MI COLECCION
 #block-coleccion .mod-catalogo:hover span:after{background:#fde052;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out}
 
 #list-news{background:#f5f0eb;padding-top:30px;padding-bottom:40px;}
-#block-noticias h3{font-size:26px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-bottom:20px;display:inline-block;margin-left:108px;border-bottom:7px solid #fb6120;}
+#block-noticias h3{font-size:26px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;padding-bottom:20px;display:inline-block;margin-left:56px;border-bottom:7px solid #fb6120;}
 #list-news .container{overflow:hidden;box-sizing:border-box;padding-left:14px;padding-right:14px;}
 #list-news .container .new-single{width:25%;float:left;box-sizing:border-box;padding-left:9px;padding-right:9px;margin-bottom:18px;visibility:hidden;}
 #list-news .container .new-single .inside-new{background:#ffffff;}
@@ -287,8 +292,10 @@ PROPIEDADES CATALOGO
 .content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;display:none;}
 
 .plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) top left no-repeat;width:21px;height:21px;text-indent:-99999px;background-size:21px;display:none;}
-.minus-book{position:absolute;top:10px;right:10px;background:red;width:21px;height:21px;text-indent:-99999px;background-size:21px;display:none;}
+.minus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-delete.png) 0px 0px no-repeat;width:21px;height:21px;text-indent:-99999px;background-size:21px;display:none;}
 .check-book{position:absolute;top:10px;right:10px;background:url(../img/ico-check.png) top left no-repeat;width:20px;height:20px;text-indent:-99999px;background-size:20px;display:none;}
+
+.minus-book:hover{background-position:0px -21px;}
 
 .single-box-book.check .check-book{display:block;}
 .single-box-book.add .plus-book{display:block;}
@@ -319,10 +326,10 @@ PROPIEDADES CATALOGO
 #my-catalogo{padding-top:50px;}
 
 #btn-mi-coleccion{position:absolute;right:27px;bottom:50px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
-#btn-mi-coleccion:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/ico-coleccion.png) top left no-repeat;background-size:21px;margin-right:10px;vertical-align:middle;}
+#btn-mi-coleccion:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/ico-coleccion.png) top left no-repeat;background-size:21px;margin-right:10px;position:relative;top:6px;}
 #btn-mi-coleccion:hover:before{background-position:0px -21px;}
 
-#box-notificacion{display:none;position:fixed;top:25px;right:30px;width:240px;box-sizing:border-box;padding:15px;padding-bottom:30px;z-index:110;background:rgba(46,46,46,0.95);border-radius:6px;}
+#box-notificacion{display:none;position:fixed;top:25px;right:30px;width:240px;box-sizing:border-box;padding:15px;padding-bottom:30px;z-index:999;background:rgba(46,46,46,0.95);border-radius:6px;}
 #box-notificacion p{font-size:12px;color:#fde052;line-height:16px;}
 #box-notificacion p strong,#box-notificacion p b{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 #box-notificacion p em,#box-notificacion p i{font-style:italic;}
@@ -341,10 +348,10 @@ PROPIEDADES REGISTRO
 .top-register{background:#ffffff;padding-top:35px;padding-bottom:35px;position:relative;margin-top:-85px;margin-bottom:12px;box-sizing:border-box;padding-right:84px;}
 .form-group{overflow:hidden;margin-bottom:25px;position:relative;}
 .form-type-1 .form-group label{display:block;text-align:right;width:44%;float:left;box-sizing:border-box;padding-right:40px;height:40px;line-height:40px;color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
-.form-type-1 .form-group input[type=text]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
-.form-type-1 .form-group input[type=password]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
-.form-type-1 .form-group input[type=email]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
-.form-type-1 .form-group textarea{border:none;-webkit-appearance:none;width:auto;display:block;width:100%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:Verdana, Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;padding:10px;}
+.form-type-1 .form-group input[type=text]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:'sofia-pro-regular', Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+.form-type-1 .form-group input[type=password]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:'sofia-pro-regular', Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+.form-type-1 .form-group input[type=email]{border:none;height:40px;line-height:40px;-webkit-appearance:none;width:auto;display:block;width:56%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:'sofia-pro-regular', Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;}
+.form-type-1 .form-group textarea{border:none;-webkit-appearance:none;width:auto;display:block;width:100%;float:left;box-sizing:border-box;padding-left:10px;padding-right:10px;color:#929091;font-size:14px;font-family:'sofia-pro-regular', Geneva, sans-serif;color:#2e2e2e;-webkit-appearance:none;border:3px solid #2e2e2e;padding:10px;}
 
 .form-type-1 .form-group input[type=text].error{border:3px solid #f05456;}
 .form-type-1 .form-group input[type=password].error{border:3px solid #f05456;}
@@ -446,7 +453,8 @@ PROPIEDADES DETALLE
 #banner-detalle h2{position:absolute;left:266px;bottom:50px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:40px;line-height:40px;}
 #banner-detalle h2 span{font-size:20px;display:inline-block;margin-left:10px;}
 .enl-delete{position:absolute;bottom:50px;right:30px;color:#ffffff;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
-.enl-delete:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/less-white.png) top left no-repeat;background-size:21px;position:relative;top:6px;margin-right:13px;}
+.enl-delete:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/less-white.png) 0px 0px no-repeat;background-size:21px;position:relative;top:6px;margin-right:13px;}
+.enl-delete:hover:before{background-position:0px -21px;}
 
 .cover-detalle{display:inline-block;position:relative;bottom:-55px;position:absolute;z-index:20;}
 .cover-detalle img{box-shadow:5px 8px 18px 0px rgba(0, 0, 0, 0.2);max-height:200px;max-width:200px;}
@@ -465,7 +473,8 @@ PROPIEDADES DETALLE
 .box-sup-det{display:block;padding-left:10px;margin-bottom:15px;width:50%;float:left;text-align:center;box-sizing:border-box;}
 .box-sup-det:first-child{padding-left:0;}
 .box-sup-det h4{color:#2e2e2e;font-size:16px;/*font-family:'sofia-pro-black', Helvetica, sans-serif;*/display:inline-block;padding-left:10px;}
-.box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;height:30px;line-height:30px;width:80px;text-align:center;border-radius:20px;margin-left:15px;position:relative;font-size:14px;-webkit-appearance:none;border:none;font-family:'sofia-pro-regular', Helvetica, sans-serif;cursor: pointer;}
+.box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;height:30px;line-height:28px;width:80px;text-align:center;border-radius:20px;margin-left:15px;position:relative;font-size:14px;-webkit-appearance:none;border:none;font-family:'sofia-pro-regular', Helvetica, sans-serif;cursor: pointer;}
+.box-sup-det .btn-det:hover{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;background:#2e2e2e;color:#fde052;}
 .img-detalles{padding-bottom:50px;overflow:hidden;max-width:575px;width:100%;}
 .img-detalles img{max-height:132px;max-width:100%;box-shadow:5px 8px 18px 0px rgba(0, 0, 0, 0.2);}
 .box-img-det{box-sizing:border-box;padding:10px;margin-bottom:15px;text-align:left;}
@@ -555,7 +564,8 @@ PROPIEDADES PROFILE
 .box-user-profile{padding-bottom:60px;}
 .box_profile h2{padding-left:44%;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:18px;padding-bottom:45px;}
 
-.btn-editar{display:block;width:115px;height:20px;line-height:20px;color:#2e2e2e;font-size:12px;background:#fde052;border:none;border-radius:20px;-webkit-appearance:none;right:7px;top:50px;position:absolute;z-index:50;text-align:center;}
+.btn-editar{display:block;width:115px;height:20px;line-height:19px;color:#2e2e2e;font-size:12px;background:#fde052;border:none;border-radius:20px;-webkit-appearance:none;right:7px;top:50px;position:absolute;z-index:50;text-align:center;}
+.btn-editar:hover{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;background:#2e2e2e;color:#fde052;}
 
 .password-profile,.delete-profile{background:#ffffff;padding-top:35px;padding-bottom:35px;position:relative;margin-bottom:12px;box-sizing:border-box;padding-right:84px;}
 .delete-profile p{padding-left:44%;}
@@ -603,6 +613,7 @@ PROPIEDADES FOOTER
 .block_visita ul{margin-bottom:50px;}
 .block_visita ul li{color:#afaaa6;font-size:14px;}
 .block_visita ul li a{color:#afaaa6;}
+.block_visita ul li a:hover{color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 
 .block_siguenos{width:35%;float:left;}
 .block_siguenos h4{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:48px;}
@@ -617,6 +628,7 @@ PROPIEDADES FOOTER
 
 .txt-footer{clear:both;color:#afaaa6;font-size:12px;line-height:21px;}
 .txt-footer a{color:#afaaa6;}
+.txt-footer a:hover{color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 
 /**********************************
 PROPIEDADES DE CUSTOM RADIO | CHECKBOX BUTTON
