@@ -32,10 +32,36 @@ jQuery.noConflict();
 
 
 jQuery.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-    }
+	headers: {
+		'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+	}
 });
+
+
+(function(jQuery){
+	"use strict";
+
+	var getUrlParameter = function(sParam) {
+		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+			sURLVariables = sPageURL.split('&'),
+			sParameterName,
+			i;
+
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split('=');
+
+			if (sParameterName[0] === sParam) {
+				return sParameterName[1] === undefined ? true : sParameterName[1];
+			}
+			return null;
+		}
+	}
+
+	if( ! jQuery.getUrlParameter ) {
+		jQuery.getUrlParameter = getUrlParameter;
+	}
+
+})(jQuery);
 
 
 jQuery(window).load(function(){
@@ -268,7 +294,7 @@ jQuery(document).ready(function(){
 
 	//Filtros de la página de catálogo
 	jQuery(document).on('click','#selectores-filtros a',function(e){
-        e.preventDefault();
+		e.preventDefault();
 
 		if(!jQuery(this).hasClass('bloqueado')){
 
@@ -305,7 +331,7 @@ jQuery(document).ready(function(){
 			//console.log(filter_segmento+'--'+filter_type1+'--'+filter_type2);
 			filter_catalogo(filter_segmento,filter_type1,filter_type2);
 		}
-    });
+	});
 
 	//Ayudas de los registros (over)
 	jQuery(document).on("mouseenter",".help-box a", function(e) {
@@ -345,11 +371,11 @@ jQuery(document).ready(function(){
 		}
 	});
 
-    jQuery('form[data-validate="true"]').on('submit', function(event){
-        if( ! validateForm.validate(event) ) {
-            event.preventDefault();
-        }
-    });
+	jQuery('form[data-validate="true"]').on('submit', function(event){
+		if( ! validateForm.validate(event) ) {
+			event.preventDefault();
+		}
+	});
 
 	//Eliminar marco de error cuando se hace click sobre un input con error
 	jQuery(document).on('focus','form input,form textarea',function(event){
@@ -703,7 +729,7 @@ function control_scroll(e){
 function filter_catalogo(segmento,type1,type2){
 	var allCourses = jQuery('#all-catalogo .content-catalogo div[data-type]');
 
-    //allCourses.show();
+	//allCourses.show();
 
 	if(segmento==-1 & type1==-1 & type2==-1 ){
 		//Cerrarmos alert de 0 libros
@@ -846,56 +872,56 @@ function filter_catalogo(segmento,type1,type2){
 
 //Función para eliminar hash
 function removeHash () {
-    var scrollV, scrollH, loc = window.location;
-    if ("pushState" in history)
-        history.pushState("", document.title, loc.pathname + loc.search);
-    else {
-        // Prevent scrolling by storing the page's current scroll offset
-        scrollV = document.body.scrollTop;
-        scrollH = document.body.scrollLeft;
+	var scrollV, scrollH, loc = window.location;
+	if ("pushState" in history)
+		history.pushState("", document.title, loc.pathname + loc.search);
+	else {
+		// Prevent scrolling by storing the page's current scroll offset
+		scrollV = document.body.scrollTop;
+		scrollH = document.body.scrollLeft;
 
-        loc.hash = "";
+		loc.hash = "";
 
-        // Restore the scroll offset, should be flicker free
-        document.body.scrollTop = scrollV;
-        document.body.scrollLeft = scrollH;
-    }
+		// Restore the scroll offset, should be flicker free
+		document.body.scrollTop = scrollV;
+		document.body.scrollLeft = scrollH;
+	}
 }
 
 //Función para mostrar las notificaciones
 function showNotification(msg,time){
    var t_visible;
    if (time === undefined || time === null) {
-   	  t_visible=2000;
+	  t_visible=2000;
    }else{
-      t_visible=time;
+	  t_visible=time;
    }
    jQuery('#box-notificacion').html(msg).stop().clearQueue().fadeIn(400,function(){
-   	  jQuery(this).delay(t_visible).fadeOut(400);
+	  jQuery(this).delay(t_visible).fadeOut(400);
    });
 }
 
 //Función para el cambio de orientación
 function doOnOrientationChange()
   {
-    switch(window.orientation)
-    {
-      case -90:
-      case 90:
+	switch(window.orientation)
+	{
+	  case -90:
+	  case 90:
 
 
-        break;
-      default:
+		break;
+	  default:
 
 
 
-        break;
-    }
+		break;
+	}
   }
 
 function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
 }
 
 function isNumber(n) {
