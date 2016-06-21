@@ -68,15 +68,6 @@ jQuery(window).load(function(){
 
 	//Ajustamos altura de los bloques de noticias
 	if (jQuery('#list-news').is(":visible") ) {
-		var heights = jQuery('#list-news div.inside-new').map(function ()
-		{
-			return jQuery(this).outerHeight();
-		}).get(),
-		//Obtenemos tamaño max de los cuadros
-		maxHeight = Math.max.apply(null, heights);
-		jQuery('#list-news div.inside-new').each(function() {
-			jQuery(this).css('height',maxHeight+30);
-		});
 		//Ocultamos bloques
 		jQuery('#list-news a.new-single').hide().css('visibility','visible');
 		//Mostramos los 8 primeros
@@ -89,11 +80,23 @@ jQuery(window).load(function(){
 				return true;
 			}
 		});
+		
+		//Ajustamos altura 
+		var heights = jQuery('#list-news a.new-single.visible div.inside-new').map(function ()
+		{
+			return jQuery(this).outerHeight();
+		}).get(),
+		//Obtenemos tamaño max de los cuadros
+		maxHeight = Math.max.apply(null, heights);
+		jQuery('#list-news a.new-single.visible div.inside-new').each(function() {
+			jQuery(this).css('height',maxHeight+30);
+		});
+		
 		//Miramos si nos hay más noticias por mostrar
 		var all_elem=jQuery('#list-news a.new-single').length;
 		var all_elem_v=jQuery('#list-news a.new-single.visible').length;
 		//console.log(all_elem+'--'+all_elem_v);
-		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}
+		if((all_elem-all_elem_v)==0){jQuery('.btn-more').hide();}else{jQuery('.btn-more').show();}
 	}
 
 	//Ajustamos altura de los cuadros de catalogo
@@ -326,7 +329,7 @@ jQuery(document).ready(function(){
 	}
 	
 	//Evento después de transición
-	jQuery('.carrusel-coleccion').on('afterChange', function(event, slick, currentSlide, nextSlide){
+	/*jQuery('.carrusel-coleccion').on('afterChange', function(event, slick, currentSlide, nextSlide){
 	  var lengh_items=0;
 		var block_item=0;
 		jQuery('.carrusel-list div.item').each(function() {
@@ -346,7 +349,7 @@ jQuery(document).ready(function(){
 			jQuery('.slick-prev').hide().css({'visibility':'hidden'});
 			jQuery('.slick-next').hide().css({'visibility':'hidden'});
 		}
-	});
+	});*/
 
 	//Filtros de la página de catálogo
 	jQuery(document).on('click','#selectores-filtros a',function(e){
@@ -482,6 +485,17 @@ jQuery(document).ready(function(){
 					return true;
 				}
 			}
+			//Removemos las alturas anteriores
+			jQuery('#list-news a.new-single.visible div.inside-new').removeAttr('style');
+			var heights = jQuery('#list-news a.new-single.visible div.inside-new').map(function ()
+			{
+					return jQuery(this).outerHeight();
+			}).get(),
+			//Obtenemos tamaño max de los cuadros
+			maxHeight = Math.max.apply(null, heights);
+			jQuery('#list-news a.new-single.visible div.inside-new').each(function() {
+				jQuery(this).css('height',maxHeight+30);
+			});
 		});
 		//Miramos si nos hay más noticias por mostrar
 		var all_elem=jQuery('#list-news a.new-single').length;
@@ -686,13 +700,15 @@ jQuery(document).ready(function(){
 
 			//Ajustamos altura de los bloques de noticias
 			if (jQuery('#list-news').is(":visible") ) {
-				var heights = jQuery('#list-news div.inside-new').map(function ()
+				//Removemos las alturas anteriores
+				jQuery('#list-news a.new-single.visible div.inside-new').removeAttr('style');
+				var heights = jQuery('#list-news a.new-single.visible div.inside-new').map(function ()
 				{
 					return jQuery(this).outerHeight();
 				}).get(),
 				//Obtenemos tamaño max de los cuadros
 				maxHeight = Math.max.apply(null, heights);
-				jQuery('#list-news div.inside-new').each(function() {
+				jQuery('#list-news a.new-single.visible div.inside-new').each(function() {
 					jQuery(this).css('height',maxHeight+30);
 				});
 			}
