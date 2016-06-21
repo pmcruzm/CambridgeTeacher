@@ -850,6 +850,7 @@ function filter_catalogo(segmento,type1,type2){
 		block_filter=0;
 		//Activamos Lazyload para las imágenes
 		jQuery("img.lazy:visible").lazyload({
+			threshold : 200,
 			load : function()
 			{
 				if(jQuery(this).parent().find('span').length>0){
@@ -905,6 +906,7 @@ function filter_catalogo(segmento,type1,type2){
 			block_filter=0;
 			//Activamos Lazyload para las imágenes
 			jQuery("img.lazy:visible").lazyload({
+				threshold : 200,
 				load : function()
 				{
 					if(jQuery(this).parent().find('span').length>0){
@@ -951,6 +953,7 @@ function filter_catalogo(segmento,type1,type2){
 			block_filter=0;
 			//Activamos Lazyload para las imágenes
 			jQuery("img.lazy:visible").lazyload({
+				threshold : 200,
 				load : function()
 				{
 					if(jQuery(this).parent().find('span').length>0){
