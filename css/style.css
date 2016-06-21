@@ -357,6 +357,7 @@ PROPIEDADES REGISTRO
 .form-type-1 .form-group input[type=password].error{border:3px solid #f05456;}
 .form-type-1 .form-group input[type=email].error{border:3px solid #f05456;}
 .form-type-1 .form-group textarea.error{border:3px solid #f05456;}
+.form-type-1 .form-group select.select-options-uppercased option {text-transform: uppercase;}
 
 .group-clase-checkbox{overflow:hidden;margin-top:30px;}
 .title-group{width:44%;float:left;text-align:right;box-sizing:border-box;padding-right:40px;}
