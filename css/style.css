@@ -287,7 +287,7 @@ PROPIEDADES CATALOGO
 .content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
 .content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:4px;padding-right:4px;float:left;margin-bottom:8px;}
 .content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding:30px;}
-.content-catalogo .single-box-book .inside-b-book img{max-width:98%;vertical-align:middle;max-height:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
+.content-catalogo .single-box-book .inside-b-book img{max-width:96.5%;vertical-align:middle;max-height:100%;box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);}
 .content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;}
 .content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;display:none;}
 
@@ -395,8 +395,8 @@ PROPIEDADES REGISTRO
 .single-radio label span{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;top:-2px;position:relative;}
 
 .help-box{position:absolute;right:-42px;width:242px;z-index:30;}
-.help-box a{display:block;width:21px;height:21px;background:url(../img/ico-question.png) top left no-repeat;text-indent:-99999px;background-size:21px;position:relative;left:125px;top:-42px;}
-.help-box .content-help{display:block;background:#fde052;box-sizing:border-box;padding:15px;padding-bottom:25px;margin-top:-25px;display:none;}
+.help-box a{display:block;width:21px;height:21px;background:url(../img/ico-question.png) top left no-repeat;text-indent:-99999px;background-size:21px;position:relative;left:125px;top:-56px;}
+.help-box .content-help{display:block;background:#fde052;box-sizing:border-box;padding:15px;padding-bottom:25px;margin-top:-40px;display:none;}
 .help-box .content-help p{color:#2e2e2e;font-size:14px;line-height:18px;}
 
 .box-textarea{display:block;width:56%;float:left;overflow:hidden;}
@@ -571,8 +571,8 @@ PROPIEDADES PROFILE
 .delete-profile p{padding-left:44%;}
 .delete-profile a{}
 
-#password-form .help-box .content-help{margin-top:-40px;}
-#password-form .help-box a{top:-56px;}
+/*#password-form .help-box .content-help{margin-top:-40px;}
+#password-form .help-box a{top:-56px;}*/
 
 .delete-profile p{color:#2e2e2e;font-size:16px;}
 .delete-profile a.btn-delete{-webkit-appearance:none;font-size:14px;height:35px;width:200px;border-radius:30px;cursor:pointer;background:#fde052;color:#2e2e2e;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;border:none;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:35px;display:block;text-align:center;margin-left:44%;}
