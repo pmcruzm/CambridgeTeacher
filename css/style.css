@@ -96,7 +96,7 @@ ul.menu_h li.language_opc .desplegable a:hover{color:#ffffff;}
 ul.menu_h li.login_opc>a:hover{/*background:#ffffff;*/}
 ul.menu_h li.login_opc>a{width:125px;height:47px;}
 
-ul.menu_h li.login_opc>a>div{display:block;color:#2e2e2e;width:114px;margin:0 auto;background-image:url(../img/btn-login.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);height:48px ;}
+ul.menu_h li.login_opc>a>div{display:block;color:#2e2e2e;/*width:114px;*/margin:0 auto;background-image:url(../img/btn-login.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);height:48px ;}
 ul.menu_h li.login_opc>a>div:hover{color:#ffffff;-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;-o-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;background-image:url(../img/btn-login-on.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);}
 ul.menu_h li.login_opc .desplegable{padding-left:47px;padding-top:33px;padding-bottom:0px;width:332px !important;box-sizing:border-box;padding-left:36px;padding-right:36px;}
 ul.menu_h li.login_opc.active>a>div{background:#2e2e2e !important;color:#ffffff;}
