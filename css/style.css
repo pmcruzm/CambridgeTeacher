@@ -76,8 +76,8 @@ PROPIEDADES HEADER
 .logo_h{display:block;background:url(../img/logo_cambridge.png) center center no-repeat;height:47px;width:162px;background-size:162px;text-indent:-99999px;}
 
 ul.menu_h{padding:0;margin:0;font-size:0;position:absolute;top:0;right:0;}
-ul.menu_h li{height:48px;display:inline-block;position:relative;}
-ul.menu_h li a{font-size:14px;line-height:46px;color:#7d7974;display:block;text-align:center;width:70px;height:48px;}
+ul.menu_h li{height:47px;display:inline-block;position:relative;}
+ul.menu_h li a{font-size:14px;line-height:46px;color:#7d7974;display:block;text-align:center;width:70px;height:47px;}
 ul.menu_h li a:hover{color:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 ul.menu_h li a.active{color:#2e2e2e;}
 ul.menu_h li.language_opc>a{width:auto !important;padding-right:15px;}
@@ -94,12 +94,12 @@ ul.menu_h li.language_opc .desplegable a.active{color:#ffffff;}
 ul.menu_h li.language_opc .desplegable a:hover{color:#ffffff;}
 
 ul.menu_h li.login_opc>a:hover{/*background:#ffffff;*/}
-ul.menu_h li.login_opc>a{width:125px;position:relative;}
+ul.menu_h li.login_opc>a{width:125px;height:47px;}
 
-ul.menu_h li.login_opc>a span{display:block;color:#2e2e2e;width:114px;margin:0 auto;position:relative;background-image:url(../img/btn-login.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);}
-ul.menu_h li.login_opc>a span:hover{color:#ffffff;-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;-o-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;background-image:url(../img/btn-login-on.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);}
+ul.menu_h li.login_opc>a>div{display:block;color:#2e2e2e;width:114px;margin:0 auto;background-image:url(../img/btn-login.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);height:48px ;}
+ul.menu_h li.login_opc>a>div:hover{color:#ffffff;-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;-o-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;background-image:url(../img/btn-login-on.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);}
 ul.menu_h li.login_opc .desplegable{padding-left:47px;padding-top:33px;padding-bottom:0px;width:332px !important;box-sizing:border-box;padding-left:36px;padding-right:36px;}
-ul.menu_h li.login_opc>a.active span{background:#2e2e2e;}
+ul.menu_h li.login_opc.active>a>div{background:#2e2e2e !important;color:#ffffff;}
 
 #form-login label{display:none;}
 #form-login input[type=text],#form-login input[type=password]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;font-family:'sofia-pro-regular', Helvetica, sans-serif;}
