@@ -119,7 +119,7 @@ ul.menu_h li.login_opc.active>a{background:#ffffff !important;}
 #form-forgot-password input[type=submit]{width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:35px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;}
 #form-forgot-password input[type=submit]:hover{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;background:#fde052;color:#393939;}
 .btns-reset{clear:both;padding-bottom:20px;}
-.feedback{text-align:center;color:#f05456;font-size:14px;margin-top:20px;display:none;width:100%;}
+.feedback{text-align:center;color:#f05456;font-size:14px;display:none;width:100%;}
 
 ul.menu_h li.login_opc.active>a{background:#2e2e2e;color:#ffffff;}
 ul.menu_h li.login_opc.active>a span{background:#2e2e2e;color:#ffffff;height:48px;line-height:48px;width:125px;}
