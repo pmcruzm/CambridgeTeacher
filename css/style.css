@@ -217,7 +217,7 @@ PROPIEDADES MI COLECCION
 .slick-prev{left:10px;background-image:url(../img/arrow_left.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
 .slick-prev.slick-disabled{background-position:0px -36px;}
 
-.empty-titles{height:200px;background:url(../img/bg-empty-titles.png) top left repeat-x;background-size:996px;padding-top:40px;}
+.empty-titles{height:200px;background:url(../img/bg-empty-titles.png) top left repeat-x;background-size:996px;padding-top:40px;display:none;}
 .box-aviso{background:url(../img/box-aviso.png) top left no-repeat;margin:0 auto;width:520px;height:115px;background-size:520px;text-align:center;padding-top:25px;}
 .box-aviso h3{font-size:20px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .box-aviso p{font-size:16px;color:#2e2e2e;line-height:21px;padding-top:8px;}
@@ -390,12 +390,16 @@ PROPIEDADES REGISTRO
 .label-2-lines{line-height:19px !important;}
 
 .bg-select{background:#2e2e2e url(../img/arrow_select.png) 95% 50% no-repeat;display:block;width:56%;float:left;overflow:hidden;height:40px;background-size:9px;}
-.bg-select > select{background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;height:40px;line-height:40px;padding-right:60px;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;cursor:pointer;padding-left:10px;}
+.bg-select > select{background:none;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;width:110%;height:40px;line-height:40px;padding-right:17%;box-sizing:border-box;font-size:14px;border:none;-webkit-appearance:none;cursor:pointer;padding-left:10px;}
 .bg-select > select.right-t{text-align:right;}
 .bg-select > select option{text-align:left;background:#2e2e2e;}
 .bg-select > select.right-t option{text-align:right;}
 .enl-help{clear:both;text-align:right;padding-right:14px;margin-bottom:15px;}
 .enl-help a{color:#7d7974;font-size:13px;}
+
+.bg-select.error{background-color:#bc232a;}
+.bg-select.error> select{}
+.bg-select.error > select option{background:#bc232a;}
 
 .single-radio label span{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;top:-2px;position:relative;}
 
