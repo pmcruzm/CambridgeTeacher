@@ -763,7 +763,7 @@ WEBKIT HACKS
 ******************************/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 /* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
-.bg-select > select.right-t{direction:rtl;padding-right:70px;}
+.bg-select > select.right-t{direction:rtl;padding-right:17%;}
 .bg-select > select{direction:ltr;}
 }
 
