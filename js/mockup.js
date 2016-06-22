@@ -25,13 +25,9 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		 var index_p=jQuery(this).parent('.slick-slide').index();
 		  jQuery('.carrusel-list').slick('slickRemove',index_p);
-		  if (s_slicks!= 1){
-			var txt='<p>Quickminds 3 ha sido añadido a tu colección</p>';
-			var time=1000;
-			showNotification(txt,time);  
+		  if (s_slicks!= 1){ 
 			//Quitamos de la varible que tiene el nº de slides
 			s_slicks--;
-			console.log(s_slicks)
 		  }else{
 			 jQuery('.carrusel-list').hide(); 
 			 jQuery('.empty-titles').fadeIn(400);
