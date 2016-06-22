@@ -17,6 +17,7 @@ var filter_type1=-1;
 var filter_type2=-1;
 var hash_active=0;
 var block_filter=0;
+var s_slicks=0;
 
 //Eventos para dispositivos móviles
 var ua = navigator.userAgent,
@@ -327,6 +328,9 @@ jQuery(document).ready(function(){
 		  slidesToScroll: 2
 		});
 	}
+	
+	//Asignamos nº de slicks item a la variables 
+	s_slicks=jQuery('.slick-slide').length;
 	
 	//Evento después de transición
 	/*jQuery('.carrusel-coleccion').on('afterChange', function(event, slick, currentSlide, nextSlide){
