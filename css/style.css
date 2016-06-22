@@ -217,7 +217,7 @@ PROPIEDADES MI COLECCION
 .slick-prev{left:10px;background-image:url(../img/arrow_left.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
 .slick-prev.slick-disabled{background-position:0px -36px;}
 
-.empty-titles{height:200px;background:url(../img/bg-empty-titles.png) top left repeat-x;background-size:996px;padding-top:40px;display:none;}
+.empty-titles{height:200px;background:url(../img/bg-empty-titles.png) top left repeat-x;background-size:996px;padding-top:40px;}
 .box-aviso{background:url(../img/box-aviso.png) top left no-repeat;margin:0 auto;width:520px;height:115px;background-size:520px;text-align:center;padding-top:25px;}
 .box-aviso h3{font-size:20px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .box-aviso p{font-size:16px;color:#2e2e2e;line-height:21px;padding-top:8px;}
@@ -783,7 +783,7 @@ MEDIA QUERIES
 @media screen and (max-width: 1440px) {
 	#list-news .container .new-single{width:16.6666%;}
 	.content-catalogo .single-box-book{width:16.6666%;}
-	
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -833,7 +833,7 @@ MEDIA QUERIES
 @media screen and (max-width: 950px) {
 	#banner-home{background:#fde052 url(../img/banner-home.png) center 55px no-repeat;height:413px;text-align:center;background-size:745px;position:relative;}
 	#info-profesor p{width:90%;margin:0 auto 10px;}
-	
+
 	#block-coleccion .container{background-size:1125px;}
 	#block-coleccion .container{height:257px;}
 	#block-coleccion{height:257px;}
@@ -892,10 +892,10 @@ MEDIA QUERIES
 	.right_footer{width:62%;}
 	.block_visita{width:60%;}
 	.block_siguenos{width:40%;}
-	
+
 	h1{display:none;}
 	span.type-user{display:none;}
-	
+
 	.btn-register-h{display:none;}
 	#info-profesor a{display:none;}
 
@@ -914,7 +914,7 @@ MEDIA QUERIES
 	.left_footer{width:100%;padding-bottom:30px;}
 	.right_footer{width:100%;}
 	.shot-box img{border-bottom:1px solid #2e2e2e;}
-	
+
 	#contact-form .top-register{padding-right:30px;padding-left:30px;}
 	.form-type-1 .form-group label{width:100%;float:inherit;text-align:left;}
 	.form-type-1 .form-group input[type="text"]{width:100%;}

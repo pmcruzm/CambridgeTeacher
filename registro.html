@@ -65,39 +65,39 @@
                     </div>
                 </div>
                 <div id="form_box_registro">
-                     <form id="registro-form" class="form-type-1" action="" method="post" role="form" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados">
+                     <form id="registro-form" class="form-type-1" action="" method="post" role="form" data-validate="true" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados">
                         <div class="top-register">
                             <div class="form-group required">
                                 <label for="first_name">NOMBRE</label>
-                                <input type="text" class="form-control validation-rule-empty" id="first_name" name="first_name">
+                                <input type="text" class="form-control" id="first_name" name="first_name" data-validation-rule="not-empty">
                             </div>
                             <div class="form-group required">
                                 <label for="last_name">APELLIDOS</label>
-                                <input type="text" class="form-control validation-rule-empty" id="last_name" name="last_name">
+                                <input type="text" class="form-control" id="last_name" name="last_name" data-validation-rule="not-empty">
                             </div>
                             <div class="form-group required">
                                 <label for="email">EMAIL</label>
-                                <input type="email" class="form-control validation-rule-mail" id="email" name="email" autocorrect="off" data-error-msg="El email no es válido">
+                                <input type="email" class="form-control" id="email" name="email" autocorrect="off" data-validation-rule="email" data-error-msg="El email no es válido">
                             </div>
                             <div class="form-group required">
                                 <label for="password">CONTRASEÑA</label>
-                                <input type="password" class="form-control validation-rule-password init_password" id="password" name="password" data-error-msg="Error contraseña">
+                                <input type="password" class="form-control" id="password" name="password" data-validation-rule="min|8" data-error-msg="Error contraseña">
                             </div>
                             <div class="help-box">
-                                	<a href="#">Ayuda</a>
-                                    <div class="content-help">
-                                    	<p>La contraseña debe tener al menos 8 caracteres. Te recomendamos que uses una combinación de mayúsculas, minúsculas, números y caracteres especiales.</p>
-                                    </div>
+                            	<a href="#">Ayuda</a>
+                                <div class="content-help">
+                                	<p>La contraseña debe tener al menos 8 caracteres. Te recomendamos que uses una combinación de mayúsculas, minúsculas, números y caracteres especiales.</p>
+                                </div>
                             </div>
                             <div class="form-group required">
                                 <label for="password_confirm">REPITE CONTRASEÑA</label>
-                                <input type="password" class="form-control validation-rule-password repeat_password" id="password_confirm" name="password_confirm" data-error-msg="Error contraseña" >
+                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" data-validation-rule="repeat|#password" data-error-msg="Error contraseña" >
                             </div>
                             <div class="group-clase-checkbox">
                             	<div class="title-group">
                                 	<p>SOY PROFESOR DE</p>
                                 </div>
-                                <div class="rest-checkbox">
+                                <div class="rest-checkbox" data-validation-rule="multi-checkbox">
                                 	<div class="single-radio"><div class="checkbox"><input id="Infantil" name="Infantil" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Infantil"></label><p><span>Infantil</span></p></div></div>
                                     <div class="single-radio"><div class="checkbox"><input id="Primaria" name="Primaria" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Primaria"></label><p><span>Primaria</span></p></div></div>
                                     <div class="single-radio"><div class="checkbox"><input id="Secundaria" name="Secundaria" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Secundaria"></label><p><span>Secundaria</span></p></div></div>
@@ -108,14 +108,16 @@
                             </div>
                         </div>
                         <div class="bottom-register">
+
                         	<div class="form-group required">
                                 <label  class="label-2-lines" for="cp_centre">CÓDIGO POSTAL<br/>DE TU CENTRO</label>
-                                <input type="text" class="form-control validation-rule-empty" id="cp_centre" name="cp_centre">
+                                <input type="text" class="form-control" id="cp_centre" name="cp_centre" data-validation-rule="zip">
                             </div>
+
                             <div class="form-group required select-box">
                                 <label for="select_centre">SELECCIONA TU CENTRO</label>
                                 <div class="bg-select error">
-                                <select id="select_centre" name="select_centre"><!--class="right-t"-->
+                                <select id="select_centre" name="select_centre" data-validation-rule="select-option"><!--class="right-t"-->
                                 	<option value="-1">Centros en tu código postal</option>
                                 	<option value="1">Centro 1</option>
                                     <option value="2">Centro 2</option>
@@ -124,22 +126,30 @@
                                 </div>
                                 <div class="enl-help"><a href="#">¿No encuentras tu centro?</a></div>
                             </div>
+
                             <div class="form-group required">
                                 <label class="label-2-lines" for="school_mastercode">SCHOOL MASTERCODE<br/>(OPCIONAL)</label>
-                                <input type="text" class="form-control validation-rule-empty" id="school_mastercode" name="school_mastercode">	
+                                <input type="text" class="form-control" id="school_mastercode" name="school_mastercode" data-validation-rule="not-empty">
                             </div>
+
                             <div class="help-box">
-                                	<a href="#">Ayuda</a>
-                                    <div class="content-help">
-                                    	<p>El School MasterCode es código único que identifica a tu centro educativo, y que tu oficina local te proporcionará si en vuestro centro utilizáis libros de Cambridge. Puedes registrarte sin él para tener acceso a versiones de prueba de nuestros libros.</p>
-                                    </div>
+                            	<a href="#">Ayuda</a>
+                                <div class="content-help">
+                                	<p>El School MasterCode es código único que identifica a tu centro educativo, y que tu oficina local te proporcionará si en vuestro centro utilizáis libros de Cambridge. Puedes registrarte sin él para tener acceso a versiones de prueba de nuestros libros.</p>
+                                </div>
                             </div>
+
                             <div class="group_checkbox">
-                               <div class="checkbox"><input id="legal" name="legal" class="validation-rule-checkbox" data-error-msg="Debe aceptar política de privacidad." type="checkbox"><label for="legal"></label><p><span>He leído y acepto la </span> <a href="#" title="Privacy Policy">Política de privacidad</a>.</p></div>
+                               <div class="checkbox"><input id="legal" name="legal" data-validation-rule="checkbox" data-error-msg="Debe aceptar política de privacidad." type="checkbox"><label for="legal"></label><p><span>He leído y acepto la </span> <a href="#" title="Privacy Policy">Política de privacidad</a>.</p></div>
                                <div class="checkbox"><input id="no_subscription" name="no_subscription" type="checkbox"><label for="no_subscription"></label><p><span>No deseo estar informado sobre nuevas promociones, acontecimientos de interés e información de Cambridge University Press.</span></p></div>
                             </div>
-                            <div class="maquetacion_captcha"><div class="g-recaptcha" data-sitekey="6LdL4CATAAAAADBQNQQKNEMNn9x6_YUmIDWybTXi"></div></div>
+
+                            <div class="maquetacion_captcha" data-validation-rule="recaptcha" data-error-msg="¿Eres un robot?">
+                                <div class="g-recaptcha" data-sitekey="6LdL4CATAAAAADBQNQQKNEMNn9x6_YUmIDWybTXi"></div>
+                            </div>
+
                             <div class="errores"></div>
+
                             <div class="submit_group"><input type="submit"  value="ENVIAR"></div>
                         </div>
                       </form>
@@ -153,7 +163,7 @@
                 </div>
                 <div class="right_footer">
                     <div class="block_visita">
-                        <h4>VISITA TAMBIÉN</h4>	
+                        <h4>VISITA TAMBIÉN</h4>
                         <ul>
                             <li><a href="#" target="_blank">Cambridge.es</a></li>
                             <li><a href="#" target="_blank">The Primary Box</a> | <a href="#">The Secondary Box</a></li>
@@ -161,7 +171,7 @@
                         </ul>
                     </div>
                     <div class="block_siguenos">
-                    	<h4>SÍGUENOS</h4>	
+                    	<h4>SÍGUENOS</h4>
                         <ul>
                             <li><a href="#" class="ico_facebook">Facebook</a></li>
                             <li><a href="#" class="ico_twitter">Twitter</a></li>

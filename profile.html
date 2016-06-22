@@ -62,22 +62,22 @@
                      <h2>MI PERFIL</h2>
                 </div>
                 <div class="box_profile">
-                	 <div class="top-register top-w-title box-user-profile">	
-                     <form id="user-form" class="form-type-1" action="" method="post" role="form" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados">
+                	 <div class="top-register top-w-title box-user-profile">
+                     <form id="user-form" class="form-type-1" action="" method="post" role="form" data-validate="true" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados">
                         	<h2>DATOS PERSONALES</h2>
                             <div class="form-group required">
                                 <label for="first_name">NOMBRE</label>
-                                <input type="text" class="form-control validation-rule-empty" id="first_name" name="first_name">
+                                <input type="text" class="form-control" id="first_name" name="first_name" data-validation-rule="not-empty">
                             </div>
                             <div class="form-group required">
                                 <label for="last_name">APELLIDOS</label>
-                                <input type="text" class="form-control validation-rule-empty" id="last_name" name="last_name">
+                                <input type="text" class="form-control" id="last_name" name="last_name" data-validation-rule="not-empty">
                             </div>
                             <div class="group-clase-checkbox">
                             	<div class="title-group">
                                 	<p>SOY PROFESOR DE</p>
                                 </div>
-                                <div class="rest-checkbox">
+                                <div class="rest-checkbox" data-validation-rule="multi-checkbox">
                                 	<div class="single-radio"><div class="checkbox"><input id="Infantil" name="Infantil" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Infantil"></label><p><span>Infantil</span></p></div></div>
                                     <div class="single-radio"><div class="checkbox"><input id="Primaria" name="Primaria" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Primaria"></label><p><span>Primaria</span></p></div></div>
                                     <div class="single-radio"><div class="checkbox"><input id="Secundaria" name="Secundaria" class="validation-rule-checkbox-profe" data-error-msg="Debe seleccionar una opción de profesor." type="checkbox"><label for="Secundaria"></label><p><span>Secundaria</span></p></div></div>
@@ -88,18 +88,18 @@
                             </div>
                             <div class="form-group required change-btn">
                                 <label for="email">EMAIL</label>
-                                <input type="email" class="form-control validation-rule-mail" id="email" name="email" autocorrect="off" data-error-msg="El email no es válido" value="usuario@google.es" disabled/>
+                                <input type="email" class="form-control" id="email" name="email" autocorrect="off" data-error-msg="El email no es válido" value="usuario@google.es" disabled/>
                                 <a href="#" class="btn-editar">Solicitar cambio</a>
                             </div>
                             <div class="form-group required change-btn">
                                 <label for="last_name">CENTRO</label>
-                                <input type="text" class="form-control validation-rule-empty" id="centre_name" name="centre_name" value="Sagrado Corazón de Madrid" disabled/>
+                                <input type="text" class="form-control" id="centre_name" name="centre_name" value="Sagrado Corazón de Madrid" disabled/>
                                 <a href="#" class="btn-editar">Solicitar cambio</a>
                             </div>
                             <div class="group_checkbox">
                                <p class="label_checkbox">PRIVACIDAD</p>
-                               <div class="checkbox"><input id="legal" name="legal" class="validation-rule-checkbox" data-error-msg="Debe aceptar política de privacidad." type="checkbox"><label for="legal"></label><p>No deseo recibir información sobre focus groups remunerados, ser invitado a eventos o información por email sobre nuevos productos, servicios y descuentos.</p></div>
-                              
+                               <div class="checkbox"><input id="legal" name="legal" data-validation-rule="checkbox" data-error-msg="Debe aceptar política de privacidad." type="checkbox"><label for="legal"></label><p>No deseo recibir información sobre focus groups remunerados, ser invitado a eventos o información por email sobre nuevos productos, servicios y descuentos.</p></div>
+
                             </div>
                             <div class="errores"></div>
                             <div class="submit_group"><input type="submit"  value="ACTUALIZAR"></div>
@@ -108,15 +108,15 @@
                 </div>
                 <!--Cambiar Contraseña-->
                 <div class="box_profile password-profile">
-                     <form id="password-form" class="form-type-1" action="" method="post" role="form" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados">
+                     <form id="password-form" class="form-type-1" action="" method="post" role="form" data-validate="true" novalidate data-error-msg="Ha habido un error, por favor revisa los campos resaltados">
                         	<h2>CAMBIAR CONTRASEÑA</h2>
                             <div class="form-group required">
                                 <label for="password_init">CONTRASEÑA ACTUAL</label>
-                                <input type="password" class="form-control validation-rule-empty" id="password_init" name="password_init" data-error-msg="Error contraseña">
+                                <input type="password" class="form-control" id="password_init" name="password_init" data-validation-rule="not-empty" data-error-msg="Error contraseña">
                             </div>
                             <div class="form-group required">
                                 <label for="password">NUEVA CONTRASEÑA</label>
-                                <input type="password" class="form-control validation-rule-password init_password" id="password" name="password" data-error-msg="Error contraseña">
+                                <input type="password" class="form-control" id="password" name="password" data-validation-rule="min|8" data-error-msg="Error contraseña">
                             </div>
                             <div class="help-box">
                                 	<a href="#">Ayuda</a>
@@ -126,7 +126,7 @@
                             </div>
                             <div class="form-group required">
                                 <label for="password_confirm">REPITE CONTRASEÑA</label>
-                                <input type="password" class="form-control validation-rule-password repeat_password" id="password_confirm" name="password_confirm" data-error-msg="Error contraseña" >
+                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" data-validation-rule="repeat|#password" data-error-msg="Error contraseña" >
                             </div>
                             <div class="errores"></div>
                             <div class="submit_group"><input type="submit"  value="CAMBIAR CONTRASEÑA"></div>
@@ -149,7 +149,7 @@
                 </div>
                 <div class="right_footer">
                     <div class="block_visita">
-                        <h4>VISITA TAMBIÉN</h4>	
+                        <h4>VISITA TAMBIÉN</h4>
                         <ul>
                             <li><a href="#" target="_blank">Cambridge.es</a></li>
                             <li><a href="#" target="_blank">The Primary Box</a> | <a href="#">The Secondary Box</a></li>
@@ -157,7 +157,7 @@
                         </ul>
                     </div>
                     <div class="block_siguenos">
-                    	<h4>SÍGUENOS</h4>	
+                    	<h4>SÍGUENOS</h4>
                         <ul>
                             <li><a href="#" class="ico_facebook">Facebook</a></li>
                             <li><a href="#" class="ico_twitter">Twitter</a></li>

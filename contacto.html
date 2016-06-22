@@ -64,23 +64,21 @@
                 <div id="form_box_registro">
              <form data-user-is-logged="false" data-error-msg="Por favor revisa los campos resaltados." data-validate="true" novalidate="" role="form" method="POST" action="http://www.thecambridgeteacher.es/contacto" class="form-type-1" id="contact-form">
 
-                <input type="hidden" value="OaUhu4aUOQP2afprYv4dl3HokdHsMKW0xcwSvsLh" name="_token">
-
                 <div class="top-register top-w-title">
 
                     <div class="intro_contact">
-                                                    <p>Por favor, usa este formulario para ponerte en contacto con nosotros, seleccionando el asunto que más se ajuste al motivo de tu consulta.</p>
-                                            </div>
+                        <p>Por favor, usa este formulario para ponerte en contacto con nosotros, seleccionando el asunto que más se ajuste al motivo de tu consulta.</p>
+                    </div>
 
                     <div class="form-group required select-box">
                         <label for="subject">ASUNTO</label>
                         <div class="bg-select">
                             <select id="subject" name="subject">
-                                                                    <option value="general">Consulta general</option>
-                                                                    <option value="centre-missing">Mi centro no está en el listado</option>
-                                                                    <option value="verification-email">No me ha llegado el correo de verificación</option>
-                                                                    <option value="smc-request">No conozco el School MasterCode de mi centro</option>
-                                                            </select>
+                                <option value="general">Consulta general</option>
+                                <option value="centre-missing">Mi centro no está en el listado</option>
+                                <option value="verification-email">No me ha llegado el correo de verificación</option>
+                                <option value="smc-request">No conozco el School MasterCode de mi centro</option>
+                            </select>
                         </div>
                     </div>
 
@@ -102,15 +100,13 @@
 
 
 
-                
+
 
                     <div data-action="general,smc-request,verification-email" style="">
 
                         <div class="form-group required">
-                            <label class="label-2-lines" for="zip">CÓDIGO POSTAL<br>
- DE TU CENTRO</label>
-                            <input type="text" data-error-msg="Debes introducir el código postal del centro." data-validation-rule="zip" placeholder="Código postal
- de tu centro" name="zip" id="zip" class="form-control">
+                            <label class="label-2-lines" for="zip">CÓDIGO POSTAL<br> DE TU CENTRO</label>
+                            <input type="text" data-error-msg="Debes introducir el código postal del centro." data-validation-rule="zip" placeholder="Código postal de tu centro" name="zip" id="zip" class="form-control">
                         </div>
 
                         <div class="form-group required">
@@ -124,8 +120,6 @@
 
                     </div>
 
-
-                
 
                     <div data-action="centre-missing" style="display:none">
 
@@ -154,7 +148,7 @@
                         <div class="form-group required">
                             <label for="new_centre_province">PROVINCIA</label>
                             <div data-validation-rule="select-option" class="bg-select">
-                                <select name="new_centre_province" class="form-control" id="new_centre_province"><option selected="selected" value="">Seleccionar provincia</option><option value="01">ÁLAVA</option><option value="02">ALBACETE</option><option value="03">ALICANTE</option><option value="04">ALMERÍA</option><option value="0">ASTURIAS</option><option value="05">ÁVILA</option><option value="06">BADAJOZ</option><option value="1">CANTABRIA</option><option value="2">CEUTA</option><option value="08">BARCELONA</option><option value="09">BURGOS</option><option value="3">CÁCERES</option><option value="4">CÁDIZ</option><option value="5">CASTELLÓN</option><option value="6">CIUDAD REAL</option><option value="7">CÓRDOBA</option><option value="8">CORUÑA, A</option><option value="9">CUENCA</option><option value="10">GIRONA</option><option value="11">GRANADA</option><option value="12">GUADALAJARA</option><option value="13">GUIPÚZCOA</option><option value="14">HUELVA</option><option value="15">HUESCA</option><option value="07">ILLES BALEARS</option><option value="16">JAÉN</option><option value="17">LEÓN</option><option value="18">LLEIDA</option><option value="19">LUGO</option><option value="20">MADRID</option><option value="21">MÁLAGA</option><option value="22">MELILLA</option><option value="23">MURCIA</option><option value="24">NAVARRA</option><option value="25">OURENSE</option><option value="26">PALENCIA</option><option value="27">PALMAS, LAS</option><option value="28">PONTEVEDRA</option><option value="29">RIOJA, LA</option><option value="30">SALAMANCA</option><option value="31">SANTA CRUZ DE TENERIFE</option><option value="32">SEGOVIA</option><option value="33">SEVILLA</option><option value="34">SORIA</option><option value="35">TARRAGONA</option><option value="36">TERUEL</option><option value="37">TOLEDO</option><option value="38">VALENCIA</option><option value="39">VALLADOLID</option><option value="40">VIZCAYA</option><option value="41">ZAMORA</option><option value="42">ZARAGOZA</option><option value="43">NO ESPAÑA</option><option value="AD">ANDORRA</option></select>
+                                <select name="new_centre_province" class="form-control" id="new_centre_province" data-validation-rule="select-option"><option selected="selected" value="">Seleccionar provincia</option><option value="01">ÁLAVA</option><option value="02">ALBACETE</option><option value="03">ALICANTE</option><option value="04">ALMERÍA</option><option value="0">ASTURIAS</option><option value="05">ÁVILA</option><option value="06">BADAJOZ</option><option value="1">CANTABRIA</option><option value="2">CEUTA</option><option value="08">BARCELONA</option><option value="09">BURGOS</option><option value="3">CÁCERES</option><option value="4">CÁDIZ</option><option value="5">CASTELLÓN</option><option value="6">CIUDAD REAL</option><option value="7">CÓRDOBA</option><option value="8">CORUÑA, A</option><option value="9">CUENCA</option><option value="10">GIRONA</option><option value="11">GRANADA</option><option value="12">GUADALAJARA</option><option value="13">GUIPÚZCOA</option><option value="14">HUELVA</option><option value="15">HUESCA</option><option value="07">ILLES BALEARS</option><option value="16">JAÉN</option><option value="17">LEÓN</option><option value="18">LLEIDA</option><option value="19">LUGO</option><option value="20">MADRID</option><option value="21">MÁLAGA</option><option value="22">MELILLA</option><option value="23">MURCIA</option><option value="24">NAVARRA</option><option value="25">OURENSE</option><option value="26">PALENCIA</option><option value="27">PALMAS, LAS</option><option value="28">PONTEVEDRA</option><option value="29">RIOJA, LA</option><option value="30">SALAMANCA</option><option value="31">SANTA CRUZ DE TENERIFE</option><option value="32">SEGOVIA</option><option value="33">SEVILLA</option><option value="34">SORIA</option><option value="35">TARRAGONA</option><option value="36">TERUEL</option><option value="37">TOLEDO</option><option value="38">VALENCIA</option><option value="39">VALLADOLID</option><option value="40">VIZCAYA</option><option value="41">ZAMORA</option><option value="42">ZARAGOZA</option><option value="43">NO ESPAÑA</option><option value="AD">ANDORRA</option></select>
                             </div>
                         </div>
                     </div>
@@ -169,7 +163,7 @@
 
 
 
-                
+
                     <div class="group_checkbox">
                         <div class="checkbox"><input type="checkbox" data-error-msg="Debes aceptar la Política de Privacidad" data-validation-rule="checkbox" name="accept_legal" id="accept_legal"><label for="accept_legal"></label><p><span>He leído y acepto la <a target="_blank" href="http://www.thecambridgeteacher.es/politica-privacidad">Política de privacidad</a></span></p></div>
                         <div class="checkbox">
@@ -179,39 +173,12 @@
                     </div>
 
 
-                    <div data-error-msg="¿Eres un robot?" data-validation-rule="recaptcha" class="maquetacion_captcha">
-                        <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/r20160615154650/recaptcha__es.js"></script><script type="text/javascript">
-        var RecaptchaOptions = {"curl_timeout":1,"callback":"recaptchaCallback","lang":"es"};
-    </script>
-<script src="https://www.google.com/recaptcha/api.js?render=onload&amp;hl=es"></script>
-<div data-callback="recaptchaCallback" data-sitekey="6LccVh8TAAAAACxrl1mW0yyZrjN4cp543uHIeZMX" class="g-recaptcha"><div><div style="width: 304px; height: 78px;"><iframe width="304" height="78" frameborder="0" src="https://www.google.com/recaptcha/api2/anchor?k=6LccVh8TAAAAACxrl1mW0yyZrjN4cp543uHIeZMX&amp;co=aHR0cDovL3d3dy50aGVjYW1icmlkZ2V0ZWFjaGVyLmVzOjgw&amp;hl=es&amp;v=r20160615154650&amp;size=normal&amp;cb=fyuua1d820t3" title="widget del recaptcha" role="presentation" scrolling="no" name="undefined"></iframe></div><textarea style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; " class="g-recaptcha-response" name="g-recaptcha-response" id="g-recaptcha-response"></textarea></div></div>
-<noscript>
-    &lt;div style="width: 302px; height: 352px;"&gt;
-        &lt;div style="width: 302px; height: 352px; position: relative;"&gt;
-            &lt;div style="width: 302px; height: 352px; position: absolute;"&gt;
-                &lt;iframe src="https://www.google.com/recaptcha/api/fallback?k=6LccVh8TAAAAACxrl1mW0yyZrjN4cp543uHIeZMX"
-                        frameborder="0" scrolling="no"
-                        style="width: 302px; height:352px; border-style: none;"&gt;
-                &lt;/iframe&gt;
-            &lt;/div&gt;
-            &lt;div style="width: 250px; height: 80px; position: absolute; border-style: none;
-                  bottom: 21px; left: 25px; margin: 0; padding: 0; right: 25px;"&gt;
-        &lt;textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                  class="g-recaptcha-response"
-                  style="width: 250px; height: 80px; border: 1px solid #c1c1c1;
-                         margin: 0; padding: 0; resize: none;"&gt;&lt;/textarea&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-</noscript>
-
+                    <div class="maquetacion_captcha" data-validation-rule="recaptcha" data-error-msg="¿Eres un robot?">
+                        <div class="g-recaptcha" data-sitekey="6LdL4CATAAAAADBQNQQKNEMNn9x6_YUmIDWybTXi"></div>
                     </div>
 
-                
+                    <div class="errores"></div>
 
-
-                    <div class="errores">
-                                            </div>
                     <div class="submit_group"><input type="submit" value="ENVIAR"></div>
 
                 </div>
