@@ -318,7 +318,7 @@ jQuery(document).ready(function(){
 	//Carrusel de Mi Catalogo
 	if (jQuery('.carrusel-coleccion').is(":visible") ) {
 		jQuery('.carrusel-list').slick({
-		  dots: true,
+		  dots: false,
 		  infinite: false,
 		  speed: 300,
 		  slidesToShow: 1,
