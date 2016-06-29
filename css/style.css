@@ -65,7 +65,7 @@ button:focus {
 PROPIEDADES GENERALES
 ******************************/
 body{margin:0;padding:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;font-size: 1em;line-height: 1.5em;}
-.container{display:block;width:100%;min-width:768px;margin:0 auto;position:relative;}
+.container{display:block;width:100%;margin:0 auto;position:relative;}
 #wrapper{}
 
 /*****************************
