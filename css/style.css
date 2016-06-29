@@ -73,11 +73,11 @@ PROPIEDADES HEADER
 ******************************/
 #header{position:fixed;width:100%;top:0;left:0;z-index:200;background:#ffffff;}
 #header .container{min-width:auto !important;}
-.logo_h{display:block;background:url(../img/logo_cambridge.png) center center no-repeat;height:47px;width:162px;background-size:162px;text-indent:-99999px;}
+.logo_h{display:block;background:url(../svg/cambridge_logo_@1x-01.svg) center center no-repeat;height:48px;width:164px;background-size:164px;text-indent:-99999px;}
 
 ul.menu_h{padding:0;margin:0;font-size:0;position:absolute;top:0;right:0;}
-ul.menu_h li{height:47px;display:inline-block;position:relative;}
-ul.menu_h li a{font-size:14px;line-height:46px;color:#7d7974;display:block;text-align:center;width:70px;height:47px;}
+ul.menu_h li{height:48px;display:inline-block;position:relative;}
+ul.menu_h li a{font-size:14px;line-height:46px;color:#7d7974;display:block;text-align:center;width:70px;height:48px;}
 ul.menu_h li a:hover{color:#2e2e2e;/*-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;*/}
 ul.menu_h li a.active{color:#2e2e2e;}
 ul.menu_h li.language_opc>a{width:auto !important;padding-right:15px;/*-webkit-transition:none;-moz-transition:none;-o-transition:none;transition:none;*/}
@@ -87,7 +87,7 @@ ul.menu_h li.language_opc.active>a{color:#ffffff;}
 ul.menu_h li.language_opc.active>a:before{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
 ul.menu_h li.language_opc>a:hover:before{background:url(../img/ico_globe_over.png) center center no-repeat;background-size:20px;}
 ul.menu_h li.language_opc.active>a:hover:before{background:url(../img/ico_globe_act.png) center center no-repeat !important;background-size:20px !important;}
-ul.menu_h li .desplegable {background:#2e2e2e;display:none;right:0;position:absolute;top:47px;width:171px;z-index:99;box-sizing:border-box;opacity:0;}
+ul.menu_h li .desplegable {background:#2e2e2e;display:none;right:0;position:absolute;top:48px;width:171px;z-index:99;box-sizing:border-box;opacity:0;}
 ul.menu_h li.language_opc .desplegable{padding-left:47px;padding-top:28px;padding-bottom:34px;}
 ul.menu_h li.language_opc .desplegable h3{padding-bottom:25px;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 ul.menu_h li.language_opc .desplegable a{color:#a19d98;font-size:14px;font-family:'sofia-pro-regular', Helvetica, sans-serif;display:block !important;line-height:21px !important;width:auto !important; height:auto !important;text-align:left !important;margin-bottom:5px;}
@@ -637,9 +637,13 @@ PROPIEDADES FOOTER
 .block_siguenos ul li:last-child{margin-right:0;}
 .block_siguenos ul li a{text-indent:-99999px;display:block;}
 .block_siguenos ul li a.ico_facebook{background:url(../img/ico_facebook.png) center center no-repeat;width:10px;height:21px;background-size:10px;}
+.block_siguenos ul li a.ico_facebook:hover{background:url(../img/ico_facebook_over.png) center center no-repeat;background-size:10px;}
 .block_siguenos ul li a.ico_twitter{background:url(../img/ico_twitter.png) center center no-repeat;width:18px;height:21px;background-size:18px;}
+.block_siguenos ul li a.ico_twitter:hover{background:url(../img/ico_twitter_over.png) center center no-repeat;background-size:18px;}
 .block_siguenos ul li a.ico_instagram{background:url(../img/ico_instagram.png) center center no-repeat;width:21px;height:21px;background-size:21px;}
+.block_siguenos ul li a.ico_instagram:hover{background:url(../img/ico_instagram_over.png) center center no-repeat;background-size:21px;}
 .block_siguenos ul li a.ico_youtube{background:url(../img/ico_youtube.png) center center no-repeat;width:22px;height:21px;background-size:22px;}
+.block_siguenos ul li a.ico_youtube:hover{background:url(../img/ico_youtube_over.png) center center no-repeat;background-size:22px;}
 
 .txt-footer{clear:both;color:#afaaa6;font-size:12px;line-height:21px;}
 .txt-footer a{color:#afaaa6;}
@@ -932,6 +936,7 @@ MEDIA QUERIES
 	.maquetacion_captcha{padding-left:0;}
 	.submit_group{padding-left:0;}
 	.submit_group input{margin:0 auto;display:block;}
+	.label-2-lines{margin-bottom:10px;}
 }
 
 @media screen and (max-width: 639px) {
