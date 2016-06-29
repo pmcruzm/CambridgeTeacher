@@ -78,26 +78,26 @@ PROPIEDADES HEADER
 ul.menu_h{padding:0;margin:0;font-size:0;position:absolute;top:0;right:0;}
 ul.menu_h li{height:47px;display:inline-block;position:relative;}
 ul.menu_h li a{font-size:14px;line-height:46px;color:#7d7974;display:block;text-align:center;width:70px;height:47px;}
-ul.menu_h li a:hover{color:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+ul.menu_h li a:hover{color:#2e2e2e;/*-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;*/}
 ul.menu_h li a.active{color:#2e2e2e;}
-ul.menu_h li.language_opc>a{width:auto !important;padding-right:15px;}
+ul.menu_h li.language_opc>a{width:auto !important;padding-right:15px;-webkit-transition:none;-moz-transition:none;-o-transition:none;transition:none;}
 ul.menu_h li.language_opc>a:before{content:'';display:inline-block;background:url(../img/ico_globe.png) center center no-repeat;background-size:20px;width:20px;height:48px;float:left;padding-left:10px;padding-right:13px;bac}
 ul.menu_h li.language_opc.active{background:#2e2e2e;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 ul.menu_h li.language_opc.active>a{color:#ffffff;}
 ul.menu_h li.language_opc.active>a:before{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
-ul.menu_h li.language_opc>a:hover:before{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
+ul.menu_h li.language_opc>a:hover:before{background:url(../img/ico_globe_over.png) center center no-repeat;background-size:20px;}
 ul.menu_h li .desplegable {background:#2e2e2e;display:none;right:0;position:absolute;top:47px;width:171px;z-index:99;box-sizing:border-box;opacity:0;}
 ul.menu_h li.language_opc .desplegable{padding-left:47px;padding-top:28px;padding-bottom:34px;}
 ul.menu_h li.language_opc .desplegable h3{padding-bottom:25px;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 ul.menu_h li.language_opc .desplegable a{color:#a19d98;font-size:14px;font-family:'sofia-pro-regular', Helvetica, sans-serif;display:block !important;line-height:21px !important;width:auto !important; height:auto !important;text-align:left !important;margin-bottom:5px;}
 ul.menu_h li.language_opc .desplegable a.active{color:#ffffff;}
-ul.menu_h li.language_opc .desplegable a:hover{color:#ffffff;}
+ul.menu_h li.language_opc .desplegable a:hover{color:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 
 ul.menu_h li.login_opc>a:hover{/*background:#ffffff;*/}
-ul.menu_h li.login_opc>a{width:125px;height:47px;}
+ul.menu_h li.login_opc>a{width:125px;height:47px;-webkit-transition:none;-moz-transition:none;-o-transition:none;transition:none;}
 
 ul.menu_h li.login_opc>a>div{display:block;color:#2e2e2e;/*width:114px;*/margin:0 auto;background-image:url(../img/btn-login.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);height:48px;}
-ul.menu_h li.login_opc>a>div:hover{color:#ffffff;-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;-o-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;background-image:url(../img/btn-login-on.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);}
+ul.menu_h li.login_opc>a>div:hover{color:#ffffff;/*-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;-o-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;*/background-image:url(../img/btn-login-on.png);background-size:114px;background-repeat:no-repeat;background-position:calc(50%) calc(50% - 0px);}
 ul.menu_h li.login_opc .desplegable{padding-left:47px;padding-top:33px;padding-bottom:0px;width:332px !important;box-sizing:border-box;padding-left:36px;padding-right:36px;}
 ul.menu_h li.login_opc.active>a>div{background:#2e2e2e !important;color:#ffffff;}
 ul.menu_h li.login_opc.active>a{background:#ffffff !important;}
