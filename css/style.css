@@ -86,7 +86,7 @@ ul.menu_h li.language_opc.active{background:#2e2e2e;-webkit-transition: all 0.4s
 ul.menu_h li.language_opc.active>a{color:#ffffff;}
 ul.menu_h li.language_opc.active>a:before{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
 ul.menu_h li.language_opc>a:hover:before{background:url(../img/ico_globe_over.png) center center no-repeat;background-size:20px;}
-ul.menu_h li.language_opc>a.active:hover:before{background:url(../img/ico_globe_act.png) center center no-repeat;background-size:20px;}
+ul.menu_h li.language_opc.active>a:hover:before{background:url(../img/ico_globe_act.png) center center no-repeat !important;background-size:20px;}
 ul.menu_h li .desplegable {background:#2e2e2e;display:none;right:0;position:absolute;top:47px;width:171px;z-index:99;box-sizing:border-box;opacity:0;}
 ul.menu_h li.language_opc .desplegable{padding-left:47px;padding-top:28px;padding-bottom:34px;}
 ul.menu_h li.language_opc .desplegable h3{padding-bottom:25px;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
