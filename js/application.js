@@ -743,6 +743,10 @@ jQuery(document).ready(function(){
 						var alto_img=jQuery(this).height();
 						var ancho_img=jQuery(this).width();
 						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
+					}else{
+						var alto_img=jQuery(this).height();
+						var ancho_img=jQuery(this).width();
+						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
 					}
 				});
 				
@@ -872,9 +876,13 @@ function filter_catalogo(segmento,type1,type2){
 				}
 				//Miramos cover de check
 				if(jQuery(this).parents('.single-box-book').hasClass('check')){
-					var alto_img=jQuery(this).height();
-					var ancho_img=jQuery(this).width();
-					jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
+						var alto_img=jQuery(this).height();
+						var ancho_img=jQuery(this).width();
+						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
+				}else{
+						var alto_img=jQuery(this).height();
+						var ancho_img=jQuery(this).width();
+						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
 				}
 			}
 		});
@@ -938,6 +946,10 @@ function filter_catalogo(segmento,type1,type2){
 						var alto_img=jQuery(this).height();
 						var ancho_img=jQuery(this).width();
 						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
+					}else{
+						var alto_img=jQuery(this).height();
+						var ancho_img=jQuery(this).width();
+						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
 					}
 				}
 			});
@@ -991,6 +1003,10 @@ function filter_catalogo(segmento,type1,type2){
 						var alto_img=jQuery(this).height();
 						var ancho_img=jQuery(this).width();
 						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
+					}else{
+						var alto_img=jQuery(this).height();
+						var ancho_img=jQuery(this).width();
+						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
 					}
 				}
 			});
@@ -1016,11 +1032,6 @@ function removeHash () {
 		document.body.scrollTop = scrollV;
 		document.body.scrollLeft = scrollH;
 	}
-}
-
-//CheckBook
-function checkbook(id){
-	
 }
 
 //Función para mostrar las notificaciones
