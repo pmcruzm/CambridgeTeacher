@@ -145,6 +145,7 @@ PROPIEDADES HOME
 
 #banner-home{background:#fde052 url(../img/banner-home.png) center 45px no-repeat;height:493px;text-align:center;background-size:935px;position:relative;}
 .btn-register-h{position:absolute;height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;bottom:-25px;left:0;right:0;margin:0 auto;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.btn-register-h:hover{-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;-o-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;color:#ffffff;}
 #banner-home h2{font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;width:100%;max-width:660px;position:absolute;bottom:60px;left:0;right:0;margin:0 auto;text-align:left;line-height:40px;}
 
 .txt-b-bottom{position:absolute;bottom:50px;width:90%;margin:0 auto;left:0;right:0;}
@@ -183,7 +184,8 @@ PROPIEDADES HOME
 #info-profesor h2{font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:26px;color:#2e2e2e;margin-bottom:40px;margin-top:40px;}
 #info-profesor p{font-size:16px;line-height:21px;color:#2e2e2e;margin-bottom:10px;}
 #info-profesor p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-#info-profesor a{height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;margin:0 auto;color:#ffffff;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;width:222px;margin-top:30px;}
+#info-profesor a{height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;margin:0 auto;color:#fde052;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;width:222px;margin-top:30px;}
+#info-profesor a:hover{-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;-o-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;color:#ffffff;}
 #info-profesor .logo-info{max-width:492px;width:90%;padding-bottom:40px;}
 #show-examples{overflow:hidden;width:100%;max-width:1200px;margin:0 auto;box-sizing:border-box;padding-left:8px;padding-right:8px;padding-top:45px;}
 .shot-box{width:33.3333%;float:left;padding-right:4px;padding-left:4px;box-sizing:border-box;}
