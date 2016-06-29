@@ -290,19 +290,21 @@ PROPIEDADES CATALOGO
 .content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
 .content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:4px;padding-right:4px;float:left;margin-bottom:8px;}
 .content-catalogo .single-box-book .inside-b-book{text-align:center;box-sizing:border-box;position:relative;overflow:hidden;padding:30px;}
-.content-catalogo .single-box-book .inside-b-book img{max-width:96.5%;vertical-align:middle;max-height:100%;box-shadow:5px 8px 18px 0px rgba(0, 0, 0, 0.2);}
+.content-catalogo .single-box-book .inside-b-book img{max-width:96%;vertical-align:middle;max-height:100%;box-shadow:5px 8px 18px 0px rgba(0, 0, 0, 0.2);}
 .content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;display:inline;}
-.content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;display:none;}
+.content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;display:none;z-index:10;}
 
 .plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) top left no-repeat;width:21px;height:21px;text-indent:-99999px;background-size:21px;display:none;}
 .minus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-delete.png) 0px 0px no-repeat;width:21px;height:21px;text-indent:-99999px;background-size:21px;display:none;}
-.check-book{position:absolute;top:10px;right:10px;background:url(../img/ico-check.png) top left no-repeat;width:20px;height:20px;text-indent:-99999px;background-size:20px;display:none;}
+.check-book{position:absolute;top:10px;right:10px;background:url(../img/ico-check.png) top left no-repeat;width:21px;height:21px;text-indent:-99999px;background-size:21px;display:none;}
 
 .minus-book:hover{background-position:0px -21px;}
 
 .single-box-book.check .check-book{display:block;}
 .single-box-book.add .plus-book{display:block;}
 .single-box-book.minus .minus-book{display:block;}
+
+.single-box-book .enl-book .cover_check{content:'';position:absolute;top:0;left:-1px;background-color:rgba(46,46,46,0.7);background-image:url(../img/check-big.png);background-position:center center;background-repeat:no-repeat;background-size:40px 40px;display:block;width:100%;height:20px;display:none;border:3px solid #fde052;box-sizing:border-box;}
 
 .box-mastercode{position:absolute;top:10px;right:60px;display:block;width:277px;height:80px;background:url(../img/bg-mastercode.png) top left no-repeat;background-size:277px;}
 .box-mastercode a{position:absolute;color:#ffffff;width:244px;top:23px;right:0;height:33px;line-height:33px;font-family:'sofia-pro-black', Helvetica, sans-serif;text-align:center;border-radius:30px;font-size:14px;background:#39c3da;display:block;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
@@ -471,7 +473,8 @@ PROPIEDADES DETALLE
 
 #block-detalle{background:#f5f0eb;position:relative;padding-bottom:100px;}
 .enl-volver{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;position:absolute;top:100px;left:55px;z-index:50;}
-.enl-volver:before{content:'';display:inline-block;width:10px;height:15px;background:url(../img/arrow-back.png) top left no-repeat;background-size:10px;margin-right:10px;position:relative;top:3px;}
+.enl-volver:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/arrow-back.png);background-size:21px;margin-right:10px;position:relative;top:5px;background-repeat:no-repeat;background-position:0px 0px;}
+.enl-volver:hover:before{background-position:0px -21px;}
 
 .box-generic-detalle{padding-left:266px;padding-right:15px;box-sizing:border-box;}
 .content-detalle{background:#ffffff;padding-left:42px;padding-right:42px;padding-top:25px;margin-bottom:12px;padding-top:40px;}
@@ -770,7 +773,7 @@ WEBKIT HACKS
 MEDIA QUERIES
 ******************************/
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 2000px) {
 	#list-news .container .new-single{width:12.5%;}
 	.content-catalogo .single-box-book{width:12.5%;}
 	#box-faqs{max-width:960px;}

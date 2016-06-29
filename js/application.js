@@ -10,6 +10,7 @@ Cliente: Cambridge Teacher
 VARIABLES
 **********************/
 var slider_l_post;
+var send_form=0;
 var max_items=8;
 var filter_segmento=-1;
 var filter_type1=-1;
@@ -80,8 +81,8 @@ jQuery(window).load(function(){
 				return true;
 			}
 		});
-
-		//Ajustamos altura
+		
+		//Ajustamos altura 
 		var heights = jQuery('#list-news a.new-single.visible div.inside-new').map(function ()
 		{
 			return jQuery(this).outerHeight();
@@ -91,7 +92,7 @@ jQuery(window).load(function(){
 		jQuery('#list-news a.new-single.visible div.inside-new').each(function() {
 			jQuery(this).css('height',maxHeight+30);
 		});
-
+		
 		//Miramos si nos hay más noticias por mostrar
 		var all_elem=jQuery('#list-news a.new-single').length;
 		var all_elem_v=jQuery('#list-news a.new-single.visible').length;
@@ -172,8 +173,8 @@ jQuery(window).load(function(){
 		//Ajustamos en la izquierda
 		jQuery('.cover-detalle img').parent().css({'left':(133-(w_img/2))});
 	}
-
-	//Ocultamos flechas según contenido
+	
+	//Ocultamos flechas según contenido 
 	if (jQuery('.carrusel-coleccion').is(":visible") ) {
 		var lengh_items=0;
 		var block_item=0;
@@ -185,8 +186,8 @@ jQuery(window).load(function(){
 				lengh_items+=jQuery(this).outerWidth();
 			}
 		});
-
-		//Mostramos/ocultamos las flechas si es mayor
+		
+		//Mostramos/ocultamos las flechas si es mayor 
 		if(lengh_items >= jQuery(window).width()){
 			jQuery('.slick-prev').show().css({'visibility':'visible'});
 			jQuery('.slick-next').show().css({'visibility':'visible'});
@@ -327,10 +328,10 @@ jQuery(document).ready(function(){
 		  slidesToScroll: 2
 		});
 	}
-
-	//Asignamos nº de slicks item a la variables
+	
+	//Asignamos nº de slicks item a la variables 
 	s_slicks=jQuery('.slick-slide').length;
-
+	
 	//Evento después de transición
 	/*jQuery('.carrusel-coleccion').on('afterChange', function(event, slick, currentSlide, nextSlide){
 	  var lengh_items=0;
@@ -343,8 +344,8 @@ jQuery(document).ready(function(){
 				lengh_items+=jQuery(this).outerWidth();
 			}
 		});
-
-		//Mostramos/ocultamos las flechas si es mayor
+		
+		//Mostramos/ocultamos las flechas si es mayor 
 		if(lengh_items >= jQuery(window).width()){
 			jQuery('.slick-prev').show().css({'visibility':'visible'});
 			jQuery('.slick-next').show().css({'visibility':'visible'});
@@ -415,6 +416,21 @@ jQuery(document).ready(function(){
 		}else{
 			jQuery(this).parent().find('.content-help').addClass('active');
 			jQuery(this).parent().find('.content-help').fadeIn(600);
+		}
+	});
+
+	//Enviar formulario de registro
+	jQuery(document).on("submit","#registro-form", function(e) {
+		if(send_form==0){
+			send_form=1;
+			//Limpiamos errores si no es la primera vez
+			jQuery(".errores").html("");
+			//Llamamos a la función de validar (id formulario y contenedor errores)
+			var result=validate_form('#registro-form');
+			if(result==1){
+				e.preventDefault();
+				send_form=0;
+			}
 		}
 	});
 
@@ -642,11 +658,15 @@ jQuery(document).ready(function(){
 	});
 
 	//Enviar formulario de mastercode
-	jQuery(document).on("submit","#form-mastercode", function(event) {
+	jQuery(document).on("submit","#form-mastercode", function(e) {
 		var form = jQuery(this);
-		event.preventDefault();
+		e.preventDefault();
+		//Limpiamos errores si no es la primera vez
+		jQuery(".errores", form).html("");
+		//Llamamos a la función de validar (id formulario y contenedor errores)
+		var result = validate_form('#form-mastercode');
 
-		if( validateForm.validate(event) ) {
+		if(result == 0) {
 
 			jQuery.ajax({
 				url: form.attr('action'),
@@ -713,11 +733,19 @@ jQuery(document).ready(function(){
 
 				//Ajustamos etiqueta sample
 				jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
+					//Ajustamos etiqueta Sample
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
 					}
+					//Miramos cover de check
+					if(jQuery(this).parents('.single-box-book').hasClass('check')){
+						var alto_img=jQuery(this).height();
+						var ancho_img=jQuery(this).width();
+						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
+					}
 				});
+				
 			}
 
 			//Ajustamos Shot de la home
@@ -739,8 +767,8 @@ jQuery(document).ready(function(){
 				var h_content=jQuery('#content').outerHeight();
 				jQuery('#modal-mastercode').height(h_content);
 			}
-
-			//Ocultamos flechas según contenido
+			
+			//Ocultamos flechas según contenido 
 			if (jQuery('.carrusel-coleccion').is(":visible") ) {
 				var lengh_items=0;
 				var block_item=0;
@@ -752,8 +780,8 @@ jQuery(document).ready(function(){
 						lengh_items+=jQuery(this).outerWidth();
 					}
 				});
-
-				//Mostramos/ocultamos las flechas si es mayor
+				
+				//Mostramos/ocultamos las flechas si es mayor 
 				if(lengh_items >= jQuery(window).width()){
 					jQuery('.slick-prev').show().css({'visibility':'visible'});
 					jQuery('.slick-next').show().css({'visibility':'visible'});
@@ -837,9 +865,16 @@ function filter_catalogo(segmento,type1,type2){
 			threshold : 1,
 			load : function()
 			{
+				//Miramos span de Sample	
 				if(jQuery(this).parent().find('span').length>0){
 					var alto_img=jQuery(this).height();
 					jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
+				}
+				//Miramos cover de check
+				if(jQuery(this).parents('.single-box-book').hasClass('check')){
+					var alto_img=jQuery(this).height();
+					var ancho_img=jQuery(this).width();
+					jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
 				}
 			}
 		});
@@ -893,9 +928,16 @@ function filter_catalogo(segmento,type1,type2){
 				threshold : 1,
 				load : function()
 				{
+					//Miramos span de Sample	
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
+					}
+					//Miramos cover de check
+					if(jQuery(this).parents('.single-box-book').hasClass('check')){
+						var alto_img=jQuery(this).height();
+						var ancho_img=jQuery(this).width();
+						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
 					}
 				}
 			});
@@ -940,9 +982,15 @@ function filter_catalogo(segmento,type1,type2){
 				threshold : 1,
 				load : function()
 				{
+					//Miramos span de Sample	
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
+					}
+					if(jQuery(this).parents('.single-box-book').hasClass('check')){
+						var alto_img=jQuery(this).height();
+						var ancho_img=jQuery(this).width();
+						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
 					}
 				}
 			});
@@ -968,6 +1016,11 @@ function removeHash () {
 		document.body.scrollTop = scrollV;
 		document.body.scrollLeft = scrollH;
 	}
+}
+
+//CheckBook
+function checkbook(id){
+	
 }
 
 //Función para mostrar las notificaciones
@@ -1010,9 +1063,149 @@ function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
+
+//Funcion para validar genéricamente un formulario
+function validate_form(id){
+
+		//Busca todos los campos requeridos de texto
+			if(jQuery(id).find('.validation-rule-empty').length > 0){
+				var error_empty=0;
+				jQuery(id).find('.validation-rule-empty').each(function() {
+					if(jQuery(this).is(":visible")){
+					var res_campo=jQuery(this).val();
+						if(res_campo==""){
+							error_empty=1;
+								jQuery(this).addClass('error').val('');
+						}
+					}
+
+				});
+			}
+
+			//Busca todos los campos requeridos de mail
+			if(jQuery(id).find('.validation-rule-mail').length > 0){
+				var error_mail=0;
+				jQuery(id).find('.validation-rule-mail').each(function() {
+					if(jQuery(this).is(":visible")){
+						var res_campo=jQuery(this).val();
+						if((res_campo=="") || (res_campo!="" && validateEmail(res_campo)==false) ){
+							error_mail=1;
+								jQuery(this).addClass('error').val('');
+						}
+					}
+
+				});
+			}
+
+			//Busca todos los campos requeridos de codigo postal
+			if(jQuery(id).find('.validation-rule-password').length > 0){
+				var error_password=0;
+				//Comprobamos que uno de los 2 no está vacío
+				if(jQuery('.init_password').val()!="" && jQuery('.repeat_password').val()!=""){
+					var txt_ini=jQuery('.init_password').val();
+					var txt_rept=jQuery('.repeat_password').val();
+					if(txt_ini!=txt_rept){
+						error_password=1;
+						jQuery('.init_password').addClass('error').val('');
+						jQuery('.repeat_password').addClass('error').val('');
+					}else{
+						if(txt_ini.length < 8){
+							error_password=1;
+							jQuery('.init_password').addClass('error').val('');
+							jQuery('.repeat_password').addClass('error').val('');
+						}
+					}
+				}else{
+					error_password=1;
+					jQuery('.init_password').addClass('error').val('');
+					jQuery('.repeat_password').addClass('error').val('');
+				}
+			}
+
+			//Busca todos los campos requeridos checkbox
+			if(jQuery(id).find('.validation-rule-checkbox').length > 0){
+				var error_checkbox=0;
+				jQuery(id).find('.validation-rule-checkbox').each(function() {
+					if(!jQuery(this).prop("checked")){
+						error_checkbox=1;
+						jQuery(this).addClass('error');
+					}
+
+				});
+			}
+
+			//Busca todos los checkbox de profesor
+			if(jQuery(id).find('.validation-rule-checkbox-profe').length > 0){
+				var error_checkbox_profe=1;
+				jQuery(id).find('.validation-rule-checkbox-profe').each(function() {
+					if(jQuery(this).prop("checked")){
+						error_checkbox_profe=0;
+						return true;
+					}
+
+				});
+				if(error_checkbox_profe==1){
+					jQuery('.validation-rule-checkbox-profe').addClass('error');
+				}
+			}
+
+			//Busca todos los campos requeridos radio
+			if(jQuery(id).find('.validation-rule-radio').length > 0){
+				var error_radio=0;
+				var value_radio=jQuery(id).find('input[name=user_type]:checked').val();
+				if (typeof value_radio == 'undefined') {
+					error_radio=1;
+					jQuery(id).find('input[name=user_type]').addClass('error');
+				}
+				//console.log(error_radio);
+			}
+
+
+			//Error general campos vacíos
+			if(error_empty==1){
+				var message=jQuery(id).attr('data-error-msg');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
+			}
+
+			if(error_checkbox==1){
+				var message=jQuery(id).find('.validation-rule-checkbox').attr('data-error-msg');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
+			}
+
+			if(error_checkbox_profe==1){
+				var message=jQuery(id).find('.validation-rule-checkbox-profe').attr('data-error-msg');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
+			}
+
+			if(error_radio==1){
+				var message=jQuery(id).find('.validation-rule-radio').attr('data-error-msg');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
+			}
+
+			//Errores password
+			if(error_password==1){
+				var message=jQuery(id).find('.validation-rule-password').attr('data-error-msg');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
+			}
+
+			if(error_mail==1){
+				var message=jQuery(id).find('.validation-rule-mail').attr('data-error-msg');
+				jQuery(id).find('.errores').append('<p>'+message+'</p>');
+			}
+
+			//Salida
+			if(error_empty==1 || error_checkbox==1 || error_mail || error_password==1 || error_radio==1 || error_checkbox_profe==1){
+				return 1;
+			}else{
+				return 0;
+			}
+}
+
+
 function recaptchaCallback(response) {
 	validateForm.isValidRecaptcha = true;
 }
+
 
 var validateForm = {
 
@@ -1027,8 +1220,7 @@ var validateForm = {
 		this.form      = jQuery(event.target);
 		this.errors    = [];
 		this.hasErrors = false;
-		jQuery('.error', this.form).removeClass('error');
-		jQuery('.errores', this.form).html('');
+		this.showErrors();
 
 		this.fields = jQuery('*[data-validation-rule]:visible:not([readonly])', this.form);
 		this.fields.each( jQuery.proxy( this.checkField , this ) );
@@ -1063,13 +1255,7 @@ var validateForm = {
 
 
 		if( error ) {
-			if(rule == 'select-option') {
-				elem.parent().addClass('error');
-			} else if (rule == 'multi-checkbox') {
-				elem.find('input[type="checkbox"]').addClass('error');
-			} else {
-				elem.addClass('error');
-			}
+			elem.addClass('error');
 
 			this.hasErrors = true;
 
@@ -1080,6 +1266,8 @@ var validateForm = {
 	},
 
 	showErrors: function() {
+
+		jQuery('.error', this.form).removeClass('.error');
 
 		var errorList = jQuery.map(
 			this.errors,
