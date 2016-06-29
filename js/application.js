@@ -273,11 +273,11 @@ jQuery(document).ready(function(){
 			jQuery('.user_opc').find('.desplegable').hide().css({opacity:0});
 		}
 		if(jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});
+			jQuery(this).parent().find('.desplegable').animate({opacity:0},0,function(){jQuery(this).hide();});
 			jQuery(this).parent().removeClass('active');
 		}else{
 			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);
+			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},0);
 		}
 	});
 
@@ -290,11 +290,11 @@ jQuery(document).ready(function(){
 			jQuery('.language_opc').find('.desplegable').hide().css({opacity:0});
 		}
 		if(jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();jQuery('.login_box').show();jQuery('.forget_box').hide();});
+			jQuery(this).parent().find('.desplegable').animate({opacity:0},0,function(){jQuery(this).hide();jQuery('.login_box').show();jQuery('.forget_box').hide();});
 			jQuery(this).parent().removeClass('active');
 		}else{
 			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);
+			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},0);
 		}
 	});
 
@@ -307,11 +307,11 @@ jQuery(document).ready(function(){
 			jQuery('.language_opc').find('.desplegable').hide().css({opacity:0});
 		}
 		if(jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().find('.desplegable').animate({opacity:0},400,function(){jQuery(this).hide();});
+			jQuery(this).parent().find('.desplegable').animate({opacity:0},0,function(){jQuery(this).hide();});
 			jQuery(this).parent().removeClass('active');
 		}else{
 			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},400);
+			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},0);
 		}
 	});
 
