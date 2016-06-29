@@ -117,7 +117,7 @@ ul.menu_h li.login_opc.active>a{background:#ffffff !important;}
 .forget_box{display:none;}
 #form-forgot-password p{color:#ffffff;font-size: 13px;line-height: 16px;margin-bottom: 20px;}
 #form-forgot-password input[type=text]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;cursor:pointer;font-family:'sofia-pro-regular', Helvetica, sans-serif;}
-#form-forgot-password input[type=submit]{width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:35px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;cursor:pointer;}
+#form-forgot-password input[type=submit]{width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:33px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;cursor:pointer;}
 #form-forgot-password input[type=submit]:hover{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;background:#fde052;color:#393939;}
 .btns-reset{clear:both;padding-bottom:20px;}
 .feedback{text-align:center;color:#f05456;font-size:14px;display:none;width:100%;}
