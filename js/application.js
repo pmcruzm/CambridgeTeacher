@@ -331,29 +331,6 @@ jQuery(document).ready(function(){
 	//Asignamos nº de slicks item a la variables
 	s_slicks=jQuery('.slick-slide').length;
 
-	//Evento después de transición
-	/*jQuery('.carrusel-coleccion').on('afterChange', function(event, slick, currentSlide, nextSlide){
-	  var lengh_items=0;
-		var block_item=0;
-		jQuery('.carrusel-list div.item').each(function() {
-			if(jQuery(this).hasClass('slick-active')){
-				block_item=1;
-			}
-			if(block_item==1){
-				lengh_items+=jQuery(this).outerWidth();
-			}
-		});
-
-		//Mostramos/ocultamos las flechas si es mayor
-		if(lengh_items >= jQuery(window).width()){
-			jQuery('.slick-prev').show().css({'visibility':'visible'});
-			jQuery('.slick-next').show().css({'visibility':'visible'});
-		}else{
-			jQuery('.slick-prev').hide().css({'visibility':'hidden'});
-			jQuery('.slick-next').hide().css({'visibility':'hidden'});
-		}
-	});*/
-
 	//Filtros de la página de catálogo
 	jQuery(document).on('click','#selectores-filtros a',function(e){
 		e.preventDefault();
@@ -673,6 +650,45 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		jQuery('#modal-mastercode').fadeOut(400);
 	});
+	
+	//Miramos si la cookie de aceptación está creada
+	if(jQuery.cookie('cambridge-teacher') == 'acepta'){
+		//Ocultamos info cookies
+		jQuery('.block-cookies').hide();
+		//Añadimos GA
+		/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-31155962-13', 'auto');
+		ga('send', 'pageview');*/
+	}else{
+		jQuery('.block-cookies').show();
+	}
+	
+	//Cerrar cuadro info cookies
+	jQuery(document).on('click','.close_c',function(event){
+		event.preventDefault();
+		jQuery('.block-cookies').fadeOut(600);
+	});
+	
+	//Aceptar cookies en el cuadro
+	jQuery(document).on('click','.btn-accept',function(e){
+		e.preventDefault();
+		jQuery('.block-cookies').fadeOut(600,function(){
+			//Creamos la cookie de aceptación
+			jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
+			//Añadimos GA
+			/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-31155962-13', 'auto');
+			ga('send', 'pageview');*/
+		});
+	});
 
 	jQuery(window).scroll(control_scroll);
 
@@ -810,7 +826,20 @@ function control_scroll(e){
 
   //Añadir Cookie si se hace scroll a +100px
   if(scrollAmount>100){
+ 		if(jQuery.cookie('cambridge-teacher') != 'acepta'){
+			jQuery('.block-cookies').fadeOut(600,function(){
+				//Creamos la cookie de aceptación
+				jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
+				//Añadimos GA
+				/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+				ga('create', 'UA-31155962-13', 'auto');
+				ga('send', 'pageview');*/
+			});
+		}
   }
 
 }
