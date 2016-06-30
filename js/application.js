@@ -655,13 +655,14 @@ jQuery(document).ready(function(){
 	if(jQuery.cookie('cambridge-teacher') == 'acepta'){
 		//Ocultamos info cookies
 		jQuery('.block-cookies').hide();
+		var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
 		//Añadimos GA
 		/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-31155962-13', 'auto');
+		ga('create', cod_GA , 'auto');
 		ga('send', 'pageview');*/
 	}else{
 		jQuery('.block-cookies').show();
@@ -679,13 +680,14 @@ jQuery(document).ready(function(){
 		jQuery('.block-cookies').fadeOut(600,function(){
 			//Creamos la cookie de aceptación
 			jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
+			var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
 			//Añadimos GA
 			/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-31155962-13', 'auto');
+			ga('create', cod_GA , 'auto');
 			ga('send', 'pageview');*/
 		});
 	});
@@ -830,13 +832,14 @@ function control_scroll(e){
 			jQuery('.block-cookies').fadeOut(600,function(){
 				//Creamos la cookie de aceptación
 				jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
+				var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
 				//Añadimos GA
 				/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-				ga('create', 'UA-31155962-13', 'auto');
+				ga('create', cod_GA , 'auto');
 				ga('send', 'pageview');*/
 			});
 		}
