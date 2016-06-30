@@ -291,7 +291,7 @@ PROPIEDADES CATALOGO
 /*#selectores-filtros a:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-filter.png);background-size:21px;vertical-align:middle;margin-right:20px;background-position:0px 0px;background-repeat:no-repeat;}
 #selectores-filtros a.active:before{background-position:0px -21px;}*/
 
-#all-catalogo{background:#ffffff;}
+#all-catalogo{background:#ffffff;min-height:550px;}
 
 .content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
 .content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:4px;padding-right:4px;float:left;margin-bottom:8px;}
