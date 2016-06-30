@@ -620,16 +620,18 @@ PROPIEDADES AVISO LEGAL
 PROPIEDADES COOKIES
 ******************************/
 
-.block-cookies{background:rgba(255,245,104,0.95);position:fixed;bottom:0;width:100%;padding-top:20px;padding-bottom:20px;z-index:300;display:none;}
+/*background:#2e2e2e;border-radius:30px;bottom:-25px;left:0;right:0;margin:0 auto;color:#fde052;*/
+
+.block-cookies{background:rgba(46,46,46,0.95);position:fixed;bottom:0;width:100%;padding-top:20px;padding-bottom:20px;z-index:300;display:none;}
 .block-cookies .container{position:relative;max-width:1024px;}
-.block-cookies h2{color:#ea575b;width:80%;margin:0 auto;text-align:center;margin-bottom:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
-.block-cookies p{color:#ea575b;width:70%;margin:0 auto;text-align:center;}
-.block-cookies p a{color:#ea575b;text-decoration:none;font-family:'sofia-pro-black', Helvetica, sans-serif;text-decoration:underline;}
-.close_c{position:absolute;right:0;top:0;display:inline-block;color:#ea575b;}
+.block-cookies h2{color:#fde052;width:80%;margin:0 auto;text-align:center;margin-bottom:20px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.block-cookies p{color:#fde052;width:70%;margin:0 auto;text-align:center;}
+.block-cookies p a{color:#fde052;text-decoration:none;font-family:'sofia-pro-black', Helvetica, sans-serif;text-decoration:underline;}
+.close_c{position:absolute;right:0;top:0;display:inline-block;color:#fde052;}
 .close_c:before{content: "c";font-family:'icomoon', Helvetica, sans-serif;-moz-osx-font-smoothing: grayscale;font-style: normal;font-weight: normal;line-height: 1;position: relative;font-size:28px;}
-.close_c:hover{color:#ea575b;}
-.btn-accept{background:#ea575b;color:#ffffff;height:30px;display:block;-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius:15px;width:140px;margin:0 auto;line-height:30px;text-align:center;margin-top:20px;}
-.btn-accept:hover{color:#ffffff;}
+.close_c:hover{color:#fde052;}
+.btn-accept{background:#fde052;color:#2e2e2e;height:30px;display:block;-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius:15px;width:140px;margin:0 auto;line-height:30px;text-align:center;margin-top:20px;}
+.btn-accept:hover{color:#2e2e2e;}
 
 /*****************************
 PROPIEDADES FOOTER
