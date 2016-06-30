@@ -142,7 +142,7 @@ span.type-user{position:absolute;font-size:12px;font-family:'sofia-pro-black', H
 /*****************************
 PROPIEDADES HOME
 ******************************/
-#content{padding-top:47px;position:relative;}
+#content{padding-top:47px;position:relative;min-height:700px;background:#f5f0eb;}
 
 #banner-home{background:#fde052 url(../img/banner-home.png) center 45px no-repeat;height:493px;text-align:center;background-size:935px;position:relative;}
 .btn-register-h{position:absolute;height:50px;line-height:50px;width:222px;background:#2e2e2e;border-radius:30px;bottom:-25px;left:0;right:0;margin:0 auto;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;-webkit-transition: color 0.4s ease-in-out;-moz-transition: color 0.4s ease-in-out;-o-transition: color 0.4s ease-in-out;transition: color 0.4s ease-in-out;}
@@ -290,6 +290,8 @@ PROPIEDADES CATALOGO
 #selectores-filtros a.bloqueado{cursor:default;}
 /*#selectores-filtros a:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-filter.png);background-size:21px;vertical-align:middle;margin-right:20px;background-position:0px 0px;background-repeat:no-repeat;}
 #selectores-filtros a.active:before{background-position:0px -21px;}*/
+
+#all-catalogo{background:#ffffff;}
 
 .content-catalogo{box-sizing:border-box;padding-left:8px;padding-right:8px;overflow:hidden;padding-bottom:52px;}
 .content-catalogo .single-box-book{width:25%;box-sizing:border-box;padding-left:4px;padding-right:4px;float:left;margin-bottom:8px;}
