@@ -164,8 +164,8 @@ jQuery(document).ready(function(){
 	w_win=jQuery(window).width();
 	
 	//Redirección a la página mobile
-	if(jQuery('meta[name="is-responsive"]').attr('content')=="false"){
-		var url_block=jQuery('meta[name="mobile-advise"]').attr('content');
+	if(jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
+		var url_block=jQuery('meta[property="mobile-redirect-url"]').attr('content');
 		window.top.location = url_block;
 	}
 
