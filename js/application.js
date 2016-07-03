@@ -101,47 +101,6 @@ jQuery(window).load(function(){
 
 	//Ajustamos altura de los cuadros de catalogo
 	if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
-
-		//Ajustamos cuadros
-		/*jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
-			var ancho_box=jQuery(this).width();
-			jQuery(this).css('height',ancho_box);
-		});*/
-
-		//Ajustamos etiqueta sample
-		/*jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
-			if(jQuery(this).parent().find('span').length>0){
-				var alto_img=jQuery(this).height();
-				jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
-			}
-		});*/
-
-		/*if(hash_active!=1){
-			//Calculamos demos y evalución para todos
-			var all_demos=jQuery('#all-catalogo .content-catalogo div[data-type=demo]').length;
-			var all_evaluacion=jQuery('#all-catalogo .content-catalogo div[data-type=centre]').length;
-
-			//Asignamos valores a enlaces correspondientes
-			jQuery('#selectores-filtros a[data-filter-type=demo] strong').html(all_demos);
-			if(all_demos==0){jQuery('#selectores-filtros a[data-filter-type=demo]').addClass('bloqueado');}
-			jQuery('#selectores-filtros a[data-filter-type=centre] strong').html(all_evaluacion);
-			if(all_evaluacion==0){jQuery('#selectores-filtros a[data-filter-type=centre]').addClass('bloqueado');}
-		}*/
-
-		//Activamos Lazyload para las imágenes
-		/*jQuery("img.lazy").lazyload({
-			effect : 'fadeIn',
-			skip_invisible : false,
-			load : function()
-			{
-				//jQuery(this).addClass('red');
-				//console.log(jQuery(this).addClass()); // Callback here
-				if(jQuery(this).parent().find('span').length>0){
-					var alto_img=jQuery(this).height();
-					jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20});
-				}
-			}
-		});*/
 	}
 
 	//Ajustamos Shot de la home
@@ -203,6 +162,12 @@ jQuery(document).ready(function(){
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
+	
+	//Redirección a la página mobile
+	if(jQuery('meta[name="is-responsive"]').attr('content')=="false"){
+		var url_block=jQuery('meta[name="mobile-advise"]').attr('content');
+		window.top.location = url_block;
+	}
 
 	//Volver el scroll a top
 	jQuery('body').scrollTo( "0px", 0,function(){
