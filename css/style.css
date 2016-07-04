@@ -798,10 +798,14 @@ WEBKIT HACKS
 /*****************************
 MEDIA QUERIES
 ******************************/
-
-@media screen and (max-width: 2000px) {
+@media screen and (min-width: 1921px) {
 	#list-news .container .new-single{width:12.5%;}
 	.content-catalogo .single-box-book{width:12.5%;}
+}
+
+@media screen and (max-width: 1920px) {
+	#list-news .container .new-single{width:16.6666%;}
+	.content-catalogo .single-box-book{width:16.6666%;}
 	#box-faqs{max-width:960px;}
 	#form_box_registro{max-width:960px;}
 	.box_profile{max-width:960px;}
@@ -809,8 +813,8 @@ MEDIA QUERIES
 
 
 @media screen and (max-width: 1440px) {
-	#list-news .container .new-single{width:16.6666%;}
-	.content-catalogo .single-box-book{width:16.6666%;}
+	#list-news .container .new-single{width:25%;}
+	.content-catalogo .single-box-book{width:25%;}
 
 }
 
