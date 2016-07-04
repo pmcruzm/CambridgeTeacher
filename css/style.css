@@ -811,11 +811,13 @@ MEDIA QUERIES
 	.box_profile{max-width:960px;}
 }
 
+@media screen and (max-width: 1659px) {
+	.content-catalogo .single-box-book{width:20%;}
+}
+
 
 @media screen and (max-width: 1440px) {
 	#list-news .container .new-single{width:25%;}
-	.content-catalogo .single-box-book{width:25%;}
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -831,6 +833,7 @@ MEDIA QUERIES
 	#box-faqs{max-width:800px;}
 	#form_box_registro{max-width:800px;}
 	.box_profile{max-width:800px;}
+	.content-catalogo .single-box-book{width:25%;}
 }
 
 
