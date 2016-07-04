@@ -164,7 +164,7 @@ jQuery(document).ready(function(){
 	w_win=jQuery(window).width();
 
 	//Redirección a la página mobile
-	if(w_win<600 && jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
+	if(device=="yes" && w_win<600 && jQuery('meta[property="mobile-redirect"]').attr('content')=="true"){
 		var url_block=jQuery('meta[property="mobile-redirect-url"]').attr('content');
 		window.top.location = url_block;
 	}
