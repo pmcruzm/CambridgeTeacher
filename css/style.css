@@ -860,6 +860,9 @@ MEDIA QUERIES
 	#block-detalle .group-generic .box-generic-detalle:first-child{top:0;margin-bottom:0;}
 	ul.menu_h li.language_opc>a span{font-size:0;}
 	ul.menu_h li.language_opc>a{padding-right:0;}
+	
+	#list-news .container .new-single{width:33.3333%;}
+	.content-catalogo .single-box-book{width:33.3333%;}
 }
 
 @media screen and (max-width: 950px) {
@@ -891,8 +894,7 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 768px) {
-	#list-news .container .new-single{width:33.3333%;}
-	.content-catalogo .single-box-book{width:33.3333%;}
+	
 }
 
 @media screen and (max-width: 767px) {
@@ -930,6 +932,9 @@ MEDIA QUERIES
 
 	.btn-register-h{display:none;}
 	#info-profesor a{display:none;}
+	
+	#list-news .container .new-single{width:50%;}
+	.content-catalogo .single-box-book{width:50%;}
 
 }
 
