@@ -214,7 +214,7 @@ PROPIEDADES MI COLECCION
 .carrusel-list .item img{height:200px;padding-right:8px;}
 .carrusel-list .item span.sample{position:absolute;bottom:0;left:0;z-index:50;display:block;background:url(../img/sample-diagonal.png) top left no-repeat;width:55px;height:55px;background-size:55px;text-indent:-99999px;}
 .carrusel-list .item .minus-book{right:15px;display:block;}
-.carrusel-list .item>a:not(.minus-book):before{display:block;width:calc(100% - 8px);box-sizing:border-box;height:200px;background:rgba(46, 46, 46, 0.7);content:'';opacity:0;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;position:absolute;top:0;}
+.carrusel-list .item>a:not(.minus-book):before{display:block;width:calc(100% - 8px);box-sizing:border-box;height:200px;background:rgba(46, 46, 46, 0.5);content:'';opacity:0;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;position:absolute;top:0;}
 .carrusel-list .item>a:not(.minus-book):hover:before{opacity:1;}
 
 .slick-arrow{position:absolute;top:0;z-index:100;top:50%;margin-top:-18px;visibility:hidden;}
