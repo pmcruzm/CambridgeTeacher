@@ -350,9 +350,9 @@ jQuery(document).ready(function(){
 	jQuery(document).on('click','.inside-b-book',function(e){
 		e.preventDefault();
 		if(jQuery(this).hasClass('over-plus')){
-			jQuery(this).addClass('over-plus');	
-		}else{
 			jQuery(this).removeClass('over-plus');	
+		}else{
+			jQuery(this).addClass('over-plus');	
 		}
 	});
 
