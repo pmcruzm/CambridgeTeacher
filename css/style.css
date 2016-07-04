@@ -466,6 +466,9 @@ PROPIEDADES FAQs
 .single-faq .desplegable b,.single-faq .desplegable strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .single-faq .desplegable em,.single-faq .desplegable i{font-style:italic;}
 
+.single-faq .desplegable img.icon-img{width:21px;height:21px;vertical-align:middle;margin-right:3px;margin-left:3px;}
+.single-faq .desplegable img.panoramica{max-width:100%;margin-bottom:14px;margin-top:14px;}
+
 /*****************************
 PROPIEDADES DETALLE
 ******************************/
