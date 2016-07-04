@@ -349,10 +349,12 @@ jQuery(document).ready(function(){
 	//Ayuda en catalogo plus click
 	jQuery(document).on('click','.inside-b-book',function(e){
 		e.preventDefault();
-		if(jQuery(this).hasClass('over-plus')){
-			jQuery(this).removeClass('over-plus');	
-		}else{
-			jQuery(this).addClass('over-plus');	
+		if(w_win<767 && device=="true"){
+			if(jQuery(this).hasClass('over-plus')){
+				jQuery(this).removeClass('over-plus');	
+			}else{
+				jQuery(this).addClass('over-plus');	
+			}
 		}
 	});
 
