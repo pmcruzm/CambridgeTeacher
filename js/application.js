@@ -162,10 +162,10 @@ jQuery(document).ready(function(){
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
-	
+
 	//Redirección a la página mobile
-	if(jQuery('meta[name="is-responsive"]').attr('content')=="false" && device=="yes" && w_win<600){
-		var url_block=jQuery('meta[name="mobile-advise"]').attr('content');
+	if(device=="yes" && w_win<600 && jQuery('meta[name="mobile-redirect"]').attr('content')=="true"){
+		var url_block=jQuery('meta[name="mobile-redirect-url"]').attr('content');
 		window.top.location = url_block;
 	}
 
@@ -615,7 +615,7 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		jQuery('#modal-mastercode').fadeOut(400);
 	});
-	
+
 	//Miramos si la cookie de aceptación está creada
 	if(jQuery.cookie('cambridge-teacher') == 'acepta'){
 		//Ocultamos info cookies
@@ -632,13 +632,13 @@ jQuery(document).ready(function(){
 	}else{
 		jQuery('.block-cookies').show();
 	}
-	
+
 	//Cerrar cuadro info cookies
 	jQuery(document).on('click','.close_c',function(event){
 		event.preventDefault();
 		jQuery('.block-cookies').fadeOut(600);
 	});
-	
+
 	//Aceptar cookies en el cuadro
 	jQuery(document).on('click','.btn-accept',function(e){
 		e.preventDefault();
@@ -696,7 +696,7 @@ jQuery(document).ready(function(){
 
 				//Ajustamos etiqueta sample
 				jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
-					//Miramos span de Sample	
+					//Miramos span de Sample
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
@@ -845,7 +845,7 @@ function filter_catalogo(segmento,type1,type2){
 			threshold : 1,
 			load : function()
 			{
-				//Miramos span de Sample	
+				//Miramos span de Sample
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
@@ -912,7 +912,7 @@ function filter_catalogo(segmento,type1,type2){
 				threshold : 1,
 				load : function()
 				{
-					//Miramos span de Sample	
+					//Miramos span de Sample
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
@@ -970,7 +970,7 @@ function filter_catalogo(segmento,type1,type2){
 				threshold : 1,
 				load : function()
 				{
-					//Miramos span de Sample	
+					//Miramos span de Sample
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
