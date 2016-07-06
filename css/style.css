@@ -961,6 +961,7 @@ MEDIA QUERIES
 	#form_box_registro{max-width:95%;}
 	.box_profile{max-width:95%;}
 	#box_aviso{max-width:95%;}
+	#box_aviso .top-register{padding:50px 60px;}
 }
 
 @media screen and (max-width: 640px) {
@@ -993,6 +994,7 @@ MEDIA QUERIES
 	.top-faqs{padding:50px 50px;}
 	.btns-faqs a{font-size:14px;line-height:18px;padding-top:17px;padding-right:5px;padding-bottom:5px;box-sizing:border-box;}
 	.contenidos-faqs{padding:40px 65px 50px;}
+	#box_aviso .top-register{padding:50px 50px;}
 }
 
 
