@@ -816,6 +816,7 @@ MEDIA QUERIES
 	#box-faqs{max-width:960px;}
 	#form_box_registro{max-width:960px;}
 	.box_profile{max-width:960px;}
+	#box_aviso{max-width:960px;}
 }
 
 @media screen and (max-width: 1659px) {
@@ -841,6 +842,7 @@ MEDIA QUERIES
 	#form_box_registro{max-width:800px;}
 	.box_profile{max-width:800px;}
 	.content-catalogo .single-box-book{width:25%;}
+	#box_aviso{max-width:800px;}
 }
 
 
@@ -852,6 +854,7 @@ MEDIA QUERIES
 	#box-faqs{max-width:660px;}
 	#form_box_registro{max-width:660px;}
 	.box_profile{max-width:660px;}
+	#box_aviso{max-width:660px;}
 }
 
 @media screen and (max-width: 1023px) {
@@ -957,6 +960,7 @@ MEDIA QUERIES
 	.top-faqs{padding:50px 60px;}
 	#form_box_registro{max-width:95%;}
 	.box_profile{max-width:95%;}
+	#box_aviso{max-width:95%;}
 }
 
 @media screen and (max-width: 640px) {
