@@ -945,6 +945,9 @@ MEDIA QUERIES
 	
 	#list-news .container .new-single{width:50%;}
 	.content-catalogo .single-box-book{width:50%;}
+	
+	.desktop_opc{display:none;}
+	.mobile_opc{display:block;}
 
 }
 
