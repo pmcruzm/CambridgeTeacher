@@ -347,7 +347,7 @@ jQuery(document).ready(function(){
 	});
 	
 	//Ayuda en catalogo plus click
-	jQuery(document).on('click','.inside-b-book',function(e){
+	/*jQuery(document).on('click','.inside-b-book',function(e){
 		e.preventDefault();
 		if(device=="true"){
 			if(jQuery(this).hasClass('over-plus')){
@@ -356,7 +356,7 @@ jQuery(document).ready(function(){
 				jQuery(this).addClass('over-plus');	
 			}
 		}
-	});
+	});*/
 
 	//Ayudas de los registros (over)
 	jQuery(document).on("mouseenter",".help-box a", function(e) {
