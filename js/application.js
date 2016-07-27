@@ -340,10 +340,14 @@ jQuery(document).ready(function(){
 	//Ayuda en catalogo plus
 	jQuery(document).on("mouseenter",".inside-b-book", function(e) {
 		e.preventDefault();
-		jQuery(this).addClass('over-plus');
+		if(device!='yes'){
+			jQuery(this).addClass('over-plus');
+		}
 	}).on("mouseleave",".inside-b-book", function(e) {
 		e.preventDefault();
-		jQuery(this).removeClass('over-plus');
+		if(device!='yes'){
+			jQuery(this).removeClass('over-plus');
+		}
 	});
 	
 	//Ayuda en catalogo plus click
