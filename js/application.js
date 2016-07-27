@@ -337,7 +337,7 @@ jQuery(document).ready(function(){
 		}
 	});
 	
-	//Ayuda en catalogo plus
+	//Over libros catalogo
 	jQuery(document).on("mouseenter",".inside-b-book", function(e) {
 		e.preventDefault();
 		if(device!='yes'){
@@ -347,6 +347,19 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		if(device!='yes'){
 			jQuery(this).removeClass('over-plus');
+		}
+	});
+	
+	//Over libros mi coleccion
+	jQuery(document).on("mouseenter",".carrusel-list .item", function(e) {
+		e.preventDefault();
+		if(device!='yes'){
+			jQuery(this).addClass('over-item');
+		}
+	}).on("mouseleave",".carrusel-list .item", function(e) {
+		e.preventDefault();
+		if(device!='yes'){
+			jQuery(this).removeClass('over-item');
 		}
 	});
 	
