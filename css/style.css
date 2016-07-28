@@ -190,7 +190,7 @@ PROPIEDADES HOME
 #info-profesor .logo-info{max-width:492px;width:90%;padding-bottom:40px;}
 #show-examples{overflow:hidden;width:100%;max-width:1200px;margin:0 auto;box-sizing:border-box;padding-left:8px;padding-right:8px;padding-top:45px;}
 .shot-box{width:33.3333%;float:left;padding-right:4px;padding-left:4px;box-sizing:border-box;}
-.shot-box img{max-width:100%;vertical-align:bottom;border-left:1px solid #2e2e2e;border-right:1px solid #2e2e2e;border-top:1px solid #2e2e2e;box-sizing:border-box;}
+.shot-box img{max-width:100%;vertical-align:bottom;border-left:3px solid #2e2e2e;border-right:3px solid #2e2e2e;border-top:3px solid #2e2e2e;box-sizing:border-box;}
 
 .box-ins-home{display:block;width:100%;max-width:430px;position:absolute;}
 .box-ins-home.right-box{right:250px;}
@@ -968,7 +968,7 @@ MEDIA QUERIES
 	.shot-box{height:auto !important;width:100%;margin-bottom:15px;}
 	.left_footer{width:100%;padding-bottom:30px;}
 	.right_footer{width:100%;}
-	.shot-box img{border-bottom:1px solid #2e2e2e;}
+	.shot-box img{border-bottom:3px solid #2e2e2e;}
 
 	#contact-form .top-register{padding-right:30px;padding-left:30px;}
 	.form-type-1 .form-group label{width:100%;float:inherit;text-align:left;}
