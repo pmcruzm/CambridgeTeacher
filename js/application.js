@@ -613,12 +613,27 @@ jQuery(document).ready(function(){
 		}
 	});
 
-	//Cuando queremos desplegar Mastercode
-	jQuery(document).on('click','.box-mastercode a',function(e){
+	//Cuando queremos desplegar modal
+	jQuery(document).on('click','*[data-modal-target]',function(e){
 		e.preventDefault();
 		var h_content=jQuery('#content').outerHeight();
-		jQuery('#modal-mastercode').height(h_content);
-		jQuery('#modal-mastercode').fadeIn(400);
+		var modalTarget=jQuery(this).data('modal-target');
+		jQuery(modalTarget).height(h_content);
+		jQuery(modalTarget).fadeIn(400);
+	});
+
+	//La modal de descarga
+	jQuery(document).on('click','*[data-modal-target="#modal-download"]',function(e){
+		var modal = jQuery('#modal-download.modal');
+		var tag   = jQuery(this).data('tag');
+		var href  = jQuery(this).attr('href');
+		jQuery('.download-tag', modal).text(tag);
+		jQuery('.btn-primary', modal).attr('href',href);
+	});
+
+	//Cerramos la modal al clickar en la descarga
+	jQuery(document).on('click','#modal-download .btn-primary',function(e){
+		jQuery(this).closest('.modal').find('.close-modal').trigger('click');
 	});
 
 	//Enviar formulario de mastercode
@@ -648,10 +663,10 @@ jQuery(document).ready(function(){
 		}
 	});
 
-	//Cerrar modal Mastercode
+	//Cerrar modal
 	jQuery(document).on("click",".close-modal", function(e) {
 		e.preventDefault();
-		jQuery('#modal-mastercode').fadeOut(400);
+		jQuery('.modal').fadeOut(400);
 	});
 
 	//Miramos si la cookie de aceptación está creada
@@ -767,9 +782,9 @@ jQuery(document).ready(function(){
 			}
 
 			//Ajustamos modal si está abierto
-			if (jQuery('#modal-mastercode').is(":visible") ) {
+			if (jQuery('.modal').is(":visible") ) {
 				var h_content=jQuery('#content').outerHeight();
-				jQuery('#modal-mastercode').height(h_content);
+				jQuery('.modal').height(h_content);
 			}
 
 			//Ocultamos flechas según contenido
