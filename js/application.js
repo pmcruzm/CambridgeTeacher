@@ -336,7 +336,7 @@ jQuery(document).ready(function(){
 			filter_catalogo(filter_segmento,filter_type1,filter_type2);
 		}
 	});
-	
+
 	//Over libros catalogo
 	jQuery(document).on("mouseenter",".inside-b-book", function(e) {
 		e.preventDefault();
@@ -349,7 +349,7 @@ jQuery(document).ready(function(){
 			jQuery(this).removeClass('over-plus');
 		}
 	});
-	
+
 	//Over libros mi coleccion
 	jQuery(document).on("mouseenter",".carrusel-list .item", function(e) {
 		e.preventDefault();
@@ -362,15 +362,15 @@ jQuery(document).ready(function(){
 			jQuery(this).removeClass('over-item');
 		}
 	});
-	
+
 	//Ayuda en catalogo plus click
 	/*jQuery(document).on('click','.inside-b-book',function(e){
 		e.preventDefault();
 		if(device=="true"){
 			if(jQuery(this).hasClass('over-plus')){
-				jQuery(this).removeClass('over-plus');	
+				jQuery(this).removeClass('over-plus');
 			}else{
-				jQuery(this).addClass('over-plus');	
+				jQuery(this).addClass('over-plus');
 			}
 		}
 	});*/
@@ -1139,6 +1139,7 @@ var validateForm = {
 		if( 'select-option' == rule ) {error = ! this.ruleValidSelectOption(elem);}
 		if( 'multi-checkbox' == rule ) {error = ! this.ruleMultiCheckbox(elem);}
 		if( 'min' == rule ) {error = ! this.ruleMinimumChars(elem, parseInt(params[0]));}
+		if( 'screenshot' == rule ) {error = ! this.ruleValidScreenshot(elem, params);}
 
 
 		if( error ) {
@@ -1204,6 +1205,16 @@ var validateForm = {
 
 	ruleMinimumChars: function(e, minChars) {
 		return e.val().length >= minChars;
+	},
+
+	ruleValidScreenshot: function(e, params) {
+		if( e.val() == '' ) {
+			return true;
+		}
+
+		var fileExtension = e.val().split('.').pop().toLowerCase();
+
+		return (jQuery.inArray(fileExtension, ['jpg','jpeg','png','gif']) !== -1 );
 	}
 
 }

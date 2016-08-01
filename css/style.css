@@ -312,7 +312,7 @@ PROPIEDADES CATALOGO
 .single-box-book.add .plus-book{display:block;}
 .single-box-book.minus .minus-book{display:block;}
 
-.inside-b-book.over-plus .plus-book{background-position:0px -21px;} 
+.inside-b-book.over-plus .plus-book{background-position:0px -21px;}
 
 .single-box-book .enl-book .cover_check{content:'';position:absolute;top:0;left:-1px;background-color:rgba(46,46,46,0.7);background-image:url(../img/check-big.png);background-position:center center;background-repeat:no-repeat;background-size:40px 40px;display:block;width:100%;height:20px;display:none;border:3px solid #fde052;box-sizing:border-box;}
 .single-box-book.check .enl-book .cover_check{display:block;}
@@ -873,7 +873,7 @@ MEDIA QUERIES
 	#block-detalle .group-generic .box-generic-detalle:first-child{top:0;margin-bottom:0;}
 	ul.menu_h li.language_opc>a span{font-size:0;}
 	ul.menu_h li.language_opc>a{padding-right:0;}
-	
+
 	#list-news .container .new-single{width:33.3333%;}
 	.content-catalogo .single-box-book{width:33.3333%;}
 }
@@ -907,7 +907,7 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 768px) {
-	
+
 }
 
 @media screen and (max-width: 767px) {
@@ -945,10 +945,10 @@ MEDIA QUERIES
 
 	.btn-register-h{display:none;}
 	#info-profesor a{display:none;}
-	
+
 	#list-news .container .new-single{width:50%;}
 	.content-catalogo .single-box-book{width:50%;}
-	
+
 	.desktop_opc{display:none;}
 	.mobile_opc{display:block;}
 
@@ -970,7 +970,7 @@ MEDIA QUERIES
 	.right_footer{width:100%;}
 	.shot-box img{border-bottom:3px solid #2e2e2e;}
 
-	#contact-form .top-register{padding-right:30px;padding-left:30px;}
+	.form-type-1 .top-register{padding-right:30px;padding-left:30px;}
 	.form-type-1 .form-group label{width:100%;float:inherit;text-align:left;}
 	.form-type-1 .form-group input[type="text"]{width:100%;}
 	.form-type-1 .form-group input[type="email"]{width:100%;}
