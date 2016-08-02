@@ -474,9 +474,12 @@ PROPIEDADES DETALLE
 ******************************/
 #banner-detalle{background-image:url(../img/bg-detalle.png);background-position:227px 22px;background-repeat:no-repeat;background-size:533px;}
 #banner-detalle .container{height:180px;position:relative;}
-#banner-detalle h3{position:absolute;left:266px;bottom:100px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;}
-#banner-detalle h2{position:absolute;left:266px;bottom:50px;color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:40px;line-height:40px;}
+#banner-detalle h3{color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:14px;padding-bottom:10px;}
+#banner-detalle h2{color:#ffffff;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:40px;line-height:40px;}
 #banner-detalle h2 span{font-size:20px;display:inline-block;margin-left:10px;}
+
+.info-book{position:absolute;bottom:50px;width:100%;box-sizing:border-box;padding-left:266px;padding-right:266px;}
+
 .enl-delete{position:absolute;bottom:50px;right:30px;color:#ffffff;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
 .enl-delete:before{content:'';display:inline-block;width:21px;height:21px;background:url(../img/less-white.png) 0px 0px no-repeat;background-size:21px;position:relative;top:5px;margin-right:13px;}
 .enl-delete:hover:before{background-position:0px -21px;}
@@ -881,6 +884,7 @@ MEDIA QUERIES
 
 	#list-news .container .new-single{width:33.3333%;}
 	.content-catalogo .single-box-book{width:33.3333%;}
+	#banner-detalle h2{font-size:25px;line-height:25px;}
 }
 
 @media screen and (max-width: 950px) {
