@@ -885,6 +885,9 @@ MEDIA QUERIES
 	#list-news .container .new-single{width:33.3333%;}
 	.content-catalogo .single-box-book{width:33.3333%;}
 	#banner-detalle h2{font-size:25px;line-height:25px;}
+	#banner-detalle .enl-delete{width:100px;display:block;line-height:16px;}
+	#banner-detalle .enl-delete::before{position:absolute;left:-30px;top:0px;}
+	.info-book{padding-right:200px;}
 }
 
 @media screen and (max-width: 950px) {
