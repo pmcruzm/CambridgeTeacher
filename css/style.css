@@ -499,12 +499,12 @@ PROPIEDADES DETALLE
 
 
 .img-detalles{overflow:hidden;padding-top:15px;}
-.box-sup-det{display:block;padding-left:10px;margin-bottom:15px;width:50%;float:left;text-align:center;box-sizing:border-box;}
+.box-sup-det{display:block;padding-left:10px;margin-bottom:15px;width:50%;float:left;text-align:center;box-sizing:border-box;max-width:288px;}
 .box-sup-det:first-child{padding-left:0;}
 .box-sup-det h4{color:#2e2e2e;font-size:16px;}
 .box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;line-height:30px;min-width:90px;text-align:center;border-radius:20px;padding:0 15px;margin:8px;position:relative;font-size:14px;-webkit-appearance:none;border:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;cursor: pointer;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .box-sup-det .btn-det:hover{background:#2e2e2e;color:#fde052;}
-.img-detalles{padding-bottom:50px;overflow:hidden;max-width:575px;width:100%;}
+.img-detalles{padding-bottom:50px;overflow:hidden;/*max-width:575px;*/width:100%;}
 .img-detalles img{max-height:132px;max-width:100%;box-shadow:0px 10px 18px 0px rgba(0, 0, 0, 0.2);}
 .box-img-det{box-sizing:border-box;padding:10px;margin-bottom:15px;}
 
