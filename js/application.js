@@ -1105,7 +1105,7 @@ function isNumber(n) {
 }
 
 function recaptchaCallback(response) {
-	validateForm.isValidRecaptcha = true;
+	jQuery('div[data-validation-rule="recaptcha"]').data('is-verified', true);
 }
 
 var validateForm = {
@@ -1114,7 +1114,6 @@ var validateForm = {
 	fields: [],
 	errors: [],
 	hasErrors: false,
-	isValidRecaptcha: false,
 
 	validate: function( event ) {
 
@@ -1148,7 +1147,7 @@ var validateForm = {
 		if( 'email' == rule ) {error = ! this.ruleIsEmail(elem);}
 		if( 'repeat' == rule ) {error = ! this.ruleRepeat(elem, params[0]);}
 		if( 'checkbox' == rule ) {error = ! this.ruleCheckbox(elem);}
-		if( 'recaptcha' == rule ) {error = ! this.ruleValidRecaptcha();}
+		if( 'recaptcha' == rule ) {error = ! this.ruleValidRecaptcha(elem);}
 		if( 'not-empty' == rule ) {error = ! this.ruleValidNotEmpty(elem);}
 		if( 'zip' == rule ) {error = ! this.ruleValidZip(elem);}
 		if( 'select-option' == rule ) {error = ! this.ruleValidSelectOption(elem);}
@@ -1199,7 +1198,7 @@ var validateForm = {
 	},
 
 	ruleValidRecaptcha: function(e) {
-		return this.isValidRecaptcha;
+		return e.data('is-verified');
 	},
 
 	ruleValidNotEmpty: function(e) {
