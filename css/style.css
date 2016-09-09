@@ -683,6 +683,8 @@ PROPIEDADES FOOTER
 .txt-footer a{color:#afaaa6;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .txt-footer a:hover{color:#ffffff;}
 
+.link_helpdesk{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:48px;display:inline-block;}
+
 /**********************************
 PROPIEDADES DE CUSTOM RADIO | CHECKBOX BUTTON
 **********************************/
@@ -1015,8 +1017,11 @@ MEDIA QUERIES
 	#footer{text-align:center;}
 	.block_visita{width:100%;}
 	.block_visita h4{margin-bottom:20px;}
+	.link_helpdesk{margin-bottom:20px;}
 	.block_siguenos{width:100%;margin-bottom:20px;}
 	.block_siguenos h4{margin-bottom:20px;}
+	.block_visita ul{margin-bottom:20px;}
+	.link_helpdesk{margin-bottom:20px;}
 	.logo_f{margin:0 auto;}
 	.txt-b-bottom p{font-size:18px;}
 	.btn-register-h{font-size:14px;height:40px;line-height:40px;bottom:-20px;}
