@@ -658,14 +658,14 @@ PROPIEDADES FOOTER
 .left_footer{width:42%;float:left;}
 .right_footer{width:58%;float:left;overflow:hidden;}
 .block_visita{width:65%;float:left;}
-.block_visita h4{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:24px;}
+.block_visita h4{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:10px;}
 .block_visita ul{margin-bottom:50px;}
 .block_visita ul li{color:#afaaa6;font-size:14px;}
 .block_visita ul li a{color:#afaaa6;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .block_visita ul li a:hover{color:#ffffff;}
 
 .block_siguenos{width:35%;float:left;}
-.block_siguenos h4{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:24px;}
+.block_siguenos h4{color:#afaaa6;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;margin-bottom:10px;}
 .block_siguenos ul{padding:0;margin:0;font-size:0;}
 .block_siguenos ul li{font-size:16px;display:inline-block;margin-right:20px;}
 .block_siguenos ul li:last-child{margin-right:0;}
@@ -1017,9 +1017,9 @@ MEDIA QUERIES
 @media screen and (max-width: 480px) {
 	#footer{text-align:center;}
 	.block_visita{width:100%;}
-	.block_visita h4{margin-bottom:20px;}
+	.block_visita h4{margin-bottom:10px;}
 	.block_siguenos{width:100%;margin-bottom:20px;}
-	.block_siguenos h4{margin-bottom:20px;}
+	.block_siguenos h4{margin-bottom:10px;}
 	.block_visita ul{margin-bottom:20px;}
 	.link_helpdesk{margin-bottom:20px;}
 	.logo_f{margin:0 auto;}
