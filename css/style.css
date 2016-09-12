@@ -429,6 +429,7 @@ PROPIEDADES CONTACT
 ******************************/
 .intro_contact{padding-left: 44%;}
 .intro_contact p{padding-bottom:50px;color:#2e2e2e;font-size:16px;line-height:24px;}
+.intro_contact a{color:#30c0d8; text-decoration:underline;}
 #banner-generico{position:relative;height:180px;background-image:url(../img/bg-contacto.png);background-size:496px;background-color:#fde052;background-position:calc(50% - 254px) 10px;background-repeat:no-repeat;}
 #banner-generico h2{font-size:40px;color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;width:100%;max-width:660px;position:absolute;bottom:60px;left:0;right:0;margin:0 auto;text-align:left;line-height:40px;}
 
