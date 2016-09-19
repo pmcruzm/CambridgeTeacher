@@ -806,23 +806,10 @@ input, textarea, select {-webkit-appearance: none;}
 .helper_bottom{display: inline-block;height:100%;vertical-align:bottom;}
 
 /*Propiedades Placeholder*/
-
-input::-webkit-input-placeholder {
-    opacity: 1 !important; /* for chrome */
-}
-
-input:-moz-placeholder { /* Firefox 18- */
-	opacity: 1 !important; /* for chrome */
-}
-
-input::-moz-placeholder {  /* Firefox 19+ */
-	opacity: 1 !important; /* for chrome */
-}
-
-input:-ms-input-placeholder { 
-	opacity: 1 !important; /* for chrome */
-}
-
+#form-login input[type=text]::-webkit-input-placeholder,#form-login input[type=password]::-webkit-input-placeholder{color:#5e5e5e !important;opacity: 1 !important;}
+#form-login input[type=text]:-moz-placeholder,#form-login input[type=password]:-moz-placeholder{color:#5e5e5e !important;opacity: 1 !important;}
+#form-login input[type=text]::-moz-placeholder,#form-login input[type=password]::-moz-placeholder{color:#5e5e5e !important;opacity: 1 !important;}
+#form-login input[type=text]:-ms-input-placeholder#form-login input[type=password]:-ms-input-placeholder{color:#5e5e5e !important;opacity: 1 !important;}
 
 
 
