@@ -105,19 +105,19 @@ ul.menu_h li.login_opc.active>a>div{background:#2e2e2e !important;color:#ffffff;
 ul.menu_h li.login_opc.active>a{background:#ffffff !important;}
 
 #form-login label{display:none;}
-#form-login input[type=text],#form-login input[type=password]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;font-family:'sofia-pro-regular', Helvetica, sans-serif;}
+#form-login input[type=text],#form-login input[type=password]{width:100%;font-size:14px;color:#c6c6c6;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;font-family:'sofia-pro-regular', Helvetica, sans-serif;}
 .btns-login{overflow:hidden;margin-bottom:10px;}
 #form-login input[type=submit]{float:left;width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:31px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;cursor:pointer;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 #form-login input[type=submit]:hover{background:#fde052;color:#393939;}
-.btns-login .btn-register{float:right;width:107px;height:35px;border-radius:30px;background:#393939;display:block;line-height:34px;color:#5e5e5e;font-size:14px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+.btns-login .btn-register{float:right;width:107px;height:35px;border-radius:30px;background:#393939;display:block;line-height:34px;color:#c6c6c6;font-size:14px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .btns-login .btn-register:hover{color:#ffffff !important;}
 .txt-remember{text-align:right !important;}
-.txt-remember a{width:auto !important;height:auto !important;color:#5e5e5e !important;line-height:13px !important;font-size:10px !important;display:inline-block !important;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+.txt-remember a{width:auto !important;height:auto !important;color:#c6c6c6 !important;line-height:13px !important;font-size:10px !important;display:inline-block !important;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .txt-remember a:hover{color:#ffffff !important;}
 
 .forget_box{display:none;}
 #form-forgot-password p{color:#ffffff;font-size: 13px;line-height: 16px;margin-bottom: 20px;}
-#form-forgot-password input[type=text]{width:100%;font-size:14px;color:#5e5e5e;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;cursor:pointer;font-family:'sofia-pro-regular', Helvetica, sans-serif;}
+#form-forgot-password input[type=text]{width:100%;font-size:14px;color:#c6c6c6;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;cursor:pointer;font-family:'sofia-pro-regular', Helvetica, sans-serif;}
 #form-forgot-password input[type=submit]{width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:33px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;cursor:pointer;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 #form-forgot-password input[type=submit]:hover{background:#fde052;color:#393939;}
 .btns-reset{clear:both;padding-bottom:20px;}
@@ -806,10 +806,10 @@ input, textarea, select {-webkit-appearance: none;}
 .helper_bottom{display: inline-block;height:100%;vertical-align:bottom;}
 
 /*Propiedades Placeholder*/
-#form-login input[type=text]::-webkit-input-placeholder,#form-login input[type=password]::-webkit-input-placeholder{color:#5e5e5e !important;opacity: 1 !important;}
-#form-login input[type=text]:-moz-placeholder,#form-login input[type=password]:-moz-placeholder{color:#5e5e5e !important;opacity: 1 !important;}
-#form-login input[type=text]::-moz-placeholder,#form-login input[type=password]::-moz-placeholder{color:#5e5e5e !important;opacity: 1 !important;}
-#form-login input[type=text]:-ms-input-placeholder#form-login input[type=password]:-ms-input-placeholder{color:#5e5e5e !important;opacity: 1 !important;}
+#form-login input[type=text]::-webkit-input-placeholder,#form-login input[type=password]::-webkit-input-placeholder{color:#c6c6c6 !important;opacity: 1 !important;}
+#form-login input[type=text]:-moz-placeholder,#form-login input[type=password]:-moz-placeholder{color:#c6c6c6 !important;opacity: 1 !important;}
+#form-login input[type=text]::-moz-placeholder,#form-login input[type=password]::-moz-placeholder{color:#c6c6c6 !important;opacity: 1 !important;}
+#form-login input[type=text]:-ms-input-placeholder#form-login input[type=password]:-ms-input-placeholder{color:#c6c6c6 !important;opacity: 1 !important;}
 
 
 
