@@ -11,6 +11,7 @@ VARIABLES
 **********************/
 var slider_l_post;
 var max_items=8;
+var init_items=8;
 var filter_segmento=-1;
 var filter_type1=-1;
 var filter_type2=-1;
@@ -73,7 +74,7 @@ jQuery(window).load(function(){
 		//Mostramos los 8 primeros
 		var cont=0;
 		jQuery('#list-news a.new-single').each(function() {
-			if(cont<max_items){
+			if(cont<init_items){
 				jQuery(this).addClass('visible').css('display','block');
 				cont++;
 			}else{
@@ -428,8 +429,12 @@ jQuery(document).ready(function(){
 	});
 
 	//Mostramos las primeras noticias visibles
-	/*if (jQuery('#list-news').is(":visible") ) {
-		var cont=0;
+	if (jQuery('#list-news').is(":visible") ) {
+		if(w_win<1921){max_items=6;init_items=12;}
+		if(w_win<1441){max_items=4;init_items=8;}
+		if(w_win<1024){max_items=3;init_items=6;}
+		if(w_win<768){max_items=2;init_items=6;}
+		/*var cont=0;
 		jQuery('#list-news a.new-single').each(function() {
 			if(cont<max_items){
 				jQuery(this).addClass('visible').css('display','block');
@@ -437,8 +442,8 @@ jQuery(document).ready(function(){
 			}else{
 				return true;
 			}
-		});
-	}*/
+		});*/
+	}
 
 	//Mostrar más noticias
 	jQuery(document).on('click','.btn-more',function(e){
