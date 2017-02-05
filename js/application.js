@@ -430,10 +430,10 @@ jQuery(document).ready(function(){
 
 	//Mostramos las primeras noticias visibles
 	if (jQuery('#list-news').is(":visible") ) {
-		if(w_win<1921){max_items=6;init_items=12;}
-		if(w_win<1441){max_items=4;init_items=8;}
-		if(w_win<1024){max_items=3;init_items=6;}
-		if(w_win<768){max_items=2;init_items=6;}
+		if(w_win<1921){max_items=12;init_items=12;}
+		if(w_win<1441){max_items=8;init_items=8;}
+		if(w_win<1024){max_items=6;init_items=6;}
+		if(w_win<768){max_items=4;init_items=6;}
 		/*var cont=0;
 		jQuery('#list-news a.new-single').each(function() {
 			if(cont<max_items){
