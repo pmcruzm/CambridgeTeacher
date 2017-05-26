@@ -758,6 +758,7 @@ jQuery(document).ready(function(){
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
+						jQuery(this).parent().find('span.featured').css({marginTop:(-alto_img/2)+14}).show();
 					}
 					//Miramos cover check
 					if(jQuery(this).parents('.single-box-book').hasClass('check')){
@@ -907,6 +908,7 @@ function filter_catalogo(segmento,type1,type2){
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
+						jQuery(this).parent().find('span.featured').css({marginTop:(-alto_img/2)+14}).show();
 					}
 					//Miramos cover check
 					if(jQuery(this).parents('.single-box-book').hasClass('check')){
@@ -974,6 +976,7 @@ function filter_catalogo(segmento,type1,type2){
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
+						jQuery(this).parent().find('span.featured').css({marginTop:(-alto_img/2)+14}).show();
 					}
 					//Miramos cover check
 					if(jQuery(this).parents('.single-box-book').hasClass('check')){
@@ -1032,6 +1035,7 @@ function filter_catalogo(segmento,type1,type2){
 					if(jQuery(this).parent().find('span').length>0){
 						var alto_img=jQuery(this).height();
 						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
+						jQuery(this).parent().find('span.featured').css({marginTop:(-alto_img/2)+14}).show();
 					}
 					//Miramos cover check
 					if(jQuery(this).parents('.single-box-book').hasClass('check')){
