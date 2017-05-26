@@ -212,10 +212,11 @@ PROPIEDADES MI COLECCION
 .carrusel-list{height:200px;}
 .carrusel-list .item{height:200px;position:relative;}
 .carrusel-list .item img{height:200px;padding-right:8px;}
-.carrusel-list .item span.sample{position:absolute;bottom:0;left:0;z-index:50;display:block;background:url(../img/sample-diagonal.png) top left no-repeat;width:55px;height:55px;background-size:55px;text-indent:-99999px;}
+.carrusel-list .item span.sample{position:absolute;bottom:0;left:0;z-index:50;display:block;background:url(../img/sample_diagonal.gif) top left no-repeat;width:55px;height:55px;background-size:55px;text-indent:-99999px;}
 .carrusel-list .item .minus-book{right:15px;display:block;}
 .carrusel-list .item>a:not(.minus-book):before{display:block;width:calc(100% - 8px);box-sizing:border-box;height:200px;background:rgba(46, 46, 46, 0.5);content:'';opacity:0;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;position:absolute;top:0;}
 .carrusel-list .item.over-item>a:not(.minus-book):before{opacity:1;}
+.featured{position:absolute;top:0;left:0;z-index:50;display:block;background:url(../img/new.gif) top left no-repeat;width:50px;height:50px;background-size:50px;text-indent:-99999px;}
 
 .slick-arrow{position:absolute;top:0;z-index:100;top:50%;margin-top:-18px;visibility:hidden;}
 .slick-next{right:10px;background-image:url(../img/arrow_right.png);background-position:0px 0px;background-repeat:no-repeat;width:36px;height:36px;display:block;background-size:36px;text-indent:-99999px;border:none;-webkit-appearance:none;background-color:transparent;cursor:pointer;}
@@ -301,6 +302,8 @@ PROPIEDADES CATALOGO
 .content-catalogo .single-box-book .inside-b-book img{max-width:96%;vertical-align:middle;max-height:100%;box-shadow:0px 10px 18px 0px rgba(0, 0, 0, 0.2);}
 .content-catalogo .single-box-book .inside-b-book .enl-book{overflow:hidden;position:relative;display:inline;}
 .content-catalogo .single-box-book .inside-b-book .enl-book span{position:absolute;bottom:0;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;display:none;z-index:10;}
+.content-catalogo .single-box-book .inside-b-book .enl-book span.featured{background:url(../img/new.gif) top left no-repeat;width:50px;height:50px;background-size:50px;left:0;}
+.content-catalogo .single-box-book .inside-b-book .enl-book span.featured.cover{left:2px;}
 
 .plus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-plus-cat.png) 0px 0px no-repeat;width:21px;height:21px;text-indent:-99999px;background-size:21px;display:none;}
 .minus-book{position:absolute;top:10px;right:10px;background:url(../img/ico-delete.png) 0px 0px no-repeat;width:21px;height:21px;text-indent:-99999px;background-size:21px;display:none;}
@@ -489,6 +492,7 @@ PROPIEDADES DETALLE
 .cover-detalle{display:inline-block;position:relative;bottom:-55px;position:absolute;z-index:20;}
 .cover-detalle img{box-shadow:0px 10px 18px 0px rgba(0, 0, 0, 0.2);max-height:200px;max-width:200px;}
 .cover-detalle span{position:absolute;left:0;display:block;background:url(../img/ico-sample.png) top left no-repeat;width:39px;height:39px;background-size:39px;text-indent:-99999px;left:-19px;bottom:0;}
+.cover-detalle span.featured{background:url(../img/new.gif) top left no-repeat;width:50px;height:50px;background-size:50px;left:0;}
 
 #block-detalle{background:#f5f0eb;position:relative;padding-bottom:100px;}
 .enl-volver{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;position:absolute;top:100px;left:55px;z-index:50;}
