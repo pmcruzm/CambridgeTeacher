@@ -533,11 +533,11 @@ PROPIEDADES DETALLE
 .single-tab:first-child{padding-left:0;}
 .single-tab:last-child{padding-right:0;}
 .single-tab a{color:#7d7974;display:block;width:100%;background:#faf8f5;font-size:11px;font-family:'sofia-pro-black', Helvetica, sans-serif;vertical-align:bottom;line-height:13px;height:132px;padding-top:14px;box-sizing:border-box;padding-left:10px;padding-right:10px;}
-.single-tab a:before{content:'';display:block;width:100px;height:80px;background-image:url(../svg/sprite_tabs-01.svg);background-repeat:no-repeat;background-size:200px;margin:0 auto;}
+.single-tab a:before{content:'';display:block;width:100px;height:80px;background-image:url(../svg/sprite_tabs-02.svg);background-repeat:no-repeat;background-size:200px;margin:0 auto;}
 .single-tab a.tab-1:before{background-position:0px 0px;}
 .single-tab a.tab-2:before{background-position:0px -80px;}
 .single-tab a.tab-3:before{background-position:0px -160px;}
-.single-tab a.tab-7:before{background-position:0px -160px;}
+.single-tab a.tab-7:before{background-position:0px -480px;}
 .single-tab a.tab-4:before{background-position:0px -240px;}
 .single-tab a.tab-5:before{background-position:0px -320px;}
 .single-tab a.tab-6:before{background-position:0px -400px;}
@@ -548,7 +548,7 @@ PROPIEDADES DETALLE
 .single-tab a.tab-1:hover:before,.single-tab a.tab-1.active:before{background-position:-100px 0px;}
 .single-tab a.tab-2:hover:before,.single-tab a.tab-2.active:before{background-position:-100px -80px;}
 .single-tab a.tab-3:hover:before,.single-tab a.tab-3.active:before{background-position:-100px -160px;}
-.single-tab a.tab-7:hover:before,.single-tab a.tab-7.active:before{background-position:-100px -160px;}
+.single-tab a.tab-7:hover:before,.single-tab a.tab-7.active:before{background-position:-100px -480px;}
 .single-tab a.tab-4:hover:before,.single-tab a.tab-4.active:before{background-position:-100px -240px;}
 .single-tab a.tab-5:hover:before,.single-tab a.tab-5.active:before{background-position:-100px -320px;}
 .single-tab a.tab-6:hover:before,.single-tab a.tab-6.active:before{background-position:-100px -400px;}
@@ -875,7 +875,7 @@ MEDIA QUERIES
 	.single-tab a.tab-1:before{background-position:0px 5px;}
 	.single-tab a.tab-2:before{background-position:0px -56px;}
 	.single-tab a.tab-3:before{background-position:0px -114px;}
-	.single-tab a.tab-7:before{background-position:0px -114px;}
+	.single-tab a.tab-7:before{background-position:0px -352px;}
 	.single-tab a.tab-4:before{background-position:0px -171px;}
 	.single-tab a.tab-5:before{background-position:0px -231px;}
 	.single-tab a.tab-6:before{background-position:0px -296px;}
@@ -885,7 +885,7 @@ MEDIA QUERIES
 	.single-tab a.tab-1:hover:before,.single-tab a.tab-1.active:before{background-position:-75px 5px;}
 	.single-tab a.tab-2:hover:before,.single-tab a.tab-2.active:before{background-position:-75px -56px;}
 	.single-tab a.tab-3:hover:before,.single-tab a.tab-3.active:before{background-position:-75px -114px;}
-	.single-tab a.tab-7:hover:before,.single-tab a.tab-7.active:before{background-position:-75px -114px;}
+	.single-tab a.tab-7:hover:before,.single-tab a.tab-7.active:before{background-position:-75px -352px;}
 	.single-tab a.tab-4:hover:before,.single-tab a.tab-4.active:before{background-position:-75px -171px;}
 	.single-tab a.tab-5:hover:before,.single-tab a.tab-5.active:before{background-position:-75px -231px;}
 	.single-tab a.tab-6:hover:before,.single-tab a.tab-6.active:before{background-position:-75px -296px;}
