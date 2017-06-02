@@ -537,10 +537,10 @@ PROPIEDADES DETALLE
 .single-tab a.tab-1:before{background-position:0px 0px;}
 .single-tab a.tab-2:before{background-position:0px -80px;}
 .single-tab a.tab-3:before{background-position:0px -160px;}
-.single-tab a.tab-4:before{background-position:0px -160px;}
-.single-tab a.tab-5:before{background-position:0px -240px;}
-.single-tab a.tab-6:before{background-position:0px -320px;}
-.single-tab a.tab-7:before{background-position:0px -400px;}
+.single-tab a.tab-7:before{background-position:0px -160px;}
+.single-tab a.tab-4:before{background-position:0px -240px;}
+.single-tab a.tab-5:before{background-position:0px -320px;}
+.single-tab a.tab-6:before{background-position:0px -400px;}
 
 .single-tab a.active{color:#2e2e2e;background:#ffffff;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .single-tab a:hover{color:#2e2e2e;background:#ffffff;}
@@ -548,17 +548,17 @@ PROPIEDADES DETALLE
 .single-tab a.tab-1:hover:before,.single-tab a.tab-1.active:before{background-position:-100px 0px;}
 .single-tab a.tab-2:hover:before,.single-tab a.tab-2.active:before{background-position:-100px -80px;}
 .single-tab a.tab-3:hover:before,.single-tab a.tab-3.active:before{background-position:-100px -160px;}
-.single-tab a.tab-3:hover:before,.single-tab a.tab-4.active:before{background-position:-100px -160px;}
-.single-tab a.tab-4:hover:before,.single-tab a.tab-5.active:before{background-position:-100px -240px;}
-.single-tab a.tab-5:hover:before,.single-tab a.tab-6.active:before{background-position:-100px -320px;}
-.single-tab a.tab-6:hover:before,.single-tab a.tab-7.active:before{background-position:-100px -400px;}
+.single-tab a.tab-7:hover:before,.single-tab a.tab-7.active:before{background-position:-100px -160px;}
+.single-tab a.tab-4:hover:before,.single-tab a.tab-4.active:before{background-position:-100px -240px;}
+.single-tab a.tab-5:hover:before,.single-tab a.tab-5.active:before{background-position:-100px -320px;}
+.single-tab a.tab-6:hover:before,.single-tab a.tab-6.active:before{background-position:-100px -400px;}
 
 .cont-tabs{background:#ffffff;}
-.box-type-1,.box-type-2,.box-type-3,.box-type-4,.box-type-5,.box-type-6{box-sizing:border-box;width:100%;padding:42px;padding-bottom:100px;}
-.box-type-1 h5,.box-type-2 h5,.box-type-3 h5,.box-type-4 h5,.box-type-5 h5,.box-type-6 h5{font-size:24px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
-.box-type-1 ul,.box-type-2 ul,.box-type-3 ul,.box-type-4 ul,.box-type-5 ul,.box-type-6 ul{padding-top:45px;}
-.box-type-1 ul li,.box-type-2 ul li,.box-type-3 ul li,.box-type-4 ul li,.box-type-5 ul li,.box-type-6 ul li{margin-bottom:20px;}
-.box-type-1 ul li a,.box-type-2 ul li a,.box-type-3 ul li a,.box-type-4 ul li a,.box-type-5 ul li a,.box-type-6 ul li a{font-size:16px;color:#2e2e2e;}
+.box-type-1,.box-type-2,.box-type-3,.box-type-4,.box-type-5,.box-type-6,.box-type-7{box-sizing:border-box;width:100%;padding:42px;padding-bottom:100px;}
+.box-type-1 h5,.box-type-2 h5,.box-type-3 h5,.box-type-4 h5,.box-type-5 h5,.box-type-6 h5,.box-type-7 h5{font-size:24px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#2e2e2e;}
+.box-type-1 ul,.box-type-2 ul,.box-type-3 ul,.box-type-4 ul,.box-type-5 ul,.box-type-6 ul,.box-type-7 ul{padding-top:45px;}
+.box-type-1 ul li,.box-type-2 ul li,.box-type-3 ul li,.box-type-4 ul li,.box-type-5 ul li,.box-type-6 ul li,.box-type-7 ul li{margin-bottom:20px;}
+.box-type-1 ul li a,.box-type-2 ul li a,.box-type-3 ul li a,.box-type-4 ul li a,.box-type-5 ul li a,.box-type-6 ul li a,.box-type-7 ul li a{font-size:16px;color:#2e2e2e;}
 
 .type-pdf:before{content:'';display:inline-block;width:24px;height:24px;background:url(../svg/fileformats_icon_sprite.svg) 0px -24px no-repeat;background-size:48px;margin-right:15px;position:relative;top:6px;}
 .type-pdf:hover:before{background-position:-24px -24px;}
@@ -872,23 +872,23 @@ MEDIA QUERIES
 	.single-tab a{padding-left:6px;padding-right:6px;padding-top:10px;height:125px;}
 	.single-tab{height:125px;}
 	.single-tab a:before{content:'';display:block;width:70px;height:70px;background-size:150px;}
-	.single-tab a.tab-1:before{background-position:0px -7px;}
+	.single-tab a.tab-1:before{background-position:0px 5px;}
 	.single-tab a.tab-2:before{background-position:0px -56px;}
 	.single-tab a.tab-3:before{background-position:0px -114px;}
-	.single-tab a.tab-4:before{background-position:0px -114px;}
-	.single-tab a.tab-5:before{background-position:0px -171px;}
-	.single-tab a.tab-6:before{background-position:0px -231px;}
-	.single-tab a.tab-7:before{background-position:0px -296px;}
+	.single-tab a.tab-7:before{background-position:0px -114px;}
+	.single-tab a.tab-4:before{background-position:0px -171px;}
+	.single-tab a.tab-5:before{background-position:0px -231px;}
+	.single-tab a.tab-6:before{background-position:0px -296px;}
 	
-	.single-tab a.tab-7{word-break:break-all;}
+	.single-tab a.tab-6{word-break:break-all;}
 	
 	.single-tab a.tab-1:hover:before,.single-tab a.tab-1.active:before{background-position:-75px 5px;}
 	.single-tab a.tab-2:hover:before,.single-tab a.tab-2.active:before{background-position:-75px -56px;}
 	.single-tab a.tab-3:hover:before,.single-tab a.tab-3.active:before{background-position:-75px -114px;}
-	.single-tab a.tab-4:hover:before,.single-tab a.tab-4.active:before{background-position:-75px -114px;}
-	.single-tab a.tab-5:hover:before,.single-tab a.tab-5.active:before{background-position:-75px -171px;}
-	.single-tab a.tab-6:hover:before,.single-tab a.tab-6.active:before{background-position:-75px -231px;}
-	.single-tab a.tab-7:hover:before,.single-tab a.tab-7.active:before{background-position:-75px -296px;}
+	.single-tab a.tab-7:hover:before,.single-tab a.tab-7.active:before{background-position:-75px -114px;}
+	.single-tab a.tab-4:hover:before,.single-tab a.tab-4.active:before{background-position:-75px -171px;}
+	.single-tab a.tab-5:hover:before,.single-tab a.tab-5.active:before{background-position:-75px -231px;}
+	.single-tab a.tab-6:hover:before,.single-tab a.tab-6.active:before{background-position:-75px -296px;}
 }
 
 
