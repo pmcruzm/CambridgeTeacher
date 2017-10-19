@@ -504,10 +504,10 @@ PROPIEDADES DETALLE
 #block-detalle .group-generic .box-generic-detalle:first-child{position:relative;top:-25px;margin-bottom:-25px;}
 
 
-.img-detalles{overflow:hidden;padding-top:15px;}
-.box-sup-det{display:block;padding-left:10px;margin-bottom:15px;width:50%;float:left;text-align:center;box-sizing:border-box;max-width:288px;}
-.box-sup-det:first-child{padding-left:0;}
+.img-detalles{overflow:hidden;padding-top:15px;display:flex;flex-wrap:wrap;}
+.box-sup-det{display:block;padding:0 5px;margin-bottom:15px;width:50%;float:left;text-align:center;box-sizing:border-box;max-width:288px;}
 .box-sup-det h4{color:#2e2e2e;font-size:16px;}
+.box-sup-det h4 + p{margin-top:-5px;}
 .box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;line-height:30px;min-width:90px;text-align:center;border-radius:20px;padding:0 15px;margin:8px;position:relative;font-size:14px;-webkit-appearance:none;border:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;cursor: pointer;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .box-sup-det .btn-det:hover{background:#2e2e2e;color:#fde052;}
 .img-detalles{padding-bottom:50px;overflow:hidden;/*max-width:575px;*/width:100%;}
@@ -879,9 +879,9 @@ MEDIA QUERIES
 	.single-tab a.tab-4:before{background-position:0px -171px;}
 	.single-tab a.tab-5:before{background-position:0px -231px;}
 	.single-tab a.tab-6:before{background-position:0px -296px;}
-	
+
 	.single-tab a.tab-6{word-break:break-all;}
-	
+
 	.single-tab a.tab-1:hover:before,.single-tab a.tab-1.active:before{background-position:-75px 5px;}
 	.single-tab a.tab-2:hover:before,.single-tab a.tab-2.active:before{background-position:-75px -56px;}
 	.single-tab a.tab-3:hover:before,.single-tab a.tab-3.active:before{background-position:-75px -114px;}
