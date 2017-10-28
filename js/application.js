@@ -484,21 +484,21 @@ jQuery(document).ready(function(){
 		var f = jQuery(this);
 
 		jQuery.ajax({
-		url: f.attr('action'),
-		method: f.attr('method'),
-		data: f.serialize(),
-		dataType: 'json',
-		success : function(response) {
-			if(response.errorCode == 0){
-				//success message
-				jQuery('.feedback', f).text(response.message).show(400);
-				if(response.redirect){window.top.location = response.redirect;}
-			}else{
-				//some error message
-				jQuery('.feedback', f).text(response.message).show(400);
+			url: f.attr('action'),
+			method: f.attr('method'),
+			data: f.serialize(),
+			dataType: 'json',
+			success : function(response) {
+				if(response.errorCode == 0){
+					//success message
+					jQuery('.feedback', f).text(response.message).show(400);
+					if(response.redirect){window.top.location = response.redirect;}
+				}else{
+					//some error message
+					jQuery('.feedback', f).text(response.message).show(400);
+				}
 			}
-		 }
-	   });
+		});
 
 	});
 
@@ -843,17 +843,17 @@ function ajusta_news(){
 
 //Función para capturar eventos scroll
 function control_scroll(e){
-  //Variable de scroll
-  var scrollAmount = jQuery(window).scrollTop();
-  var h_foot=jQuery('#footer').height();
+	//Variable de scroll
+	var scrollAmount = jQuery(window).scrollTop();
+	var h_foot=jQuery('#footer').height();
 
-  //Obtenemos altura y anchura del navegador
-  h_win=jQuery(window).height();
-  w_win=jQuery(window).width();
+	//Obtenemos altura y anchura del navegador
+	h_win=jQuery(window).height();
+	w_win=jQuery(window).width();
 
-  //Añadir Cookie si se hace scroll a +100px
-  if(scrollAmount>100){
- 		if(jQuery.cookie('cambridge-teacher') != 'acepta'){
+	//Añadir Cookie si se hace scroll a +100px
+	if(scrollAmount>100){
+		if(jQuery.cookie('cambridge-teacher') != 'acepta'){
 			jQuery('.block-cookies').fadeOut(600,function(){
 				//Creamos la cookie de aceptación
 				jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
@@ -1091,22 +1091,18 @@ function showNotification(msg,time){
 }
 
 //Función para el cambio de orientación
-function doOnOrientationChange()
-  {
+function doOnOrientationChange() {
 	switch(window.orientation)
 	{
-	  case -90:
-	  case 90:
-
+		case -90:
+		case 90:
 
 		break;
-	  default:
-
-
+		default:
 
 		break;
 	}
-  }
+}
 
 function validateEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -1114,7 +1110,7 @@ function validateEmail(email) {
 }
 
 function isNumber(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
+	return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 function recaptchaCallback(response) {
@@ -1245,3 +1241,20 @@ var validateForm = {
 	}
 
 }
+
+
+jQuery(function($){
+
+	$('*[data-track-outbound]').on('click', function(e){
+
+		var code = $(this).data('track-outbound');
+
+		if( typeof ga === 'function' ) {
+			ga('send', 'event', 'outbound', 'click', code, {
+				'transport': 'beacon'
+			});
+		}
+
+	});
+
+});
