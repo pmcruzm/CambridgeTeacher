@@ -236,12 +236,21 @@ PROPIEDADES MI COLECCION
 #block-coleccion .enl-explorar:before{content:'';display:inline-block;width:21px;height:21px;background-image:url(../img/ico-explorar.png);background-size:21px;margin-right:10px;background-repeat:no-repeat;background-position:0px 0px;position:relative;top:5px;}
 #block-coleccion .enl-explorar:hover:before{background-position:0px -21px;}
 #block-coleccion .mod-catalogo{position:absolute;bottom:0;box-sizing:border-box;border:3px solid #323232;display:block;width:114px;background:#464646;left:50%;}
+
 #block-coleccion .enl-infantil{height:145px;margin-left:-446px;}
 #block-coleccion .enl-primaria{height:161px;margin-left:-290px;}
 #block-coleccion .enl-secundaria{height:154px;margin-left:-133px;}
 #block-coleccion .enl-bachillerato{height:144px;margin-left:24px;}
 #block-coleccion .enl-examenes{height:161px;margin-left:180px;}
 #block-coleccion .enl-adultos{height:144px;margin-left:336px;}
+
+#block-coleccion.block-coleccion-pt .container{background-image:url(../img/bg-catalogo-sup-pt.png);}
+#block-coleccion.block-coleccion-pt .enl-infantil{margin-left:-368px;}
+#block-coleccion.block-coleccion-pt .enl-primaria{margin-left:-212px;}
+#block-coleccion.block-coleccion-pt .enl-secundaria{margin-left:-53px;}
+#block-coleccion.block-coleccion-pt .enl-examenes{margin-left:101px;}
+#block-coleccion.block-coleccion-pt .enl-adultos{margin-left:256px;}
+
 #block-coleccion .mod-catalogo span{display:block;font-size:13px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;position:absolute;text-align:center;width:100%;bottom:50px;}
 #block-coleccion .mod-catalogo span:before{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-bottom:5px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 #block-coleccion .mod-catalogo span:after{content:'';display:block;background:#363636;width:80px;height:3px;margin:0 auto;margin-top:5px;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
@@ -942,6 +951,13 @@ MEDIA QUERIES
 	#block-coleccion .enl-bachillerato{height:109px;margin-left:11px;}
 	#block-coleccion .enl-examenes{height:122px;margin-left:127px;}
 	#block-coleccion .enl-adultos{height:109px;margin-left:242px;}
+
+	#block-coleccion.block-coleccion-pt .enl-infantil{margin-left:-278px;}
+	#block-coleccion.block-coleccion-pt .enl-primaria{margin-left:-163px;}
+	#block-coleccion.block-coleccion-pt .enl-secundaria{margin-left:-46px;}
+	#block-coleccion.block-coleccion-pt .enl-examenes{margin-left:69px;}
+	#block-coleccion.block-coleccion-pt .enl-adultos{margin-left:184px;}
+
 	#block-coleccion .mod-catalogo span:before{width:60px;margin:0 auto 2px;height:2px;}
 	#block-coleccion .mod-catalogo span:after{width:60px;margin:0 auto 2px;height:2px;}
 	#block-coleccion .mod-catalogo span{font-size:10px;bottom:30px;}
