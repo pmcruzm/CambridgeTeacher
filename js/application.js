@@ -1169,6 +1169,8 @@ var validateForm = {
 		if( 'recaptcha' == rule ) {error = ! this.ruleValidRecaptcha(elem);}
 		if( 'not-empty' == rule ) {error = ! this.ruleValidNotEmpty(elem);}
 		if( 'zip' == rule ) {error = ! this.ruleValidZip(elem);}
+		if( 'zip-es' == rule ) {error = ! this.ruleValidZipSpain(elem);}
+		if( 'zip-pt' == rule ) {error = ! this.ruleValidZipPortugal(elem);}
 		if( 'select-option' == rule ) {error = ! this.ruleValidSelectOption(elem);}
 		if( 'multi-checkbox' == rule ) {error = ! this.ruleMultiCheckbox(elem);}
 		if( 'min' == rule ) {error = ! this.ruleMinimumChars(elem, parseInt(params[0]));}
@@ -1226,6 +1228,14 @@ var validateForm = {
 
 	ruleValidZip: function(e) {
 		return e.val().length == 5;
+	},
+
+	ruleValidZipSpain: function(e) {
+		return e.val().length == 5;
+	},
+
+	ruleValidZipPortugal: function(e) {
+		return e.val().length == 4;
 	},
 
 	ruleValidSelectOption: function(e) {
