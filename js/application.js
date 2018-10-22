@@ -867,19 +867,6 @@ function control_scroll(e){
 	//Obtenemos altura y anchura del navegador
 	h_win=jQuery(window).height();
 	w_win=jQuery(window).width();
-
-	//Añadir Cookie si se hace scroll a +100px
-	if(scrollAmount>100){
-		if(jQuery.cookie('cambridge-teacher') != 'acepta'){
-			jQuery('.block-cookies').fadeOut(600,function(){
-				//Creamos la cookie de aceptación
-				jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
-
-				loadAnalytics();
-			});
-		}
-  }
-
 }
 
 //Funcion para mostrar los elementos filtrados
