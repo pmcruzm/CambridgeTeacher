@@ -705,9 +705,33 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		jQuery('.modal').fadeOut(400);
 	});
+	
+	//Miramos si la cookie de aceptación está creada
+	__cmp('getGooglePersonalization', function(consent, isSuccess) {
+	
+	// do we have a cookie? 
+	if(!isSuccess) 
+	 return;
+	
+	// check for given consent
+	if(consent.googlePersonalizationData.consentValue) {
+	  //
+	  // You have consent from the user: 
+	  // add your code here to call google’s admanager or adsense
+	  //
+	  loadAnalytics();
+	} else {
+	  // 
+	  // No consent for personalized ads from the user:
+	  // either no call to google’s admanger / adsense or
+	  // call admanager and adsense using the appropriate 
+	  // method to set ‘requestNonPersonalizedAds’ accordingly.
+	  //
+	}
+	});
 
 	//Miramos si la cookie de aceptación está creada
-	if(jQuery.cookie('cambridge-teacher') == 'acepta'){
+	/*if(jQuery.cookie('cambridge-teacher') == 'acepta'){
 		//Ocultamos info cookies
 		jQuery('.block-cookies').hide();
 		loadAnalytics();
@@ -730,7 +754,7 @@ jQuery(document).ready(function(){
 
 			loadAnalytics();
 		});
-	});
+	});*/
 
 	jQuery(window).scroll(control_scroll);
 

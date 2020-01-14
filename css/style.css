@@ -665,6 +665,28 @@ PROPIEDADES COOKIES
 .btn-accept{background:#fde052;color:#2e2e2e;height:30px;display:block;-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius:15px;width:140px;margin:0 auto;line-height:30px;text-align:center;margin-top:20px;}
 .btn-accept:hover{color:#2e2e2e;}
 
+.qc-cmp-button.qc-cmp-secondary-button { border-color: #eee !important;background-color: #eee !important;}
+.qc-cmp-persistent-link{background-color:rgba(255, 255, 255,0.95) !important;color:#fde052 !important;}
+.qc-cmp-ui{background-color: rgba(255, 255, 255,0.95) !important;}
+.qc-cmp-main-messaging,.qc-cmp-messaging,.qc-cmp-sub-title,.qc-cmp-privacy-settings-title,.qc-cmp-purpose-list,.qc-cmp-tab,.qc-cmp-title,.qc-cmp-vendor-list,.qc-cmp-vendor-list-title {color: #fde052 !important;}
+.qc-cmp-table-header{/*color: #ff5c48 !important;*/}
+.qc-cmp-table{/*color: #ff5c48 !important;*/}
+.qc-cmp-alt-action,.qc-cmp-link {/*color: #ff5c48 !important;*/}
+.qc-cmp-alt-action:hover,.qc-cmp-link:hover {/*color: #ff5c48 !important;*/}
+.qc-cmp-button,.qc-cmp-button.qc-cmp-secondary-button:hover {background-color: #fde052 !important;border-color: #fde052 !important;color:rgba(255, 255, 255,0.95) !important;}
+.qc-cmp-button:hover,.qc-cmp-button.qc-cmp-secondary-button {background-color: transparent !important; border-color: #fde052 !important;color:#fde052 !important;}
+.qc-cmp-horizontal-buttons .qc-cmp-secondary-button{display:none !important;}
+.qc-cmp-alt-action, .qc-cmp-alt-action:not([href]):not([tabindex]){color:#fde052 !important;}
+.qc-cmp-table-header{color:#fde052 !important;}
+.qc-cmp-table{color:#fde052 !important;border:1px solid #fde052 !important;}
+.qc-cmp-table-row:last-child{border:1px solid #fde052 !important;}
+.qc-cmp-toggle-status{color:#fde052 !important;}
+.qc-cmp-table-row{border-top:1px solid #fde052 !important;}
+.qc-cmp-back::before{background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23fde052' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 5l6 6 6-6'/%3E%3C/svg%3E") 50% no-repeat !important;}
+.qc-cmp-arrow-down{background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23fde052' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 5l6 6 6-6'/%3E%3C/svg%3E") 50% no-repeat !important;}
+.qc-cmp-persistent-link svg g{fill:#fde052 !important;}
+.qc-cmp-close-icon{background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M.5.5l23 23m0-23l-23 23' fill='none' stroke='%23fde052' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3C/svg%3E") 50% no-repeat !important;}
+
 /*****************************
 PROPIEDADES FOOTER
 ******************************/
