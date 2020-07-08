@@ -340,6 +340,7 @@ PROPIEDADES CATALOGO
 .modal .modal-inner h3{color:#ffffff;font-size:40px;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:40px;margin-bottom:40px;}
 .modal .modal-inner p{color:#2e2e2e;font-size:16px;margin-bottom:20px;}
 .modal .modal-inner p a{text-decoration:underline;color:#ffffff;}
+.modal .modal-inner .buttons > * {margin-top:10px;}
 #form-mastercode{}
 #form-mastercode label{display:none;}
 #form-mastercode input[type=text]{width:280px;box-sizing:border-box;border:solid 3px #ffffff;background:none;height:35px;line-height:35px;color:#2e2e2e;font-size:20px;padding-right:10px;padding-left:10px;}

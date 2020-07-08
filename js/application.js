@@ -662,21 +662,7 @@ jQuery(document).ready(function(){
 		var h_content=jQuery('#content').outerHeight();
 		var modalTarget=jQuery(this).data('modal-target');
 		jQuery(modalTarget).height(h_content);
-		jQuery(modalTarget).fadeIn(400);
-	});
-
-	//La modal de descarga
-	jQuery(document).on('click','*[data-modal-target="#modal-download"]',function(e){
-		var modal = jQuery('#modal-download.modal');
-		var tag   = jQuery(this).data('tag');
-		var href  = jQuery(this).attr('href');
-		jQuery('.download-tag', modal).text(tag);
-		jQuery('.btn-primary', modal).attr('href',href);
-	});
-
-	//Cerramos la modal al clickar en la descarga
-	jQuery(document).on('click','#modal-download .btn-primary',function(e){
-		jQuery(this).closest('.modal').find('.close-modal').trigger('click');
+		jQuery(modalTarget).fadeIn(150);
 	});
 
 	//Enviar formulario de mastercode
@@ -709,7 +695,7 @@ jQuery(document).ready(function(){
 	//Cerrar modal
 	jQuery(document).on("click",".close-modal", function(e) {
 		e.preventDefault();
-		jQuery('.modal').fadeOut(400);
+		jQuery('.modal').fadeOut(150);
 	});
 
 	//Miramos si la cookie de aceptación está creada
@@ -724,13 +710,13 @@ jQuery(document).ready(function(){
 	//Cerrar cuadro info cookies
 	jQuery(document).on('click','.close_c',function(event){
 		event.preventDefault();
-		jQuery('.block-cookies').fadeOut(600);
+		jQuery('.block-cookies').fadeOut(150);
 	});
 
 	//Aceptar cookies en el cuadro
 	jQuery(document).on('click','.btn-accept',function(e){
 		e.preventDefault();
-		jQuery('.block-cookies').fadeOut(600,function(){
+		jQuery('.block-cookies').fadeOut(150,function(){
 			//Creamos la cookie de aceptación
 			jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
 
