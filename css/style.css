@@ -510,7 +510,7 @@ PROPIEDADES DETALLE
 .enl-volver:hover:before{background-position:0px -21px;}
 
 .box-generic-detalle{padding-left:266px;padding-right:15px;box-sizing:border-box;}
-.content-detalle{background:#ffffff;padding-left:42px;padding-right:42px;padding-top:25px;margin-bottom:12px;padding-top:40px;}
+.content-detalle{background:#ffffff;padding-left:42px;padding-right:42px;padding-top:25px;margin-bottom:12px;padding-top:40px;padding-bottom:50px;}
 #block-detalle .group-generic .box-generic-detalle:first-child{position:relative;top:-25px;margin-bottom:-25px;}
 
 
@@ -520,7 +520,7 @@ PROPIEDADES DETALLE
 .box-sup-det h4 + p{margin-top:-5px;}
 .box-sup-det .btn-det{display:inline-block;background:#fde052;color:#2e2e2e;line-height:30px;min-width:90px;text-align:center;border-radius:20px;padding:0 15px;margin:8px;position:relative;font-size:14px;-webkit-appearance:none;border:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;cursor: pointer;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .box-sup-det .btn-det:hover{background:#2e2e2e;color:#fde052;}
-.img-detalles{padding-bottom:50px;overflow:hidden;/*max-width:575px;*/width:100%;}
+.img-detalles{overflow:hidden;/*max-width:575px;*/width:100%;}
 .img-detalles img{max-height:132px;max-width:100%;box-shadow:0px 10px 18px 0px rgba(0, 0, 0, 0.2);}
 .box-img-det{box-sizing:border-box;padding:10px;margin-bottom:15px;}
 
@@ -531,6 +531,29 @@ PROPIEDADES DETALLE
 
 
 .content-detalle h4{color:#2e2e2e;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:24px;margin-bottom: 10px;}
+.content-wysiwyg h4{margin-bottom: 30px;}
+.content-wysiwyg p{margin-bottom: 1.3em;}
+.content-wysiwyg ol{list-style:decimal; padding-left:3em;}
+.content-wysiwyg ol li{margin-bottom:2em;}
+.content-wysiwyg .btn{
+    display: inline-block;
+    background: #fde052;
+    color: #2e2e2e;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 0 15px;
+    margin: 8px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    border: 0;
+    font-family: 'sofia-pro-regular', Helvetica, sans-serif;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+.content-wysiwyg .btn:hover{background:#2e2e2e;color:#fde052;}
+
+
 .list-digitales{padding-bottom:40px;padding-top:30px;}
 .list-digitales li{margin-bottom:20px;}
 .list-digitales li a{color:#2e2e2e;font-size:16px;}
