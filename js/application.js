@@ -670,18 +670,18 @@ jQuery(document).ready(function(){
 				method: me.data('method') ? me.data('method') : 'GET',
 				success : function(response) {
 					if(typeof response == 'object' && response.redirectTo) {
-						console.log(response)
+						// console.log(response)
 						window.location.href=response.redirectTo;
 						return;
 					}
 
 					if(typeof response == 'string') {
-						console.log(response)
+						// console.log(response)
 						modal.find('.modal-content').html(response);
 						modal.height(h_content);
 						modal.fadeIn(150);
 					}
-					console.log(typeof response)
+					// console.log(typeof response)
 				}
 			});
 		} else {
