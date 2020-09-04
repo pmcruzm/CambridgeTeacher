@@ -659,10 +659,35 @@ jQuery(document).ready(function(){
 	//Cuando queremos desplegar modal
 	jQuery(document).on('click','*[data-modal-target]',function(e){
 		e.preventDefault();
+		var me = jQuery(this);
 		var h_content=jQuery('#content').outerHeight();
-		var modalTarget=jQuery(this).data('modal-target');
-		jQuery(modalTarget).height(h_content);
-		jQuery(modalTarget).fadeIn(150);
+		var modalTarget=me.data('modal-target');
+		var modal=jQuery(modalTarget);
+
+		if( me.data('modal-action') ) {
+			jQuery.ajax({
+				url: me.data('modal-action'),
+				method: me.data('method') ? me.data('method') : 'GET',
+				success : function(response) {
+					if(typeof response == 'object' && response.redirectTo) {
+						console.log(response)
+						window.location.href=response.redirectTo;
+						return;
+					}
+
+					if(typeof response == 'string') {
+						console.log(response)
+						modal.find('.modal-content').html(response);
+						modal.height(h_content);
+						modal.fadeIn(150);
+					}
+					console.log(typeof response)
+				}
+			});
+		} else {
+			modal.height(h_content);
+			modal.fadeIn(150);
+		}
 	});
 
 	//Enviar formulario de mastercode

@@ -335,11 +335,14 @@ PROPIEDADES CATALOGO
 .emb-ondas{display:block;position:absolute;width:45px;height:7px;background:url(../img/emb-ondas.png) top left no-repeat;background-size:45px;z-index:50;top:19px;right:40px;}
 .emb-asteriscos{display:block;position:absolute;width:66px;height:10px;background:url(../img/emb-aster.png) top left no-repeat;background-size:66px;z-index:50;top:50px;left:60px;}
 
-.modal{display:none;background:rgba(0,0,0,0.5);position:absolute;top:0;width:100%;z-index:80;height:1000px;}
+.modal{display:none;background:rgba(0,0,0,0.5);position:fixed;top:0;width:100%;z-index:80;height:1000px;}
 .modal .modal-inner{width:480px;box-sizing:border-box;border:8px solid #ffffff;background:#39c3da;padding:50px;position:absolute;top:110px;left:0;right:0;margin:0 auto;}
 .modal .modal-inner h3{color:#ffffff;font-size:40px;font-family:'sofia-pro-black', Helvetica, sans-serif;line-height:40px;margin-bottom:40px;}
 .modal .modal-inner p{color:#2e2e2e;font-size:16px;margin-bottom:20px;}
-.modal .modal-inner p a{text-decoration:underline;color:#ffffff;}
+.modal .modal-inner a{text-decoration:underline;color:#ffffff;}
+.modal .modal-inner b,.modal .modal-inner strong{font-weight:bold;}
+.modal .modal-inner .btn-primary{text-decoration:none;color:#2e2e2e;}
+.modal .modal-inner .btn-primary:hover{background:#2e2e2e;color:#fde052;}
 .modal .modal-inner .buttons > * {margin-top:10px;}
 #form-mastercode{}
 #form-mastercode label{display:none;}
