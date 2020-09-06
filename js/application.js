@@ -723,6 +723,15 @@ jQuery(document).ready(function(){
 		jQuery('.modal').fadeOut(150);
 	});
 
+	jQuery(document).on('keyup', function(event) {
+		if(event.key == "Escape") {
+			var activeModal = jQuery('.modal:visible');
+			if(activeModal.length) {
+				jQuery(".close-modal", activeModal).trigger('click')
+			}
+		}
+	});
+
 	//Miramos si la cookie de aceptación está creada
 	if(jQuery.cookie('cambridge-teacher') == 'acepta'){
 		//Ocultamos info cookies
