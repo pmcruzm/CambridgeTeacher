@@ -671,7 +671,9 @@ jQuery(document).ready(function(){
 				success : function(response) {
 					if(typeof response == 'object' && response.redirectTo) {
 						// console.log(response)
-						window.location.href=response.redirectTo;
+						// window.location.href=response.redirectTo;
+						var win = window.open(response.redirectTo, '_blank');
+						win.focus();
 						return;
 					}
 
