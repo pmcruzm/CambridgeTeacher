@@ -529,11 +529,11 @@ jQuery(document).ready(function(){
 			success : function(response) {
 				if(response.errorCode == 0){
 					//success message
-					jQuery('.feedback', f).text(response.message).show(400);
+					jQuery('.feedback', f).text(response.message).show(150);
 					if(response.redirect){window.top.location = response.redirect;}
 				}else{
 					//some error message
-					jQuery('.feedback', f).text(response.message).show(400);
+					jQuery('.feedback', f).text(response.message).show(150);
 				}
 			}
 		});
@@ -553,11 +553,11 @@ jQuery(document).ready(function(){
 	jQuery(document).on('click','.enl-faq',function(e){
 		e.preventDefault();
 		if(jQuery(this).hasClass('active')){
-			jQuery(this).parent().find('.desplegable').slideToggle(400,function(){
+			jQuery(this).parent().find('.desplegable').slideToggle(150,function(){
 				jQuery(this).parent().find('.enl-faq').removeClass('active');
 			});
 		}else{
-			jQuery(this).parent().find('.desplegable').slideToggle(400,function(){
+			jQuery(this).parent().find('.desplegable').slideToggle(150,function(){
 				jQuery(this).parent().find('.enl-faq').addClass('active');
 			});
 		}
@@ -569,8 +569,8 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		jQuery('.btns-faqs a').removeClass('active');
 		jQuery(this).addClass('active');
-		jQuery('.old-user-ct').fadeOut(400,function(){
-			jQuery('.new-user-ct').fadeIn(400);
+		jQuery('.old-user-ct').fadeOut(75,function(){
+			jQuery('.new-user-ct').fadeIn(75);
 			//Cerrar todos los desplegables
 			jQuery('.old-user-ct .desplegable').hide();
 			jQuery('.old-user-ct a').removeClass('active');
@@ -583,8 +583,8 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 		jQuery('.btns-faqs a').removeClass('active');
 		jQuery(this).addClass('active');
-		jQuery('.new-user-ct').fadeOut(400,function(){
-			jQuery('.old-user-ct').fadeIn(400);
+		jQuery('.new-user-ct').fadeOut(75,function(){
+			jQuery('.old-user-ct').fadeIn(75);
 			//Cerrar todos los desplegables
 			jQuery('.new-user-ct .desplegable').hide();
 			jQuery('.new-user-ct a').removeClass('active');
@@ -598,8 +598,8 @@ jQuery(document).ready(function(){
 			jQuery('.single-tab a').removeClass('active');
 			jQuery(this).addClass('active');
 			var box_open='.'+jQuery(this).attr('rel');
-			jQuery('.cont-tabs > div:visible').fadeOut(400,function(){
-				jQuery(box_open).fadeIn(400);
+			jQuery('.cont-tabs > div:visible').fadeOut(75,function(){
+				jQuery(box_open).fadeIn(75);
 			});
 		}
 	});
@@ -707,11 +707,11 @@ jQuery(document).ready(function(){
 				success : function(response) {
 					if(response.errorCode == 0){
 						//success message
-						jQuery('.errores', form).text(response.message).show(400);
+						jQuery('.errores', form).text(response.message).show(150);
 						if(response.redirect){window.top.location = response.redirect;}
 					}else{
 						//some error message
-						jQuery('.errores', form).text(response.message).show(400);
+						jQuery('.errores', form).text(response.message).show(150);
 					}
 				}
 			});
@@ -1110,8 +1110,8 @@ function showNotification(msg,time){
    }else{
 	  t_visible=time;
    }
-   jQuery('#box-notificacion').html(msg).stop().clearQueue().fadeIn(400,function(){
-	  jQuery(this).delay(t_visible).fadeOut(400);
+   jQuery('#box-notificacion').html(msg).stop().clearQueue().fadeIn(75,function(){
+	  jQuery(this).delay(t_visible).fadeOut(75);
    });
 }
 
