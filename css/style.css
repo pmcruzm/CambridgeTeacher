@@ -455,10 +455,12 @@ PROPIEDADES FAQs
 #box-faqs{margin: 0 auto;max-width: 660px;width:100%;}
 
 .top-faqs{padding:50px 90px;box-sizing:border-box;}
+.top-faqs ul{list-style:disc; padding-left:40px; margin-top:1em;}
 .top-faqs p{margin-top:40px;font-size:16px;line-height:24px;}
 .top-faqs p:first-child{margin-top:0;}
-.top-faqs p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-.top-faqs p a{color:#30c0d8;text-decoration:underline;}
+.top-faqs strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
+.top-faqs a{color:#30c0d8;text-decoration:underline;}
+.top-faqs a:hover{text-decoration:none;}
 
 .btns-faqs{overflow:hidden;height:70px;}
 .btns-faqs a{width:50%;float:left;height:70px;line-height:25px;padding-top:10px;text-transform:uppercase;font-family:'sofia-pro-black', Helvetica, sans-serif;font-size:18px;color:#7d7974;background:#faf8f5;text-align:center;}
