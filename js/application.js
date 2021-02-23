@@ -19,44 +19,6 @@ var hash_active=0;
 var block_filter=0;
 var s_slicks=0;
 
-function loadAnalytics() {
-
-	var cod_GA=jQuery('meta[property="google-tracking-id"]').attr('content');
-	var facebook_pixel_id=jQuery('meta[property="facebook-pixel-id"]').attr('content');
-
-	//Añadimos GA
-	// if( cod_GA && cod_GA != '' ) {
-	// 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	// 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	// 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	// 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	// 	ga('create', cod_GA , 'auto');
-	// 	ga('send', 'pageview');
-	// }
-
-	//GTM
-	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-5F9T9CL');
-
-	//Añadimos Facebook Pixel
-	if( facebook_pixel_id && facebook_pixel_id != '' ) {
-	    !function(f,b,e,v,n,t,s)
-	    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-	    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-	    n.queue=[];t=b.createElement(e);t.async=!0;
-	    t.src=v;s=b.getElementsByTagName(e)[0];
-	    s.parentNode.insertBefore(t,s)}(window,document,'script',
-	    'https://connect.facebook.net/en_US/fbevents.js');
-	    fbq('init', facebook_pixel_id);
-	    fbq('track', 'PageView');
-	}
-
-}
-
 //Eventos para dispositivos móviles
 var ua = navigator.userAgent,
 event = (ua.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)) ? "touchstart" : "click";
@@ -732,32 +694,6 @@ jQuery(document).ready(function(){
 				jQuery(".close-modal", activeModal).trigger('click')
 			}
 		}
-	});
-
-	//Miramos si la cookie de aceptación está creada
-	if(jQuery.cookie('cambridge-teacher') == 'acepta'){
-		//Ocultamos info cookies
-		jQuery('.block-cookies').hide();
-		loadAnalytics();
-	}else{
-		jQuery('.block-cookies').show();
-	}
-
-	//Cerrar cuadro info cookies
-	jQuery(document).on('click','.close_c',function(event){
-		event.preventDefault();
-		jQuery('.block-cookies').fadeOut(150);
-	});
-
-	//Aceptar cookies en el cuadro
-	jQuery(document).on('click','.btn-accept',function(e){
-		e.preventDefault();
-		jQuery('.block-cookies').fadeOut(150,function(){
-			//Creamos la cookie de aceptación
-			jQuery.cookie('cambridge-teacher', 'acepta', { expires: 365 * 10 ,path: '/' });
-
-			loadAnalytics();
-		});
 	});
 
 	jQuery(window).scroll(control_scroll);
