@@ -135,6 +135,16 @@ ul.menu_h li.user_opc .desplegable a{color:#a19d98;font-size:14px;font-family:'s
 ul.menu_h li.user_opc .desplegable a:hover{color:#ffffff;}
 .enl-logout{font-size:10px !important;margin-top:20px;}
 
+ul.menu_h li.notifications_opc>a{color:#30c0d8;width:auto;padding-left:20px;padding-right:28px;background:url(../img/arrow_down.png) 88% 23px no-repeat;background-size:9px;}
+ul.menu_h li.notifications_opc.active>a{color:#ffffff !important;background:#2e2e2e url(../img/arrow_down_w.png) 88% 23px no-repeat !important;background-size:9px !important;}
+ul.menu_h li.notifications_opc>a:hover{background:url(../img/arrow_down_b.png) 88% 23px no-repeat;background-size:9px;color:#2e2e2e;}
+ul.menu_h li.notifications_opc .desplegable{padding:25px;width:250px;}
+ul.menu_h li.notifications_opc .desplegable > *:last-child {margin-bottom:0;}
+ul.menu_h li.notifications_opc .desplegable h3{padding-bottom:25px;color:#fde052;font-size:16px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
+ul.menu_h li.notifications_opc .desplegable p{color:#fde052; line-height:135%; font-size:14px;font-family:'sofia-pro-regular', Helvetica, sans-serif; margin-bottom:10px;}
+ul.menu_h li.notifications_opc .desplegable a{color:#a19d98; line-height:inherit; display:inline; text-align:left; width:initial; height:initial; text-decoration:underline;}
+ul.menu_h li.notifications_opc .desplegable a:hover{color:#ffffff;}
+
 .cobo-logo{}
 h1{display:block;position:absolute;top:0;left:197px;height:48px;width:222px;height:48px;background:url(../img/ico_cambridge_t.png) center left no-repeat;background-size:222px;text-indent:-99999px;}
 span.type-user{position:absolute;font-size:12px;font-family:'sofia-pro-black', Helvetica, sans-serif;display:block;height:20px;line-height:19px;padding-left:10px;padding-right:10px;background:#2e2e2e;top:14px;border-radius:2px;color:#fde052;left:425px;}

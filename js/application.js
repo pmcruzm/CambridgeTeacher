@@ -225,59 +225,21 @@ jQuery(document).ready(function(){
 		}
 	}
 
-	//Menú principal y submenús
-	jQuery(document).on('click','.language_opc > a',function(e){
+	jQuery('.menu_h').on('click','.has_opc > a',function(e){
 		e.preventDefault();
-		//Miramos si ya está desplegado el de login
-		if(jQuery('.login_opc').hasClass('active')){
-			jQuery('.login_opc').removeClass('active');
-			jQuery('.login_opc').find('.desplegable').hide().css({opacity:0});
-		}
-		//Miramos si ya está desplegado el de profile
-		if(jQuery('.user_opc').hasClass('active')){
-			jQuery('.user_opc').removeClass('active');
-			jQuery('.user_opc').find('.desplegable').hide().css({opacity:0});
-		}
-		if(jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().find('.desplegable').animate({opacity:0},0,function(){jQuery(this).hide();});
-			jQuery(this).parent().removeClass('active');
+		var $li = jQuery(this).parent();
+		$li.siblings().removeClass('active');
+		$li.siblings().find('.desplegable').hide().css({opacity:0});
+		if($li.hasClass('active')){
+			$li.find('.desplegable').animate({opacity:0},0,function(){jQuery(this).hide();});
+			$li.removeClass('active');
 		}else{
-			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},0);
+			$li.addClass('active');
+			$li.find('.desplegable').show().animate({opacity:1},0);
 		}
-	});
-
-	//Activar el menú de Login
-	jQuery(document).on('click','.login_opc > a',function(e){
-		e.preventDefault();
-		//Miramos si ya está desplegado el de idioma
-		if(jQuery('.language_opc').hasClass('active')){
-			jQuery('.language_opc').removeClass('active');
-			jQuery('.language_opc').find('.desplegable').hide().css({opacity:0});
-		}
-		if(jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().find('.desplegable').animate({opacity:0},0,function(){jQuery(this).hide();jQuery('.login_box').show();jQuery('.forget_box').hide();});
-			jQuery(this).parent().removeClass('active');
-		}else{
-			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},0);
-		}
-	});
-
-	//Activar desplegable usuario logado
-	jQuery(document).on('click','.user_opc > a',function(e){
-		e.preventDefault();
-		//Miramos si ya está desplegado el de idioma
-		if(jQuery('.language_opc').hasClass('active')){
-			jQuery('.language_opc').removeClass('active');
-			jQuery('.language_opc').find('.desplegable').hide().css({opacity:0});
-		}
-		if(jQuery(this).parent().hasClass('active')){
-			jQuery(this).parent().find('.desplegable').animate({opacity:0},0,function(){jQuery(this).hide();});
-			jQuery(this).parent().removeClass('active');
-		}else{
-			jQuery(this).parent().addClass('active');
-			jQuery(this).parent().find('.desplegable').show().animate({opacity:1},0);
+		if($li.is('.login_opc') && $li.hasClass('active')) {
+			jQuery('.login_box').stop().show();
+			jQuery('.forget_box').stop().hide();
 		}
 	});
 
