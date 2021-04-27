@@ -662,108 +662,113 @@ jQuery(document).ready(function(){
 
 	//Evento para capturar el resize de la ventana
 	jQuery( window ).resize(function() {
-			//Obtenemos altura y anchura del navegador
-			var h_win_r=jQuery(this).height();
-			var w_win_r=jQuery(this).width();
+		//Obtenemos altura y anchura del navegador
+		var h_win_r=jQuery(this).height();
+		var w_win_r=jQuery(this).width();
 
-			//Ajustamos altura de los bloques de noticias
-			if (jQuery('#list-news').is(":visible") ) {
-				//Removemos las alturas anteriores
-				jQuery('#list-news a.new-single.visible div.inside-new').removeAttr('style');
-				var heights = jQuery('#list-news a.new-single.visible div.inside-new').map(function ()
-				{
-					return jQuery(this).outerHeight();
-				}).get(),
-				//Obtenemos tamaño max de los cuadros
-				maxHeight = Math.max.apply(null, heights);
-				jQuery('#list-news a.new-single.visible div.inside-new').each(function() {
-					jQuery(this).css('height',maxHeight+30);
-				});
-			}
+		//Ajustamos altura de los bloques de noticias
+		if (jQuery('#list-news').is(":visible") ) {
+			//Removemos las alturas anteriores
+			jQuery('#list-news a.new-single.visible div.inside-new').removeAttr('style');
+			var heights = jQuery('#list-news a.new-single.visible div.inside-new').map(function ()
+			{
+				return jQuery(this).outerHeight();
+			}).get(),
+			//Obtenemos tamaño max de los cuadros
+			maxHeight = Math.max.apply(null, heights);
+			jQuery('#list-news a.new-single.visible div.inside-new').each(function() {
+				jQuery(this).css('height',maxHeight+30);
+			});
+		}
+
+		//Ajustamos altura de los cuadros de catalogo
+		if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
 
 			//Ajustamos altura de los cuadros de catalogo
-			if (jQuery('#all-catalogo .content-catalogo').is(":visible") ) {
+			var heights = jQuery('#all-catalogo .content-catalogo div.inside-b-book').map(function ()
+			{
+				return jQuery(this).outerWidth();
+			}).get(),
+			//Obtenemos tamaño max de los cuadros
+			maxWidth = Math.max.apply(null, heights);
+			jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
+				jQuery(this).css('height',maxWidth);
+			});
 
-				//Ajustamos altura de los cuadros de catalogo
-				var heights = jQuery('#all-catalogo .content-catalogo div.inside-b-book').map(function ()
-				{
-					return jQuery(this).outerWidth();
-				}).get(),
-				//Obtenemos tamaño max de los cuadros
-				maxWidth = Math.max.apply(null, heights);
-				jQuery('#all-catalogo .content-catalogo div.inside-b-book').each(function() {
-					jQuery(this).css('height',maxWidth);
-				});
-
-				//Ajustamos etiqueta sample
-				jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
-					//Miramos span de Sample
-					if(jQuery(this).parent().find('span').length>0){
-						var alto_img=jQuery(this).height();
-						jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
-						jQuery(this).parent().find('span.featured').css({marginTop:Math.round(-alto_img/2)+13}).show();
-						jQuery(this).parent().find('span.cover').css({marginTop:Math.round(-alto_img/2)+16}).show();
-					}
-					//Miramos cover check
-					if(jQuery(this).parents('.single-box-book').hasClass('check')){
-						var alto_img=jQuery(this).height();
-						var ancho_img=jQuery(this).width();
-						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
-					}else{
-						var alto_img=jQuery(this).height();
-						var ancho_img=jQuery(this).width();
-						jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
-					}
-				});
-			}
-
-			//Ajustamos Shot de la home
-			if (jQuery('#show-examples').is(":visible") ) {
-				jQuery('#show-examples div.shot-box').removeAttr('style');
-				var heights = jQuery('#show-examples div.shot-box').map(function ()
-				{
-					return jQuery(this).outerHeight();
-				}).get(),
-				//Obtenemos tamaño max de los cuadros
-				maxHeight = Math.max.apply(null, heights);
-				jQuery('#show-examples div.shot-box').each(function() {
-					jQuery(this).css('height',maxHeight);
-				});
-			}
-
-			//Ajustamos modal si está abierto
-			if (jQuery('.modal').is(":visible") ) {
-				var h_content=jQuery('#content').outerHeight();
-				jQuery('.modal').height(h_content);
-			}
-
-			//Ocultamos flechas según contenido
-			if (jQuery('.carrusel-coleccion').is(":visible") ) {
-				var lengh_items=0;
-				var block_item=0;
-				jQuery('.carrusel-list div.item').each(function() {
-					if(jQuery(this).hasClass('slick-active')){
-						block_item=1;
-					}
-					if(block_item==1){
-						lengh_items+=jQuery(this).outerWidth();
-					}
-				});
-
-				//Mostramos/ocultamos las flechas si es mayor
-				if(lengh_items >= jQuery(window).width()){
-					jQuery('.slick-prev').show().css({'visibility':'visible'});
-					jQuery('.slick-next').show().css({'visibility':'visible'});
-				}else{
-					jQuery('.slick-prev').hide().css({'visibility':'hidden'});
-					jQuery('.slick-next').hide().css({'visibility':'hidden'});
+			//Ajustamos etiqueta sample
+			jQuery('#all-catalogo .content-catalogo .enl-book img').each(function() {
+				//Miramos span de Sample
+				if(jQuery(this).parent().find('span').length>0){
+					var alto_img=jQuery(this).height();
+					jQuery(this).parent().find('span').css({bottom:(-alto_img/2)+20}).show();
+					jQuery(this).parent().find('span.featured').css({marginTop:Math.round(-alto_img/2)+13}).show();
+					jQuery(this).parent().find('span.cover').css({marginTop:Math.round(-alto_img/2)+16}).show();
 				}
-			}
+				//Miramos cover check
+				if(jQuery(this).parents('.single-box-book').hasClass('check')){
+					var alto_img=jQuery(this).height();
+					var ancho_img=jQuery(this).width();
+					jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13}).show();
+				}else{
+					var alto_img=jQuery(this).height();
+					var ancho_img=jQuery(this).width();
+					jQuery(this).parent().find('div.cover_check').css({height:alto_img+2,width:ancho_img+2,top:(-alto_img/2)+13});
+				}
+			});
+		}
 
+		//Ajustamos Shot de la home
+		if (jQuery('#show-examples').is(":visible") ) {
+			jQuery('#show-examples div.shot-box').removeAttr('style');
+			var heights = jQuery('#show-examples div.shot-box').map(function ()
+			{
+				return jQuery(this).outerHeight();
+			}).get(),
+			//Obtenemos tamaño max de los cuadros
+			maxHeight = Math.max.apply(null, heights);
+			jQuery('#show-examples div.shot-box').each(function() {
+				jQuery(this).css('height',maxHeight);
+			});
+		}
+
+		//Ajustamos modal si está abierto
+		if (jQuery('.modal').is(":visible") ) {
+			var h_content=jQuery('#content').outerHeight();
+			jQuery('.modal').height(h_content);
+		}
+
+		//Ocultamos flechas según contenido
+		if (jQuery('.carrusel-coleccion').is(":visible") ) {
+			var lengh_items=0;
+			var block_item=0;
+			jQuery('.carrusel-list div.item').each(function() {
+				if(jQuery(this).hasClass('slick-active')){
+					block_item=1;
+				}
+				if(block_item==1){
+					lengh_items+=jQuery(this).outerWidth();
+				}
+			});
+
+			//Mostramos/ocultamos las flechas si es mayor
+			if(lengh_items >= jQuery(window).width()){
+				jQuery('.slick-prev').show().css({'visibility':'visible'});
+				jQuery('.slick-next').show().css({'visibility':'visible'});
+			}else{
+				jQuery('.slick-prev').hide().css({'visibility':'hidden'});
+				jQuery('.slick-next').hide().css({'visibility':'hidden'});
+			}
+		}
 
 	});
 
-
+	jQuery('.notifications_opc').on('click', 'button', function(event){
+		jQuery(this).closest('.notifications_opc').remove();
+		jQuery.ajax({
+			url: jQuery(this).data('action'),
+			method: jQuery(this).data('method'),
+		});
+	});
 });
 
 

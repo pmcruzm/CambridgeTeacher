@@ -67,6 +67,7 @@ PROPIEDADES GENERALES
 body{margin:0;padding:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;font-size: 1em;line-height: 1.5em;}
 .container{display:block;width:100%;margin:0 auto;position:relative;}
 #wrapper{}
+.text-right {text-align: right;}
 
 /*****************************
 PROPIEDADES HEADER
@@ -145,6 +146,8 @@ ul.menu_h li.notifications_opc .desplegable h3{padding-bottom:25px;color:#fde052
 ul.menu_h li.notifications_opc .desplegable p{color:#fde052; line-height:135%; font-size:14px;font-family:'sofia-pro-regular', Helvetica, sans-serif; margin-bottom:10px;}
 ul.menu_h li.notifications_opc .desplegable a{color:#a19d98; line-height:inherit; display:inline; text-align:left; width:initial; height:initial; text-decoration:underline;}
 ul.menu_h li.notifications_opc .desplegable a:hover{color:#ffffff;}
+ul.menu_h li.notifications_opc button { color:#2e2e2e; border:0; background-color:#fde052; cursor:pointer;}
+
 
 .cobo-logo{}
 h1{display:block;position:absolute;top:0;left:197px;height:48px;width:222px;height:48px;background:url(../img/ico_cambridge_t.png) center left no-repeat;background-size:222px;text-indent:-99999px;}
