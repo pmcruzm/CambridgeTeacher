@@ -146,8 +146,8 @@ ul.menu_h li.notifications_opc .desplegable h3{padding-bottom:25px;color:#fde052
 ul.menu_h li.notifications_opc .desplegable p{color:#fde052; line-height:135%; font-size:14px;font-family:'sofia-pro-regular', Helvetica, sans-serif; margin-bottom:10px;}
 ul.menu_h li.notifications_opc .desplegable a{color:#a19d98; line-height:inherit; display:inline; text-align:left; width:initial; height:initial; text-decoration:underline;}
 ul.menu_h li.notifications_opc .desplegable a:hover{color:#ffffff;}
-ul.menu_h li.notifications_opc button { color:#fde052; border:1px solid #fde052; background-color:#2e2e2e; cursor:pointer; border-radius:3px;}
-ul.menu_h li.notifications_opc button:hover { color:#2e2e2e; border-color:#fde052; background-color:#fde052;}
+ul.menu_h li.notifications_opc button { color:#fde052; border:none; background-color:#393939; cursor:pointer; border-radius:15px; padding:2px 12px; font-size: 12px; font-family: 'sofia-pro-black', Helvetica, sans-serif; text-transform:uppercase; letter-spacing: .5px;}
+ul.menu_h li.notifications_opc button:hover { color:#393939;  background-color:#fde052;}
 
 
 .cobo-logo{}
