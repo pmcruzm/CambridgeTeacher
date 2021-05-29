@@ -763,7 +763,13 @@ jQuery(document).ready(function(){
 	});
 
 	jQuery('.notifications_opc').on('click', 'button', function(event){
-		jQuery(this).closest('.notifications_opc').remove();
+		var $menuNotifs = jQuery(this).closest('.notifications_opc');
+		$menuNotifs.children('a').attr('title', $menuNotifs.data('label-empty'))
+		$menuNotifs.find('.notification-label').text('')
+		$menuNotifs.find('.notification-count').text('0')
+		$menuNotifs.find('.desplegable').empty().append(
+			jQuery('<p>').addClass('text-center').text($menuNotifs.data('label-empty'))
+		);
 		jQuery.ajax({
 			url: jQuery(this).data('action'),
 			method: jQuery(this).data('method'),
