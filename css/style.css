@@ -139,6 +139,7 @@ ul.menu_h li.user_opc .desplegable a:hover{color:#ffffff;}
 ul.menu_h li.notifications_opc.disabled {opacity:.7; pointer-events: none;}
 ul.menu_h li.notifications_opc>a{color:red;padding-left:5px;padding-right:10px; font-weight:bold;}
 ul.menu_h li.notifications_opc>a .notification-count{background-color:red; color:white; font-size:11px; border-radius:50%; display: inline-block; height:14px; width:14px; position: absolute; top:10px; left: 17px; line-height: 14px;}
+ul.menu_h li.notifications_opc.notifications-empty .notification-count{background-color:#aaa;}
 ul.menu_h li.notifications_opc>a:before{content:'';display:inline-block;background:url(../svg/notification.svg) center center no-repeat;background-size:20px;width:20px;height:48px;float:left;padding-left:5px;padding-right:0px;}
 ul.menu_h li.notifications_opc.active>a{color:#ffffff !important;background-color:#2e2e2e;}
 ul.menu_h li.notifications_opc>a:hover{color:#2e2e2e;}

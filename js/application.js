@@ -764,7 +764,8 @@ jQuery(document).ready(function(){
 
 	jQuery('.notifications_opc').on('click', 'button', function(event){
 		var $menuNotifs = jQuery(this).closest('.notifications_opc');
-		$menuNotifs.children('a').attr('title', $menuNotifs.data('label-empty'))
+		$menuNotifs.addClass('notifications-empty');
+		$menuNotifs.children('a').attr('title', $menuNotifs.data('label-empty'));
 		$menuNotifs.find('.notification-label').text('')
 		$menuNotifs.find('.notification-count').text('0')
 		$menuNotifs.find('.desplegable').empty().append(
