@@ -116,9 +116,10 @@ ul.menu_h li.login_opc.active>a{background:#ffffff !important;}
 .txt-remember{text-align:right !important;}
 .txt-remember a{width:auto !important;height:auto !important;color:#c6c6c6 !important;line-height:13px !important;font-size:10px !important;display:inline-block !important;-webkit-transition: all 0.15s ease-in-out;-moz-transition: all 0.15s ease-in-out;-o-transition: all 0.15s ease-in-out;transition: all 0.15s ease-in-out;}
 .txt-remember a:hover{color:#ffffff !important;}
-.toggle-password-visibility {display: block; width:25px; height:40px; border:0; cursor:pointer; position:absolute; right:42px;}
+.toggle-password-visibility {display: block; width:25px; height:40px; border:0; cursor:pointer; position:absolute; right:10px;}
 .toggle-password-visibility.icon-show-pasword-on {background: center no-repeat url('../svg/icon-eye-on.svg');}
 .toggle-password-visibility.icon-show-pasword-off {background: center no-repeat url('../svg/icon-eye-off.svg');}
+#form-login .toggle-password-visibility {right:42px;}
 
 
 .forget_box{display:none;}
@@ -1081,6 +1082,7 @@ MEDIA QUERIES
 	.form-type-1 .top-register{padding-right:30px;padding-left:30px;}
 	.form-type-1 .form-group label{width:100%;float:inherit;text-align:left;}
 	.form-type-1 .form-group input[type="text"]{width:100%;}
+	.form-type-1 .form-group input[type="password"]{width:100%;}
 	.form-type-1 .form-group input[type="email"]{width:100%;}
 	.bg-select{width:100%;}
 	.box-textarea{width:100%;}

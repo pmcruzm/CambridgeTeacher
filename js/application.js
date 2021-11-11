@@ -474,7 +474,7 @@ jQuery(document).ready(function(){
 	});
 
 	// Ocultar/mostrar contraseña
-	jQuery('#form-login').on('click', '.toggle-password-visibility', function(e){
+	jQuery('#form-login,#login-form').on('click', '.toggle-password-visibility', function(e){
 		e.preventDefault();
 
         var button = jQuery(this);
