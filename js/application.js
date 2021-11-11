@@ -473,6 +473,21 @@ jQuery(document).ready(function(){
 
 	});
 
+	// Ocultar/mostrar contraseña
+	jQuery('#form-login').on('click', '.toggle-password-visibility', function(e){
+		e.preventDefault();
+
+        var button = jQuery(this);
+        var field  = button.next();
+        if (field.is('[type="password"]')) {
+            field.attr('type','text');
+            button.removeClass('icon-show-pasword-off').addClass('icon-show-pasword-on');
+        } else {
+            field.attr('type','password');
+            button.removeClass('icon-show-pasword-on').addClass('icon-show-pasword-off');
+        }
+	});
+
 	//Desplegar los cuadros de faqs
 	jQuery(document).on('click','.enl-faq',function(e){
 		e.preventDefault();

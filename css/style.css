@@ -107,6 +107,7 @@ ul.menu_h li.login_opc.active>a{background:#ffffff !important;}
 
 #form-login label{display:none;}
 #form-login input[type=text],#form-login input[type=password]{width:100%;font-size:14px;color:#c6c6c6;height:40px;background:#2e2e2e;line-height:20px;box-sizing:border-box;padding-left:20px;padding-right:20px;border:#5e5e5e solid 2px;margin-bottom:20px;font-family:'sofia-pro-regular', Helvetica, sans-serif;}
+#form-login #password_login{padding-right:30px;}
 .btns-login{overflow:hidden;margin-bottom:10px;}
 #form-login input[type=submit]{float:left;width:130px;height:35px;-webkit-appearance:none;border-radius:30px;background:#393939;display:block;line-height:31px;font-family:'sofia-pro-black', Helvetica, sans-serif;color:#fde052;border:none;font-size:14px;cursor:pointer;-webkit-transition: all 0.15s ease-in-out;-moz-transition: all 0.15s ease-in-out;-o-transition: all 0.15s ease-in-out;transition: all 0.15s ease-in-out;}
 #form-login input[type=submit]:hover{background:#fde052;color:#393939;}
@@ -115,6 +116,10 @@ ul.menu_h li.login_opc.active>a{background:#ffffff !important;}
 .txt-remember{text-align:right !important;}
 .txt-remember a{width:auto !important;height:auto !important;color:#c6c6c6 !important;line-height:13px !important;font-size:10px !important;display:inline-block !important;-webkit-transition: all 0.15s ease-in-out;-moz-transition: all 0.15s ease-in-out;-o-transition: all 0.15s ease-in-out;transition: all 0.15s ease-in-out;}
 .txt-remember a:hover{color:#ffffff !important;}
+.toggle-password-visibility {display: block; width:25px; height:40px; border:0; cursor:pointer; position:absolute; right:42px;}
+.toggle-password-visibility.icon-show-pasword-on {background: center no-repeat url('../svg/icon-eye-on.svg');}
+.toggle-password-visibility.icon-show-pasword-off {background: center no-repeat url('../svg/icon-eye-off.svg');}
+
 
 .forget_box{display:none;}
 #form-forgot-password p{color:#ffffff;font-size: 13px;line-height: 16px;margin-bottom: 20px;}
