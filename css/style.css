@@ -425,6 +425,12 @@ PROPIEDADES REGISTRO
 
 .form-type-1 .form-group select.uppercased,.form-type-1 .form-group select.uppercased option {text-transform: uppercase;}
 
+.form-type-1 .form-group.privacy-policy-hint {margin-left:44%; font-size:12px; line-height: 1.4;}
+.form-type-1 .form-group.privacy-policy-hint p {margin-bottom:9px;}
+.form-type-1 .form-group.privacy-policy-hint p a {color: #30c0d8; text-decoration: underline;}
+.form-type-1 .form-group.privacy-policy-hint p a:hover {text-decoration: none;}
+
+
 .group-clase-checkbox{overflow:hidden;margin-top:30px;}
 .title-group{width:44%;float:left;text-align:right;box-sizing:border-box;padding-right:40px;}
 .title-group p{color:#2e2e2e;font-size:14px;font-family:'sofia-pro-black', Helvetica, sans-serif;}
@@ -436,7 +442,7 @@ PROPIEDADES REGISTRO
 .single-radio .checkbox p{padding-left:32px !important;line-height:12px !important;margin-top:-23px !important;}
 
 .bottom-register{background:#ffffff;padding-top:35px;padding-bottom:150px;position:relative;box-sizing:border-box;box-sizing:border-box;padding-right:84px;}
-.group_checkbox{margin-top:70px;}
+.group_checkbox{margin-top:40px;}
 .form-type-1 .checkbox label{display:inline-block;}
 .form-type-1 .checkbox{padding-left:50px;margin-bottom:18px;display:block;padding-left:44%;}
 .form-type-1 .checkbox p{margin-top:-30px;font-size:13px;padding-left:40px;color:#2e2e2e;line-height:21px;}
@@ -448,7 +454,7 @@ PROPIEDADES REGISTRO
 
 .errores{color:#f05456;font-size:14px;display:block;padding-left:44%;width:95%;box-sizing:border-box;margin-top:20px;}
 
-.maquetacion_captcha{padding-left:44%;padding-top:40px;overflow:hidden;}
+.maquetacion_captcha{padding-left:44%;padding-top:20px;overflow:hidden;}
 .label-2-lines{line-height:19px !important;}
 
 .bg-select{background:#2e2e2e url(../img/arrow_select.png) 95% 50% no-repeat;display:block;width:56%;float:left;overflow:hidden;height:40px;background-size:9px;}
@@ -699,17 +705,22 @@ PROPIEDADES AVISO LEGAL
 #box_aviso .top-register{padding-left:84px;padding-top:50px;padding-bottom:100px;}
 
 #box_aviso h3 {font-size:24px; margin-bottom: 20px; margin-top: 25px;}
+#box_aviso h4 {font-size:20px; margin-bottom: 10px; margin-top: 25px;}
+#box_aviso h5 {font-weight:bold; margin-bottom: 5px; }
+#box_aviso table {width: 100%; margin-bottom: 25px;}
+#box_aviso table td {padding:4px 8px;}
+#box_aviso table thead td {color:white; background-color: black;}
 
 #box_aviso p{margin-bottom:14px;color:#2e2e2e;}
 #box_aviso p strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-#box_aviso p a{color:#30c0d8;text-decoration:underline;}
+#box_aviso a{color:#30c0d8;text-decoration:underline;}
 
-#box_aviso ul,#box_aviso ol{margin-bottom:14px;padding-left:30px;}
-#box_aviso ul li{list-style:disc;}
-#box_aviso ol li{list-style:decimal;}
+#box_aviso ul, #box_aviso ol{margin-bottom:14px;padding-left:30px; list-style-position: inside;}
+#box_aviso ul li{list-style:disc; margin-bottom: 4px;}
+#box_aviso ol li{list-style:decimal; margin-bottom: 4px;}
 
-#box_aviso b,#box_aviso  strong{font-family:'sofia-pro-black', Helvetica, sans-serif;}
-#box_aviso em,#box_aviso  i{font-style:italic;}
+#box_aviso b, #box_aviso strong{font-weight:bold;}
+#box_aviso em, #box_aviso i{font-style:italic;}
 
 
 /*****************************
@@ -1088,7 +1099,9 @@ MEDIA QUERIES
 	.shot-box img{border-bottom:3px solid #2e2e2e;}
 
 	.form-type-1 .top-register{padding-right:30px;padding-left:30px;}
+	.form-type-1 .bottom-register{padding-right:30px;padding-left:30px;}
 	.form-type-1 .form-group label{width:100%;float:inherit;text-align:left;}
+	.form-type-1 .form-group.privacy-policy-hint {margin-left:0%;}
 	.form-type-1 .form-group input[type="text"]{width:100%;}
 	.form-type-1 .form-group input[type="password"]{width:100%;}
 	.form-type-1 .form-group input[type="email"]{width:100%;}

@@ -191,7 +191,7 @@ jQuery(document).ready(function(){
 					//jQuery("img.lazy").lazyload({skip_invisible : false});
 				}
 			}else{
-				jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
+				jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),350,{axis:'y',easing:'easeInOutExpo'});
 			}
 		}
 	});
