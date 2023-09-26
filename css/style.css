@@ -746,8 +746,8 @@ PROPIEDADES FOOTER
 .block_siguenos ul li a{text-indent:-99999px;display:block;}
 .block_siguenos ul li a.ico_facebook{background:url(../img/ico_facebook.png) center center no-repeat;width:10px;height:21px;background-size:10px;}
 .block_siguenos ul li a.ico_facebook:hover{background:url(../img/ico_facebook_over.png) center center no-repeat;background-size:10px;}
-.block_siguenos ul li a.ico_twitter{background:url(../img/ico_twitter.png) center center no-repeat;width:18px;height:21px;background-size:18px;}
-.block_siguenos ul li a.ico_twitter:hover{background:url(../img/ico_twitter_over.png) center center no-repeat;background-size:18px;}
+.block_siguenos ul li a.ico_twitter{background:url("../img/ico_twitter.png?v=1") center center no-repeat;width:18px;height:21px;background-size:18px;}
+.block_siguenos ul li a.ico_twitter:hover{background:url("../img/ico_twitter_over.png?v=1") center center no-repeat;background-size:18px;}
 .block_siguenos ul li a.ico_instagram{background:url(../img/ico_instagram.png) center center no-repeat;width:21px;height:21px;background-size:21px;}
 .block_siguenos ul li a.ico_instagram:hover{background:url(../img/ico_instagram_over.png) center center no-repeat;background-size:21px;}
 .block_siguenos ul li a.ico_youtube{background:url(../img/ico_youtube.png) center center no-repeat;width:22px;height:21px;background-size:22px;}
