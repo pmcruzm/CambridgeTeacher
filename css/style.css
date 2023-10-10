@@ -745,17 +745,17 @@ PROPIEDADES FOOTER
 .block_siguenos ul li:last-child{margin-right:0;}
 .block_siguenos ul li a{text-indent:-99999px;display:block;}
 .block_siguenos ul li a.ico_facebook{background:url(../img/ico_facebook.png) center center no-repeat;width:10px;height:21px;background-size:10px;}
-.block_siguenos ul li a.ico_facebook:hover{background:url(../img/ico_facebook_over.png) center center no-repeat;background-size:10px;}
+.block_siguenos ul li a.ico_facebook:hover{background-image:url(../img/ico_facebook_over.png);}
 .block_siguenos ul li a.ico_twitter{background:url("../img/ico_twitter.png?v=1") center center no-repeat;width:18px;height:21px;background-size:18px;}
-.block_siguenos ul li a.ico_twitter:hover{background:url("../img/ico_twitter_over.png?v=1") center center no-repeat;background-size:18px;}
+.block_siguenos ul li a.ico_twitter:hover{background-image:url("../img/ico_twitter_over.png?v=1");}
 .block_siguenos ul li a.ico_instagram{background:url(../img/ico_instagram.png) center center no-repeat;width:21px;height:21px;background-size:21px;}
-.block_siguenos ul li a.ico_instagram:hover{background:url(../img/ico_instagram_over.png) center center no-repeat;background-size:21px;}
+.block_siguenos ul li a.ico_instagram:hover{background-image:url(../img/ico_instagram_over.png);}
 .block_siguenos ul li a.ico_youtube{background:url(../img/ico_youtube.png) center center no-repeat;width:22px;height:21px;background-size:22px;}
-.block_siguenos ul li a.ico_youtube:hover{background:url(../img/ico_youtube_over.png) center center no-repeat;background-size:22px;}
+.block_siguenos ul li a.ico_youtube:hover{background-image:url(../img/ico_youtube_over.png);}
 .block_siguenos ul li a.ico_pinterest{background:url(../img/ico_pinterest.png) center center no-repeat;width:15px;height:21px;background-size:16px;}
-.block_siguenos ul li a.ico_pinterest:hover{background:url(../img/ico_pinterest_over.png) center center no-repeat;background-size:16px;}
+.block_siguenos ul li a.ico_pinterest:hover{background-image:url(../img/ico_pinterest_over.png);}
 .block_siguenos ul li a.ico_linkedin{background:url(../img/ico_linkedin.png) center center no-repeat;width:18px;height:21px;background-size:18px;}
-.block_siguenos ul li a.ico_linkedin:hover{background:url(../img/ico_linkedin_over.png) center center no-repeat;background-size:18px;}
+.block_siguenos ul li a.ico_linkedin:hover{background-image:url(../img/ico_linkedin_over.png);}
 
 .txt-footer{clear:both;color:#afaaa6;font-size:12px;line-height:21px;}
 .txt-footer a{color:#afaaa6;-webkit-transition: all 0.15s ease-in-out;-moz-transition: all 0.15s ease-in-out;-o-transition: all 0.15s ease-in-out;transition: all 0.15s ease-in-out;}
