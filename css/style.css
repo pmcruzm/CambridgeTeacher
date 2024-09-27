@@ -72,6 +72,7 @@ body{margin:0;padding:0;font-family:'sofia-pro-regular', Helvetica, sans-serif;f
 body.has-bottom-banner #footer {padding-bottom: 70px;}
 .banner {position:fixed; z-index: 99; bottom:0; width:100%; padding:15px; box-sizing: border-box; text-align:center; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 .banner > p {max-width: 1280px; margin-left:auto; margin-right:auto;}
+.banner b {font-weight: bold;}
 .banner.banner-black-white {color:white; background:#2e2e2e;}
 .banner.banner-yellow-black {color:black; background:#fde052;}
 .banner.banner-blue-black {color:black; background:#30c0d8;}
