@@ -1,23 +1,24 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title></title>
-    <meta name="description" content="" />
-	<meta property="og:title" content=""/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
 
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/fontface.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-     <!-- Font Awesome styles-->
+    <!-- Font Awesome styles-->
     <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
 
     <!--El siguiente comentario es un comentario condicional que solo IE sabe interpretar-->
@@ -29,12 +30,13 @@
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 </head>
+
 <body>
-	<div id="wrapper">
-    	<div id="header">
-        	<div class="container">
+    <div id="wrapper">
+        <div id="header">
+            <div class="container">
                 <a href="" class="logo_h">Cambridge University Press</a>
-               	<h1>The Cambridge Teacher</h1>
+                <h1>The Cambridge Teacher</h1>
                 <span class="type-user">GUEST</span>
                 <ul class="menu_h">
                     <li><a href="#">FAQs</a></li>
@@ -57,140 +59,234 @@
             </div>
         </div>
         <div id="content">
-        	<div id="block-registro">
+            <div id="block-registro">
                 <div id="banner-generico">
-                     <h2>CONTACTO</h2>
+                    <h2>CONTACTO</h2>
                 </div>
                 <div id="form_box_registro">
-             <form data-user-is-logged="false" data-error-msg="Por favor revisa los campos resaltados." data-validate="true" novalidate="" role="form" method="POST" action="http://www.thecambridgeteacher.es/contacto" class="form-type-1" id="contact-form">
+                    <form data-user-is-logged="false" data-error-msg="Por favor revisa los campos resaltados."
+                        data-validate="true" novalidate="" role="form" method="POST"
+                        action="http://www.thecambridgeteacher.es/contacto" class="form-type-1" id="contact-form">
 
-                <div class="top-register top-w-title">
+                        <div class="top-register top-w-title">
 
-                    <div class="intro_contact">
-                        <p>Por favor, usa este formulario para ponerte en contacto con nosotros, seleccionando el asunto que más se ajuste al motivo de tu consulta.</p>
-                    </div>
-
-                    <div class="form-group required select-box">
-                        <label for="subject">ASUNTO</label>
-                        <div class="bg-select">
-                            <select id="subject" name="subject">
-                                <option value="general">Consulta general</option>
-                                <option value="centre-missing">Mi centro no está en el listado</option>
-                                <option value="verification-email">No me ha llegado el correo de verificación</option>
-                                <option value="smc-request">No conozco el School MasterCode de mi centro</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-                    <div class="form-group required">
-                        <label for="first_name">NOMBRE</label>
-                        <input type="text" data-validation-rule="not-empty" value="" name="first_name" id="first_name" class="form-control">
-                    </div>
-
-                    <div class="form-group required">
-                        <label for="last_name">APELLIDOS</label>
-                        <input type="text" data-validation-rule="not-empty" value="" name="last_name" id="last_name" class="form-control">
-                    </div>
-
-                    <div class="form-group required">
-                        <label for="email">EMAIL</label>
-                        <input type="email" data-error-msg="El email no es válido." data-validation-rule="email" value="" autocorrect="off" name="email" id="email" class="form-control">
-                    </div>
-
-
-
-
-
-                    <div data-action="general,smc-request,verification-email" style="">
-
-                        <div class="form-group required">
-                            <label class="label-2-lines" for="zip">CÓDIGO POSTAL<br> DE TU CENTRO</label>
-                            <input type="text" data-error-msg="Debes introducir el código postal del centro." data-validation-rule="zip" placeholder="Código postal de tu centro" name="zip" id="zip" class="form-control">
-                        </div>
-
-                        <div class="form-group required">
-                            <label for="centre_id">NOMBRE DEL CENTRO</label>
-                            <div class="bg-select">
-                                <select data-error-msg="Debes seleccionar un centro." data-validation-rule="select-option" data-none-selected-text="Introduce primero el código postal de tu centro" data-choose-text="Selecciona tu centro" name="centre_id" class="form-control uppercased">
-                                    <option value="">Introduce primero el código postal de tu centro</option>
-                                </select>
+                            <div class="intro_contact">
+                                <p>Por favor, usa este formulario para ponerte en contacto con nosotros, seleccionando
+                                    el asunto que más se ajuste al motivo de tu consulta.</p>
                             </div>
-                        </div>
 
-                    </div>
-
-
-                    <div data-action="centre-missing" style="display:none">
-
-                        <div class="form-group required">
-                            <label for="new_centre_zip" class="label-2-lines">CÓDIGO POSTAL<br>
- DE TU CENTRO</label>
-                            <input type="text" data-validation-rule="zip" placeholder="Código postal del centro educativo" name="new_centre_zip" id="new_centre_zip" class="form-control">
-                        </div>
-
-                        <div class="form-group required">
-                            <label for="new_centre_name">NOMBRE DEL CENTRO</label>
-                            <input type="text" data-validation-rule="not-empty" name="new_centre_name" id="new_centre_name" class="form-control">
-                        </div>
-
-                        <div class="form-group required">
-                            <label for="new_centre_address">DIRECCIÓN DEL CENTRO</label>
-                            <input type="text" data-validation-rule="not-empty" name="new_centre_address" id="new_centre_address" class="form-control">
-                        </div>
-
-                        <div class="form-group required">
-                            <label for="new_centre_city">CIUDAD</label>
-                            <input type="text" data-validation-rule="not-empty" name="new_centre_city" id="new_centre_city" class="form-control">
-                        </div>
-
-
-                        <div class="form-group required">
-                            <label for="new_centre_province">PROVINCIA</label>
-                            <div data-validation-rule="select-option" class="bg-select">
-                                <select name="new_centre_province" class="form-control" id="new_centre_province" data-validation-rule="select-option"><option selected="selected" value="">Seleccionar provincia</option><option value="01">ÁLAVA</option><option value="02">ALBACETE</option><option value="03">ALICANTE</option><option value="04">ALMERÍA</option><option value="0">ASTURIAS</option><option value="05">ÁVILA</option><option value="06">BADAJOZ</option><option value="1">CANTABRIA</option><option value="2">CEUTA</option><option value="08">BARCELONA</option><option value="09">BURGOS</option><option value="3">CÁCERES</option><option value="4">CÁDIZ</option><option value="5">CASTELLÓN</option><option value="6">CIUDAD REAL</option><option value="7">CÓRDOBA</option><option value="8">CORUÑA, A</option><option value="9">CUENCA</option><option value="10">GIRONA</option><option value="11">GRANADA</option><option value="12">GUADALAJARA</option><option value="13">GUIPÚZCOA</option><option value="14">HUELVA</option><option value="15">HUESCA</option><option value="07">ILLES BALEARS</option><option value="16">JAÉN</option><option value="17">LEÓN</option><option value="18">LLEIDA</option><option value="19">LUGO</option><option value="20">MADRID</option><option value="21">MÁLAGA</option><option value="22">MELILLA</option><option value="23">MURCIA</option><option value="24">NAVARRA</option><option value="25">OURENSE</option><option value="26">PALENCIA</option><option value="27">PALMAS, LAS</option><option value="28">PONTEVEDRA</option><option value="29">RIOJA, LA</option><option value="30">SALAMANCA</option><option value="31">SANTA CRUZ DE TENERIFE</option><option value="32">SEGOVIA</option><option value="33">SEVILLA</option><option value="34">SORIA</option><option value="35">TARRAGONA</option><option value="36">TERUEL</option><option value="37">TOLEDO</option><option value="38">VALENCIA</option><option value="39">VALLADOLID</option><option value="40">VIZCAYA</option><option value="41">ZAMORA</option><option value="42">ZARAGOZA</option><option value="43">NO ESPAÑA</option><option value="AD">ANDORRA</option></select>
+                            <div class="form-group required select-box">
+                                <label for="subject">ASUNTO</label>
+                                <div class="bg-select">
+                                    <select id="subject" name="subject">
+                                        <option value="general">Consulta general</option>
+                                        <option value="centre-missing">Mi centro no está en el listado</option>
+                                        <option value="verification-email">No me ha llegado el correo de verificación
+                                        </option>
+                                        <option value="smc-request">No conozco el School MasterCode de mi centro
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
+
+
+                            <div class="form-group required">
+                                <label for="first_name">NOMBRE</label>
+                                <input type="text" data-validation-rule="not-empty" value="" name="first_name"
+                                    id="first_name" class="form-control">
+                            </div>
+
+                            <div class="form-group required">
+                                <label for="last_name">APELLIDOS</label>
+                                <input type="text" data-validation-rule="not-empty" value="" name="last_name"
+                                    id="last_name" class="form-control">
+                            </div>
+
+                            <div class="form-group required">
+                                <label for="email">EMAIL</label>
+                                <input type="email" data-error-msg="El email no es válido." data-validation-rule="email"
+                                    value="" autocorrect="off" name="email" id="email" class="form-control">
+                            </div>
+
+
+
+
+
+                            <div data-action="general,smc-request,verification-email" style="">
+
+                                <div class="form-group required">
+                                    <label class="label-2-lines" for="zip">CÓDIGO POSTAL<br> DE TU CENTRO</label>
+                                    <input type="text" data-error-msg="Debes introducir el código postal del centro."
+                                        data-validation-rule="zip" placeholder="Código postal de tu centro" name="zip"
+                                        id="zip" class="form-control">
+                                </div>
+
+                                <div class="form-group required">
+                                    <label for="centre_id">NOMBRE DEL CENTRO</label>
+                                    <div class="bg-select">
+                                        <select data-error-msg="Debes seleccionar un centro."
+                                            data-validation-rule="select-option"
+                                            data-none-selected-text="Introduce primero el código postal de tu centro"
+                                            data-choose-text="Selecciona tu centro" name="centre_id"
+                                            class="form-control uppercased">
+                                            <option value="">Introduce primero el código postal de tu centro</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div data-action="centre-missing" style="display:none">
+
+                                <div class="form-group required">
+                                    <label for="new_centre_zip" class="label-2-lines">CÓDIGO POSTAL<br>
+                                        DE TU CENTRO</label>
+                                    <input type="text" data-validation-rule="zip"
+                                        placeholder="Código postal del centro educativo" name="new_centre_zip"
+                                        id="new_centre_zip" class="form-control">
+                                </div>
+
+                                <div class="form-group required">
+                                    <label for="new_centre_name">NOMBRE DEL CENTRO</label>
+                                    <input type="text" data-validation-rule="not-empty" name="new_centre_name"
+                                        id="new_centre_name" class="form-control">
+                                </div>
+
+                                <div class="form-group required">
+                                    <label for="new_centre_address">DIRECCIÓN DEL CENTRO</label>
+                                    <input type="text" data-validation-rule="not-empty" name="new_centre_address"
+                                        id="new_centre_address" class="form-control">
+                                </div>
+
+                                <div class="form-group required">
+                                    <label for="new_centre_city">CIUDAD</label>
+                                    <input type="text" data-validation-rule="not-empty" name="new_centre_city"
+                                        id="new_centre_city" class="form-control">
+                                </div>
+
+
+                                <div class="form-group required">
+                                    <label for="new_centre_province">PROVINCIA</label>
+                                    <div data-validation-rule="select-option" class="bg-select">
+                                        <select name="new_centre_province" class="form-control" id="new_centre_province"
+                                            data-validation-rule="select-option">
+                                            <option selected="selected" value="">Seleccionar provincia</option>
+                                            <option value="01">ÁLAVA</option>
+                                            <option value="02">ALBACETE</option>
+                                            <option value="03">ALICANTE</option>
+                                            <option value="04">ALMERÍA</option>
+                                            <option value="0">ASTURIAS</option>
+                                            <option value="05">ÁVILA</option>
+                                            <option value="06">BADAJOZ</option>
+                                            <option value="1">CANTABRIA</option>
+                                            <option value="2">CEUTA</option>
+                                            <option value="08">BARCELONA</option>
+                                            <option value="09">BURGOS</option>
+                                            <option value="3">CÁCERES</option>
+                                            <option value="4">CÁDIZ</option>
+                                            <option value="5">CASTELLÓN</option>
+                                            <option value="6">CIUDAD REAL</option>
+                                            <option value="7">CÓRDOBA</option>
+                                            <option value="8">CORUÑA, A</option>
+                                            <option value="9">CUENCA</option>
+                                            <option value="10">GIRONA</option>
+                                            <option value="11">GRANADA</option>
+                                            <option value="12">GUADALAJARA</option>
+                                            <option value="13">GUIPÚZCOA</option>
+                                            <option value="14">HUELVA</option>
+                                            <option value="15">HUESCA</option>
+                                            <option value="07">ILLES BALEARS</option>
+                                            <option value="16">JAÉN</option>
+                                            <option value="17">LEÓN</option>
+                                            <option value="18">LLEIDA</option>
+                                            <option value="19">LUGO</option>
+                                            <option value="20">MADRID</option>
+                                            <option value="21">MÁLAGA</option>
+                                            <option value="22">MELILLA</option>
+                                            <option value="23">MURCIA</option>
+                                            <option value="24">NAVARRA</option>
+                                            <option value="25">OURENSE</option>
+                                            <option value="26">PALENCIA</option>
+                                            <option value="27">PALMAS, LAS</option>
+                                            <option value="28">PONTEVEDRA</option>
+                                            <option value="29">RIOJA, LA</option>
+                                            <option value="30">SALAMANCA</option>
+                                            <option value="31">SANTA CRUZ DE TENERIFE</option>
+                                            <option value="32">SEGOVIA</option>
+                                            <option value="33">SEVILLA</option>
+                                            <option value="34">SORIA</option>
+                                            <option value="35">TARRAGONA</option>
+                                            <option value="36">TERUEL</option>
+                                            <option value="37">TOLEDO</option>
+                                            <option value="38">VALENCIA</option>
+                                            <option value="39">VALLADOLID</option>
+                                            <option value="40">VIZCAYA</option>
+                                            <option value="41">ZAMORA</option>
+                                            <option value="42">ZARAGOZA</option>
+                                            <option value="43">NO ESPAÑA</option>
+                                            <option value="AD">ANDORRA</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="message">MENSAJE</label>
+                                <div class="box-textarea">
+                                    <textarea
+                                        data-placeholder-ask-samples="Indica aquí los títulos de los que deseas recibir muestras"
+                                        data-placeholder-course-request="Indica aquí el curso y nivel del mismo al que quieres tener acceso"
+                                        data-placeholder-course-missing="Puedes indicar aquí los libros adoptados por tu centro a los que deseas tener acceso"
+                                        data-placeholder-smc-request="Puedes indicar aquí los libros adoptados por tu centro a los que deseas tener acceso"
+                                        rows="7" class="form-control" name="message" id="message"
+                                        placeholder=""></textarea>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="group_checkbox">
+                                <div class="checkbox"><input type="checkbox"
+                                        data-error-msg="Debes aceptar la Política de Privacidad"
+                                        data-validation-rule="checkbox" name="accept_legal" id="accept_legal"><label
+                                        for="accept_legal"></label>
+                                    <p><span>He leído y acepto la <a target="_blank"
+                                                href="http://www.thecambridgeteacher.es/politica-privacidad">Política de
+                                                privacidad</a></span></p>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="accept_promos" value="1" name="accept_promos"><label
+                                        for="accept_promos"></label>
+                                    <p><span>Deseo recibir noticias e información sobre promociones, productos y
+                                            servicios de Cambridge University Press, incluyendo invitaciones a focus
+                                            groups remunerados y jornadas de formación.</span></p>
+                                </div>
+                            </div>
+
+
+                            <div class="maquetacion_captcha" data-validation-rule="recaptcha"
+                                data-error-msg="¿Eres un robot?">
+                                <div class="g-recaptcha" data-sitekey="6LdL4CATAAAAADBQNQQKNEMNn9x6_YUmIDWybTXi"></div>
+                            </div>
+
+                            <div class="errores"></div>
+
+                            <div class="submit_group"><input type="submit" value="ENVIAR"></div>
+
                         </div>
-                    </div>
 
 
-                    <div class="form-group">
-                        <label for="message">MENSAJE</label>
-                        <div class="box-textarea">
-                            <textarea data-placeholder-ask-samples="Indica aquí los títulos de los que deseas recibir muestras" data-placeholder-course-request="Indica aquí el curso y nivel del mismo al que quieres tener acceso" data-placeholder-course-missing="Puedes indicar aquí los libros adoptados por tu centro a los que deseas tener acceso" data-placeholder-smc-request="Puedes indicar aquí los libros adoptados por tu centro a los que deseas tener acceso" rows="7" class="form-control" name="message" id="message" placeholder=""></textarea>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="group_checkbox">
-                        <div class="checkbox"><input type="checkbox" data-error-msg="Debes aceptar la Política de Privacidad" data-validation-rule="checkbox" name="accept_legal" id="accept_legal"><label for="accept_legal"></label><p><span>He leído y acepto la <a target="_blank" href="http://www.thecambridgeteacher.es/politica-privacidad">Política de privacidad</a></span></p></div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="accept_promos" value="1" name="accept_promos"><label for="accept_promos"></label><p><span>Deseo recibir noticias e información sobre promociones, productos y servicios de Cambridge University Press, incluyendo invitaciones a focus groups remunerados y jornadas de formación.</span></p>
-                        </div>
-                    </div>
-
-
-                    <div class="maquetacion_captcha" data-validation-rule="recaptcha" data-error-msg="¿Eres un robot?">
-                        <div class="g-recaptcha" data-sitekey="6LdL4CATAAAAADBQNQQKNEMNn9x6_YUmIDWybTXi"></div>
-                    </div>
-
-                    <div class="errores"></div>
-
-                    <div class="submit_group"><input type="submit" value="ENVIAR"></div>
-
+                    </form>
                 </div>
-
-
-            </form>
-        </div>
             </div>
         </div>
         <div id="footer">
-        	<div class="container">
+            <div class="container">
                 <div class="left_footer">
-                	<a href="#" class="logo_f">Cambridge University Press</a>
+                    <a href="#" class="logo_f">Cambridge University Press</a>
                 </div>
                 <div class="right_footer">
                     <div class="block_visita">
@@ -202,21 +298,22 @@
                         </ul>
                     </div>
                     <div class="block_siguenos">
-                    	<h4>SÍGUENOS</h4>
+                        <h4>SÍGUENOS</h4>
                         <ul>
                             <li><a href="#" class="ico_facebook">Facebook</a></li>
-                            <li><a href="#" class="ico_twitter">Twitter</a></li>
+                            <li><a href="#" class="ico_tiktok">TikTok</a></li>
                             <li><a href="#" class="ico_instagram">Instagram</a></li>
                             <li><a href="#" class="ico_youtube">Youtube</a></li>
                         </ul>
                     </div>
-                    <p class="txt-footer">© Cambridge University Press 2016 / <a href="#">Aviso Legal</a> / <a href="#">Politica de privacidad</a></p>
+                    <p class="txt-footer">© Cambridge University Press 2016 / <a href="#">Aviso Legal</a> / <a
+                            href="#">Politica de privacidad</a></p>
                 </div>
             </div>
         </div>
     </div>
     <script src="js/jquery.js"></script>
-	   <script src="js/jquery-migrate-3.1.0.min.js"></script>
+    <script src="js/jquery-migrate-3.1.0.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.scrollTo.js"></script>
     <script src="js/jquery.fitvids.js"></script>
@@ -225,4 +322,5 @@
     <script src="js/slick.min.js"></script>
     <script src="js/application.js"></script>
 </body>
+
 </html>
